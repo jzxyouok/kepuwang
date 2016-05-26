@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: 12px / 1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    color: #FFF;
+}
+
+.videoList {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.videoList .video-title {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    color: #B9DDFF;
+    background-color: #323232;
+}
+
+.videoList .video-title h4 {
+    position: relative;
+    top: 40%;
+    font-size: 1.6em;
+}
+
+.videoList .video-title-2 {
+    color: #B8FFD4;
+}
+
+.videoList .video-title-3 {
+    color: #EAFFB8;
+}
+
+.videoList .thumbnail {
+    margin-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+}
+
+.videoList .thumbnail .caption {
+    border-bottom: 2px solid #3c3c3c;
+}
+
+.videoList h3 {
+    font-size: 18px;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.col-list .thumbnail:last-child .caption {
+    border-bottom: 0;
+}
+
+.video-only {
+    width: 1200px !important;
+    padding-right: 100px;
+}
+
+.video-only .thumbnail {
+    margin-bottom: 20px;
+    padding: 0 !important;
+}
+
+.video-only .thumbnail .caption {
+    border: none;
+
+}
+
+.video-only h3 {
+    margin-top: 0!important;
+}
+
+#mainType a {
+    line-height: 40px;
+    text-align: center;
+}
+#mainType .caption{
+    padding:4px;
+}
+#mainType li {
+    list-style: none;
+    text-align: center;
+}
+
+#mainType {
+    background-color: #1b1b1b;
+    position: fixed;
+    top: 60%;
+    right: 30px;
+    width: 100px;
+}
+
+#mainType .active,#mainType li:hover {
+    background-color: #242424;
+}
+.videoPic{
+    position:relative;
+}
+.videoPlay{
+    /*border:1px solid red;*/
+    position:absolute;
+    top:0px;
+    right:33px;
+}
+#test{
+    margin-left:auto !important;
+    margin-right:auto !important;
+}

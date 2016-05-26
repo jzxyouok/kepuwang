@@ -1,0 +1,54 @@
+<div class="container-fluid marginTop">
+    <div class="row-fluid">
+        <div class="  whiteBg" id="content" novalidate>
+            <ol class="breadcrumb">
+                <li>管理平台</li>
+                <li>用户管理</li>
+            </ol>
+            <div class="row search">
+                <form class="form-inline" ng-submit="searchUser()">
+                    <div class="form-group">
+                        <label for="exampleInputName2">用户名</label>
+                        <input type="text" class="form-control" name="name" ng-model="name" id="exampleInputName2" placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail2">邮箱</label>
+                        <input type="text" class="form-control" name="email" ng-model="email" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail2">用户状态</label>
+                        <select name="status" id="" class="form-control" ng-model="status">
+                            <option value="">不限</option>
+                            <option value="0">禁用</option>
+                            <option value="1">启用</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success">搜索</button>
+                </form>
+            </div>
+            <table class="table table-bordered">
+                <tr>
+                    <th>编号</th>
+                    <th>用户名</th>
+                    <th>邮箱</th>
+                    <th>注册时间</th>
+                    <th>用户状态</th>
+                    <th>操作</th>
+                </tr>
+                <tr ng-repeat="user in allUser">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.registertime| date:'yyyy-MM-dd hh:mm:ss'}}</td>
+                    <td>开启</td>
+                    <td>
+                        <a href="">密码重置</a>
+                        <a href="">禁用</a>
+                    </td>
+                </tr>
+            </table>
+            <div class="tcdPageCode">
+            </div>
+        </div>
+    </div>
+</div>

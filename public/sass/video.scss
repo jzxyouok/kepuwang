@@ -1,0 +1,50 @@
+ $nav-bgc:#535353;
+ * {
+     margin: 0;
+     padding: 0;
+     font: 12px / 1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+     color: #FFF;
+ }
+.videoList{
+	margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    .video-title
+    {
+    	width: 100%;
+    	height: 100px;
+    	margin: 0 auto;
+    	text-align: center;
+    	color: #B9DDFF;
+    	background-color: #323232;
+    	h4{
+    		position: relative;
+    		top:40%;
+    		font-size: 1.6em;
+    	}
+    }
+    .video-title-2
+    {
+    	color:#B8FFD4;
+    }
+    .video-title-3
+    {
+    	color:#EAFFB8;
+    }
+    .thumbnail {
+    	margin-bottom: 0;
+    	padding-left: 20px;
+    	padding-right: 20px;
+    	padding-top: 15px;
+    	.caption{
+    		border-bottom: 2px solid #3c3c3c;
+    	}
+    	
+    }
+    h3{
+        font-size: 18px;
+    	color: #fff;
+    }
+    
+
+}

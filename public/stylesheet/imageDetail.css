@@ -1,0 +1,108 @@
+.imageDetail {
+    background-color: #1f1f1f;
+    width: 1100px;
+    padding: 0 30px;
+    margin: 20px auto;
+    margin-top: 60px;
+    padding-bottom: 30px;
+}
+
+.imageDetail * {
+    font-weight: 300;
+}
+
+.main-title {
+    font-weight: 300;
+}
+
+.imageDetail p {
+    font-size: 1.4em;
+}
+
+.imageDetail h3 {
+    text-align: center;
+}
+
+.imageDetail .left h2 {
+    color: #c1b721;
+}
+
+.media-object {
+    margin: 0 0 1em 0;
+    width: 100%;
+}
+
+.imageDetail .right {
+    margin-top: 40px;
+}
+
+.imageDetail .right p {
+    margin-top: 35px;
+}
+
+.imageDetail .imgDetail {
+    clear: both;
+    padding: 30px 40px;
+    border-top: 2px solid #494949;
+    border-bottom: 2px solid #494949;
+}
+
+.imgDownload {
+    /*max-width: 80%;*/
+    padding-bottom: 20px;
+    margin: 0 auto;
+    border-bottom: 2px solid #494949;
+    margin-bottom: 50px;
+}
+
+.imageDetail .imgDownload table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.imageDetail .imgDownload th,
+.imageDetail .imgDownload td {
+    padding: 10px 45px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.imageDetail .imgDownload th {
+    color: #0F86F1;
+    font-size: 1.2em;
+}
+
+.imageDetail-bottom {
+    text-align: center;
+}
+
+.videoPlay {
+    padding-bottom: 20px;
+}
+
+.good {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    vertical-align: baseline;
+    padding: 5px 8px;
+    border-radius: 4px;
+    background-color: #363636;
+    cursor:pointer;
+}
+
+.good img {
+    width: 16px !important;
+    height: 16px !important;
+    display: inline;
+    line-height: 20px;
+    margin-top: -5px;
+}
+
+.good span {
+    font-size: 14px;
+    font-weight: 200;
+    display: inline;
+    line-height: 20px;
+}

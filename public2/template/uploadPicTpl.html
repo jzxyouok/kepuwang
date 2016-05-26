@@ -1,0 +1,86 @@
+<div class="container-fluid marginTop">
+    <div class="row-fluid">
+        <div class="  whiteBg" id="content" novalidate>
+            <ol class="breadcrumb">
+                <li>管理平台</li>
+                <li>图片管理</li>
+                <li>上传图片</li>
+            </ol>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <!--  <form action="index.php?c=pic&a=uploadPic" enctype="multipart/form-data" method="post" >
+                        <div class="form-group">
+                            <label for="exampleInputFile">选择文件</label>
+                            <input type="file" id="exampleInputFile" required>
+                            <p class="help-block"> </p>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">图片名称</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="输入图片名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">图片描述</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="输入图片描述">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">轮播图片
+                            </label>
+                            <label>
+                                <input type="checkbox">普通图片
+                            </label>
+                            <label>
+                                <input type="checkbox">首页图片
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">图片分类</label>
+                            <select name="status" id="" class="form-control" ng-model="status">
+                                <option value="">不限</option>
+                                <option value="0">禁用</option>
+                                <option value="1">启用</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form> -->
+                    <form action="index.php?c=pic&a=uploadPic" enctype="multipart/form-data" method="post">
+                        <div class="form-group">
+                            <label for="exampleInputFile">选择文件</label>
+                            <input type='file' name='photo' required>
+                            <p class="help-block"> </p>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">图片名称</label>
+                            <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="输入图片名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">图片描述</label>
+                            <input type="text" name="description" class="form-control" id="exampleInputEmail1" placeholder="输入图片描述">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">图片分类</label>
+                            <select name="mainType" id="" class="form-control">
+                                <option value="0">不限</option>
+                                <option value="1">天文·地理</option>
+                                <option value="2">地理·地质</option>
+                                <option value="3">人文·生态</option>
+                            </select>
+                        </div>
+                        <div class="radio">
+                            <label> 
+                                <input type="radio" name="type" id="type2" value="3">轮播图片
+                            </label>
+                            <label>
+                                <input type="radio" name="type" id="type3" value="2">首页图片
+                            </label>
+                            <label>
+                                <input type="radio" name="type" id="type3" value="1">普通资源
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
