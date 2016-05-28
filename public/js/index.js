@@ -90,6 +90,14 @@
                 templateUrl: "/public/template/imageDetailTpl.html",
                 // controller: "allPicController"
             })
+            .when("/documentary/", {
+                templateUrl: "/public/template/documentary.html",
+                controller: "loginController"
+            })
+             .when("/articleDetail", {
+                templateUrl: "/public/template/articleDetailTpl.html",
+                controller: "loginController"
+            })
 
         .otherwise({ redirectTo: "/index" });
 

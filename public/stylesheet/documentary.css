@@ -1,0 +1,51 @@
+.video {
+  overflow: auto;
+  max-width: 76%;
+  margin: 20px auto;
+  background-color: #1f1f1f;
+}
+.video .left {
+  height: 255px;
+}
+.video h3 {
+  margin-top: 0;
+}
+.video img {
+  float: left;
+  max-width: 400px;
+  margin-right: 20px;
+}
+.video .list-group-item, .video .list-group-item.active {
+  border-color: #655656;
+}
+.video .list-group-item.active:focus, .video .list-group-item.active:hover {
+  background-color: #535353;
+}
+.video .list-group {
+  margin-top: 15px;
+  clear: both;
+}
+.video .list-group a {
+  margin: 2px 0;
+  background-color: #1f1f1f;
+  color: white;
+  font-size: 16px;
+}
+.video .col-md-3 {
+  padding: 2px;
+}
+.video .list-group-item {
+  padding: 4px 15px;
+}
+.video .showMore {
+  text-align: center;
+}
+#documentary{
+      width: 1084px;
+    margin: 0 auto;
+    border-left: 2px solid rgb(109,107,108);
+    border-right: 2px solid rgb(109,107,108);
+}
+#videoLast{
+  margin-bottom:0; 
+}

@@ -1,3 +1,9 @@
+#imageTpl{
+    width: 1084px;
+    margin: 0 auto;
+    border-left: 2px solid rgb(109,107,108);
+    border-right: 2px solid rgb(109,107,108);
+}
 a {
     text-decoration: none;
 }
