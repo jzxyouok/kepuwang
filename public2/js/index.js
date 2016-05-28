@@ -61,9 +61,13 @@
                 templateUrl: "/public2/template/loginTpl.html",
                 controller: "loginController"
             })
+
             .when("/pic/:id", {
                 templateUrl: "/public2/template/imageTpl.html",
                 controller: "allPicController"
+            })  .when("/newPic", {
+                templateUrl: "/public2/template/newPic.html",
+                controller: "newPicController"
             }).when("/uploadPic", {
                 templateUrl: "/public2/template/uploadPicTpl.html",
                 controller: "uploadImageController"
@@ -204,7 +208,65 @@
             }
         }
     });
+    app.controller("newPicController", function($scope, $http) {
+        var o_ueditorupload = UE.getEditor('j_ueditorupload', {
+            autoHeightEnabled: false
+        });
+        o_ueditorupload.ready(function() {
+            o_ueditorupload.hide(); //隐藏编辑器
+            o_ueditorupload.addListener('beforeInsertImage', function(t, arg) {
+                $scope.img_src = arg[0].src;
+            });
+            // o_ueditorupload.addListener('afterUpfile', function (t, arg)
+            // {
+            //   $scope.files = arg[0].url;
+            // });
+        });
 
+
+        $scope.newVideo = {
+            save: function() {
+                // var content = UE.getEditor('editor').getContent();
+                // var JqueryObject = $(content);
+                // 提取附件
+                // console.log($(JqueryObject, "img[src^='/attachment']"));
+                // console.log(content)
+
+                // console.log(content + "/n" + $scope.newArticle.title);
+                $http({
+                    method: "POST",
+                    url: "/admin.php?c=pic&a=newPic",
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+                    transformRequest: transform,
+                    data: {
+                        title: $scope.newVideo.title,
+                        // content: content,
+                        thumbnail_url: $scope.img_src,
+                        mainType: $scope.newVideo.mainType,
+                        type: $scope.newVideo.type,
+                        abstract: $scope.newVideo.abstract,
+                       
+                    }
+                }).success(function(response) {
+ 
+                    location.href = "#/newContent?articletype=2&id=" + response;
+                });
+
+            },
+            upFiles: function() {
+                var myFiles = o_ueditorupload.getDialog("attachment");
+                myFiles.open();
+            },
+            upImage: function() {
+                var myImage = o_ueditorupload.getDialog("insertimage");
+                myImage.open();
+            },
+            publish: function() {
+
+            }
+
+        }
+    });
     app.controller("newVideoController", function($scope, $http) {
         var o_ueditorupload = UE.getEditor('j_ueditorupload', {
             autoHeightEnabled: false

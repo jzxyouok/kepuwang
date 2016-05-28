@@ -6,79 +6,43 @@
  <div class="templatemo-content-wrapper">
     <div class="templatemo-content">
 <div class="row">
-<h1>输入文章基本信息</h1>
+<h1>输入图片基本信息</h1>
     <div class="col-md-2 form-group">
-        <label for="exampleInputEmail2">文章类型</label>
-        <select name="status" class="form-control" ng-model="newArticle.mainType"  >
-            <option value="1" ng-selected="1">天文·物理</option>
+        <label for="exampleInputEmail2">图片类型</label>
+        <select name="status" class="form-control" ng-model="newVideo.mainType"  >
+            <option value="1"  >天文·物理</option>
             <option value="2">地理·地质</option>
             <option value="3">生命·生态</option>
-            <option value="0">其他</option>
+            <option value="4">其他</option>
+            <!-- 1天文文理2地理地质3人文生态4其他 -->
         </select>
     </div>
     <div class="form-group col-md-6">
-        <label for="exampleInputPassword1">文章标题</label>
-        <input type="text" name="title" ng-model="newArticle.title" class="form-control" id="exampleInputEmail1" placeholder="输入文章标题">
+        <label for="exampleInputPassword1">图片标题</label>
+        <input type="text" name="title" ng-model="newVideo.title" class="form-control" id="exampleInputEmail1" placeholder="输入图片标题">
     </div>
     <div class="col-md-2">
     </div>
 
 </div>
+ 
 <div class="row">
 <div class="col-md-8">
-  <label for="exampleInputEmail2">文章简介</label>
-    <textarea class="form-control" rows="3" placeholder="请输入文章简介"></textarea>
+  <label for="exampleInputEmail2">图片简介</label>
+    <textarea class="form-control" rows="3" ng-model="newVideo.abstract" placeholder="请输入图片简介"></textarea>
 </div>
-    
 </div>
     <script type="text/plain" id="j_ueditorupload" style="height:5px;display:none;" ></script>
-    <script>
-      //实例化编辑器
-      var o_ueditorupload = UE.getEditor('j_ueditorupload',
-      {
-        autoHeightEnabled:false
-      });
-      o_ueditorupload.ready(function ()
-      {
-    
-    o_ueditorupload.hide();//隐藏编辑器
-    
-    //监听图片上传
-    o_ueditorupload.addListener('beforeInsertImage', function (t,arg)
-    {
-          alert('这是图片地址：'+arg[0].src);
-    });
-    
-    /* 文件上传监听
-     * 需要在ueditor.all.min.js文件中找到
-     * d.execCommand("insertHtml",l)
-     * 之后插入d.fireEvent('afterUpfile',b)
-     */
-        o_ueditorupload.addListener('afterUpfile', function (t, arg)
-        {
-          alert('这是文件地址：'+arg[0].url);
-        });
-      });
-      
-      //弹出图片上传的对话框
-      function upImage()
-      {
-        var myImage = o_ueditorupload.getDialog("insertimage");
-        myImage.open();
-      }
-      //弹出文件上传的对话框
-      function upFiles()
-      {
-        var myFiles = o_ueditorupload.getDialog("attachment");
-        myFiles.open();
-      } 
-    </script>
-    
-    <div class="row" style="padding-top:30px;">
-        <div class="col-md-2"> <button type="button" class="btn btn-md btn-primary" onClick="upImage()">选择文章缩略图</button></div>
-        <div class="col-md-2"> <button type="button" class="btn btn-md btn-primary" onClick="upFiles()">添加文章附件</button></div>
-
+ 
+  <div class="row" style="padding-top:30px;">
+    <div class="col-md-2">
+        <button type="button" class="btn btn-md btn-primary" ng-click="newVideo.upImage()">选择图片</button>
     </div>
+    <div class="col-md-2">
+        <!-- <button type="button" class="btn btn-md btn-primary" ng-click="newVideo.upFiles()">添加文章附件</button> -->
+    </div>
+</div>
+
    
     <br>
     <!-- <button type="button" onClick="upFiles()">调用上传文件模块</button> -->
@@ -86,38 +50,34 @@
     <div class="row" style="padding:0 30px 30px 30px;">
         <div class="radio floatLeft">
             <label>
-                <input type="radio" name="type" id="type" ng-model="newArticle.type"  value="3" ng-selected="3">  普通文章
+                <input type="radio" name="type" id="type" ng-model="newVideo.type"  value="3" ng-selected="3">  普通文章
             </label>
         </div>
         <div class="radio floatLeft">
             <label>
-                <input type="radio" name="type" id="type" ng-model="newArticle.type"  value="1"> 首页轮播
+                <input type="radio" name="type" id="type" ng-model="newVideo.type"  value="1"> 首页轮播
             </label>
         </div>
         <div class="radio floatLeft">
             <label>
-                <input type="radio" name="type" id="type"  ng-model="newArticle.type" value="4"> 首页推荐栏目
+                <input type="radio" name="type" id="type"  ng-model="newVideo.type" value="4"> 首页推荐栏目
             </label>
         </div>
           <div class="radio floatLeft">
             <label>
-                <input type="radio" name="type" id="type"  ng-model="newArticle.type" value="2"> 首页热点文章
+                <input type="radio" name="type" id="type"  ng-model="newVideo.type" value="2"> 首页热点文章
             </label>
         </div>
     </div>
     <div class="row">
     <div class="col-md-4 ">
-         <button class="btn btn-success marginRight" ng-click="newArticle.save()">编辑正文<span class="glyphicon glyphicon-arrow-right"></span></button>
+         <button class="btn btn-success marginRight" ng-click="newVideo.save()">编辑正文<span class="glyphicon glyphicon-arrow-right"></span></button>
     </div>
        
-        <!-- <button class="btn btn-default " ng-click="newArticle.publish()">发布</button> -->
+        <!-- <button class="btn btn-default " ng-click="newVideo.publish()">发布</button> -->
     </div>
 </div>
-<script type="text/javascript">
-//实例化编辑器
-//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
-var ue = UE.getEditor('editor');
-</script>
+ 
  
  
  

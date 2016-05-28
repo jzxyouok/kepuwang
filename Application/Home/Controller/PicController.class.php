@@ -6,6 +6,24 @@ use Think\Controller;
 class PicController extends Controller
 {
     // 1:普通资源 2：放置于首页 3：轮播图片
+    public function newPic()
+    {
+        $newVideo = array(
+            title       => I("post.title"),
+            thumbnail   => I("post.thumbnail_url"),
+            type        => I("post.type"),
+            "abstract"  => I("post.abstract"),
+
+            mainType    => I("post.mainType"),
+            publishTime => time(),
+        );
+
+        $db = M("pic");
+
+        $id = $db->add($newVideo);
+        echo $id;
+
+    }
 
     public function otherPic()
     {

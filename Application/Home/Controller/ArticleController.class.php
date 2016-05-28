@@ -71,6 +71,9 @@ class ArticleController extends Controller
             case '1':
                 $db = M("article");
                 break;
+            case '2':
+                $db = M("pic");
+                break;
             case '4':
                 $db = M("video");
                 break;
@@ -100,6 +103,9 @@ class ArticleController extends Controller
         switch (I("post.articleType")) {
             case '1':
                 $db = M("article");
+                break;
+            case '2':
+                $db = M("pic");
                 break;
             case '4':
                 $db = M("video");

@@ -28,7 +28,7 @@
         <div class="navbar-collapse collapse templatemo-sidebar">
             <ul class="templatemo-sidebar-menu">
                 <li class="active"><a href="#"><i class="fa fa-home"></i>主页</a></li>
-                <li class="sub open">
+                <li class="sub">
                     <a href="javascript:;">
                         <i class="fa fa-database"></i>文章管理
                         <div class="pull-right"><span class="caret"></span></div>
@@ -44,7 +44,7 @@
                         <li><a href="#">Facilisi</a></li>
                     </ul>
                 </li>
-                <li class="sub open">
+                <li class="sub">
                     <a href="javascript:;">
                         <i class="fa fa-database"></i> 图片管理
                         <div class="pull-right"><span class="caret"></span></div>
@@ -56,11 +56,11 @@
                         <li><a href="#/allArticle?type=3">普通图片</a></li>
                         <li><a href="#/allArticle?status=2">草稿箱</a></li>
                         <li><a href="#/allArticle?status=0">被撤图片</a></li>
-                        <li><a href="#/newVideo">新图片</a></li>
+                        <li><a href="#/newPic">新图片</a></li>
                         <li><a href="#">Facilisi</a></li>
                     </ul>
                 </li>
-                <li class="sub open">
+                <li class="sub">
                     <a href="javascript:;">
                         <i class="fa fa-database"></i> 视频管理
                         <div class="pull-right"><span class="caret"></span></div>
@@ -73,10 +73,10 @@
                         <li><a href="#/allArticle?status=2">草稿箱</a></li>
                         <li><a href="#/allArticle?status=0">被撤视频</a></li>
                         <li><a href="#/newVideo">新视频</a></li>
-                        <li><a href="#">Facilisi</a></li>
+                        
                     </ul>
                 </li>
-                <li class="sub open">
+                <li class="sub">
                     <a href="javascript:;">
                         <i class="fa fa-database"></i> 用户管理
                         <div class="pull-right"><span class="caret"></span></div>
