@@ -65,8 +65,21 @@ class ArticleController extends Controller
     }
     public function newContent()
     {
-        $articleId = I("get.id");
-        $db        = M("article");
+        $articleId   = I("get.id");
+        $articletype = I("get.articletype");
+        switch ($articletype) {
+            case '1':
+                $db = M("article");
+                break;
+            case '4':
+                $db = M("video");
+                break;
+
+            default:
+                # code...
+                break;
+        }
+
         $condition = array(
             id => $articleId,
         );
@@ -78,8 +91,8 @@ class ArticleController extends Controller
     }
     public function saveContent()
     {
-
-        $data = array(
+        $articleType = I("post.articleType");
+        $data        = array(
             id      => I("post.id"),
             content => I("post.content"),
         );
@@ -88,7 +101,9 @@ class ArticleController extends Controller
             case '1':
                 $db = M("article");
                 break;
-
+            case '4':
+                $db = M("video");
+                break;
             default:
                 $db = M("article");
                 break;

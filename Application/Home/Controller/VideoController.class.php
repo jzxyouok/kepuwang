@@ -9,44 +9,18 @@ class VideoController extends Controller
     {
         $newVideo = array(
             title       => I("post.title"),
-            content     => I("post.content"),
+            thumbnail   => I("post.thumbnail_url"),
+            type        => I("post.type"),
+            "abstract"  => I("post.abstract"),
+            videoCode   => I("post.videoCode"),
             mainType    => I("post.mainType"),
             publishTime => time(),
         );
-        $newVideo["video_src"] = getPic($newVideo["content"]); //使用函数 返回匹配地址 如果不为空则声称缩略图
-        // echo $info . "INFO";
-        // if (!$info == null) {
-        //     echo "ssssss";
-        //     $thumb = $info . 'thumb.png';
-        //     $image = new \Think\Image(); //实例化图像处理，缩略图功能
-        // $image->open($info); // 生成一个居中裁剪为240*160的缩略图
-        // $unlink                = $image->thumb(240, 160, \Think\Image::IMAGE_THUMB_CENTER)->save($thumb);
-        // $newVideo["thumbnail"] = $thumb;
-        // } else {
-        //     $thumb = '';
-        // }
 
-        // switch (I("post.mainType")) {
-        //     case '1':
-        // $db = M("Video");
+        $db = M("video");
 
-        //         break;
-        //     case '2':
-        //         $db                  = M("pic");
-        //         $newVideo["img_src"] = $info;
-        //         break;
-        //     case '3':
-        //         $db                  = M("video");
-        //         $newVideo["img_src"] = $info;
-        //         break;
-
-        //     default:
-        //         $db = M("Video");
-        //         break;
-        // }
-        $db = M("Video");
-        $db->add($newVideo);
-        echo json_encode($newVideo);
+        $id = $db->add($newVideo);
+        echo $id;
 
     }
 

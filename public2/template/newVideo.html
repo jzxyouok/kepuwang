@@ -9,8 +9,8 @@
 <h1>输入视频基本信息</h1>
     <div class="col-md-2 form-group">
         <label for="exampleInputEmail2">视频类型</label>
-        <select name="status" class="form-control" ng-model="newArticle.mainType"  >
-            <option value="1" ng-selected="1">天文·物理</option>
+        <select name="status" class="form-control" ng-model="newVideo.mainType"  >
+            <option value="1"  >天文·物理</option>
             <option value="2">地理·地质</option>
             <option value="3">生命·生态</option>
             <option value="4">其他</option>
@@ -19,7 +19,7 @@
     </div>
     <div class="form-group col-md-6">
         <label for="exampleInputPassword1">视频标题</label>
-        <input type="text" name="title" ng-model="newArticle.title" class="form-control" id="exampleInputEmail1" placeholder="输入视频标题">
+        <input type="text" name="title" ng-model="newVideo.title" class="form-control" id="exampleInputEmail1" placeholder="输入视频标题">
     </div>
     <div class="col-md-2">
     </div>
@@ -28,23 +28,23 @@
 <div class="row">
 <div class="col-md-8">
   <label for="exampleInputEmail2">视频通用代码</label>
-    <textarea class="form-control" rows="3" ng-model="newArticle.abstract" placeholder="请输入视频通用代码"></textarea>
+    <textarea class="form-control" rows="3" ng-model="newVideo.videoCode" placeholder="请输入视频通用代码"></textarea>
 </div>
 </div>
 <div class="row">
 <div class="col-md-8">
   <label for="exampleInputEmail2">视频简介</label>
-    <textarea class="form-control" rows="3" ng-model="newArticle.abstract" placeholder="请输入视频简介"></textarea>
+    <textarea class="form-control" rows="3" ng-model="newVideo.abstract" placeholder="请输入视频简介"></textarea>
 </div>
 </div>
     <script type="text/plain" id="j_ueditorupload" style="height:5px;display:none;" ></script>
  
   <div class="row" style="padding-top:30px;">
     <div class="col-md-2">
-        <button type="button" class="btn btn-md btn-primary" ng-click="newArticle.upImage()">选择视频缩略图</button>
+        <button type="button" class="btn btn-md btn-primary" ng-click="newVideo.upImage()">选择视频缩略图</button>
     </div>
     <div class="col-md-2">
-        <!-- <button type="button" class="btn btn-md btn-primary" ng-click="newArticle.upFiles()">添加文章附件</button> -->
+        <!-- <button type="button" class="btn btn-md btn-primary" ng-click="newVideo.upFiles()">添加文章附件</button> -->
     </div>
 </div>
 
@@ -55,31 +55,31 @@
     <div class="row" style="padding:0 30px 30px 30px;">
         <div class="radio floatLeft">
             <label>
-                <input type="radio" name="type" id="type" ng-model="newArticle.type"  value="3" ng-selected="3">  普通文章
+                <input type="radio" name="type" id="type" ng-model="newVideo.type"  value="3" ng-selected="3">  普通文章
             </label>
         </div>
         <div class="radio floatLeft">
             <label>
-                <input type="radio" name="type" id="type" ng-model="newArticle.type"  value="1"> 首页轮播
+                <input type="radio" name="type" id="type" ng-model="newVideo.type"  value="1"> 首页轮播
             </label>
         </div>
         <div class="radio floatLeft">
             <label>
-                <input type="radio" name="type" id="type"  ng-model="newArticle.type" value="4"> 首页推荐栏目
+                <input type="radio" name="type" id="type"  ng-model="newVideo.type" value="4"> 首页推荐栏目
             </label>
         </div>
           <div class="radio floatLeft">
             <label>
-                <input type="radio" name="type" id="type"  ng-model="newArticle.type" value="2"> 首页热点文章
+                <input type="radio" name="type" id="type"  ng-model="newVideo.type" value="2"> 首页热点文章
             </label>
         </div>
     </div>
     <div class="row">
     <div class="col-md-4 ">
-         <button class="btn btn-success marginRight" ng-click="newArticle.save()">编辑正文<span class="glyphicon glyphicon-arrow-right"></span></button>
+         <button class="btn btn-success marginRight" ng-click="newVideo.save()">编辑正文<span class="glyphicon glyphicon-arrow-right"></span></button>
     </div>
        
-        <!-- <button class="btn btn-default " ng-click="newArticle.publish()">发布</button> -->
+        <!-- <button class="btn btn-default " ng-click="newVideo.publish()">发布</button> -->
     </div>
 </div>
  

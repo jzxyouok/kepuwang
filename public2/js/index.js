@@ -104,20 +104,20 @@
             $scope.article.detail = response[articleId];
             // console.log($scope.article);
         })
-        $scope.article.save = function(){
+        $scope.article.save = function() {
             $http({
-                url:"/admin.php?c=article&a=update",
-                method:"post",
-                data:{
-                    id:$scope.article.detail.id,
-                    abstract:$scope.article.detail.abstract,
-                    maintype:$scope.article.detail.maintype,
-                    thumbnail:$scope.article.detail.thumbnail,
-                    title:$scope.article.detail.title,
-                    type:$scope.article.detail.type,
+                url: "/admin.php?c=article&a=update",
+                method: "post",
+                data: {
+                    id: $scope.article.detail.id,
+                    abstract: $scope.article.detail.abstract,
+                    maintype: $scope.article.detail.maintype,
+                    thumbnail: $scope.article.detail.thumbnail,
+                    title: $scope.article.detail.title,
+                    type: $scope.article.detail.type,
 
                 }
-            }).success(function(response){
+            }).success(function(response) {
                 // window.location.reload(true);
             })
         }
@@ -128,7 +128,7 @@
             o_ueditorupload.hide(); //隐藏编辑器
 
             o_ueditorupload.addListener('beforeInsertImage', function(t, arg) {
-                 
+
                 $scope.article.detail.thumbnail = arg[0].src;
             });
             $scope.article.upFiles = function() {
@@ -145,9 +145,10 @@
     app.controller("newContentController", function($scope, $http, $route) {
         $scope.article = {
             id: $route.current.params.id,
+            articleType:$route.current.params.articletype,
             save: function() {
                 $http({
-                    url: "admin.php?c=article&a=saveContent",
+                    url: "admin.php?c=article&a=saveContent&articletype=" + $scope.article.articleType,
                     method: "post",
                     data: {
                         articleType: $route.current.params.articletype,
@@ -162,12 +163,12 @@
 
         }
         $http({
-            url: "/admin.php?c=article&a=newContent&id=" + $scope.article.id,
+            url: "/admin.php?c=article&a=newContent&id=" + $scope.article.id + "&articletype=" +$scope.article.articleType ,
             method: "get"
         }).success(function(response) {
-           
+
             $scope.article.title = response.title;
-            UE.getEditor('editor').setContent(response.content,false);
+            UE.getEditor('editor').setContent(response.content, false);
         });
     })
     app.controller("allArticleController", function($http, $scope, $location, pageSet) {
@@ -191,8 +192,8 @@
                 });
             }
         }
-        $scope.publish=function(id){
-             var message = "确定发布这篇文章？";
+        $scope.publish = function(id) {
+            var message = "确定发布这篇文章？";
             if (confirm(message)) {
                 $http({
                     url: "/admin.php?c=article&a=publish&id=" + id,
@@ -205,13 +206,28 @@
     });
 
     app.controller("newVideoController", function($scope, $http) {
+        var o_ueditorupload = UE.getEditor('j_ueditorupload', {
+            autoHeightEnabled: false
+        });
+        o_ueditorupload.ready(function() {
+            o_ueditorupload.hide(); //隐藏编辑器
+            o_ueditorupload.addListener('beforeInsertImage', function(t, arg) {
+                $scope.img_src = arg[0].src;
+            });
+            // o_ueditorupload.addListener('afterUpfile', function (t, arg)
+            // {
+            //   $scope.files = arg[0].url;
+            // });
+        });
+
+
         $scope.newVideo = {
             save: function() {
-                var content = UE.getEditor('editor').getContent();
-                var JqueryObject = $(content);
+                // var content = UE.getEditor('editor').getContent();
+                // var JqueryObject = $(content);
                 // 提取附件
-                // console.log($(JqueryObject,"img[src^='/attachment']"));
-                console.log(content)
+                // console.log($(JqueryObject, "img[src^='/attachment']"));
+                // console.log(content)
 
                 // console.log(content + "/n" + $scope.newArticle.title);
                 $http({
@@ -221,15 +237,26 @@
                     transformRequest: transform,
                     data: {
                         title: $scope.newVideo.title,
-                        content: content,
+                        // content: content,
+                        thumbnail_url: $scope.img_src,
                         mainType: $scope.newVideo.mainType,
-                        video: $("embed").text()
+                        type: $scope.newVideo.type,
+                        abstract: $scope.newVideo.abstract,
+                        videoCode:$scope.newVideo.videoCode
                     }
                 }).success(function(response) {
-                    // $scope.allPic = response;
-                    console.log(response);
+ 
+                    location.href = "#/newContent?articletype=4&id=" + response;
                 });
 
+            },
+            upFiles: function() {
+                var myFiles = o_ueditorupload.getDialog("attachment");
+                myFiles.open();
+            },
+            upImage: function() {
+                var myImage = o_ueditorupload.getDialog("insertimage");
+                myImage.open();
             },
             publish: function() {
 

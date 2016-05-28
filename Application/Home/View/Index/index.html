@@ -46,17 +46,17 @@
                 </li>
                 <li class="sub open">
                     <a href="javascript:;">
-                        <i class="fa fa-database"></i> 视频管理
+                        <i class="fa fa-database"></i> 图片管理
                         <div class="pull-right"><span class="caret"></span></div>
                     </a>
                     <ul class="templatemo-submenu">
-                        <li><a href="#/allArticle">所有视频</a></li>
-                        <li><a href="#/allArticle?type=1">轮播视频</a></li>
-                        <li><a href="#/allArticle?type=2">首页视频</a></li>
-                        <li><a href="#/allArticle?type=3">普通视频</a></li>
+                        <li><a href="#/allArticle">所有图片</a></li>
+                        <li><a href="#/allPic?type=1">轮播图片</a></li>
+                        <li><a href="#/allPic ?type=2">首页图片</a></li>
+                        <li><a href="#/allArticle?type=3">普通图片</a></li>
                         <li><a href="#/allArticle?status=2">草稿箱</a></li>
-                        <li><a href="#/allArticle?status=0">被撤视频</a></li>
-                        <li><a href="#/newVideo">新视频</a></li>
+                        <li><a href="#/allArticle?status=0">被撤图片</a></li>
+                        <li><a href="#/newVideo">新图片</a></li>
                         <li><a href="#">Facilisi</a></li>
                     </ul>
                 </li>
