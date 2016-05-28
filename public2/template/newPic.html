@@ -13,8 +13,7 @@
             <option value="1" ng-selected="1">天文·物理</option>
             <option value="2">地理·地质</option>
             <option value="3">生命·生态</option>
-            <option value="4">其他</option>
-            <!-- 1天文文理2地理地质3人文生态4其他 -->
+            <option value="0">其他</option>
         </select>
     </div>
     <div class="form-group col-md-6">
@@ -28,21 +27,58 @@
 <div class="row">
 <div class="col-md-8">
   <label for="exampleInputEmail2">文章简介</label>
-    <textarea class="form-control" rows="3" ng-model="newArticle.abstract" placeholder="请输入文章简介"></textarea>
+    <textarea class="form-control" rows="3" placeholder="请输入文章简介"></textarea>
 </div>
- 
+    
 </div>
     <script type="text/plain" id="j_ueditorupload" style="height:5px;display:none;" ></script>
- 
-  <div class="row" style="padding-top:30px;">
-    <div class="col-md-2">
-        <button type="button" class="btn btn-md btn-primary" ng-click="newArticle.upImage()">选择文章缩略图</button>
-    </div>
-    <div class="col-md-2">
-        <!-- <button type="button" class="btn btn-md btn-primary" ng-click="newArticle.upFiles()">添加文章附件</button> -->
-    </div>
-</div>
+    <script>
+      //实例化编辑器
+      var o_ueditorupload = UE.getEditor('j_ueditorupload',
+      {
+        autoHeightEnabled:false
+      });
+      o_ueditorupload.ready(function ()
+      {
+    
+    o_ueditorupload.hide();//隐藏编辑器
+    
+    //监听图片上传
+    o_ueditorupload.addListener('beforeInsertImage', function (t,arg)
+    {
+          alert('这是图片地址：'+arg[0].src);
+    });
+    
+    /* 文件上传监听
+     * 需要在ueditor.all.min.js文件中找到
+     * d.execCommand("insertHtml",l)
+     * 之后插入d.fireEvent('afterUpfile',b)
+     */
+        o_ueditorupload.addListener('afterUpfile', function (t, arg)
+        {
+          alert('这是文件地址：'+arg[0].url);
+        });
+      });
+      
+      //弹出图片上传的对话框
+      function upImage()
+      {
+        var myImage = o_ueditorupload.getDialog("insertimage");
+        myImage.open();
+      }
+      //弹出文件上传的对话框
+      function upFiles()
+      {
+        var myFiles = o_ueditorupload.getDialog("attachment");
+        myFiles.open();
+      } 
+    </script>
+    
+    <div class="row" style="padding-top:30px;">
+        <div class="col-md-2"> <button type="button" class="btn btn-md btn-primary" onClick="upImage()">选择文章缩略图</button></div>
+        <div class="col-md-2"> <button type="button" class="btn btn-md btn-primary" onClick="upFiles()">添加文章附件</button></div>
 
+    </div>
    
     <br>
     <!-- <button type="button" onClick="upFiles()">调用上传文件模块</button> -->
@@ -77,7 +113,11 @@
         <!-- <button class="btn btn-default " ng-click="newArticle.publish()">发布</button> -->
     </div>
 </div>
- 
+<script type="text/javascript">
+//实例化编辑器
+//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+var ue = UE.getEditor('editor');
+</script>
  
  
  

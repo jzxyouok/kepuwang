@@ -1,0 +1,39 @@
+ 
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js">
+</script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
+ <div class="templatemo-content-wrapper">
+    <div class="templatemo-content">
+<div class="row">
+ 
+ 
+    <div class="form-group col-md-6">
+         <h4><b>标题：{{article.title}}</b></h4>
+    </div>
+    <div class="col-md-2">
+    </div>
+
+</div>
+ 
+    <script type="text/plain" id="editor" style="height:400px:width:1000px;" ></script>
+    <div class="row" style="padding-top:40px;">
+        <div class="col-md-5">
+            <button class="btn btn-md btn-info"><a href="/#article/{{article.id}}/1"></a>预览</button>
+            <button class="btn btn-md btn-success"ng-click="article.save()" style="margin-left:20px;">保存</button>
+            <!-- <button class="btn btn-md btn-primary"   style="margin-left:20px;">发布</button> -->
+        </div>
+    </div>
+ <script type="text/javascript">
+//实例化编辑器
+//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+var ue = UE.getEditor('editor');
+</script>
+ 
+ 
+ 
+ 
+ 
+ 
+
+

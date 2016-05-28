@@ -6,9 +6,9 @@
  <div class="templatemo-content-wrapper">
     <div class="templatemo-content">
 <div class="row">
-<h1>输入文章基本信息</h1>
+<h1>输入视频基本信息</h1>
     <div class="col-md-2 form-group">
-        <label for="exampleInputEmail2">文章类型</label>
+        <label for="exampleInputEmail2">视频类型</label>
         <select name="status" class="form-control" ng-model="newArticle.mainType"  >
             <option value="1" ng-selected="1">天文·物理</option>
             <option value="2">地理·地质</option>
@@ -18,8 +18,8 @@
         </select>
     </div>
     <div class="form-group col-md-6">
-        <label for="exampleInputPassword1">文章标题</label>
-        <input type="text" name="title" ng-model="newArticle.title" class="form-control" id="exampleInputEmail1" placeholder="输入文章标题">
+        <label for="exampleInputPassword1">视频标题</label>
+        <input type="text" name="title" ng-model="newArticle.title" class="form-control" id="exampleInputEmail1" placeholder="输入视频标题">
     </div>
     <div class="col-md-2">
     </div>
@@ -27,16 +27,21 @@
 </div>
 <div class="row">
 <div class="col-md-8">
-  <label for="exampleInputEmail2">文章简介</label>
-    <textarea class="form-control" rows="3" ng-model="newArticle.abstract" placeholder="请输入文章简介"></textarea>
+  <label for="exampleInputEmail2">视频通用代码</label>
+    <textarea class="form-control" rows="3" ng-model="newArticle.abstract" placeholder="请输入视频通用代码"></textarea>
 </div>
- 
+</div>
+<div class="row">
+<div class="col-md-8">
+  <label for="exampleInputEmail2">视频简介</label>
+    <textarea class="form-control" rows="3" ng-model="newArticle.abstract" placeholder="请输入视频简介"></textarea>
+</div>
 </div>
     <script type="text/plain" id="j_ueditorupload" style="height:5px;display:none;" ></script>
  
   <div class="row" style="padding-top:30px;">
     <div class="col-md-2">
-        <button type="button" class="btn btn-md btn-primary" ng-click="newArticle.upImage()">选择文章缩略图</button>
+        <button type="button" class="btn btn-md btn-primary" ng-click="newArticle.upImage()">选择视频缩略图</button>
     </div>
     <div class="col-md-2">
         <!-- <button type="button" class="btn btn-md btn-primary" ng-click="newArticle.upFiles()">添加文章附件</button> -->

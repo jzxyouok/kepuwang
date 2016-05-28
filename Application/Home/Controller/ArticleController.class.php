@@ -5,49 +5,35 @@ use Think\Controller;
 
 class ArticleController extends Controller
 {
+    //1天文文理2地理地质3人文生态4其他
     public function newArticle()
     {
         $newArticle = array(
             title       => I("post.title"),
-            content     => I("post.content"),
+            thumbnail   => I("post.thumbnail_url"),
             mainType    => I("post.mainType"),
+            type        => I("post.type"),
+            "abstract"  => I("post.abstract"),
             publishTime => time(),
         );
-        $info = getPic($newArticle["content"]); //使用函数 返回匹配地址 如果不为空则声称缩略图
-        echo $info . "INFO";
-        if (!$info == null) {
-            echo "ssssss";
-            $thumb = $info . 'thumb.png';
-            $image = new \Think\Image(); //实例化图像处理，缩略图功能
-            $image->open($info); // 生成一个居中裁剪为240*160的缩略图
-            $unlink                  = $image->thumb(240, 160, \Think\Image::IMAGE_THUMB_CENTER)->save($thumb);
-            $newArticle["thumbnail"] = $thumb;
-        } else {
-            $thumb = '';
-        }
+        // $info = getPic($newArticle["content"]); //使用函数 返回匹配地址 如果不为空则声称缩略图
+        // $info = $newArticle["thumbnail"];
+        // echo $info . "INFO";
+        // if (!$info == null) {
+        //     echo "ssssss";
+        //     $thumb = $info . 'thumb.png';
+        //     $image = new \Think\Image(); //实例化图像处理，缩略图功能
+        //     $image->open($info); // 生成一个居中裁剪为240*160的缩略图
+        //     $unlink                  = $image->thumb(240, 160, \Think\Image::IMAGE_THUMB_CENTER)->save($thumb);
+        //     $newArticle["thumbnail"] = $thumb;
+        // } else {
+        //     $thumb = '';
+        // }
 
-        switch (I("post.mainType")) {
-            case '1':
-                $db = M("article");
+        $db = M("article");
 
-                break;
-            case '2':
-                $db                    = M("pic");
-                $newArticle["img_src"] = $info;
-                break;
-            case '3':
-                $db                    = M("video");
-                $newArticle["img_src"] = $info;
-                break;
-
-            default:
-                $db = M("article");
-                break;
-        }
-        $newArticle["publishTime"] = time();
-
-        $db->add($newArticle);
-        echo json_encode($newArticle);
+        $id = $db->add($newArticle);
+        echo $id;
 
     }
 
@@ -63,16 +49,103 @@ class ArticleController extends Controller
     // }
     public function allArticle()
     {
-        $page      = I("get.page") || 1;
+        $page = I("get.page") || 1;
+
         $condition = array(
-            type   => I("get.type"),
+            // type   => I("get.type"),
             status => I("get.status"),
         );
-
+        if (I("get.type")) {
+            $condition["type"] = I("get.type");
+        }
         $result["pageNum"]    = M("article")->where($condition)->count();
         $result["allArticle"] = M("article")->where($condition)->order("publishTime DESC")->limit(($page - 1) * 10, $page * 10)->select();
         // echo (M("article")->getLastSql());
         echo json_encode($result);
+    }
+    public function newContent()
+    {
+        $articleId = I("get.id");
+        $db        = M("article");
+        $condition = array(
+            id => $articleId,
+        );
+        $title             = $db->where($condition)->getField("id,title,content");
+        $result            = $title[$articleId];
+        $result['content'] = htmlspecialchars_decode(html_entity_decode($result['content']));
+        echo json_encode($result);
+        // echo $db->getLastSql();
+    }
+    public function saveContent()
+    {
+
+        $data = array(
+            id      => I("post.id"),
+            content => I("post.content"),
+        );
+
+        switch (I("post.articleType")) {
+            case '1':
+                $db = M("article");
+                break;
+
+            default:
+                $db = M("article");
+                break;
+        }
+        $db->save($data);
+    }
+    public function editArticle()
+    {
+        $articleType = I("get.articleType");
+        $id          = I("get.id");
+        switch ($articleType) {
+            case '1':
+                $db = M("article");
+                break;
+
+            default:
+                $db = M("article");
+                break;
+        }
+
+        $articleDetail = $db->where("id = " . $id)->getField("id,mainType,thumbnail,title,abstract,type", true);
+        echo json_encode($articleDetail);
+    }
+    public function changeStatus()
+    {
+        $id     = I("get.id");
+        $update = array(
+            status => I("get.status") == "0" ? "1" : "0",
+        );
+        M("article")->where("id=" . $id)->save($update);
+        echo "1";
+        // echo M("article")->getLastSql();
+    }
+    public function publish()
+    {
+        $id     = I("get.id");
+        $update = array(
+            status => "1",
+        );
+        M("article")->where("id=" . $id)->save($update);
+        echo "1";
+
+    }
+    public function update()
+    {
+        $id      = I("post.id");
+        $Article = array(
+            title      => I("post.title"),
+            thumbnail  => I("post.thumbnail"),
+            mainType   => I("post.mainType"),
+            type       => I("post.type"),
+            "abstract" => I("post.abstract"),
+            // publishTime => time(),
+        );
+        $db = M("article");
+        $db->where("id=" . $id)->save($Article);
+        echo $id;
     }
 
 }
