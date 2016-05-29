@@ -1,5 +1,5 @@
 <?php
-namespace Home\Controller;
+namespace Main\Controller;
 
 use Think\Controller;
 
@@ -14,14 +14,30 @@ class PicController extends Controller
     }
     public function allPic()
     {
-        $page = I("get.page") || 1;
-        $db   = M("pic");
+        $page = I("get.page");
+
+        $where = array(
+            type   => 3,
+            status => 1,
+        );
+        $db = M("pic");
         if (I("get.type")) {
             $where["type"] = I(" get.type");
         }
-        $where["status"] = 1;
-        $result          = $db->order("type,publishTime desc")->limit(0, 10)->where($where)->getField('id,title,content,type,thumbnail');
+        $result         = array();
+        $result["num"]  = $db->where($where)->count();
+        $result["data"] = $db->order("publishTime desc")->limit(($page - 1) * 18, $page * 18)->where($where)->select(); //getField('id,title,abstract,thumbnail');
         echo json_encode($result);
+    }
+    public function picDetail()
+    {
+
+        $id = I("get.id");
+
+        $db        = M("pic");
+        $picDetail = $db->where("id = " . $id)->getField("id,mainType,thumbnail,title,abstract,content,type,likes", true);
+        echo json_encode($picDetail[$id]);
+
     }
 
 }

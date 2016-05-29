@@ -163,17 +163,34 @@ class ArticleController extends Controller
     }
     public function publish()
     {
-        $id     = I("get.id");
+        $id      = I("get.id");
+        $article = I("get.articletype");
+        switch ($article) {
+            case '1':
+                $db = M("article");
+                break;
+            case '2':
+                $db = M("pic");
+                break;
+            case '4':
+                $db = M("video");
+                break;
+
+            default:
+                # code...
+                break;
+        }
         $update = array(
             status => "1",
         );
-        M("article")->where("id=" . $id)->save($update);
+        $db->where("id=" . $id)->save($update);
         echo "1";
 
     }
     public function update()
     {
-        $id      = I("post.id");
+        $id = I("post.id");
+
         $Article = array(
             title      => I("post.title"),
             thumbnail  => I("post.thumbnail"),

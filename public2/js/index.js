@@ -22,15 +22,7 @@
             replace: true
         }
     });
-    // 配置文件信息
-    app.factory('config', function() {
-        return {
-            USERNAME_NOT_EXIST: "用户名错误！",
-            USERNAME_WRONG_LNGTH: "用户名长度要在6~12位！",
-            USERNAME_WRONG_PATTERN: "用户名仅能包括字母和数字！",
-            WRONG_PASSWORD: "密码错误！"
-        }
-    });
+ 
     // 关于用户的服务
     app.service("pageSet", function() {
         return {
@@ -269,7 +261,7 @@
                 }).success(function(response) {
 
 
-                    // location.href = "#/newContent?articletype=2&id=" + response;
+                    location.href = "#/newContent?articletype=2&id=" + response;
                 });
 
             },
@@ -438,7 +430,7 @@
             }
         }
         $scope.publish = function(id) {
-            var message = "确定发布这篇文章？";
+            var message = "确定发布此图片？";
             if (confirm(message)) {
                 $http({
                     url: "/admin.php?c=article&articletype=2&a=publish&id=" + id,

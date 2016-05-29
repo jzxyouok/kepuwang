@@ -11,12 +11,12 @@
     });
     app.service("pageSet", function() {
         return {
-            init: function(pages) {
+            init: function(pages, callback) {
                 $(".tcdPageCode").createPage({
                     pageCount: pages,
                     current: 1,
                     backFn: function(p) {
-                        console.log(p);
+                        callback(p);
                     }
                 });
             },
@@ -76,7 +76,7 @@
             })
             .when("/video", {
                 templateUrl: "/public/template/videoTpl.html",
-               controller: "videoController"
+                controller: "videoController"
             })
             .when("/videoDetail/:id", {
                 templateUrl: "/public/template/videoDetailTpl.html",
@@ -88,7 +88,7 @@
             })
             .when("/imageDetail/:id", {
                 templateUrl: "/public/template/imageDetailTpl.html",
-                // controller: "allPicController"
+                controller: "imageDetailController"
             })
             .when("/documentary/", {
                 templateUrl: "/public/template/documentary.html",
@@ -98,11 +98,11 @@
                 templateUrl: "/public/template/articleTpl.html",
                 controller: "loginController"
             })
-             .when("/articleDetail", {
+            .when("/articleDetail", {
                 templateUrl: "/public/template/articleDetailTpl.html",
                 controller: "loginController"
             })
-              .when("/tieba", {
+            .when("/tieba", {
                 templateUrl: "/public/template/tieba.html",
                 controller: "loginController"
             })
@@ -112,16 +112,19 @@
 
     }]);
 
-    app.controller("imageDetail", function($scope, $http) {
+    app.controller("imageDetailController", function($scope, $http, $route) {
+        var id = $route.current.params.id;
+        if (id == "")
+            window.location.href = "#/image";
         $http({
-            url: "/imageDetail",
+            url: "/index.php?c=pic&a=picDetail&id=" + id,
             method: "get"
         }).success(function(response) {
-            $scope = response;
+            $scope.imgDetail = response;
         });
     })
     app.controller("indexController", function($scope, $http, user) {
-         
+
         $http({
             method: "get",
             url: "/index",
@@ -133,15 +136,63 @@
         })
     })
     app.controller("allPicController", function($scope, $http, pageSet) {
+        $http({
+            method: "get",
+            url: "/index.php?c=pic&a=allPic&page=1",
+        }).success(function(response) {
+            $scope.num = response.num;
+            pageSet.init(Math.ceil($scope.num / 18), picByPage);
+        });
+        picByPage(1);
+
+        function picByPage(page) {
+            $http({
+                method: "get",
+                url: "/index.php?c=pic&a=allPic&page=" + page,
+            }).success(function(response) {
+                $scope.num = response.num;
+                initPics(response.data)
+            });
+        }
+
+
+        function initPics(data) {
+            $scope.pics = data;
+            var etraData = $scope.pics.length % 3;
+            var jiange = parseInt($scope.pics.length / 3);
+            var pics;
+
+            switch (etraData) {
+                case 0:
+                    $scope.picsLeft = $scope.pics.slice(0, jiange);
+                    $scope.picsMiddle = $scope.pics.slice(jiange, jiange * 2);
+                    $scope.picsRight = $scope.pics.slice(jiange * 2, jiange * 3);
+                    break;
+                case 1:
+                    $scope.picsLeft = $scope.pics.slice(0, jiange + 1);
+                    $scope.picsMiddle = $scope.pics.slice(jiange + 1, jiange * 2 + 1);
+                    $scope.picsRight = $scope.pics.slice(jiange * 2 + 1, jiange * 3 + 1);
+                    break;
+
+                case 2:
+                    $scope.picsLeft = $scope.pics.slice(0, jiange + 1);
+                    $scope.picsMiddle = $scope.pics.slice(jiange + 1, jiange * 2 + 2);
+                    $scope.picsRight = $scope.pics.slice(jiange * 2 + 2, jiange * 3 + 2);
+                    break;
+            }
+        }
+
+
+
+    });
+
+    app.controller("videoController", function($http, $scope, pageSet) {
         pageSet.init(5);
-    })
-    app.controller("videoController",function($http,$scope, pageSet){
-pageSet.init(5);
 
     })
-        
+
     app.controller("loginController", function($scope, $http) {
-        $scope.init = function(type){
+        $scope.init = function(type) {
             $scope.type = type;
             $('#myModal').modal();
 
