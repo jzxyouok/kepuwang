@@ -1,6 +1,11 @@
 ! function(angular, window, b) {
     var app = angular.module('myApp', ['ngRoute']);
     // 导航栏指令
+    app.filter('trusted', ['$sce', function ($sce) {
+    return function(url) {
+        return $sce.trustAsResourceUrl(url);
+    };
+}]);
     app.directive("navbar", function() {
         return {
             restrict: "E",
@@ -80,7 +85,7 @@
             })
             .when("/videoDetail/:id", {
                 templateUrl: "/public/template/videoDetailTpl.html",
-                controller: "videoController"
+                controller: "videoDetailController"
             })
             .when("/image", {
                 templateUrl: "/public/template/imageTpl.html",
@@ -111,7 +116,7 @@
         .otherwise({ redirectTo: "/index" });
 
     }]);
-
+ 
     app.controller("imageDetailController", function($scope, $http, $route) {
         var id = $route.current.params.id;
         if (id == "")
@@ -121,6 +126,17 @@
             method: "get"
         }).success(function(response) {
             $scope.imgDetail = response;
+        });
+    })
+    app.controller("videoDetailController", function($scope, $http, $route) {
+        var id = $route.current.params.id;
+        if (id == "")
+            window.location.href = "#/video";
+        $http({
+            url: "/index.php?c=video&a=videoDetail&id=" + id,
+            method: "get"
+        }).success(function(response) {
+            $scope.videoDetail = response;
         });
     })
     app.controller("indexController", function($scope, $http, user) {
@@ -186,9 +202,32 @@
 
     });
 
-    app.controller("videoController", function($http, $scope, pageSet) {
-        pageSet.init(5);
+    app.controller("videoController", function($http, $scope, pageSet,$route) {
+     var maintype = $route.current.params.mainType;
+     var query = "";
+     if(maintype){
+        query = "&maintype=" + maintype;
+     }
+     $http({
+            method: "get",
+            url: "/index.php?c=video&a=allVideo&page=1" + query,
+        }).success(function(response) {
+            $scope.num = response.num;
+            pageSet.init(Math.ceil($scope.num / 18), picByPage);
+             $scope.videos = response.data;
+        });
+      
 
+        function picByPage(page) {
+            $http({
+                method: "get",
+                url: "/index.php?c=video&a=allVideo&page=" + page  + query,
+            }).success(function(response) {
+                $scope.videos = response.data;
+            });
+        }
+
+ 
     })
 
     app.controller("loginController", function($scope, $http) {

@@ -5882,3 +5882,429 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000802s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000909s ]
 
+[ 2016-05-29T18:04:52+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057657s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057740s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000228s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000800s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000918s ]
+
+[ 2016-05-29T18:05:06+08:00 ] 127.0.0.1 /admin.php?c=video&a=allVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0214s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `video` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `video` ORDER BY publishTime DESC LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000715s ]
+
+[ 2016-05-29T18:05:12+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=39&status=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000926s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 144 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0190s ]
+SQL: UPDATE `video` SET `status`='1' WHERE ( id=39 ) [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000638s ]
+
+[ 2016-05-29T18:05:16+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=38&status=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 144 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0223s ]
+SQL: UPDATE `video` SET `status`='1' WHERE ( id=38 ) [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+
+[ 2016-05-29T18:05:16+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061191s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061305s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000796s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003874s ]
+
+[ 2016-05-29T18:05:16+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002179s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001127s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.105711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106097s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001348s ]
+
+[ 2016-05-29T18:05:19+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=37&status=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001049s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 144 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0218s ]
+SQL: UPDATE `video` SET `status`='1' WHERE ( id=37 ) [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001943s ]
+
+[ 2016-05-29T18:05:20+08:00 ] 127.0.0.1 /admin.php?c=video&a=allVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001016s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0177s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `video` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `video` ORDER BY publishTime DESC LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000974s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001074s ]
+
+[ 2016-05-29T18:11:57+08:00 ] 127.0.0.1 /admin.php?c=video&a=newVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001114s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant videoCode - assumed 'videoCode' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0220s ]
+NOTIC: [8] Undefined variable: newPic G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 23 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001124s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001190s ]
+
+[ 2016-05-29T18:11:58+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=&articletype=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001599s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0143s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 87 行.
+SQL: SELECT `id`,`title`,`content` FROM `video` WHERE `id` = 0  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000945s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001008s ]
+
+[ 2016-05-29T18:12:08+08:00 ] 127.0.0.1 /admin.php?c=video&a=allVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001173s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.1711s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `video` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `video` ORDER BY publishTime DESC LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000903s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-05-29T18:12:45+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=&articletype=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001433s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0247s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 87 行.
+SQL: SELECT `id`,`title`,`content` FROM `video` WHERE `id` = 0  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2016-05-29T18:13:46+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000816s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043985s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002369s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002521s ]
+
+[ 2016-05-29T18:13:46+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029393s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029623s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001880s ]
+
+[ 2016-05-29T18:13:55+08:00 ] 127.0.0.1 /admin.php?c=video&a=newVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant videoCode - assumed 'videoCode' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0133s ]
+NOTIC: [8] Undefined variable: newPic G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 23 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000897s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001121s ]
+
+[ 2016-05-29T18:14:16+08:00 ] 127.0.0.1 /admin.php?c=video&a=newVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant videoCode - assumed 'videoCode' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0270s ]
+NOTIC: [8] Undefined variable: newPic G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 23 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001273s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001344s ]
+
+[ 2016-05-29T18:15:11+08:00 ] 127.0.0.1 /admin.php?c=video&a=newVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001662s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant videoCode - assumed 'videoCode' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0199s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `video` SET `title`='的说法是否',`thumbnail`='/Uploads/image/20160529/1464516851240074.jpg',`type`='3',`abstract`='多舒服撒',`videoCode`='的沙发放',`mainType`='1',`publishTime`='1464516910' WHERE ( id= )
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `video` SET `title`='的说法是否',`thumbnail`='/Uploads/image/20160529/1464516851240074.jpg',`type`='3',`abstract`='多舒服撒',`videoCode`='的沙发放',`mainType`='1',`publishTime`='1464516910' WHERE ( id= )
+
+[ 2016-05-29T18:15:36+08:00 ] 127.0.0.1 /admin.php?c=video&a=newVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001211s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant videoCode - assumed 'videoCode' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0144s ]
+SQL: INSERT INTO `video` (`title`,`thumbnail`,`type`,`abstract`,`videoCode`,`mainType`,`publishTime`) VALUES ('的说法是否','/Uploads/image/20160529/1464516851240074.jpg','3','多舒服撒','的沙发放','1','1464516935') [ RunTime:0.0690s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002530s ]
+
+[ 2016-05-29T18:16:52+08:00 ] 127.0.0.1 /admin.php?c=video&a=newVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001430s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant videoCode - assumed 'videoCode' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0304s ]
+SQL: INSERT INTO `video` (`title`,`thumbnail`,`type`,`abstract`,`videoCode`,`mainType`,`publishTime`) VALUES ('的说法是否','/Uploads/image/20160529/1464516851240074.jpg','3','多舒服撒','的沙发放','1','1464517011') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000770s ]
+
+[ 2016-05-29T18:18:03+08:00 ] 127.0.0.1 /admin.php?c=video&a=newVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant videoCode - assumed 'videoCode' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0748s ]
+SQL: INSERT INTO `video` (`title`,`thumbnail`,`type`,`abstract`,`videoCode`,`mainType`,`publishTime`) VALUES ('的说法是否','/Uploads/image/20160529/1464516851240074.jpg','3','多舒服撒','的沙发放','1','1464517082') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000864s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000983s ]
+
+[ 2016-05-29T18:20:44+08:00 ] 127.0.0.1 /admin.php?c=video&a=newVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant videoCode - assumed 'videoCode' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.1291s ]
+SQL: INSERT INTO `video` (`title`,`thumbnail`,`type`,`abstract`,`videoCode`,`mainType`,`publishTime`) VALUES ('的说法是否','/Uploads/image/20160529/1464516851240074.jpg','3','多舒服撒','http://player.youku.com/player.php/sid/XMTU4NzU4NzUxNg==/v.swf','1','1464517242') [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000793s ]
+
+[ 2016-05-29T18:20:45+08:00 ] 127.0.0.1 /admin.php?c=video&a=allVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000907s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0141s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `video` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `video` ORDER BY publishTime DESC LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2016-05-29T18:20:53+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=44&status=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001215s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 144 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0129s ]
+SQL: UPDATE `video` SET `status`='1' WHERE ( id=44 ) [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000938s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001036s ]
+
+[ 2016-05-29T18:20:53+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000865s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001397s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.127801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.127978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002788s ]
+
+[ 2016-05-29T18:20:55+08:00 ] 127.0.0.1 /admin.php?c=video&a=allVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001157s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0365s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `video` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `video` ORDER BY publishTime DESC LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001110s ]
+

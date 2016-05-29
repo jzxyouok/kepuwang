@@ -1,60 +1,64 @@
 <link rel="stylesheet" href="/public/stylesheet/imageDetail.css">
 <div class="videoDetailTpl">
     <div class="imageDetail">
-    <div class="row videoPlay">
-        <div class="col-md-9 left">
-            <h2>撞上天敌二次方</h2>
-            <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" src="http://player.youku.com/player.php/sid/XMTQxNjg3NjE2MA==/v.swf" width="740" height="500" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" />
+        <div class="row videoPlay">
+            <div class="col-md-9 left">
+                <h2>{{videoDetail.title}}</h2>
+                <EMBED style=" margin: 5px auto; width:900px; height: 400px" ; ng-src="{{videoDetail.videocode|trusted}}" width="740" height="500" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash">
+                <!-- <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" ng-src="{{videoDetail.videocode|trusted}}" width="740" height="500" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" /> -->
+            </div>
+            <div class="col-md-3 right">
+                <h3>视频名片</h3>
+                <p>简介：{{videoDetail.abstract}}</p>
+                <p>名称：{{videoDetail.title}}</p>
+                <p>类别： <span ng-switch="videoDetail.maintype">
+                                    <span ng-switch-when="1">天文·文理</span>
+                    <span ng-switch-when="2">地理·地质</span>
+                    <span ng-switch-when="3">人文·生态</span>
+                    <span ng-switch-default>其他</span>
+                    </span>
+                </p>
+                <p>发表人：佚名</p>
+                <p>上传时间：{{videoDetail.publishTime||YYYY-MM-DD}}</p>
+            </div>
         </div>
-        <div class="col-md-3 right">
-            <h3>视频名片</h3>
-            <p>简介：各个时代的天文学家都有提出恒星碰撞的理论，但是这要等到新的技术的发展滞后，才可以得到这证明。但是这要等到新的技术的发展之后才可以证实。</p>
-            <p>名称：撞上天敌二次方</p>
-            <p>类别：天文·物理</p>
-            <p>发表人：佚名</p>
-            <p>上传时间：2016-4-13</p>
+        <div class="imgDetail row">
+            <h3>视频简介</h3> {{videoDetail.content}}
         </div>
-    </div>
-    <div class="imgDetail row">
-        <h3>视频简介</h3>
-        <p>虽然恒星碰撞可能在银河系的某些地区频繁发生，但是在太阳所处的环境附近发生的可能性则非常低。根据计算，在太阳附近的恒星碰撞频率是10兆兆年一次。另一恒星与太阳近距离接触的可能性非常低。</p>
-        <p>当中N表示每百万年接近太阳至太阳半径D之内的恒星，单位为秒差距。地球的平局轨道半径是1天文单位，相当于4.82 X 10秒差距，可以作为比较。尽管太阳不会直接发生这样的事件，但是另一恒星达到100光年距离以内，仍有可能导致地球的毁灭。不过，这依然是不太可能的，因为没有如此接近太阳的恒星集团。</p>
-    </div>
-    <div class="imgDownload">
-        <h3>视频下载</h3>
-        <table>
-            <!-- <tr>
+        <div class="imgDownload">
+            <h3>视频下载</h3>
+            <table>
+                <!-- <tr>
                 <th>小尺寸</th>
                 <th>中尺寸</th>
                 <th>大尺寸</th>
             </tr> -->
-            <tr>
-                <td>百度网盘1</td>
-                <td>百度网盘2</td>
-                <td>百度网盘3</td>
-            </tr>
-        </table>
-    </div>
-    <div class="row">
-        <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2232" data-title="2323" data-url="http://www.server.com/#/videoDetail/12"></div>
-        <!-- 多说评论框 end -->
-        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-        <script type="text/javascript">
-        var duoshuoQuery = {
-            short_name: "boomler2"
-        };
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';
-            ds.async = true;
-            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
-        </script>
-        <!-- 多说公共JS代码 end -->
+                <tr>
+                    <td>百度网盘1</td>
+                    <td>百度网盘2</td>
+                    <td>百度网盘3</td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <!-- 多说评论框 start -->
+            <div class="ds-thread" data-thread-key="2232" data-title="2323" data-url="http://www.server.com/#/videoDetail/12"></div>
+            <!-- 多说评论框 end -->
+            <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+            <script type="text/javascript">
+            var duoshuoQuery = {
+                short_name: "boomler2"
+            };
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';
+                ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+            </script>
+            <!-- 多说公共JS代码 end -->
+        </div>
     </div>
 </div>
-</div>
-

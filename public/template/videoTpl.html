@@ -1,208 +1,47 @@
 <link rel="stylesheet" href="/public/stylesheet/video.css">
 <div id="videoTpl">
-
-<div id="ad-carousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li class="active" data-target="#ad-carousel" data-slide-to="0"></li>
-        <li data-target="#ad-carousel" data-slide-to="1"></li>
-        <li data-target="#ad-carousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="item active">
-            <img src="/public/images/slider01.png" alt="1 slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h2>这是一个星光与城市的故事</h2>
+    <div id="ad-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li class="active" data-target="#ad-carousel" data-slide-to="0"></li>
+            <li data-target="#ad-carousel" data-slide-to="1"></li>
+            <li data-target="#ad-carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="/public/images/slider01.png" alt="1 slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h2>这是一个星光与城市的故事</h2>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="item">
-            <img src="/public/images/slider02.jpg" alt="2 slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h2>情定苏格兰群岛</h2>
+            <div class="item">
+                <img src="/public/images/slider02.jpg" alt="2 slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h2>情定苏格兰群岛</h2>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="item">
-            <img src="/public/images/slider03.jpg" alt="5 slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h2>我们从何而来？</h2>
+            <div class="item">
+                <img src="/public/images/slider03.jpg" alt="5 slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h2>我们从何而来？</h2>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="row videoList video-only" id="test" style="position:relative">
-    <div class="col-sm-6 col-md-3 col-list">
+    <div class="row videoList video-only" id="test" style="position:relative">
         <!-- <div class="video-title video-title-1"><h4>天文·地理</h4></div> -->
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
+        <div class="thumbnail col-sm-6 col-md-3  videoPic" ng-repeat="video in videos">
+            <img ng-src="{{video.thumbnail}}" alt="...">
             <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
+                <h3>{{video.title}}</h3>
+                <p>{{video.abstract}}</p>
                 <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3 col-list">
-        <!-- <div class="video-title video-title-2"><h4>地理·地质</h4></div> -->
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3 col-list">
-        <!-- <div class="video-title video-title-2"><h4>地理·地质</h4></div> -->
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3 col-list">
-        <!-- <div class="video-title video-title-2"><h4>地理·地质</h4></div> -->
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnail videoPic">
-            <img src="/public/images/1.jpg" alt="...">
-            <div class="caption">
-                <h3>天空当揭示万物</h3>
-                <p>我们从何而来？宇宙中的第一代恒星目前为止最明亮的早期宇宙星系被发现，...</p>
-                <div class="videoPlay">
-                    <a href="#/videoDetail/12"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
+                    <a href="#/videoDetail/{{video.id}}"><img src="/public/images/videoPlay.png" width="180" alt=""></a>
                 </div>
             </div>
         </div>
@@ -212,10 +51,12 @@
 </div>
 <div id="mainType">
     <ul>
-        <li class="active"><a href="">全部</a></li>
-        <li><a href="" class="color1">天文·物理</a></li>
-        <li><a href="" class="color2">地理·地质</a></li>
-        <li><a href="" class="color3">生命·生态</a></li>
+
+
+        <li class="active"><a href="#/video">全部</a></li>
+        <li><a href="#/video?mainType=1" class="color1">天文·物理</a></li>
+        <li><a href="#/video?mainType=2" class="color2">地理·地质</a></li>
+        <li><a href="#/video?mainType=3" class="color3">生命·生态</a></li>
     </ul>
 </div>
 </div>
