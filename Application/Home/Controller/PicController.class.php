@@ -8,21 +8,25 @@ class PicController extends Controller
     // 1:普通资源 2：放置于首页 3：轮播图片
     public function newPic()
     {
-        $newVideo = array(
+        $newPic = array(
             title       => I("post.title"),
             thumbnail   => I("post.thumbnail_url"),
             type        => I("post.type"),
             "abstract"  => I("post.abstract"),
-
             mainType    => I("post.mainType"),
             publishTime => time(),
         );
 
         $db = M("pic");
+        $id = I("post.id");
+        if ($id != "") {
+            $db->where("id=" . $id)->save($newPic);
+        } else {
+            $id = $db->add($newVideo);
+        }
+        // echo $db->getLastSql();
 
-        $id = $db->add($newVideo);
         echo $id;
-
     }
 
     public function otherPic()
@@ -32,13 +36,30 @@ class PicController extends Controller
     }
     public function allPic()
     {
-        $db = M("pic");
-        if (I("get.type")) {
-            $where["type"] = I("get.type");
+
+        $page = I("get.page") || 1;
+
+        $condition = array();
+        if (I("get.type") != "") {
+            $condition["type"] = I("get.type");
         }
-        $where["status"] = 1;
-        $result          = $db->order("type,publishTime desc")->limit(0, 10)->where($where)->getField('id,title,content,type,thumbnail');
+        if (I("get.status") != "") {
+            $condition["status"] = I("get.status");
+        }
+        $result["pageNum"]    = M("pic")->where($condition)->count();
+        $result["allArticle"] = M("pic")->where($condition)->order("publishTime DESC")->limit(($page - 1) * 10, $page * 10)->select();
+        // echo (M("article")->getLastSql());
         echo json_encode($result);
+    }
+    public function picDetail()
+    {
+
+        $id = I("get.id");
+
+        $db        = M("pic");
+        $picDetail = $db->where("id = " . $id)->getField("id,mainType,thumbnail,title,abstract,type", true);
+        echo json_encode($picDetail[$id]);
+
     }
     public function uploadPic()
     {

@@ -18,34 +18,43 @@ class VideoController extends Controller
         );
 
         $db = M("video");
+        $id = I("post.id");
+        if ($id != "") {
+            $db->where("id=" . $id)->save($newPic);
+        } else {
+            $id = $db->add($newVideo);
+        }
 
-        $id = $db->add($newVideo);
         echo $id;
 
     }
 
-    // public function indexVideo()
-    // {
-    //     $indexVideoCondition = array(
-    //         type     => 1,
-    //         status   => 1,
-    //         mainType => 1,
-    //     );
-    //     $indexVideo = M("Video")->where($indexVideoCondition)->order("publishTime DESC")->limit(0, 6);
-    //     echo json_encode($indexVideo);
-    // }
     public function allVideo()
     {
-        $page      = I("get.page") || 1;
-        $condition = array(
-            type   => I("get.type"),
-            status => I("get.status"),
-        );
+        $page = I("get.page") || 1;
 
-        $result["pageNum"]  = M("Video")->where($condition)->count();
-        $result["allVideo"] = M("Video")->where($condition)->order("publishTime DESC")->limit(($page - 1) * 10, $page * 10)->select();
-        // echo (M("Video")->getLastSql());
+        $condition = array();
+        if (I("get.type") != "") {
+            $condition["type"] = I("get.type");
+        }
+        if (I("get.status") != "") {
+            $condition["status"] = I("get.status");
+        }
+        $result["pageNum"]    = M("video")->where($condition)->count();
+        $result["allArticle"] = M("video")->where($condition)->order("publishTime DESC")->limit(($page - 1) * 10, $page * 10)->select();
+        // echo (M("article")->getLastSql());
         echo json_encode($result);
+    }
+    public function videoDetail()
+    {
+
+        $id = I("get.id");
+
+        $db                     = M("video");
+        $picDetail              = $db->where("id = " . $id)->getField("id,mainType,thumbnail,title,abstract,type,videoCode", true);
+        $picDetail["videoCode"] = htmlspecialchars_decode(html_entity_decode($picDetail["videoCode"]));
+        echo json_encode($picDetail[$id]);
+
     }
 
 }

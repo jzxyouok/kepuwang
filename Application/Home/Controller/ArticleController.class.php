@@ -124,6 +124,9 @@ class ArticleController extends Controller
             case '1':
                 $db = M("article");
                 break;
+            case '2':
+                $db = M("pic");
+                break;
 
             default:
                 $db = M("article");
@@ -135,11 +138,26 @@ class ArticleController extends Controller
     }
     public function changeStatus()
     {
-        $id     = I("get.id");
-        $update = array(
+        $id          = I("get.id");
+        $articleType = I("get.articletype");
+        $update      = array(
             status => I("get.status") == "0" ? "1" : "0",
         );
-        M("article")->where("id=" . $id)->save($update);
+        switch ($articleType) {
+            case '1':
+                $db = M("article");
+                break;
+            case '2':
+                $db = M("pic");
+                break;
+            case '4':
+                $db = M("video");
+                break;
+            default:
+                # code...
+                break;
+        }
+        $db->where("id=" . $id)->save($update);
         echo "1";
         // echo M("article")->getLastSql();
     }

@@ -9,7 +9,7 @@
 <h1>输入视频基本信息</h1>
     <div class="col-md-2 form-group">
         <label for="exampleInputEmail2">视频类型</label>
-        <select name="status" class="form-control" ng-model="newVideo.mainType"  >
+        <select name="status" class="form-control" ng-model="newVideo.maintype"  >
             <option value="1"  >天文·物理</option>
             <option value="2">地理·地质</option>
             <option value="3">生命·生态</option>
@@ -28,7 +28,7 @@
 <div class="row">
 <div class="col-md-8">
   <label for="exampleInputEmail2">视频通用代码</label>
-    <textarea class="form-control" rows="3" ng-model="newVideo.videoCode" placeholder="请输入视频通用代码"></textarea>
+    <textarea class="form-control" rows="3" ng-model="newVideo.videocode" placeholder="请输入视频通用代码"></textarea>
 </div>
 </div>
 <div class="row">
@@ -40,8 +40,11 @@
     <script type="text/plain" id="j_ueditorupload" style="height:5px;display:none;" ></script>
  
   <div class="row" style="padding-top:30px;">
+  <div class="col-md-4">
+      <img ng-src="{{newVideo.thumbnail}}" alt="" width="100" height="100">
+  </div>
     <div class="col-md-2">
-        <button type="button" class="btn btn-md btn-primary" ng-click="newVideo.upImage()">选择视频缩略图</button>
+        <button type="button" class="btn btn-md btn-primary" ng-click="methods.upImage()">选择视频缩略图</button>
     </div>
     <div class="col-md-2">
         <!-- <button type="button" class="btn btn-md btn-primary" ng-click="newVideo.upFiles()">添加文章附件</button> -->
@@ -55,28 +58,20 @@
     <div class="row" style="padding:0 30px 30px 30px;">
         <div class="radio floatLeft">
             <label>
-                <input type="radio" name="type" id="type" ng-model="newVideo.type"  value="3" ng-selected="3">  普通文章
+                <input type="radio" name="type" id="type" ng-model="newVideo.type"  value="3" ng-selected="3">  普通视频
             </label>
         </div>
+        
         <div class="radio floatLeft">
             <label>
-                <input type="radio" name="type" id="type" ng-model="newVideo.type"  value="1"> 首页轮播
+                <input type="radio" name="type" id="type"  ng-model="newVideo.type" value="2"> 首页视频
             </label>
         </div>
-        <div class="radio floatLeft">
-            <label>
-                <input type="radio" name="type" id="type"  ng-model="newVideo.type" value="4"> 首页推荐栏目
-            </label>
-        </div>
-          <div class="radio floatLeft">
-            <label>
-                <input type="radio" name="type" id="type"  ng-model="newVideo.type" value="2"> 首页热点文章
-            </label>
-        </div>
+          
     </div>
     <div class="row">
     <div class="col-md-4 ">
-         <button class="btn btn-success marginRight" ng-click="newVideo.save()">编辑正文<span class="glyphicon glyphicon-arrow-right"></span></button>
+         <button class="btn btn-success marginRight" ng-click="methods.save()">编辑正文<span class="glyphicon glyphicon-arrow-right"></span></button>
     </div>
        
         <!-- <button class="btn btn-default " ng-click="newVideo.publish()">发布</button> -->

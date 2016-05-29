@@ -16,13 +16,13 @@
                 <div class="  whiteBg" id="content">
                     <ol class="breadcrumb">
                         <li>管理平台</li>
-                        <li>图片管理</li>
+                        <li>视频管理</li>
                         <li ng-switch="{{type}}">
-                            <span ng-switch-when="2">首页图片</span>
-                            <span ng-switch-when="3">普通图片</span>
+                            <span ng-switch-when="2">首页视频</span>
+                            <span ng-switch-when="3">普通视频</span>
                         </li>
                         <li ng-switch="{{status}}">
-                            <span ng-switch-when="0">被撤图片</span>
+                            <span ng-switch-when="0">被撤视频</span>
                             <span ng-switch-when="2">草稿箱</span>
                         </li>
                     </ol>
@@ -96,7 +96,7 @@
                                    
                                     </span> 
                                    <span ng-click="publish(article.id)" class="link" ng-show="{{article.status==2}}">发布</span>
-                                    <a href="#/editPic?id={{article.id}}"> 编辑 </a>
+                                    <a href="#/newVideo?id={{article.id}}"> 编辑 </a>
                                     <a href="/index.php/#pic/{{article.id}}/1" target="_blank">预览</a>
                                     <!-- <a href="">置于首页</a> -->
                                 </td>

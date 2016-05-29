@@ -61,20 +61,27 @@
                 templateUrl: "/public2/template/loginTpl.html",
                 controller: "loginController"
             })
-
-            .when("/pic/:id", {
+            .when("/allPic", {
                 templateUrl: "/public2/template/imageTpl.html",
                 controller: "allPicController"
-            })  .when("/newPic", {
+            })
+            .when("/newPic", {
                 templateUrl: "/public2/template/newPic.html",
                 controller: "newPicController"
-            }).when("/uploadPic", {
+            })
+            .when("/editPic", {
+                templateUrl: "/public2/template/newPic.html",
+                controller: "editPicController"
+            })
+            .when("/uploadPic", {
                 templateUrl: "/public2/template/uploadPicTpl.html",
                 controller: "uploadImageController"
             })
-            .when("/video", {
+            .when("/allVideo", {
                 templateUrl: "/public2/template/videoTpl.html",
-            }).when("/newVideo", {
+                controller: "allVideoController"
+            })
+            .when("/newVideo", {
                 templateUrl: "/public2/template/newVideo.html",
                 controller: "newVideoController"
             })
@@ -96,6 +103,7 @@
             })
             .otherwise({ redirectTo: "/index" });
     }]);
+ 
     app.controller('editArticleController', function($scope, $http, $route) {
         // 得到之前数据
         var articleId = $route.current.params.id;
@@ -108,6 +116,7 @@
             $scope.article.detail = response[articleId];
             // console.log($scope.article);
         })
+
         $scope.article.save = function() {
             $http({
                 url: "/admin.php?c=article&a=update",
@@ -149,7 +158,7 @@
     app.controller("newContentController", function($scope, $http, $route) {
         $scope.article = {
             id: $route.current.params.id,
-            articleType:$route.current.params.articletype,
+            articleType: $route.current.params.articletype,
             save: function() {
                 $http({
                     url: "admin.php?c=article&a=saveContent&articletype=" + $scope.article.articleType,
@@ -167,7 +176,7 @@
 
         }
         $http({
-            url: "/admin.php?c=article&a=newContent&id=" + $scope.article.id + "&articletype=" +$scope.article.articleType ,
+            url: "/admin.php?c=article&a=newContent&id=" + $scope.article.id + "&articletype=" + $scope.article.articleType,
             method: "get"
         }).success(function(response) {
 
@@ -208,7 +217,21 @@
             }
         }
     });
-    app.controller("newPicController", function($scope, $http) {
+    app.controller("newPicController", function($scope, $route, $http) {
+        var picId = $route.current.params.id;
+        $scope.newPic = {};
+        if (picId !== undefined) {
+            $http({
+                url: "/admin.php?c=pic&a=picDetail&id=" + picId,
+                method: "get",
+            }).success(function(response) {
+                $scope.newPic = response;
+
+            })
+
+        }
+
+
         var o_ueditorupload = UE.getEditor('j_ueditorupload', {
             autoHeightEnabled: false
         });
@@ -224,31 +247,28 @@
         });
 
 
-        $scope.newVideo = {
+        $scope.methods = {
             save: function() {
-                // var content = UE.getEditor('editor').getContent();
-                // var JqueryObject = $(content);
-                // 提取附件
-                // console.log($(JqueryObject, "img[src^='/attachment']"));
-                // console.log(content)
 
-                // console.log(content + "/n" + $scope.newArticle.title);
+                console.log("dddd")
                 $http({
                     method: "POST",
                     url: "/admin.php?c=pic&a=newPic",
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
                     transformRequest: transform,
                     data: {
-                        title: $scope.newVideo.title,
+                        title: $scope.newPic.title,
                         // content: content,
-                        thumbnail_url: $scope.img_src,
-                        mainType: $scope.newVideo.mainType,
-                        type: $scope.newVideo.type,
-                        abstract: $scope.newVideo.abstract,
-                       
+                        thumbnail_url: $scope.newPic.thumbnail,
+                        mainType: $scope.newPic.maintype,
+                        type: $scope.newPic.type,
+                        abstract: $scope.newPic.abstract,
+                        id: $scope.newPic.id
+
                     }
                 }).success(function(response) {
- 
+
+
                     location.href = "#/newContent?articletype=2&id=" + response;
                 });
 
@@ -264,10 +284,24 @@
             publish: function() {
 
             }
+        }
+
+    });
+    app.controller("newVideoController", function($scope, $http,$route) {
+         var videoId = $route.current.params.id;
+        $scope.newVideo = {};
+        if (videoId !== undefined) {
+            $http({
+                url: "/admin.php?c=video&a=videoDetail&id=" + videoId,
+                method: "get",
+            }).success(function(response) {
+                $scope.newVideo = response;
+
+            })
 
         }
-    });
-    app.controller("newVideoController", function($scope, $http) {
+
+
         var o_ueditorupload = UE.getEditor('j_ueditorupload', {
             autoHeightEnabled: false
         });
@@ -276,22 +310,11 @@
             o_ueditorupload.addListener('beforeInsertImage', function(t, arg) {
                 $scope.img_src = arg[0].src;
             });
-            // o_ueditorupload.addListener('afterUpfile', function (t, arg)
-            // {
-            //   $scope.files = arg[0].url;
-            // });
         });
 
 
-        $scope.newVideo = {
+        $scope.methods = {
             save: function() {
-                // var content = UE.getEditor('editor').getContent();
-                // var JqueryObject = $(content);
-                // 提取附件
-                // console.log($(JqueryObject, "img[src^='/attachment']"));
-                // console.log(content)
-
-                // console.log(content + "/n" + $scope.newArticle.title);
                 $http({
                     method: "POST",
                     url: "/admin.php?c=video&a=newVideo",
@@ -301,13 +324,14 @@
                         title: $scope.newVideo.title,
                         // content: content,
                         thumbnail_url: $scope.img_src,
-                        mainType: $scope.newVideo.mainType,
+                        mainType: $scope.newVideo.maintype,
                         type: $scope.newVideo.type,
                         abstract: $scope.newVideo.abstract,
-                        videoCode:$scope.newVideo.videoCode
+                        videoCode: $scope.newVideo.videocode,
+                        id:videoId
                     }
                 }).success(function(response) {
- 
+
                     location.href = "#/newContent?articletype=4&id=" + response;
                 });
 
@@ -385,16 +409,86 @@
 
         }
     });
-    app.controller("allPicController", function($scope, $http, $route) {
-        $scope.type = $route.current.params.id;
-
+    app.controller("allPicController", function($scope, $http, $location, pageSet) {
+        var queryString = "";
+        $scope.type = $location.search()['type'];
+        if ($scope.type !== undefined) {
+            queryString = "&type=" + $scope.type;
+        }
+        $scope.status = $location.search()['status'];
+        if ($scope.status !== undefined) {
+            queryString = "&status=" + $scope.status;
+        }
         $http({
-            method: "get",
-            url: "/admin.php?c=pic&a=allPic&type=" + $scope.type,
+            url: "/admin.php?c=pic&a=allPic" + queryString,
+            method: "get"
         }).success(function(response) {
-            $scope.allPic = response;
+            $scope.allArticle = response.allArticle;
+            pageSet.init(response.pageNum / 10 + 1);
         });
-
+        $scope.changeStatus = function(id, status) {
+            var message = "确定" + status == "0" ? "恢复" : "撤销" + "这张图片？";
+            if (confirm(message)) {
+                $http({
+                    url: "/admin.php?c=article&a=changeStatus&articletype=2&id=" + id + "&status=" + status,
+                    method: "get"
+                }).success(function(response) {
+                    // location.reload(true);
+                });
+            }
+        }
+        $scope.publish = function(id) {
+            var message = "确定发布这篇文章？";
+            if (confirm(message)) {
+                $http({
+                    url: "/admin.php?c=article&articletype=2&a=publish&id=" + id,
+                    method: "get"
+                }).success(function(response) {
+                    location.reload(true);
+                });
+            }
+        }
+    });
+    app.controller("allVideoController", function($scope, $http, $location, pageSet) {
+        var queryString = "";
+        $scope.type = $location.search()['type'];
+        if ($scope.type !== undefined) {
+            queryString = "&type=" + $scope.type;
+        }
+        $scope.status = $location.search()['status'];
+        if ($scope.status !== undefined) {
+            queryString = "&status=" + $scope.status;
+        }
+        $http({
+            url: "/admin.php?c=video&a=allVideo" + queryString,
+            method: "get"
+        }).success(function(response) {
+            $scope.allArticle = response.allArticle;
+            pageSet.init(response.pageNum / 10 + 1);
+        });
+        $scope.changeStatus = function(id, status) {
+            alert(status)
+            var message = "确定" + (status == "0" ? "恢复" : "撤销") + "此视频？";
+            if (confirm(message)) {
+                $http({
+                    url: "/admin.php?c=article&a=changeStatus&articletype=4&id=" + id + "&status=" + status,
+                    method: "get"
+                }).success(function(response) {
+                    location.reload(true);
+                });
+            }
+        }
+        $scope.publish = function(id) {
+            var message = "确定发布此视频？";
+            if (confirm(message)) {
+                $http({
+                    url: "/admin.php?c=article&articletype=4&a=publish&id=" + id,
+                    method: "get"
+                }).success(function(response) {
+                    location.reload(true);
+                });
+            }
+        }
     });
 
     app.controller("userController", function($scope, $http, pageSet) {
