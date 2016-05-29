@@ -71,7 +71,7 @@
             })
             .when("/editPic", {
                 templateUrl: "/public2/template/newPic.html",
-                controller: "editPicController"
+                controller: "newPicController"
             })
             .when("/uploadPic", {
                 templateUrl: "/public2/template/uploadPicTpl.html",
@@ -263,7 +263,7 @@
                         mainType: $scope.newPic.maintype,
                         type: $scope.newPic.type,
                         abstract: $scope.newPic.abstract,
-                        id: $scope.newPic.id
+                        id: $scope.newPic.id 
 
                     }
                 }).success(function(response) {

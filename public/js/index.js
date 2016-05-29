@@ -94,10 +94,19 @@
                 templateUrl: "/public/template/documentary.html",
                 controller: "loginController"
             })
+            .when("/article", {
+                templateUrl: "/public/template/articleTpl.html",
+                controller: "loginController"
+            })
              .when("/articleDetail", {
                 templateUrl: "/public/template/articleDetailTpl.html",
                 controller: "loginController"
             })
+              .when("/tieba", {
+                templateUrl: "/public/template/tieba.html",
+                controller: "loginController"
+            })
+
 
         .otherwise({ redirectTo: "/index" });
 

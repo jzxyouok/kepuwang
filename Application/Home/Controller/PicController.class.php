@@ -19,12 +19,12 @@ class PicController extends Controller
 
         $db = M("pic");
         $id = I("post.id");
+
         if ($id != "") {
             $db->where("id=" . $id)->save($newPic);
         } else {
-            $id = $db->add($newVideo);
+            $id = $db->add($newPic);
         }
-        // echo $db->getLastSql();
 
         echo $id;
     }

@@ -19,7 +19,7 @@ class VideoController extends Controller
 
         $db = M("video");
         $id = I("post.id");
-        if ($id != "") {
+        if ($id != "0") {
             $db->where("id=" . $id)->save($newPic);
         } else {
             $id = $db->add($newVideo);

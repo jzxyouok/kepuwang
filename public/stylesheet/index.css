@@ -145,6 +145,7 @@ body {
 #topNav {
     width: 100%;
     z-index: 999;
+    position: relative;
 }
 
 #topNav .container-fluid {
@@ -695,7 +696,7 @@ footer .contact-me p {
 
 .login{
     position: absolute;
-    left: 1040px;
+    right: 240px;
 }
 .container-fluid{
     width: 100% !important;
