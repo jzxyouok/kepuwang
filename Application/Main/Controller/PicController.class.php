@@ -14,7 +14,8 @@ class PicController extends Controller
     }
     public function allPic()
     {
-        $db = M("pic");
+        $page = I("get.page") || 1;
+        $db   = M("pic");
         if (I("get.type")) {
             $where["type"] = I(" get.type");
         }

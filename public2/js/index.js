@@ -259,7 +259,7 @@
                     data: {
                         title: $scope.newPic.title,
                         // content: content,
-                        thumbnail_url: $scope.newPic.thumbnail,
+                        thumbnail_url: $scope.img_src||$scope.newPic.thumbnail,
                         mainType: $scope.newPic.maintype,
                         type: $scope.newPic.type,
                         abstract: $scope.newPic.abstract,
@@ -269,7 +269,7 @@
                 }).success(function(response) {
 
 
-                    location.href = "#/newContent?articletype=2&id=" + response;
+                    // location.href = "#/newContent?articletype=2&id=" + response;
                 });
 
             },
