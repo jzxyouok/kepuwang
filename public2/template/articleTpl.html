@@ -16,25 +16,21 @@
                     <ol class="breadcrumb">
                         <li>管理平台</li>
                         <li>文章管理</li>
-                        <li ng-switch="{{type}}">
-                            <span ng-switch-when="1">普通文章</span>
+                        <li ng-switch="type">
+                            <span ng-switch-when="3">普通文章</span>
                             <span ng-switch-when="2">首页文章</span>
-                            <span ng-switch-when="3">轮播文章</span>
+                            <span ng-switch-when="1">轮播文章</span>
                             <span ng-switch-default>其他</span>
                         </li>
                     </ol>
-               <!--      <div class="row search">
+               <div class="row search">
                         <form class="form-inline" ng-submit="searchUser()">
                             <div class="form-group">
-                                <label for="exampleInputName2">用户名</label>
-                                <bninput type="text" class="form-control" name="name" ng-model="name" id="exampleInputName2" placeholder="Jane Doe">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail2">邮箱</label>
+                                <label for="exampleInputEmail2">文章名称</label>
                                 <input type="text" class="form-control" name="email" ng-model="email" id="exampleInputEmail2" placeholder="jane.doe@example.com">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail2">用户状态</label>
+                                <label for="exampleInputEmail2">文章状态</label>
                                 <select name="status" id="" class="form-control" ng-model="status">
                                     <option value="">不限</option>
                                     <option value="0">禁用</option>
@@ -43,7 +39,7 @@
                             </div>
                             <button type="submit" class="btn btn-success">搜索</button>
                         </form>
-                    </div> -->
+                    </div>  
                     <div class="row">
                         <table class="table table-bordered">
                             <tr>

@@ -178,6 +178,7 @@
     })
     app.controller("allArticleController", function($http, $scope, $location, pageSet) {
         var type = $location.search()['type'] || 0;
+        $scope.type = type;
         var status = $location.search()['status'] || 1;
         $http({
             url: "/admin.php?c=article&a=allArticle&type=" + type + "&status=" + status,

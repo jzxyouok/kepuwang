@@ -41,7 +41,7 @@
                         <li><a href="#/allArticle?status=2">草稿箱</a></li>
                         <li><a href="#/allArticle?status=0">被撤文章</a></li>
                         <li><a href="#/newArticle">新文章</a></li>
-                        <li><a href="#">Facilisi</a></li>
+                         
                     </ul>
                 </li>
                 <li class="sub">
@@ -56,7 +56,7 @@
                         <li><a href="#/allPic?status=2">草稿箱</a></li>
                         <li><a href="#/allPic?status=0">被撤图片</a></li>
                         <li><a href="#/newPic">新图片</a></li>
-                        <li><a href="#">Facilisi</a></li>
+                        <!-- <li><a href="#">Facilisi</a></li> -->
                     </ul>
                 </li>
                 <li class="sub">
@@ -87,16 +87,16 @@
                         <li><a href="#">Facilisi</a></li>
                     </ul>
                 </li>
-                <li>
+               <!--  <li>
                     <a href="data-visualization.html">
                         <i class="fa fa-cubes"></i>
                         <span class="badge pull-right">9</span> 文章管理
                     </a>
-                </li>
-                <li><a href="#/newArticle"><i class="fa fa-map-marker"></i><span class="badge pull-right">42</span>发布</a></li>
+                </li> -->
+                <!-- <li><a href="#/newArticle"><i class="fa fa-map-marker"></i><span class="badge pull-right">42</span>发布</a></li>
                 <li><a href="tables.html"><i class="fa fa-users"></i><span class="badge pull-right">NEW</span>Manage Users</a></li>
                 <li><a href="preferences.html"><i class="fa fa-cog"></i>Preferences</a></li>
-                <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+                <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>Sign Out</a></li> -->
             </ul>
         </div>
         <div ng-view></div>
@@ -110,7 +110,7 @@
                     <h4 class="modal-title" id="myModalLabel">注销登录</h4>
                 </div>
                 <div class="modal-footer">
-                    <a href="sign-in.html" class="btn btn-primary">Yes</a>
+                    <a href="admin.php?c=login&a=signout" class="btn btn-primary">Yes</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
                 </div>
             </div>
@@ -118,7 +118,7 @@
     </div>
     <footer class="templatemo-footer">
         <div class="templatemo-copyright">
-            <p>Copyright &copy; 2084 Your Company Name Collect from <a href="http://www.mianfeimoban.com/" target="_blank">网站模板</a></p>
+            <p>Copyright &copy; 2016 科普网</p>
         </div>
     </footer>
     </div>

@@ -2,10 +2,13 @@
 <div class="videoDetailTpl">
     <div class="imageDetail">
         <div class="row videoPlay">
-            <div class="col-md-9 left">
+            <div class="col-md-9 left " id="videoPlay">
                 <h2>{{videoDetail.title}}</h2>
-                <EMBED style=" margin: 5px auto; width:900px; height: 400px" ; ng-src="{{videoDetail.videocode|trusted}}" width="740" height="500" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash">
-                <!-- <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" ng-src="{{videoDetail.videocode|trusted}}" width="740" height="500" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" /> -->
+                    
+                 <embed  ng-src="{{videoDetail.videocode|trusted}}"  quality="high" width="480" height="400" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>  
+
+                  
+                 <!--  <video controls="controls" name="Video Name" ng-src="{{videoDetail.videocode|trusted}}"></video> -->
             </div>
             <div class="col-md-3 right">
                 <h3>视频名片</h3>

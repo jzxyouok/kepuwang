@@ -137,6 +137,7 @@
             method: "get"
         }).success(function(response) {
             $scope.videoDetail = response;
+            // location.reload(true)
         });
     })
     app.controller("indexController", function($scope, $http, user) {

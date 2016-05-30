@@ -7,7 +7,15 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $this->display();
+        $user = session("user");
+
+        if ($user == "") {
+            redirect('/admin.php?c=login', 0, '页面跳转中...');
+
+        } else {
+            $this->display();
+        }
+
     }
     public function allUser()
     {
