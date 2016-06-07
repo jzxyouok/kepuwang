@@ -8,6 +8,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width">
     <link href="/public/stylesheet/styles.css" rel="stylesheet" media="screen">
+    <link href="/public2/stylesheet/index.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="/public2/stylesheet/templatemo_main.css">
 </head>
 
@@ -28,11 +29,11 @@
         <div class="navbar-collapse collapse templatemo-sidebar">
             <ul class="templatemo-sidebar-menu">
                 <li class="active"><a href="#"><i class="fa fa-home"></i>主页</a></li>
-                <li class="sub">
-                    <a href="javascript:;">
-                        <i class="fa fa-database"></i>文章管理
-                        <div class="pull-right"><span class="caret"></span></div>
-                    </a>
+                <li class="sub"><a href="javascript:;">
+    <i class="fa fa-database"></i>文章管理
+    <div class="pull-right"><span class="caret"></span></div>
+</a>
+
                     <ul class="templatemo-submenu">
                         <li><a href="#/allArticle">所有文章</a></li>
                         <li><a href="#/allArticle?type=1">轮播文章</a></li>
@@ -72,6 +73,21 @@
                         <li><a href="#/allVideo?status=2">草稿箱</a></li>
                         <li><a href="#/allVideo?status=0">被撤视频</a></li>
                         <li><a href="#/newVideo">新视频</a></li>
+                    </ul>
+                </li>
+                 <li class="sub">
+                    <a href="javascript:;">
+                        <i class="fa fa-database"></i> 纪录片管理
+                        <div class="pull-right"><span class="caret"></span></div>
+                    </a>
+                    <ul class="templatemo-submenu">
+                        <li><a href="#/allVideo">所有纪录片</a></li>
+                         
+                         
+                        
+                        <li><a href="#/allVideo?status=2">草稿箱</a></li>
+                        <li><a href="#/allVideo?status=0">被撤纪录片</a></li>
+                        <li><a href="#/newVideo">新纪录片</a></li>
                     </ul>
                 </li>
                 <li class="sub">

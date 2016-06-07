@@ -1,11 +1,11 @@
 ! function(angular, window, b) {
     var app = angular.module('myApp', ['ngRoute']);
     // 导航栏指令
-    app.filter('trusted', ['$sce', function ($sce) {
-    return function(url) {
-        return $sce.trustAsResourceUrl(url);
-    };
-}]);
+    app.filter('trusted', ['$sce', function($sce) {
+        return function(url) {
+            return $sce.trustAsResourceUrl(url);
+        };
+    }]);
     app.directive("navbar", function() {
         return {
             restrict: "E",
@@ -99,13 +99,17 @@
                 templateUrl: "/public/template/documentary.html",
                 controller: "loginController"
             })
+            .when("/documentaryDetail", {
+                templateUrl: "/public/template/documentaryDetail.html",
+                controller: "allArticleController"
+            })
             .when("/article", {
                 templateUrl: "/public/template/articleTpl.html",
-                controller: "loginController"
+                controller: "articleListController"
             })
-            .when("/articleDetail", {
+            .when("/articleDetail/:id", {
                 templateUrl: "/public/template/articleDetailTpl.html",
-                controller: "loginController"
+                controller: "articleDetailController"
             })
             .when("/tieba", {
                 templateUrl: "/public/template/tieba.html",
@@ -116,7 +120,19 @@
         .otherwise({ redirectTo: "/index" });
 
     }]);
- 
+
+    app.controller("articleDetailController", function($scope, $http, $route, $sce) {
+        var id = $route.current.params.id;
+        if (id == "")
+            window.location.href = "#/article";
+        $http({
+            url: "/index.php?c=article&a=articleDetail&id=" + id,
+            method: "get"
+        }).success(function(response) {
+            $scope.articleDetail = response;
+            $scope.articleDetail.detail.content = $sce.trustAsHtml($scope.articleDetail.detail.content);
+        });
+    });
     app.controller("imageDetailController", function($scope, $http, $route) {
         var id = $route.current.params.id;
         if (id == "")
@@ -137,7 +153,6 @@
             method: "get"
         }).success(function(response) {
             $scope.videoDetail = response;
-            // location.reload(true)
         });
     })
     app.controller("indexController", function($scope, $http, user) {
@@ -158,6 +173,7 @@
             url: "/index.php?c=pic&a=allPic&page=1",
         }).success(function(response) {
             $scope.num = response.num;
+            
             pageSet.init(Math.ceil($scope.num / 18), picByPage);
         });
         picByPage(1);
@@ -177,7 +193,7 @@
             $scope.pics = data;
             var etraData = $scope.pics.length % 3;
             var jiange = parseInt($scope.pics.length / 3);
-            var pics;
+            console.log(jiange)
 
             switch (etraData) {
                 case 0:
@@ -203,32 +219,56 @@
 
     });
 
-    app.controller("videoController", function($http, $scope, pageSet,$route) {
-     var maintype = $route.current.params.mainType;
-     var query = "";
-     if(maintype){
-        query = "&maintype=" + maintype;
-     }
-     $http({
+    app.controller("articleListController", function($http, $scope, pageSet, $route) {
+        var maintype = $route.current.params.mainType;
+        var query = "";
+        if (maintype) {
+            query = "&maintype=" + maintype;
+        }
+        $http({
+            method: "get",
+            url: "/index.php?c=article&a=allArticle&page=1" + query,
+        }).success(function(response) {
+            $scope.num = response.num;
+            pageSet.init(Math.ceil($scope.num / 18), articleByPage);
+            $scope.articles = response.data;
+        });
+
+        function articleByPage(page) {
+            $http({
+                method: "get",
+                url: "/index.php?c=article&a=allArticle&page=" + page + query,
+            }).success(function(response) {
+                $scope.articles = response.data;
+            });
+        }
+    })
+    app.controller("videoController", function($http, $scope, pageSet, $route) {
+        var maintype = $route.current.params.mainType;
+        var query = "";
+        if (maintype) {
+            query = "&maintype=" + maintype;
+        }
+        $http({
             method: "get",
             url: "/index.php?c=video&a=allVideo&page=1" + query,
         }).success(function(response) {
             $scope.num = response.num;
             pageSet.init(Math.ceil($scope.num / 18), picByPage);
-             $scope.videos = response.data;
+            $scope.videos = response.data;
         });
-      
+
 
         function picByPage(page) {
             $http({
                 method: "get",
-                url: "/index.php?c=video&a=allVideo&page=" + page  + query,
+                url: "/index.php?c=video&a=allVideo&page=" + page + query,
             }).success(function(response) {
                 $scope.videos = response.data;
             });
         }
 
- 
+
     })
 
     app.controller("loginController", function($scope, $http) {

@@ -36,7 +36,7 @@
  
   <div class="row" style="padding-top:30px;">
     <div class="col-md-3">
-        <img src="{{article.detail.thumbnail}}" alt="">
+        <img ng-src="{{article.detail.thumbnail}}" alt="" width="160" height="120">
     </div><div class="col-md-2">
 
         <button type="button" class="btn btn-md btn-primary" ng-click="article.upImage()" style="margin-top:100px">更换文章缩略图</button>
@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="row" style="padding-bottom:100px;">
-       <div class="col-md-4 ">
+       <div class="col-md-4">
          <button class="btn btn-danger marginRight"  ><a href="javascript:history.back(-1)">放弃修改</a>   </button>
      
          <button class="btn btn-primary" ng-click="article.save()">提交修改</button>
@@ -82,9 +82,10 @@
          <a href="#/newContent?articletype=1&id={{article.detail.id}}">
          编辑正文<span class="glyphicon glyphicon-arrow-right"></span></a></button>
     </div>
-       
-        <!-- <button class="btn btn-default " ng-click="article.publish()">发布</button> -->
-    </div>
+
+        <!-- <button class="btn btn-default " ng-click="article.publish()">发布</button> --><p class="  bg-warning row">标记正文前，注意有无提交修改！！</p>
+    </div> 
+     
 </div>
  
  

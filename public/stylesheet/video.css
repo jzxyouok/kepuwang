@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font: 12px / 1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
-    color: #FFF;
+    color: #eee;
 }
 
 .videoList {
@@ -36,9 +36,9 @@
 
 .videoList .thumbnail {
     margin-bottom: 0;
-    padding-left: 20px;
+   /* padding-left: 20px;
     padding-right: 20px;
-    padding-top: 15px;
+    padding-top: 15px;*/
 }
 
 .videoList .thumbnail .caption {
@@ -69,9 +69,13 @@ a:hover {
 
 .video-only .thumbnail {
     margin-bottom: 20px;
-  margin:8px;
+  margin:14px;
+    padding:0;
 }
-
+.video-thumbnail {
+    width:250px;
+    height:165px!important;
+}
 .video-only .thumbnail .caption {
     border: none;
 
@@ -106,8 +110,10 @@ a:hover {
 }
 .videoPic{
     position:relative;
-    /*margin:5px;*/
+    width:20%!important;
     padding:10px;
+    height:258px!important;
+    overflow: hidden;
 }
 .videoPlay{
     /*border:1px solid red;*/
@@ -127,6 +133,16 @@ a:hover {
     border-right: 2px solid rgb(109,107,108);
 }
 
-.col-md-3 {
-    width: 24%;
+/*.col-md-3 {
+    width: 20%;
+}*/
+#test{
+    padding:0 20px;
+}
+.picture-thumb{
+    width:316px !important;
+    height:216px !important;
+}
+.video-padding{
+    padding:0 10px;
 }

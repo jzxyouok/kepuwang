@@ -36,7 +36,7 @@
     <div class="row videoList video-only" id="test" style="position:relative">
         <!-- <div class="video-title video-title-1"><h4>天文·地理</h4></div> -->
         <div class="thumbnail col-sm-6 col-md-3  videoPic" ng-repeat="video in videos">
-            <img ng-src="{{video.thumbnail}}" alt="...">
+            <img ng-src="{{video.thumbnail}}" class="video-thumbnail" alt="...">
             <div class="caption">
                 <h3>{{video.title}}</h3>
                 <p>{{video.abstract}}</p>
@@ -46,8 +46,11 @@
             </div>
         </div>
     </div>
-    <div class="tcdPageCode pull-right">
+    <div class="row">
+        <div class="tcdPageCode pull-right">
     </div>
+    </div>
+    
 </div>
 <div id="mainType">
     <ul>

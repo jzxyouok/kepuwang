@@ -55,7 +55,7 @@ class ArticleController extends Controller
             // type   => I("get.type"),
             status => I("get.status"),
         );
-        if (I("get.type")) {
+        if (I("get.type") != "0") {
             $condition["type"] = I("get.type");
         }
         $result["pageNum"]    = M("article")->where($condition)->count();

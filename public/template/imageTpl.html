@@ -43,7 +43,7 @@
         <div class="col-sm-6 col-md-4 col-list">
             <!-- <div class="video-title video-title-1"><h4>天文·地理</h4></div> -->
             <div class="thumbnail" ng-repeat="pic in picsLeft">
-                <a href="#/imageDetail/{{pic.id}}"><img ng-src="{{pic.thumbnail}}" alt="..."></a>
+                <a href="#/imageDetail/{{pic.id}}"><img class="picture-thumb" ng-src="{{pic.thumbnail}}" alt="..."></a>
                 <div class="caption">
                     <h3>{{pic.title}}</h3>
                     <p>{{pic.abstract}}</p>
@@ -52,7 +52,7 @@
         </div>
         <div class="col-sm-6 col-md-4 col-list">
             <div class="thumbnail" ng-repeat="pic in picsMiddle">
-                <a href="#/imageDetail/{{pic.id}}"><img ng-src="{{pic.thumbnail}}" alt="..."></a>
+                <a href="#/imageDetail/{{pic.id}}"><img  class="picture-thumb" ng-src="{{pic.thumbnail}}" alt="..."></a>
                 <div class="caption">
                     <h3>{{pic.title}}</h3>
                     <p>{{pic.abstract}}</p>
@@ -61,7 +61,7 @@
         </div>
         <div class="col-sm-6 col-md-4 col-list">
             <div class="thumbnail" ng-repeat="pic in picsRight">
-                <a href="#/imageDetail/{{pic.id}}"><img ng-src="{{pic.thumbnail}}" alt="..."></a>
+                <a href="#/imageDetail/{{pic.id}}"><img  class="picture-thumb" ng-src="{{pic.thumbnail}}" alt="..."></a>
                 <div class="caption">
                     <h3>{{pic.title}}</h3>
                     <p>{{pic.abstract}}</p>

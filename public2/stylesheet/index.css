@@ -23,6 +23,60 @@ a:hover {
   float: right;
 }
 
+.tcdPageCode {
+    padding: 15px 20px 35px 20px;
+    text-align: left;
+    color: #ccc;
+    text-align: center;
+}
+.tcdPageCode *{
+    font-size:16px;
+}
+.tcdPageCode a {
+    display: inline-block;
+    color: #428bca;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    /*border: 1px solid #ddd;*/
+    margin: 0 2px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.tcdPageCode a:hover {
+    text-decoration: none;
+    border: 1px solid #428bca;
+}
+
+.tcdPageCode span.current {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    margin: 0 2px;
+    color: #fff;
+    background-color: #428bca;
+    /*border: 1px solid #428bca;*/
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.tcdPageCode span.disabled {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    margin: 0 2px;
+    color: #bfbfbf;
+    /*background: #f2f2f2;*/
+    /*border: 1px solid #bfbfbf;*/
+    font-size:12px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
 .container {
   width: 960px;
 }
@@ -74,87 +128,4 @@ a:hover {
   border-radius: 4px;
   vertical-align: middle;
 }
-
-body {
-  background-color: #f5f5f5 !important;
-}
-
-.marginTop {
-  margin-top: 10px;
-}
-
-.thumbnail {
-  border: 0 !important;
-}
-
-.bs-docs-sidenav li {
-  line-height: 26px !important;
-}
-
-.blackBg {
-  background-color: #1b1b1b !important;
-}
-
-.brand,
-.navbar {
-  padding-bottom: 0 !important;
-  background-color: #404A54 !important;
-}
-.brand a,
-.navbar a {
-  color: #ddd !important;
-}
-.brand a:hover,
-.navbar a:hover {
-  color: white;
-}
-
-.dropdown-menu a {
-  color: #222 !important;
-}
-
-.dropdown-menu li:hover {
-  background-color: #FFF;
-}
-
-#sidebar ul {
-  position: fixed;
-  top: 150px;
-  left: 100px;
-}
-
-.whiteBg {
-  background-color: #FFF;
-}
-
-.navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
-  background-color: #3b3b3b !important;
-}
-
-#content {
-  padding: 20px 20px;
-}
-
-.marginRight {
-  margin-right: 20px;
-}
-
-.floatRight {
-  float: right;
-}
-
-.floatLeft {
-  display: inline-block !important;
-  margin-right: 15px;
-}
-
-.form-inline .form-group select {
-  width: 160px !important;
-  padding-right: 15px;
-}
-
-.pad {
-  padding: 30px 50px;
-}
-
  

@@ -35,7 +35,7 @@ class PicController extends Controller
         $id = I("get.id");
 
         $db        = M("pic");
-        $picDetail = $db->where("id = " . $id)->getField("id,mainType,thumbnail,title,abstract,content,type,likes", true);
+        $picDetail = $db->where("id = " . $id)->getField("id,mainType,thumbnail,title,abstract,content,type,like", true);
         echo json_encode($picDetail[$id]);
 
     }

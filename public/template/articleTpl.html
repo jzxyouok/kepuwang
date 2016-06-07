@@ -36,124 +36,23 @@
         </div>
     </div>
     <div class="row videoList" id='test'>
-        <div class="col-sm-6 col-md-4 col-list">
-            <!-- <div class="video-title video-title-1"><h4>天文·地理</h4></div> -->
+        <div class="col-md-3 video-padding articlelist" ng-repeat="article in articles">
             <div class="thumbnail">
                 <div class="caption-change">
-                    <h3>悬停太累，让飞行器挂在树叶上“休息”吧</h3>
+                    <a href="#articleDetail/{{article.id}}"><h4>{{article.title}} </h4></a>
                     <p>
-                        Akshat Rathi |今天10:48
+                        {{article.publishtime||YYYY-MM-DD}}
                     </p>
                 </div>
-                <img src="/public/images/article1.png" alt="">
+                <img ng-src="{{article.thumbnail}}" alt="">
                 <div class="caption">
-                    <p>来自麻省理工大学和哈佛大学的研究者们研发了一种名叫RoboBee的微型飞行器，它可以利用静电吸附稳稳地倒挂在多种物体表面上。这样做，对“节省体力”很有帮助。</p>
+                    <p>{{article.abstract}}</p>
                 </div>
             </div>
-            <div class="thumbnail">
-                <div class="caption-change">
-                    <h3>悬停太累，让飞行器挂在树叶上“休息”吧</h3>
-                    <p>
-                        Akshat Rathi |今天10:48
-                    </p>
-                </div>
-                <img src="/public/images/article1.png" alt="">
-                <div class="caption">
-                    <p>来自麻省理工大学和哈佛大学的研究者们研发了一种名叫RoboBee的微型飞行器，它可以利用静电吸附稳稳地倒挂在多种物体表面上。这样做，对“节省体力”很有帮助。</p>
-                </div>
-            </div>
-            <div class="thumbnail">
-                <div class="caption-change">
-                    <h3>悬停太累，让飞行器挂在树叶上“休息”吧</h3>
-                    <p>
-                        Akshat Rathi |今天10:48
-                    </p>
-                </div>
-                <img src="/public/images/article1.png" alt="">
-                <div class="caption">
-                    <p>来自麻省理工大学和哈佛大学的研究者们研发了一种名叫RoboBee的微型飞行器，它可以利用静电吸附稳稳地倒挂在多种物体表面上。这样做，对“节省体力”很有帮助。</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-list">
-            <!-- <div class="video-title video-title-1"><h4>天文·地理</h4></div> -->
-            <div class="thumbnail">
-                <div class="caption-change">
-                    <h3>悬停太累，让飞行器挂在树叶上“休息”吧</h3>
-                    <p>
-                        Akshat Rathi |今天10:48
-                    </p>
-                </div>
-                <img src="/public/images/article1.png" alt="">
-                <div class="caption">
-                    <p>来自麻省理工大学和哈佛大学的研究者们研发了一种名叫RoboBee的微型飞行器，它可以利用静电吸附稳稳地倒挂在多种物体表面上。这样做，对“节省体力”很有帮助。</p>
-                </div>
-            </div>
-            <div class="thumbnail">
-                <div class="caption-change">
-                    <h3>悬停太累，让飞行器挂在树叶上“休息”吧</h3>
-                    <p>
-                        Akshat Rathi |今天10:48
-                    </p>
-                </div>
-                <img src="/public/images/article1.png" alt="">
-                <div class="caption">
-                    <p>来自麻省理工大学和哈佛大学的研究者们研发了一种名叫RoboBee的微型飞行器，它可以利用静电吸附稳稳地倒挂在多种物体表面上。这样做，对“节省体力”很有帮助。</p>
-                </div>
-            </div>
-            <div class="thumbnail">
-                <div class="caption-change">
-                    <h3>悬停太累，让飞行器挂在树叶上“休息”吧</h3>
-                    <p>
-                        Akshat Rathi |今天10:48
-                    </p>
-                </div>
-                <img src="/public/images/article1.png" alt="">
-                <div class="caption">
-                    <p>来自麻省理工大学和哈佛大学的研究者们研发了一种名叫RoboBee的微型飞行器，它可以利用静电吸附稳稳地倒挂在多种物体表面上。这样做，对“节省体力”很有帮助。</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-list">
-            <!-- <div class="video-title video-title-1"><h4>天文·地理</h4></div> -->
-            <div class="thumbnail">
-                <div class="caption-change">
-                    <h3>悬停太累，让飞行器挂在树叶上“休息”吧</h3>
-                    <p>
-                        Akshat Rathi |今天10:48
-                    </p>
-                </div>
-                <img src="/public/images/article1.png" alt="">
-                <div class="caption">
-                    <p>来自麻省理工大学和哈佛大学的研究者们研发了一种名叫RoboBee的微型飞行器，它可以利用静电吸附稳稳地倒挂在多种物体表面上。这样做，对“节省体力”很有帮助。</p>
-                </div>
-            </div>
-            <div class="thumbnail">
-                <div class="caption-change">
-                    <h3>悬停太累，让飞行器挂在树叶上“休息”吧</h3>
-                    <p>
-                        Akshat Rathi |今天10:48
-                    </p>
-                </div>
-                <img src="/public/images/article1.png" alt="">
-                <div class="caption">
-                    <p>来自麻省理工大学和哈佛大学的研究者们研发了一种名叫RoboBee的微型飞行器，它可以利用静电吸附稳稳地倒挂在多种物体表面上。这样做，对“节省体力”很有帮助。</p>
-                </div>
-            </div>
-            <div class="thumbnail">
-                <div class="caption-change">
-                    <h3>悬停太累，让飞行器挂在树叶上“休息”吧</h3>
-                    <p>
-                        Akshat Rathi |今天10:48
-                    </p>
-                </div>
-                <img src="/public/images/article1.png" alt="">
-                <div class="caption">
-                    <p>来自麻省理工大学和哈佛大学的研究者们研发了一种名叫RoboBee的微型飞行器，它可以利用静电吸附稳稳地倒挂在多种物体表面上。这样做，对“节省体力”很有帮助。</p>
-                </div>
-            </div>
-        </div>
-        <div class="tcdPageCode pull-right">
-        </div>
+        </div> 
+        <div class="tcdPageCode pull-right row">
     </div>
+    </div>
+   
+</div>
 </div>

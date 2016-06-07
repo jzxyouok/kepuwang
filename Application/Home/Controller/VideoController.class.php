@@ -41,7 +41,7 @@ class VideoController extends Controller
             $condition["status"] = I("get.status");
         }
         $result["pageNum"]    = M("video")->where($condition)->count();
-        $result["allArticle"] = M("video")->where($condition)->order("publishTime DESC")->limit(($page - 1) * 10, $page * 10)->select();
+        $result["allArticle"] = M("video")->where($condition)->order("publishTime DESC")->limit(($page - 1) * 19, $page * 19)->select();
         // echo (M("article")->getLastSql());
         echo json_encode($result);
     }

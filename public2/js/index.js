@@ -22,7 +22,7 @@
             replace: true
         }
     });
- 
+
     // 关于用户的服务
     app.service("pageSet", function() {
         return {
@@ -95,7 +95,7 @@
             })
             .otherwise({ redirectTo: "/index" });
     }]);
- 
+
     app.controller('editArticleController', function($scope, $http, $route) {
         // 得到之前数据
         var articleId = $route.current.params.id;
@@ -123,7 +123,9 @@
 
                 }
             }).success(function(response) {
-                // window.location.reload(true);
+                alert("保存成功");
+                window.location.reload(true);
+                
             })
         }
         var o_ueditorupload = UE.getEditor('j_ueditorupload', {
@@ -191,18 +193,19 @@
             var message = "确定" + status == "0" ? "恢复" : "撤销" + "这篇文章？";
             if (confirm(message)) {
                 $http({
-                    url: "/admin.php?c=article&a=changeStatus&id=" + id + "&status=" + status,
+                    url: "/admin.php?c=article&a=changeStatus&articletype=1&id=" + id + "&status=" + status,
                     method: "get"
                 }).success(function(response) {
                     location.reload(true);
                 });
             }
         }
-        $scope.publish = function(id) {
+        $scope.publish = function(id,status) { 
+            
             var message = "确定发布这篇文章？";
             if (confirm(message)) {
                 $http({
-                    url: "/admin.php?c=article&a=publish&id=" + id,
+                    url: "/admin.php?c=article&a=publish&articletype=1&id=" + id,
                     method: "get"
                 }).success(function(response) {
                     location.reload(true);
@@ -252,17 +255,17 @@
                     data: {
                         title: $scope.newPic.title,
                         // content: content,
-                        thumbnail_url: $scope.img_src||$scope.newPic.thumbnail,
+                        thumbnail_url: $scope.img_src || $scope.newPic.thumbnail,
                         mainType: $scope.newPic.maintype,
                         type: $scope.newPic.type,
                         abstract: $scope.newPic.abstract,
-                        id: $scope.newPic.id 
+                        id: $scope.newPic.id
 
                     }
                 }).success(function(response) {
 
 
-                    location.href = "#/newContent?articletype=2&id=" + response;
+                    // location.href = "#/newContent?articletype=2&id=" + response;
                 });
 
             },
@@ -280,8 +283,8 @@
         }
 
     });
-    app.controller("newVideoController", function($scope, $http,$route) {
-         var videoId = $route.current.params.id;
+    app.controller("newVideoController", function($scope, $http, $route) {
+        var videoId = $route.current.params.id;
         $scope.newVideo = {};
         if (videoId !== undefined) {
             $http({
@@ -321,11 +324,11 @@
                         type: $scope.newVideo.type,
                         abstract: $scope.newVideo.abstract,
                         videoCode: $scope.newVideo.videocode,
-                        id:videoId
+                        id: videoId
                     }
                 }).success(function(response) {
 
-                    location.href = "#/newContent?articletype=4&id=" + response;
+                    // location.href = "#/newContent?articletype=4&id=" + response;
                 });
 
             },
@@ -460,7 +463,7 @@
             pageSet.init(response.pageNum / 10 + 1);
         });
         $scope.changeStatus = function(id, status) {
-            alert(status)
+             
             var message = "确定" + (status == "0" ? "恢复" : "撤销") + "此视频？";
             if (confirm(message)) {
                 $http({

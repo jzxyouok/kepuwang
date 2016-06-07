@@ -1,12 +1,11 @@
+<!-- 纪录片详情页和视频详情页共用前端！！ -->
 <link rel="stylesheet" href="/public/stylesheet/imageDetail.css">
 <div class="videoDetailTpl">
     <div class="imageDetail">
         <div class="row videoPlay">
             <div class="col-md-9 left">
                 <h2>{{videoDetail.title}}</h2>
-                 
-                <embed src=" http://static.youku.com/v1.0.0149/v/swf/qplayer_rtmp.swf?VideoIDS=XMTU4NzU1NTU4MA&winType=adshow&isAutoPlay=true" quality="high" width="760px"  align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed>
- 
+                <EMBED style=" margin: 5px auto; width:900px; height: 400px" ; ng-src="{{videoDetail.videocode|trusted}}" width="740" height="500" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash">
                 <!-- <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" ng-src="{{videoDetail.videocode|trusted}}" width="740" height="500" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" /> -->
             </div>
             <div class="col-md-3 right">

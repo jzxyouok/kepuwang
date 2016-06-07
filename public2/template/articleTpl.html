@@ -23,11 +23,11 @@
                             <span ng-switch-default>其他</span>
                         </li>
                     </ol>
-               <div class="row search">
+               <div class="row search" style="margin-bottom:20px">
                         <form class="form-inline" ng-submit="searchUser()">
                             <div class="form-group">
                                 <label for="exampleInputEmail2">文章名称</label>
-                                <input type="text" class="form-control" name="email" ng-model="email" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                                <input type="text" class="form-control" name="email" ng-model="email" id="exampleInputEmail2" placeholder="使用名称搜索">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail2">文章状态</label>
@@ -39,7 +39,7 @@
                             </div>
                             <button type="submit" class="btn btn-success">搜索</button>
                         </form>
-                    </div>  
+               </div>  
                     <div class="row">
                         <table class="table table-bordered">
                             <tr>
@@ -61,7 +61,7 @@
                                 <span ng-switch="{{article.status}}">
                                     <span ng-switch-when="1">可用</span>
                                     <span ng-switch-when="0">已撤销</span>
-                                     <span ng-switch-when="0">草稿</span>
+                                     <span ng-switch-when="2">草稿</span>
                                     </span>
                                
                                 </td>
@@ -83,14 +83,14 @@
                                     </span>
                                 </td>
                                 <td>
-                                        <span ng-switch="{{article.status}}" ng-click="publish(article.id)" class="link">
-                                    <span ng-switch-when="1">撤销</span>
-                                    <span ng-switch-when="0">恢复</span>
-                                    <span ng-switch-when="2">发布</span>
+                                        <span ng-switch="{{article.status}}"   class="link">
+                                    <span ng-switch-when="1" ng-click="changeStatus(article.id,article.status)">撤销</span>
+                                    <span ng-switch-when="0" ng-click="changeStatus(article.id,article.status)">恢复</span>
+                                    <span ng-switch-when="2" ng-click="publish(article.id,article.status)">发布</span>
                                     </span>
 
                                     <a href="#/editArticle?id={{article.id}}"> 编辑 </a>
-                                    <a href="/index.php/#article/{{article.id}}/1" target="_blank">预览</a>
+                                    <a href="/index.php/#articleDetail/{{article.id}}" target="_blank">预览</a>
                                     <!-- <a href="">置于首页</a> -->
                                 </td>
                             </tr>
