@@ -132,11 +132,11 @@
             </div>
         </div>
     </div>
-    <footer class="templatemo-footer">
+ <!--    <footer class="templatemo-footer">
         <div class="templatemo-copyright">
             <p>Copyright &copy; 2016 科普网</p>
         </div>
-    </footer>
+    </footer> -->
     </div>
     <script src="/public2/js/jquery.min.js"></script>
     <script src="/public2/js/bootstrap.min.js"></script>

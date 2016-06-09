@@ -125,7 +125,7 @@
             }).success(function(response) {
                 alert("保存成功");
                 window.location.reload(true);
-                
+
             })
         }
         var o_ueditorupload = UE.getEditor('j_ueditorupload', {
@@ -150,6 +150,7 @@
 
     })
     app.controller("newContentController", function($scope, $http, $route) {
+
         $scope.article = {
             id: $route.current.params.id,
             articleType: $route.current.params.articletype,
@@ -169,6 +170,7 @@
             },
 
         }
+        
         $http({
             url: "/admin.php?c=article&a=newContent&id=" + $scope.article.id + "&articletype=" + $scope.article.articleType,
             method: "get"
@@ -200,8 +202,8 @@
                 });
             }
         }
-        $scope.publish = function(id,status) { 
-            
+        $scope.publish = function(id, status) {
+
             var message = "确定发布这篇文章？";
             if (confirm(message)) {
                 $http({
@@ -235,11 +237,14 @@
             o_ueditorupload.hide(); //隐藏编辑器
             o_ueditorupload.addListener('beforeInsertImage', function(t, arg) {
                 $scope.img_src = arg[0].src;
+                 console.log(arg);
             });
-            // o_ueditorupload.addListener('afterUpfile', function (t, arg)
-            // {
-            //   $scope.files = arg[0].url;
-            // });
+            o_ueditorupload.addListener('afterUpfile', function (t, arg)
+            { 
+                console.log("asdssa"+ arg[0].url);
+              $scope.files = arg[0].url;
+              console.log(arg);
+            });
         });
 
 
@@ -263,10 +268,33 @@
 
                     }
                 }).success(function(response) {
-
+                    alert("保存成功");
 
                     // location.href = "#/newContent?articletype=2&id=" + response;
                 });
+
+
+            },
+            saveAndEditContent: function() {
+                $http({
+                    method: "POST",
+                    url: "/admin.php?c=pic&a=newPic",
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+                    transformRequest: transform,
+                    data: {
+                        title: $scope.newPic.title,
+                        // content: content,
+                        thumbnail_url: $scope.img_src || $scope.newPic.thumbnail,
+                        mainType: $scope.newPic.maintype,
+                        type: $scope.newPic.type,
+                        abstract: $scope.newPic.abstract,
+                        id: $scope.newPic.id
+
+                    }
+                }).success(function(response) {
+                     location.href = "#/newContent?articletype=2&id=" + response;
+                });
+
 
             },
             upFiles: function() {
@@ -463,7 +491,7 @@
             pageSet.init(response.pageNum / 10 + 1);
         });
         $scope.changeStatus = function(id, status) {
-             
+
             var message = "确定" + (status == "0" ? "恢复" : "撤销") + "此视频？";
             if (confirm(message)) {
                 $http({

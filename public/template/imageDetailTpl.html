@@ -7,12 +7,12 @@
         <img src="/public/images/good.png" width="50" height="50" alt="">
         <span>{{imgDetail.likes || 0}}</span>
         </div>
-        <a href="#">
+        
             <img class="media-object" ng-src="{{imgDetail.thumbnail}}" alt="...">
-        </a>
+        
     </div>
-    <div class="col-md-3 right">
-        <h3 class="main-title">图片名片</h3>
+    <div class="col-md-3 right" ng-bind-html="imgDetail.subContent">
+        <!-- <h3 class="main-title">图片名片</h3>
         <p>简介：{{imgDetail.abstract}}</p>
         <p>名称：{{imgDetail.title}}</p>
         <p ng-switch="imgDetail.maintype">类别： 
@@ -23,14 +23,14 @@
                                     <!-- <span ng-switch-default>其他</span> -->
          </p>
         <p>发表人：{{imgDetail.author}}</p>
-        <p>上传时间：{{imgDetail.publishTime || yyyy-MM-DD}}</p>
+        <p>上传时间：{{imgDetail.publishTime || yyyy-MM-DD}}</p> -->
     </div>
     <div class="imgDetail">
-        <h3 class="main-title">图片详情</h3>
+        <h4 class="main-title">图片详情</h4>
          {{imgDetail.content}}
     </div>
     <div class="imgDownload">
-        <h3 class="main-title">图片下载</h3>
+        <h4 class="main-title">图片下载</h4>
         <table>
             <tr>
                 <th>小尺寸</th>

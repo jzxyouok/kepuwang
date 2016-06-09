@@ -8,13 +8,15 @@ body {
     margin: 0 auto;
     position:relative;
      
-    padding:20px 27% 40px 30px;
+    padding:20px 360px 40px 30px;
      background-color: #eee; 
      color: #050505 !important;
 }
  .articleDetail-left{
     border-right:2px solid #ddd;
     padding-right:10px;
+    min-height:500px;
+    color: #222;
  }
 
  .articleDetail h2 {
@@ -25,9 +27,12 @@ body {
  .articleDetail p {
     font-size: 1.4em;
     padding: 15px 0;
-    text-indent: 2em;  color: #050505 !important;
+    text-indent: 2em;  
+    color: #050505 !important;
 }
- 
+.articleDetail-left * {
+color: #050505 !important;
+ }
 
  .articleRight {
     position:absolute;
@@ -65,6 +70,5 @@ body {
 footer {
     clear: both;
 }
-
-
+ 
 /*# sourceMappingURL=articleDetail.css.map */

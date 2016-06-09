@@ -39,5 +39,11 @@ class PicController extends Controller
         echo json_encode($picDetail[$id]);
 
     }
+    public function like(){
+        $id = I("get.id");
+        $db = M("pic");
+        $db->where("id=".$id)->update("like")
+
+    }
 
 }

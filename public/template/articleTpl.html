@@ -1,7 +1,19 @@
 <link rel="stylesheet" href="/public/stylesheet/article.css">
 <link rel="stylesheet" href="/public/stylesheet/video.css">
-<!-- 注意！文章页和视频页共用css！ -->
-<div id="imageTpl">
+<style>
+        #article-list1,
+    #article-list2,
+    #article-list3,
+    #article-list4 {
+        /*border:1px solid red;*/
+        width: 22.7%;
+        margin: 0 1%;
+        float: left;}
+        .bottom-padding{
+            padding-bottom:50px;
+        }
+</style>
+<div id="imageTpl" class="bottom-padding">
     <div id="ad-carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li class="active" data-target="#ad-carousel" data-slide-to="0"></li>
@@ -35,24 +47,22 @@
             </div>
         </div>
     </div>
-    <div class="row videoList" id='test'>
-        <div class="col-md-3 video-padding articlelist" ng-repeat="article in articles">
-            <div class="thumbnail">
-                <div class="caption-change">
-                    <a href="#articleDetail/{{article.id}}"><h4>{{article.title}} </h4></a>
-                    <p>
-                        {{article.publishtime||YYYY-MM-DD}}
-                    </p>
-                </div>
-                <img ng-src="{{article.thumbnail}}" alt="">
-                <div class="caption">
-                    <p>{{article.abstract}}</p>
-                </div>
-            </div>
-        </div> 
-        <div class="tcdPageCode pull-right row">
+    <div class="row videoList article-list" id='test'>
+        <div id="article-list1">
+
+        </div>
+        <div id="article-list2">
+
+        </div>
+        <div id="article-list3">
+
+        </div>
+        <div id="article-list4">
+
+        </div>
+
     </div>
+    <div class="tcdPageCode pull-right row">
     </div>
-   
 </div>
-</div>
+ 

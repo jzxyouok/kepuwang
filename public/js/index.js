@@ -6,6 +6,14 @@
             return $sce.trustAsResourceUrl(url);
         };
     }]);
+
+    app.service("util", function() {
+        return {
+            localTime: function(timestamp) {
+                return new Date(parseInt(timestamp) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ').slice(0, 10);
+            }
+        }
+    })
     app.directive("navbar", function() {
         return {
             restrict: "E",
@@ -14,6 +22,21 @@
             replace: true
         }
     });
+app.directive('embedSrc', function () {
+  return {
+    restrict: 'A',
+    link: function (scope, element, attrs) {
+      var current = element;
+      scope.$watch(function() { return attrs.embedSrc; }, function () {
+        var clone = element
+                      .clone()
+                      .attr('src', attrs.embedSrc);
+        current.replaceWith(clone);
+        current = clone;
+      });
+    }
+  };
+})
     app.service("pageSet", function() {
         return {
             init: function(pages, callback) {
@@ -30,7 +53,6 @@
 
     })
 
-
     app.directive("foot", function() {
         return {
             restrict: "E",
@@ -39,36 +61,6 @@
             replace: true
         }
     });
-    // 配置文件信息
-    app.factory('config', function() {
-        return {
-            USERNAME_NOT_EXIST: "用户名错误！",
-            USERNAME_WRONG_LNGTH: "用户名长度要在6~12位！",
-            USERNAME_WRONG_PATTERN: "用户名仅能包括字母和数字！",
-            WRONG_PASSWORD: "密码错误！"
-        }
-    });
-    // 关于用户的服务
-    app.service("user", function($http, config) {
-        return {
-            checkUserName: function(name) {
-                if (name.length < 6 || name.length > 12) {
-                    return config.USERNAME_WRONG_LNGTH;
-                }
-                var reg = /^[a-zA-Z0-9_]{6,12}$/;
-                if (!reg.test(name)) {
-                    return config.USERNAME_WRONG_PATTERN;
-                }
-            },
-            encryPassword: function(password) {
-
-                }
-                // 
-                // some other code
-        }
-
-    })
-
 
     app.config(['$routeProvider', function($routeProvider) {
         $routeProvider.when("/index", {
@@ -132,18 +124,28 @@
             $scope.articleDetail = response;
             $scope.articleDetail.detail.content = $sce.trustAsHtml($scope.articleDetail.detail.content);
         });
+
     });
     app.controller("imageDetailController", function($scope, $http, $route) {
         var id = $route.current.params.id;
         if (id == "")
             window.location.href = "#/image";
         $http({
-            url: "/index.php?c=pic&a=picDetail&id=" + id,
+            url: "/index.php?c=pic&a=like&id=" + id,
             method: "get"
         }).success(function(response) {
             $scope.imgDetail = response;
         });
+        $scope.like = function() {
+            $http({
+                url: "/index.php?c=pic&a=articleDetail&id=" + id,
+                method: "get"
+            }).success(function(response) {
+                $scope.articleDetail.detail.likes++;
+            })
+        }
     })
+
     app.controller("videoDetailController", function($scope, $http, $route) {
         var id = $route.current.params.id;
         if (id == "")
@@ -154,8 +156,8 @@
         }).success(function(response) {
             $scope.videoDetail = response;
         });
-    })
-    app.controller("indexController", function($scope, $http, user) {
+    });
+    app.controller("indexController", function($scope, $http) {
 
         $http({
             method: "get",
@@ -166,14 +168,14 @@
             $scope.img_src = response.img_src;
 
         })
-    })
+    });
     app.controller("allPicController", function($scope, $http, pageSet) {
         $http({
             method: "get",
             url: "/index.php?c=pic&a=allPic&page=1",
         }).success(function(response) {
             $scope.num = response.num;
-            
+
             pageSet.init(Math.ceil($scope.num / 18), picByPage);
         });
         picByPage(1);
@@ -219,7 +221,7 @@
 
     });
 
-    app.controller("articleListController", function($http, $scope, pageSet, $route) {
+    app.controller("articleListController", function($http, $scope, pageSet, util, $route) {
         var maintype = $route.current.params.mainType;
         var query = "";
         if (maintype) {
@@ -231,7 +233,22 @@
         }).success(function(response) {
             $scope.num = response.num;
             pageSet.init(Math.ceil($scope.num / 18), articleByPage);
-            $scope.articles = response.data;
+            $("#article-list1").empty();
+            $("#article-list2").empty();
+            $("#article-list3").empty();
+            $("#article-list4").empty();
+            for (var len = response.data.length, i = 0; i < len; i++) {
+                var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/' 
+                + response.data[i].id + '"><h4>' + response.data[i].title +
+                 '</h4></a><p>'+response.data[i].publishtime.slice(0,16) +
+                  '</p></div><img src="' + response.data[i].thumbnail + 
+                  '" alt=""><div class="caption"><p>' + response.data[i].abstract +
+                    '</p></div></div>';
+
+                $("#article-list" + (i % 4 + 1)).append(newArticle);
+
+            }
+            // $scope.articles = response.data;
         });
 
         function articleByPage(page) {
@@ -239,11 +256,23 @@
                 method: "get",
                 url: "/index.php?c=article&a=allArticle&page=" + page + query,
             }).success(function(response) {
-                $scope.articles = response.data;
+                $("#article-list1").empty();
+                $("#article-list2").empty();
+                $("#article-list3").empty();
+                $("#article-list4").empty();
+
+                for (var len = response.data.length, i = 0; i < len; i++) {
+                    var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/' + response.data[i].id + '"><h4>' + response.data[i].id + '</h4></a><p> {{article.publishtime||YYYY-MM-DD}}</p></div><img ng-src="' + response.data[i].thumbnail +
+                        '" alt=""><div class="caption"><p>+' + response.data[i].abstract +
+                        '</p></div></div>';
+
+                    $("#article-list" + (i % 4 + 1)).append(newArticle);
+
+                }
             });
         }
-    })
-    app.controller("videoController", function($http, $scope, pageSet, $route) {
+    });
+     app.controller("videoController", function($http, $scope, pageSet, $route) {
         var maintype = $route.current.params.mainType;
         var query = "";
         if (maintype) {

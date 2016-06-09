@@ -59,8 +59,8 @@ class ArticleController extends Controller
             $condition["type"] = I("get.type");
         }
         $result["pageNum"]    = M("article")->where($condition)->count();
-        $result["allArticle"] = M("article")->where($condition)->order("publishTime DESC")->limit(($page - 1) * 10, $page * 10)->select();
-        // echo (M("article")->getLastSql());
+        $result["allArticle"] = M("article")->where($condition)->order("publishTime desc")->limit(($page - 1) * 10, $page * 10)->select();
+
         echo json_encode($result);
     }
     public function newContent()

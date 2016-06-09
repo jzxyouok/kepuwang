@@ -5,9 +5,9 @@
             <div class="col-md-9 left">
                 <h2>{{videoDetail.title}}</h2>
                  
-                <embed src=" http://static.youku.com/v1.0.0149/v/swf/qplayer_rtmp.swf?VideoIDS=XMTU4NzU1NTU4MA&winType=adshow&isAutoPlay=true" quality="high" width="760px"  align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed>
+                <!-- <embed src=" http://static.youku.com/v1.0.0149/v/swf/qplayer_rtmp.swf?VideoIDS=XMTU4NzU1NTU4MA&winType=adshow&isAutoPlay=true" quality="high" width="760px"  align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed> -->
  
-                <!-- <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" ng-src="{{videoDetail.videocode|trusted}}" width="740" height="500" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" /> -->
+                <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer"  embed-src="{{videoDetail.videocode|trusted}}" width="740" height="500" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" />
             </div>
             <div class="col-md-3 right">
                 <h3>视频名片</h3>
@@ -20,7 +20,7 @@
                     <span ng-switch-default>其他</span>
                     </span>
                 </p>
-                <p>发表人：佚名</p>
+                <!-- <p>发表人：佚名</p> -->
                 <p>上传时间：{{videoDetail.publishTime||YYYY-MM-DD}}</p>
             </div>
         </div>
@@ -44,7 +44,7 @@
         </div>
         <div class="row">
             <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="2232" data-title="2323" data-url="http://www.server.com/#/videoDetail/12"></div>
+            <div class="ds-thread" data-thread-key="id{{videoDetail.id}}" data-title="{{videoDetail.title}}" data-url="http://www.server.com/#/videoDetail/"></div>
             <!-- 多说评论框 end -->
             <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
             <script type="text/javascript">
