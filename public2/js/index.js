@@ -106,7 +106,7 @@
         $scope.article = { detail: {} };
 
         $http({
-            url: "/admin.php?c=article&a=editArticle&articletype=1&id=" + articleId,
+            url: "/admin.php?c=article&a=editArticle&articleType=1&id=" + articleId,
             method: "get",
         }).success(function(response) {
             $scope.article.detail = response[articleId];
@@ -157,13 +157,13 @@
 
         $scope.article = {
             id: $route.current.params.id,
-            articleType: $route.current.params.articletype,
+            articleType: $route.current.params.articleType,
             save: function() {
                 $http({
-                    url: "admin.php?c=article&a=saveContent&articletype=" + $scope.article.articleType,
+                    url: "admin.php?c=article&a=saveContent&articleType=" + $scope.article.articleType,
                     method: "post",
                     data: {
-                        articleType: $route.current.params.articletype,
+                        articleType: $route.current.params.articleType,
                         id: $route.current.params.id,
                         content: UE.getEditor('editor').getContent()
                     }
@@ -176,12 +176,12 @@
         }
 
         $http({
-            url: "/admin.php?c=article&a=newContent&id=" + $scope.article.id + "&articletype=" + $scope.article.articleType,
+            url: "/admin.php?c=article&a=newContent&id=" + $scope.article.id + "&articleType=" + $scope.article.articleType,
             method: "get"
         }).success(function(response) {
 
             $scope.article.title = response.title;
-            UE.getEditor('editor').setContent(response.content, false);
+            UE.getEditor('editor').setContent(response.content||"", false);
         });
     })
     app.controller("allArticleController", function($http, $scope, $location, pageSet) {
@@ -199,7 +199,7 @@
             var message = "确定" + status == "0" ? "恢复" : "撤销" + "这篇文章？";
             if (confirm(message)) {
                 $http({
-                    url: "/admin.php?c=article&a=changeStatus&articletype=1&id=" + id + "&status=" + status,
+                    url: "/admin.php?c=article&a=changeStatus&articleType=1&id=" + id + "&status=" + status,
                     method: "get"
                 }).success(function(response) {
                     location.reload(true);
@@ -211,7 +211,7 @@
             var message = "确定发布这篇文章？";
             if (confirm(message)) {
                 $http({
-                    url: "/admin.php?c=article&a=publish&articletype=1&id=" + id,
+                    url: "/admin.php?c=article&a=publish&articleType=1&id=" + id,
                     method: "get"
                 }).success(function(response) {
                     location.reload(true);
@@ -457,7 +457,7 @@
             var message = "确定" + status == "0" ? "恢复" : "撤销" + "这张图片？";
             if (confirm(message)) {
                 $http({
-                    url: "/admin.php?c=article&a=changeStatus&articletype=2&id=" + id + "&status=" + status,
+                    url: "/admin.php?c=article&a=changeStatus&articleType=2&id=" + id + "&status=" + status,
                     method: "get"
                 }).success(function(response) {
                     // location.reload(true);
@@ -468,7 +468,7 @@
             var message = "确定发布此图片？";
             if (confirm(message)) {
                 $http({
-                    url: "/admin.php?c=article&articletype=2&a=publish&id=" + id,
+                    url: "/admin.php?c=article&articleType=2&a=publish&id=" + id,
                     method: "get"
                 }).success(function(response) {
                     location.reload(true);
@@ -498,7 +498,7 @@
             var message = "确定" + (status == "0" ? "恢复" : "撤销") + "此视频？";
             if (confirm(message)) {
                 $http({
-                    url: "/admin.php?c=article&a=changeStatus&articletype=4&id=" + id + "&status=" + status,
+                    url: "/admin.php?c=article&a=changeStatus&articleType=4&id=" + id + "&status=" + status,
                     method: "get"
                 }).success(function(response) {
                     location.reload(true);
@@ -510,7 +510,7 @@
             var message = "确定发布此视频？";
             if (confirm(message)) {
                 $http({
-                    url: "/admin.php?c=article&articletype=4&a=publish&id=" + id,
+                    url: "/admin.php?c=article&articleType=4&a=publish&id=" + id,
                     method: "get"
                 }).success(function(response) {
                     location.reload(true);

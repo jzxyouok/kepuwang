@@ -97,7 +97,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001530s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001746s ]
 
-[ 2016-06-02T19:21:38+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=2&id=52&status=1
+[ 2016-06-02T19:21:38+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=2&id=52&status=1
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000155s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001315s ]

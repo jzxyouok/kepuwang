@@ -21,11 +21,12 @@
                     </span>
                 </p>
                 <!-- <p>发表人：佚名</p> -->
-                <p>上传时间：{{videoDetail.publishTime||YYYY-MM-DD}}</p>
+                <p>上传时间：{{videoDetail.publishTime}}</p>
             </div>
         </div>
         <div class="imgDetail row">
-            <h3>视频简介</h3> {{videoDetail.content}}
+            <h3>视频简介</h3> 
+            <div ng-bind-html="videoDetail.content"></div> 
         </div>
         <div class="imgDownload">
             <h3>视频下载</h3>

@@ -412,7 +412,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001619s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001811s ]
 
-[ 2016-06-03T10:16:48+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=42&status=0
+[ 2016-06-03T10:16:48+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=42&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000840s ]
@@ -460,7 +460,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000817s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000914s ]
 
-[ 2016-06-03T10:16:54+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=41&status=0
+[ 2016-06-03T10:16:54+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=41&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
@@ -527,7 +527,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002233s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002433s ]
 
-[ 2016-06-03T10:18:44+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=43&articletype=4
+[ 2016-06-03T10:18:44+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=43&articleType=4
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
@@ -1145,7 +1145,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002189s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002696s ]
 
-[ 2016-06-03T10:21:09+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=72&status=0
+[ 2016-06-03T10:21:09+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=72&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
@@ -1221,7 +1221,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001895s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002086s ]
 
-[ 2016-06-03T10:21:24+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=73&status=0
+[ 2016-06-03T10:21:24+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=73&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
@@ -1269,7 +1269,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002072s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002279s ]
 
-[ 2016-06-03T10:21:29+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=71&status=0
+[ 2016-06-03T10:21:29+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=71&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
@@ -1317,7 +1317,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002062s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002282s ]
 
-[ 2016-06-03T10:21:34+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=70&status=0
+[ 2016-06-03T10:21:34+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=70&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
@@ -1463,7 +1463,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001151s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001282s ]
 
-[ 2016-06-03T10:39:06+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=69&status=0
+[ 2016-06-03T10:39:06+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=69&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
@@ -1531,7 +1531,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001957s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002151s ]
 
-[ 2016-06-03T10:39:18+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=64&status=0
+[ 2016-06-03T10:39:18+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=64&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
@@ -1545,7 +1545,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002096s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002307s ]
 
-[ 2016-06-03T10:39:20+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=67&status=0
+[ 2016-06-03T10:39:20+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=67&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
@@ -1559,7 +1559,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002725s ]
 INFO: [ app_end ] --END-- [ RunTime:0.003009s ]
 
-[ 2016-06-03T10:39:27+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=65&status=0
+[ 2016-06-03T10:39:27+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=65&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
@@ -1661,7 +1661,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002097s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002303s ]
 
-[ 2016-06-03T10:39:47+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=66&status=0
+[ 2016-06-03T10:39:47+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=66&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
@@ -1709,7 +1709,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001578s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001808s ]
 
-[ 2016-06-03T10:39:55+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=68&status=0
+[ 2016-06-03T10:39:55+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=68&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
@@ -1785,7 +1785,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001560s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001761s ]
 
-[ 2016-06-03T10:40:46+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=72&status=1
+[ 2016-06-03T10:40:46+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=72&status=1
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
@@ -1833,7 +1833,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001837s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002030s ]
 
-[ 2016-06-03T10:40:50+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=73&status=1
+[ 2016-06-03T10:40:50+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=73&status=1
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
@@ -1915,7 +1915,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001554s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001785s ]
 
-[ 2016-06-03T10:41:29+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=72&status=0
+[ 2016-06-03T10:41:29+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=72&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
@@ -1963,7 +1963,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001497s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001695s ]
 
-[ 2016-06-03T10:41:33+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=73&status=0
+[ 2016-06-03T10:41:33+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=73&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
@@ -2011,7 +2011,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003195s ]
 INFO: [ app_end ] --END-- [ RunTime:0.003480s ]
 
-[ 2016-06-03T10:41:51+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=55&status=0
+[ 2016-06-03T10:41:51+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=55&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
@@ -2093,7 +2093,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000593s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000664s ]
 
-[ 2016-06-03T10:42:23+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=55&status=1
+[ 2016-06-03T10:42:23+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=55&status=1
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
@@ -2440,7 +2440,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000760s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000852s ]
 
-[ 2016-06-03T10:43:26+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=87&status=0
+[ 2016-06-03T10:43:26+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=87&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
@@ -2488,7 +2488,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002067s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002344s ]
 
-[ 2016-06-03T10:43:31+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=88&status=0
+[ 2016-06-03T10:43:31+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=88&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
@@ -2536,7 +2536,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000895s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
 
-[ 2016-06-03T10:43:35+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=86&status=0
+[ 2016-06-03T10:43:35+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=86&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
@@ -2584,7 +2584,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000820s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000927s ]
 
-[ 2016-06-03T10:43:39+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=82&status=0
+[ 2016-06-03T10:43:39+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=82&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
@@ -2632,7 +2632,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001977s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002205s ]
 
-[ 2016-06-03T10:43:43+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=85&status=0
+[ 2016-06-03T10:43:43+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=85&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
@@ -2727,7 +2727,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002609s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002964s ]
 
-[ 2016-06-03T10:47:30+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=83&status=0
+[ 2016-06-03T10:47:30+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=83&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001446s ]
@@ -2789,7 +2789,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002066s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002340s ]
 
-[ 2016-06-03T10:47:40+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=88&status=1
+[ 2016-06-03T10:47:40+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=88&status=1
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
@@ -3066,7 +3066,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003008s ]
 INFO: [ app_end ] --END-- [ RunTime:0.003283s ]
 
-[ 2016-06-03T10:53:02+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=89&status=0
+[ 2016-06-03T10:53:02+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=89&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
@@ -3114,7 +3114,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002249s ]
 
-[ 2016-06-03T10:53:23+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=89&status=1
+[ 2016-06-03T10:53:23+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=89&status=1
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
@@ -3310,7 +3310,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003014s ]
 INFO: [ app_end ] --END-- [ RunTime:0.003261s ]
 
-[ 2016-06-03T10:53:37+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=95&status=0
+[ 2016-06-03T10:53:37+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=95&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
@@ -3700,7 +3700,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001685s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001880s ]
 
-[ 2016-06-03T10:55:20+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=93&status=0
+[ 2016-06-03T10:55:20+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=93&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000884s ]
@@ -3714,7 +3714,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
 
-[ 2016-06-03T10:55:21+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=94&status=0
+[ 2016-06-03T10:55:21+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=94&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
@@ -3782,7 +3782,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001900s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002186s ]
 
-[ 2016-06-03T10:55:25+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=112&status=0
+[ 2016-06-03T10:55:25+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=112&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
@@ -3830,7 +3830,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001961s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002240s ]
 
-[ 2016-06-03T10:55:29+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=113&status=0
+[ 2016-06-03T10:55:29+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=113&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
@@ -3878,7 +3878,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002256s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002540s ]
 
-[ 2016-06-03T10:55:32+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=110&status=0
+[ 2016-06-03T10:55:32+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=110&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
@@ -3926,7 +3926,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002697s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002947s ]
 
-[ 2016-06-03T10:55:39+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=106&status=0
+[ 2016-06-03T10:55:39+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=106&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001063s ]
@@ -3974,7 +3974,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001990s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002392s ]
 
-[ 2016-06-03T10:55:43+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articletype=4&id=103&status=0
+[ 2016-06-03T10:55:43+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=103&status=0
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000672s ]
@@ -4068,7 +4068,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002115s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002307s ]
 
-[ 2016-06-03T11:00:51+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=53&articletype=2
+[ 2016-06-03T11:00:51+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=53&articleType=2
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
@@ -4134,7 +4134,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002620s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002862s ]
 
-[ 2016-06-03T11:07:02+08:00 ] 127.0.0.1 /admin.php?c=article&articletype=2&a=publish&id=54
+[ 2016-06-03T11:07:02+08:00 ] 127.0.0.1 /admin.php?c=article&articleType=2&a=publish&id=54
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001090s ]
@@ -4360,7 +4360,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001353s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001521s ]
 
-[ 2016-06-03T11:09:43+08:00 ] 127.0.0.1 /admin.php?c=article&articletype=2&a=publish&id=61
+[ 2016-06-03T11:09:43+08:00 ] 127.0.0.1 /admin.php?c=article&articleType=2&a=publish&id=61
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
@@ -4408,7 +4408,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002197s ]
 
-[ 2016-06-03T11:09:46+08:00 ] 127.0.0.1 /admin.php?c=article&articletype=2&a=publish&id=62
+[ 2016-06-03T11:09:46+08:00 ] 127.0.0.1 /admin.php?c=article&articleType=2&a=publish&id=62
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
@@ -4456,7 +4456,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002193s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002507s ]
 
-[ 2016-06-03T11:09:50+08:00 ] 127.0.0.1 /admin.php?c=article&articletype=2&a=publish&id=59
+[ 2016-06-03T11:09:50+08:00 ] 127.0.0.1 /admin.php?c=article&articleType=2&a=publish&id=59
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
@@ -4504,7 +4504,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002050s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002260s ]
 
-[ 2016-06-03T11:09:53+08:00 ] 127.0.0.1 /admin.php?c=article&articletype=2&a=publish&id=60
+[ 2016-06-03T11:09:53+08:00 ] 127.0.0.1 /admin.php?c=article&articleType=2&a=publish&id=60
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
@@ -4552,7 +4552,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001626s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001828s ]
 
-[ 2016-06-03T11:09:57+08:00 ] 127.0.0.1 /admin.php?c=article&articletype=2&a=publish&id=55
+[ 2016-06-03T11:09:57+08:00 ] 127.0.0.1 /admin.php?c=article&articleType=2&a=publish&id=55
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
@@ -4600,7 +4600,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002170s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002387s ]
 
-[ 2016-06-03T11:10:01+08:00 ] 127.0.0.1 /admin.php?c=article&articletype=2&a=publish&id=56
+[ 2016-06-03T11:10:01+08:00 ] 127.0.0.1 /admin.php?c=article&articleType=2&a=publish&id=56
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
@@ -4648,7 +4648,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001946s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002201s ]
 
-[ 2016-06-03T11:10:06+08:00 ] 127.0.0.1 /admin.php?c=article&articletype=2&a=publish&id=58
+[ 2016-06-03T11:10:06+08:00 ] 127.0.0.1 /admin.php?c=article&articleType=2&a=publish&id=58
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
@@ -4861,7 +4861,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003010s ]
 INFO: [ app_end ] --END-- [ RunTime:0.003205s ]
 
-[ 2016-06-03T13:38:12+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=43&articletype=1
+[ 2016-06-03T13:38:12+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=43&articleType=1
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000773s ]
@@ -4890,7 +4890,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002069s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002265s ]
 
-[ 2016-06-03T13:45:15+08:00 ] 127.0.0.1 /admin.php?c=article&a=editArticle&articletype=1&id=31
+[ 2016-06-03T13:45:15+08:00 ] 127.0.0.1 /admin.php?c=article&a=editArticle&articleType=1&id=31
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
@@ -5008,7 +5008,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002027s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002297s ]
 
-[ 2016-06-03T13:49:06+08:00 ] 127.0.0.1 /admin.php?c=article&a=editArticle&articletype=1&id=17
+[ 2016-06-03T13:49:06+08:00 ] 127.0.0.1 /admin.php?c=article&a=editArticle&articleType=1&id=17
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
@@ -5036,7 +5036,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001493s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001685s ]
 
-[ 2016-06-03T13:49:21+08:00 ] 127.0.0.1 /admin.php?c=article&a=editArticle&articletype=1&id=31
+[ 2016-06-03T13:49:21+08:00 ] 127.0.0.1 /admin.php?c=article&a=editArticle&articleType=1&id=31
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
@@ -5067,7 +5067,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001987s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002172s ]
 
-[ 2016-06-03T13:51:18+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=44&articletype=1
+[ 2016-06-03T13:51:18+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=44&articleType=1
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
@@ -5096,7 +5096,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001964s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002159s ]
 
-[ 2016-06-03T13:54:05+08:00 ] 127.0.0.1 /admin.php?c=article&a=editArticle&articletype=1&id=18
+[ 2016-06-03T13:54:05+08:00 ] 127.0.0.1 /admin.php?c=article&a=editArticle&articleType=1&id=18
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
@@ -5109,7 +5109,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002327s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002529s ]
 
-[ 2016-06-03T13:54:10+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=18&articletype=1
+[ 2016-06-03T13:54:10+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=18&articleType=1
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000782s ]

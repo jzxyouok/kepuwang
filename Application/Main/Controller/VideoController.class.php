@@ -34,6 +34,7 @@ class VideoController extends Controller
 
         $db        = M("video");
         $picDetail = $db->where("id = " . $id)->getField("id,mainType,thumbnail,title,abstract,content,type,videoCode", true);
+        $picDetail[$id]["content"] = htmlspecialchars_decode(html_entity_decode($picDetail[$id]["content"]));
         echo json_encode($picDetail[$id]);
 
     }

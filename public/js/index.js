@@ -161,7 +161,7 @@ app.directive('embedSrc', function () {
         }
     })
 
-    app.controller("videoDetailController", function($scope, $http, $route) {
+    app.controller("videoDetailController", function($scope, $http, $route,$sce) {
         var id = $route.current.params.id;
         if (id == "")
             window.location.href = "#/video";
@@ -170,6 +170,7 @@ app.directive('embedSrc', function () {
             method: "get"
         }).success(function(response) {
             $scope.videoDetail = response;
+            $scope.videoDetail.content = $sce.trustAsHtml($scope.videoDetail.content);
         });
     });
     app.controller("indexController", function($scope, $http) {

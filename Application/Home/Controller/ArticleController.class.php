@@ -74,8 +74,8 @@ class ArticleController extends Controller
     public function newContent()
     {
         $articleId   = I("get.id");
-        $articletype = I("get.articletype");
-        switch ($articletype) {
+        $articleType = I("get.articleType");
+        switch ($articleType) {
             case '1':
                 $db = M("article");
                 break;
@@ -87,7 +87,7 @@ class ArticleController extends Controller
                 break;
 
             default:
-                # code...
+                 $db = M("article");
                 break;
         }
 
@@ -147,7 +147,7 @@ class ArticleController extends Controller
     public function changeStatus()
     {
         $id          = I("get.id");
-        $articleType = I("get.articletype");
+        $articleType = I("get.articleType");
         $update      = array(
             status => I("get.status") == "0" ? "1" : "0",
         );
@@ -172,7 +172,7 @@ class ArticleController extends Controller
     public function publish()
     {
         $id      = I("get.id");
-        $article = I("get.articletype");
+        $article = I("get.articleType");
         switch ($article) {
             case '1':
                 $db = M("article");
