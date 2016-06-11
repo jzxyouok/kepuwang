@@ -126,22 +126,36 @@ app.directive('embedSrc', function () {
         });
 
     });
-    app.controller("imageDetailController", function($scope, $http, $route) {
+    app.controller("imageDetailController", function($scope, $http, $route,$sce) {
         var id = $route.current.params.id;
         if (id == "")
             window.location.href = "#/image";
         $http({
-            url: "/index.php?c=pic&a=like&id=" + id,
+            url: "/index.php?c=pic&a=picDetail&id=" + id,
             method: "get"
         }).success(function(response) {
             $scope.imgDetail = response;
+           $scope.imgDetail.maincontent =   $sce.trustAsHtml($scope.imgDetail.maincontent);
         });
         $scope.like = function() {
+            var liked = localStorage.getItem("pid" + id) === "1";
+            
+            if(liked){
+                 console.log(liked + "`````false")
+                localStorage.setItem("pid" + id,"0");
+                $scope.imgDetail.likes--;
+            }else{
+                console.log(liked + "`````true")
+                localStorage.setItem("pid" + id,"1");
+                $scope.imgDetail.likes++;
+            }
+              
             $http({
-                url: "/index.php?c=pic&a=articleDetail&id=" + id,
+                url: "/index.php?c=pic&a=like&id=" + id + "&liked=" + liked,
                 method: "get"
             }).success(function(response) {
-                $scope.articleDetail.detail.likes++;
+                 
+               
             })
         }
     })

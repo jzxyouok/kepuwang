@@ -9,14 +9,17 @@ class PicController extends Controller
     public function newPic()
     {
         $newPic = array(
+ 
             title       => I("post.title"),
             thumbnail   => I("post.thumbnail_url"),
+            img_src => I("post.img_src"),
             type        => I("post.type"),
             "abstract"  => I("post.abstract"),
             mainType    => I("post.mainType"),
+            mainContent    => I("post.mainContent"),
             publishTime => time(),
         );
-
+// 此处缺少图片压缩
         $db = M("pic");
         $id = I("post.id");
 
@@ -57,8 +60,10 @@ class PicController extends Controller
         $id = I("get.id");
 
         $db        = M("pic");
-        $picDetail = $db->where("id = " . $id)->getField("id,mainType,thumbnail,title,abstract,type", true);
-        echo json_encode($picDetail[$id]);
+        $picDetail = $db->where("id = " . $id)->find();
+          $picDetail["maincontent"] = htmlspecialchars_decode(html_entity_decode($picDetail["maincontent"]));
+      
+        echo json_encode($picDetail);
 
     }
     public function uploadPic()

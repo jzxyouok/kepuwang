@@ -1,90 +1,90 @@
- 
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js">
 </script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
- <div class="templatemo-content-wrapper">
+<div class="templatemo-content-wrapper">
     <div class="templatemo-content">
-<div class="row">
-<h1>输入图片基本信息</h1>
-    <div class="col-md-2 form-group">
-        <label for="exampleInputEmail2">图片类型</label>
-        <select name="status" class="form-control" ng-model="newPic.maintype"  >
-            <option value="1"  >天文·物理</option>
-            <option value="2">地理·地质</option>
-            <option value="3">生命·生态</option>
-            <option value="4">其他</option>
-            <!-- 1天文文理2地理地质3人文生态4其他 -->
-        </select>
-    </div>
-    <div class="form-group col-md-6">
-        <label for="exampleInputPassword1">图片标题</label>
-        <input type="text" name="title" ng-model="newPic.title" class="form-control" id="exampleInputEmail1" placeholder="输入图片标题" required>
-    </div>
-    <div class="col-md-2">
-    </div>
-
-</div>
+        <div class="row">
+            <h1>输入图片基本信息</h1>
+            <div class="col-md-2 form-group">
+                <label for="exampleInputEmail2">图片类型</label>
+                <select name="status" class="form-control" ng-model="newPic.maintype">
+                    <option value="1">天文·物理</option>
+                    <option value="2">地理·地质</option>
+                    <option value="3">生命·生态</option>
+                    <option value="4">其他</option>
+                    <!-- 1天文文理2地理地质3人文生态4其他 -->
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="exampleInputPassword1">图片标题</label>
+                <input type="text" name="title" ng-model="newPic.title" class="form-control" id="exampleInputEmail1" placeholder="输入图片标题" required>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <label for="exampleInputEmail2">图片简介</label>
+                <textarea class="form-control" rows="3" ng-model="newPic.abstract" placeholder="请输入图片简介"></textarea>
+            </div>
+        </div>
+        <script type="text/plain" id="j_ueditorupload"></script>
+        <script type="text/plain" id="j_ueditorupload" style="height:5px;display:none;"></script>
+        <div class="row" style="padding-top:30px;">
+            <div class="col-md-2">
+                <button type="button" class="btn btn-md btn-primary" ng-click="methods.upImage(1)">选择图片</button>
+            </div>
+            <div class="col-md-2">
+                <img ng-src="{{newPic.img_src}}" width="120" height="90" alt="原图">
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-md btn-primary" ng-click="methods.upImage(2)">上传缩略图</button>
+            </div>
+            <div class="col-md-2">
+                <img ng-src="{{newPic.thumbnail}}" width="120" height="90" alt="缩略图">
+            </div>
+        </div>
+         <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>编辑图片基本信息</h3>  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <script type="text/plain" id="editor2"></script>
+                <script>
+                var ue = UE.getEditor('editor2');
+                </script>
+            </div>
+        </div>
  
-<div class="row">
-<div class="col-md-8">
-  <label for="exampleInputEmail2">图片简介</label>
-    <textarea class="form-control" rows="3" ng-model="newPic.abstract" placeholder="请输入图片简介"></textarea>
+    <!-- <div class="col-md-2">
+    <button type="button" class="btn btn-md btn-primary" ng-click="methods.upFiles()">添加文章附件</button>
 </div>
-</div>
-    <script type="text/plain" id="j_ueditorupload" style="height:5px;display:none;" ></script>
- 
-  <div class="row" style="padding-top:30px;">
-  <div class="col-md-4">
-      <img ng-src="{{newPic.thumbnail}}" width="100" height="100" alt="">
-  </div>
-    <div class="col-md-2">
-        <button type="button" class="btn btn-md btn-primary" ng-click="methods.upImage()">选择图片</button>
-    </div>
-    <div class="col-md-2">
-          <button type="button" class="btn btn-md btn-primary" ng-click="methods.upFiles()">添加文章附件</button>  
-    </div>
-</div>
-
-   
+ -->
     <br>
-    <!-- <button type="button" onClick="upFiles()">调用上传文件模块</button> -->
-<div class="row pad">
-    <div class="row" style="padding:0 30px 30px 30px;">
-        <div class="radio floatLeft">
-            <label>
-                <input type="radio" name="type" id="type" ng-model="newPic.type"  value="3"  selected>  普通图片
-            </label>
+    <div class="row pad">
+        <div class="row" style="padding:0 30px 30px 30px;">
+            <div class="radio floatLeft">
+                <label>
+                    <input type="radio" name="type" id="type" ng-model="newPic.type" value="3" selected> 普通图片
+                </label>
+            </div>
+            <div class="radio floatLeft">
+                <label>
+                    <input type="radio" name="type" id="type" ng-model="newPic.type" value="2"> 首页
+                </label>
+            </div>
         </div>
-    <!--     <div class="radio floatLeft">
-            <label>
-                <input type="radio" name="type" id="type" ng-model="newPic.type"  value="1"> 首页轮播
-            </label>
+        <div class="row">
+            <div class="col-md-4 ">
+               <button class="btn btn-primary" ng-click="methods.save(0)" ng-show="showSavebuttom">
+                   保存
+               </button> <button class="btn btn-success marginRight" ng-click="methods.save(1);">编辑正文<span class="glyphicon glyphicon-arrow-right"></span></button>
+            </div>
+            <!-- <button class="btn btn-default " ng-click="newPic.publish()">发布</button> -->
         </div>
-        <div class="radio floatLeft">
-            <label>
-                <input type="radio" name="type" id="type"  ng-model="newPic.type" value="4"> 首页推荐栏目
-            </label>
-        </div> -->
-          <div class="radio floatLeft">
-            <label>
-                <input type="radio" name="type" id="type"  ng-model="newPic.type" value="2"> 首页
-            </label>
-        </div>
-    </div>
-    <div class="row">
-    <div class="col-md-4 ">
-
-         
-         <button class="btn btn-success marginRight" ng-click="methods.save();">编辑正文<span class="glyphicon glyphicon-arrow-right"></span></button>
-    </div>
-       
-        <!-- <button class="btn btn-default " ng-click="newPic.publish()">发布</button> -->
     </div>
 </div>
- 
- 
- 
- 
-
-

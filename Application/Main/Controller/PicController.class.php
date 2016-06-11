@@ -35,14 +35,22 @@ class PicController extends Controller
         $id = I("get.id");
 
         $db        = M("pic");
-        $picDetail = $db->where("id = " . $id)->getField("id,mainType,thumbnail,title,abstract,content,type,like", true);
+        $picDetail = $db->where("id = " . $id)->getField("id,title,content,type,likes,img_src,mainContent", true);
+        $picDetail[$id]["maincontent"] = htmlspecialchars_decode(html_entity_decode($picDetail[$id]["maincontent"]));
+         $picDetail[$id]["content"] = htmlspecialchars_decode(html_entity_decode($picDetail[$id]["content"]));
         echo json_encode($picDetail[$id]);
 
     }
     public function like(){
         $id = I("get.id");
+        $liked = I("get.liked");
         $db = M("pic");
-        $db->where("id=".$id)->update("like")
+        if($liked == "true"){
+              $db->where('id='.$id)->setDec('likes');
+          }else{
+            $db->where('id='.$id)->setInc('likes');
+          }
+      
 
     }
 
