@@ -38,6 +38,7 @@ h1 { font-size: 24px; }
     margin-left: 235px;
     margin-top: 0px;
     min-height: 600px;
+    min-width:800px;
     padding: 25px 20px 50px 20px;
     background-color: white;
     overflow-x: hidden;

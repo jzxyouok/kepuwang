@@ -25,9 +25,7 @@ body {
 }
 
  .articleDetail p {
-    font-size: 1.4em;
-    padding: 15px 0;
-    text-indent: 2em;  
+  
     color: #050505 !important;
 }
 .articleDetail-left * {

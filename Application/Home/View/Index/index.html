@@ -103,12 +103,12 @@
                         <li><a href="#">Facilisi</a></li>
                     </ul>
                 </li>
-               <!--  <li>
-                    <a href="data-visualization.html">
+                <li class="sub">
+                    <a href="#/about">
                         <i class="fa fa-cubes"></i>
-                        <span class="badge pull-right">9</span> 文章管理
+                        使用说明
                     </a>
-                </li> -->
+                </li>
                 <!-- <li><a href="#/newArticle"><i class="fa fa-map-marker"></i><span class="badge pull-right">42</span>发布</a></li>
                 <li><a href="tables.html"><i class="fa fa-users"></i><span class="badge pull-right">NEW</span>Manage Users</a></li>
                 <li><a href="preferences.html"><i class="fa fa-cog"></i>Preferences</a></li>

@@ -51,16 +51,25 @@ class ArticleController extends Controller
     {
         $page = I("get.page") || 1;
 
-        $condition = array(
-            // type   => I("get.type"),
+        if(I("get.status") != "9"){
+             $condition = array(
             status => I("get.status"),
         );
-        if (I("get.type") != "0") {
+        }
+       
+
+        if (I("get.name") != "") {
+            $condition["title"] = array("like","%".I("get.name")."%");
+        }
+
+         if (I("get.type") != "0") {
             $condition["type"] = I("get.type");
         }
+
+
         $result["pageNum"]    = M("article")->where($condition)->count();
         $result["allArticle"] = M("article")->where($condition)->order("publishTime desc")->limit(($page - 1) * 10, $page * 10)->select();
-
+ // echo M("article")->getLastSql();
         echo json_encode($result);
     }
     public function newContent()
