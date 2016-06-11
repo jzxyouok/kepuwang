@@ -61,7 +61,6 @@ class ArticleController extends Controller
         if (I("get.name") != "") {
             $condition["title"] = array("like","%".I("get.name")."%");
         }
-
          if (I("get.type") != "0") {
             $condition["type"] = I("get.type");
         }

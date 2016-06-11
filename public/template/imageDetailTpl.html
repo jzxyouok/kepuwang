@@ -16,7 +16,8 @@
     </div>
     <div class="imgDetail">
         <h4 class="main-title">图片详情</h4>
-         {{imgDetail.content}}
+         <div  ng-bind-html="imgDetail.content"> 
+         </div> 
     </div>
     <div class="imgDownload">
         <h4 class="main-title">图片下载</h4>

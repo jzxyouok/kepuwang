@@ -3329,3 +3329,270 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000929s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001067s ]
 
+[ 2016-06-11T18:45:01+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+
+[ 2016-06-11T18:45:01+08:00 ] 127.0.0.1 /admin.php?c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032522s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032631s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000590s ]
+
+[ 2016-06-11T18:45:01+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000994s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+
+[ 2016-06-11T18:45:01+08:00 ] 127.0.0.1 /admin.php?c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005282s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005364s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000541s ]
+
+[ 2016-06-11T18:45:08+08:00 ] 127.0.0.1 /admin.php?c=login&a=auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0668s ]
+SQL: SELECT * FROM `admin` WHERE ( username='admin' ) LIMIT 1   [ RunTime:0.0625s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075444s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000571s ]
+
+[ 2016-06-11T18:45:09+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040951s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041031s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000788s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000894s ]
+
+[ 2016-06-11T18:45:13+08:00 ] 127.0.0.1 /admin.php?c=article&a=allArticle&type=0&status=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0754s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0736s ]
+SQL: SELECT * FROM `article` WHERE `status` = 2 ORDER BY publishTime desc LIMIT 0,10   [ RunTime:0.1450s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000848s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000955s ]
+
+[ 2016-06-11T18:45:16+08:00 ] 127.0.0.1 /admin.php?c=article&a=allArticle&type=3&status=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0655s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `status` = 1 AND `type` = 3 LIMIT 1   [ RunTime:0.0641s ]
+SQL: SELECT * FROM `article` WHERE `status` = 1 AND `type` = 3 ORDER BY publishTime desc LIMIT 0,10   [ RunTime:0.1356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000830s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2016-06-11T18:48:29+08:00 ] 127.0.0.1 /admin.php?c=article&a=editArticle&articletype=1&id=55
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000958s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001166s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0949s ]
+SQL: SELECT `id`,`mainType`,`thumbnail`,`title`,`abstract`,`type` FROM `article` WHERE ( id = 55 )  [ RunTime:0.0943s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2016-06-11T18:48:49+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=55&articletype=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000997s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000923s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0853s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 96 行.
+SQL: SELECT `id`,`title`,`content` FROM `article` WHERE `id` = 55  [ RunTime:0.1725s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000691s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000779s ]
+
+[ 2016-06-11T19:33:44+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055746s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001005s ]
+
+[ 2016-06-11T19:33:53+08:00 ] 127.0.0.1 /admin.php?c=pic&a=allPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000753s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.1769s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pic` LIMIT 1   [ RunTime:0.1026s ]
+SQL: SELECT * FROM `pic` ORDER BY publishTime DESC LIMIT 0,10   [ RunTime:0.1955s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001261s ]
+
+[ 2016-06-11T19:38:24+08:00 ] 127.0.0.1 /admin.php?c=pic&a=newPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001168s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant img_src - assumed 'img_src' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant mainContent - assumed 'mainContent' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0698s ]
+SQL: INSERT INTO `pic` (`title`,`thumbnail`,`img_src`,`type`,`abstract`,`mainType`,`mainContent`,`publishTime`) VALUES ('图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题','/Uploads/image/20160611/1465645101121048.jpg','/Uploads/image/20160611/1465645090469864.jpg','3','图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题','3','&lt;p&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/p&gt;','1465645103') [ RunTime:0.0967s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000844s ]
+
+[ 2016-06-11T19:38:25+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=72&articletype=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001454s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0876s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 95 行.
+SQL: SELECT `id`,`title`,`content` FROM `pic` WHERE `id` = 72  [ RunTime:0.0630s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001232s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001383s ]
+
+[ 2016-06-11T19:39:26+08:00 ] 127.0.0.1 /admin.php?c=article&a=saveContent&articletype=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 107 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.1116s ]
+SQL: UPDATE `pic` SET `content`='&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;' WHERE `id` = 72 [ RunTime:0.1767s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000845s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000951s ]
+
+[ 2016-06-11T19:39:37+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=72&articletype=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0966s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 95 行.
+SQL: SELECT `id`,`title`,`content` FROM `pic` WHERE `id` = 72  [ RunTime:0.1997s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001151s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001323s ]
+
+[ 2016-06-11T19:41:50+08:00 ] 127.0.0.1 /admin.php?c=article&a=saveContent&articletype=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 107 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0962s ]
+SQL: UPDATE `pic` SET `content`='&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &quot; helvetica=&quot;&quot; font-weight:=&quot;&quot; line-height:=&quot;&quot; color:=&quot;&quot; font-size:=&quot;&quot; white-space:=&quot;&quot; background-color:=&quot;&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &quot; helvetica=&quot;&quot; font-weight:=&quot;&quot; line-height:=&quot;&quot; color:=&quot;&quot; font-size:=&quot;&quot; white-space:=&quot;&quot; background-color:=&quot;&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &quot; helvetica=&quot;&quot; font-weight:=&quot;&quot; line-height:=&quot;&quot; color:=&quot;&quot; font-size:=&quot;&quot; white-space:=&quot;&quot; background-color:=&quot;&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &quot; helvetica=&quot;&quot; font-weight:=&quot;&quot; line-height:=&quot;&quot; color:=&quot;&quot; font-size:=&quot;&quot; white-space:=&quot;&quot; background-color:=&quot;&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &quot; helvetica=&quot;&quot; font-weight:=&quot;&quot; line-height:=&quot;&quot; color:=&quot;&quot; font-size:=&quot;&quot; white-space:=&quot;&quot; background-color:=&quot;&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &quot; helvetica=&quot;&quot; font-weight:=&quot;&quot; line-height:=&quot;&quot; color:=&quot;&quot; font-size:=&quot;&quot; white-space:=&quot;&quot; background-color:=&quot;&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &quot; helvetica=&quot;&quot; font-weight:=&quot;&quot; line-height:=&quot;&quot; color:=&quot;&quot; font-size:=&quot;&quot; white-space:=&quot;&quot; background-color:=&quot;&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &quot; helvetica=&quot;&quot; font-weight:=&quot;&quot; line-height:=&quot;&quot; color:=&quot;&quot; font-size:=&quot;&quot; white-space:=&quot;&quot; background-color:=&quot;&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &quot; helvetica=&quot;&quot; font-weight:=&quot;&quot; line-height:=&quot;&quot; color:=&quot;&quot; font-size:=&quot;&quot; white-space:=&quot;&quot; background-color:=&quot;&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &quot; helvetica=&quot;&quot; font-weight:=&quot;&quot; line-height:=&quot;&quot; color:=&quot;&quot; font-size:=&quot;&quot; white-space:=&quot;&quot; background-color:=&quot;&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &quot; helvetica=&quot;&quot; font-weight:=&quot;&quot; line-height:=&quot;&quot; color:=&quot;&quot; font-size:=&quot;&quot; white-space:=&quot;&quot; background-color:=&quot;&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;h4 style=&quot;margin: 10px 0px; padding: 0px; box-sizing: border-box; font-family: HelveticaNeue, &quot; helvetica=&quot;&quot; font-weight:=&quot;&quot; line-height:=&quot;&quot; color:=&quot;&quot; font-size:=&quot;&quot; white-space:=&quot;&quot; background-color:=&quot;&quot;&gt;&lt;span class=&quot;ng-binding&quot; style=&quot;margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;span style=&quot;font-weight: 700; line-height: 1.1;&quot;&gt;图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题图片标题&lt;/span&gt;&lt;/h4&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;' WHERE `id` = 72 [ RunTime:0.2150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000686s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+

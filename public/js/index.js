@@ -135,6 +135,7 @@ app.directive('embedSrc', function () {
             method: "get"
         }).success(function(response) {
             $scope.imgDetail = response;
+           $scope.imgDetail.content =   $sce.trustAsHtml($scope.imgDetail.content);
            $scope.imgDetail.maincontent =   $sce.trustAsHtml($scope.imgDetail.maincontent);
         });
         $scope.like = function() {

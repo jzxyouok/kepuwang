@@ -292,7 +292,7 @@
                 }).success(function(response) {
 
                     if (isRedirect === 1)
-                        location.href = "#/newContent?articletype=2&id=" + response;
+                        location.href = "#/newContent?articleType=2&id=" + response;
                     else {
                         alert("保存成功");
                     }
@@ -418,7 +418,7 @@
                 }).success(function(response) {
                     // $scope.allPic = response;
                     // console.log(response);
-                    location.href = "#/newContent?articletype=1&id=" + response;
+                    location.href = "#/newContent?articleType=1&id=" + response;
                 });
 
             },
