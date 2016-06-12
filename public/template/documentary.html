@@ -1,4 +1,14 @@
 <link rel="stylesheet" href="/public/stylesheet/documentary.css">
+<style>
+* {
+    font: 12px / 1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    color: #FFF;
+}
+.docu{
+    width:80%!important;
+    padding:20px;
+}
+</style>
 <div id="documentary">
     <div id="ad-carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -33,135 +43,19 @@
             </div>
         </div>
     </div>
-    <div class="video">
-        <div class="left">
-            <img src="/public/images/decumentary.jpg" alt="">
-            <h3>云南大学天文台采风:长江 地理与人文 </h3>
-            <p>更新时间:2016.5.22</p>
-            <p>作者:云南大学</p>
+    <div class="video docu" ng-repeat="doc in documentarys">
+        <div class="left row">
+            <img ng-src="{{doc.thumbnail}}" alt="" width="400" height="300">
+            <h3>{{doc.title}} </h3>
+            <p>更新时间:{{doc.publishtime}}</p>
             <h4>内容简介</h4>
-            <p>长江发源于“世界屋脊”——青藏高原的唐古拉山脉各拉丹冬峰西南侧。</p>
-            <p>干流流经青海、西藏、四川、云南、重庆、湖北、湖南、江西、安徽、江苏、上海11个省、自治区、直辖市，于崇明岛以东注入东海，全长约6300㎞，比黄河（5464㎞）长800余公里。</p>
-            <p>长江黄河乃是中华文明的发源地。</p>
+            <p> {{doc.abstract}}</p>
         </div>
-        <!--         <ul class="list-group">
-             <li class=""><a href="">1&nbsp&nbsp云南野兽来了</a></li>
-             <li class=""><a href="">2&nbsp&nbsp呈贡生态谜团</a></li>
-             <li class=""><a href="">3&nbsp&nbsp昆虫与昆明？</a></li>
-             <li class=""><a href="">4&nbsp&nbsp滇池的景象好</a></li>
-             <li class=""><a href="">5&nbsp&nbsp皮革厂倒闭了</a></li>
-             <li class=""><a href="">展开显示更多&nbsp&nbsp&nbsp&nbsp</a></li>           
-        </ul> -->
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item active">源远流长  <span class="badge">1</span></a>
-                <a href="#" class="list-group-item">巨川之源<span class="badge">2</span></a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item ">四川盆地<span class="badge">3</span></a>
-                <a href="#" class="list-group-item">岷江秀色 <span class="badge">4</span></a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item ">峨眉凌云<span class="badge">5</span></a>
-                <a href="#" class="list-group-item">宜宾到重庆 <span class="badge">6</span></a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item ">川江两岸 <span class="badge">7</span></a>
-                <a href="#" class="list-group-item showMore">显示更多集数>> </a>
-            </div>
-        </div>
-    </div>
-    <div class="video">
-        <div class="left">
-            <img src="/public/images/decumentary.jpg" alt="">
-            <h3>云南大学天文台采风:长江 地理与人文 </h3>
-            <p>更新时间:2016.5.22</p>
-            <p>作者:云南大学</p>
-            <h4>内容简介</h4>
-            <p>长江发源于“世界屋脊”——青藏高原的唐古拉山脉各拉丹冬峰西南侧。</p>
-            <p>干流流经青海、西藏、四川、云南、重庆、湖北、湖南、江西、安徽、江苏、上海11个省、自治区、直辖市，于崇明岛以东注入东海，全长约6300㎞，比黄河（5464㎞）长800余公里。</p>
-            <p>长江黄河乃是中华文明的发源地。</p>
-        </div>
-        <!--         <ul class="list-group">
-             <li class=""><a href="">1&nbsp&nbsp云南野兽来了</a></li>
-             <li class=""><a href="">2&nbsp&nbsp呈贡生态谜团</a></li>
-             <li class=""><a href="">3&nbsp&nbsp昆虫与昆明？</a></li>
-             <li class=""><a href="">4&nbsp&nbsp滇池的景象好</a></li>
-             <li class=""><a href="">5&nbsp&nbsp皮革厂倒闭了</a></li>
-             <li class=""><a href="">展开显示更多&nbsp&nbsp&nbsp&nbsp</a></li>           
-        </ul> -->
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item active">源远流长  <span class="badge">1</span></a>
-                <a href="#" class="list-group-item">巨川之源<span class="badge">2</span></a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item ">四川盆地<span class="badge">3</span></a>
-                <a href="#" class="list-group-item">岷江秀色 <span class="badge">4</span></a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item ">峨眉凌云<span class="badge">5</span></a>
-                <a href="#" class="list-group-item">宜宾到重庆 <span class="badge">6</span></a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item ">川江两岸 <span class="badge">7</span></a>
-                <a href="#" class="list-group-item showMore">显示更多集数>> </a>
-            </div>
-        </div>
-    </div>
-    <div class="video" id="videoLast">
-        <div class="left">
-            <img src="/public/images/decumentary.jpg" alt="">
-            <h3>云南大学天文台采风:长江 地理与人文 </h3>
-            <p>更新时间:2016.5.22</p>
-            <p>作者:云南大学</p>
-            <h4>内容简介</h4>
-            <p>长江发源于“世界屋脊”——青藏高原的唐古拉山脉各拉丹冬峰西南侧。</p>
-            <p>干流流经青海、西藏、四川、云南、重庆、湖北、湖南、江西、安徽、江苏、上海11个省、自治区、直辖市，于崇明岛以东注入东海，全长约6300㎞，比黄河（5464㎞）长800余公里。</p>
-            <p>长江黄河乃是中华文明的发源地。</p>
-        </div>
-        <!--         <ul class="list-group">
-             <li class=""><a href="">1&nbsp&nbsp云南野兽来了</a></li>
-             <li class=""><a href="">2&nbsp&nbsp呈贡生态谜团</a></li>
-             <li class=""><a href="">3&nbsp&nbsp昆虫与昆明？</a></li>
-             <li class=""><a href="">4&nbsp&nbsp滇池的景象好</a></li>
-             <li class=""><a href="">5&nbsp&nbsp皮革厂倒闭了</a></li>
-             <li class=""><a href="">展开显示更多&nbsp&nbsp&nbsp&nbsp</a></li>           
-        </ul> -->
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item active">源远流长  <span class="badge">1</span></a>
-                <a href="#" class="list-group-item">巨川之源<span class="badge">2</span></a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item ">四川盆地<span class="badge">3</span></a>
-                <a href="#" class="list-group-item">岷江秀色 <span class="badge">4</span></a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item ">峨眉凌云<span class="badge">5</span></a>
-                <a href="#" class="list-group-item">宜宾到重庆 <span class="badge">6</span></a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item ">川江两岸 <span class="badge">7</span></a>
-                <a href="#" class="list-group-item showMore">显示更多集数>> </a>
+        <div class="row">
+            <div class="col-md-3" ng-repeat="set in doc.sets track by $index">
+                <div class="list-group">
+                    <a href="/documentary/{{doc.id}}/{{$index}}" class="list-group-item">{{set.title}}<span class="badge">{{$index+1}}</span></a>
+                </div>
             </div>
         </div>
     </div>

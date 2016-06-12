@@ -1,0 +1,87 @@
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js">
+</script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js">
+</script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
+<style>
+.del {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.mainInfo-docu {
+    width: 600px;
+}
+</style>
+<div class="templatemo-content-wrapper">
+    <div class="templatemo-content">
+        <div class="row">
+            <h1>输入记录片基本信息</h1>
+            <div class="form-group col-md-6">
+                <label for="exampleInputPassword1">记录片标题</label>
+                <input type="text" name="title" ng-model="documentary.title" class="form-control" id="exampleInputEmail1" placeholder="输入标题">
+            </div>
+        </div>
+        <div class="row">
+            <label for="exampleInputEmail2">纪录片通用代码</label>
+            <div class="col-md-12" style="padding:10px 30px 0 30px" ng-repeat="set in documentary.sets">
+                <div class="form-inline">
+                    <h5 for="exampleInputName2">第{{$index+1}}集</h5>
+                    <div class="form-group">
+                        <label for="exampleInputName2">名称</label>
+                        <input class="form-control" ng-model="set.title" placeholder="输入本集标题">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail2">链接</label>
+                        <input class="form-control" ng-model="set.code" placeholder="请输入本集视频地址" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail2" class="del" ng-click="delSet($index)">删除</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn btn-success  " style="margin-left:600px" ng-click="addSet()">新增集数</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <label for="exampleInputEmail2">纪录片简介</label>
+                <textarea class="form-control" rows="3" ng-model="documentary.abstract" placeholder="请输入纪录片简介"></textarea>
+            </div>
+        </div>
+        <script type="text/plain" id="j_ueditorupload" style="height:5px;display:none;"></script>
+        <div class="row" style="padding-top:30px;">
+            <div class="col-md-2">
+                <button type="button" class="btn btn-md btn-primary" ng-click="documentary.upImage()">选择纪录片缩略图</button>
+            </div>
+            <div class="col-md-4">
+                <img ng-src="{{documentary.thumbnail}}" alt="" width="120" height="90">
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>编辑纪录片基本信息</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mainInfo-docu">
+              <script type="text/plain" id="j_ueditorupload"></script>
+                <script type="text/plain" id="editor2"></script>
+                <script>
+                var ue = UE.getEditor('editor2');
+                </script>
+            </div>
+        </div>
+        <br>
+        <div class="row pad">
+            <div class="row">
+                <div class="col-md-4 ">
+
+                    <button class="btn btn-info marginRight" ng-click="save(1)" ng-show="showSaveButton">保存</button>
+                    <button class="btn btn-success marginRight" ng-click="save(0)">编辑纪录片详细信息<span class="glyphicon glyphicon-arrow-right"></span></button>
+                </div>
+            </div>
+        </div>

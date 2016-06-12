@@ -67,11 +67,21 @@
     <ul>
 
 
-        <li class="active"><a href="#/video">全部</a></li>
-        <li><a href="#/article?mainType=1" class="color1">天文·物理</a></li>
-        <li><a href="#/article?mainType=2" class="color2">地理·地质</a></li>
-        <li><a href="#/article?mainType=3" class="color3">生命·生态</a></li>
+        <li id="typeNode1" onclick="active(this,'typeNode1')"><a href="#/article">全部</a></li>
+        <li id="typeNode2" onclick="active(this,'typeNode2')"><a href="#/article?mainType=1" class="color1">天文·物理</a></li>
+        <li id="typeNode3" onclick="active(this,'typeNode3')"><a href="#/article?mainType=2" class="color2">地理·地质</a></li>
+        <li id="typeNode4" onclick="active(this,'typeNode4')"><a href="#/article?mainType=3" class="color3">生命·生态</a></li>
     </ul>
+    <script>
+        var current = "typeNode1";
+        document.getElementById(current).style.backgroundColor = "#242424";
+        function active(obj,node){
+             document.getElementById(current).style.backgroundColor = "#1b1b1b";
+             obj.style.backgroundColor ="#242424";
+             current = node;
+        
+        }
+    </script>
 </div>
     <div class="tcdPageCode pull-right row">
     </div>

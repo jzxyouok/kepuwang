@@ -1,0 +1,83 @@
+<style>
+    .link{
+        color:#337ab7;
+        cursor: pointer;
+    }
+    .link:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+</style>
+<div class="templatemo-content-wrapper">
+    <div class="templatemo-content">
+        <div class="container-fluid marginTop">
+            <div class="row-fluid">
+                <div class="  whiteBg" id="content">
+                    <ol class="breadcrumb">
+                        <li>管理平台</li>
+                        <li>记录片管理</li>
+                        
+                    </ol>
+               <div class="row search" style="margin-bottom:20px">
+                        <form class="form-inline" ng-submit="searchArticle()">
+                            <div class="form-group">
+                                <label for="exampleInputEmail2">纪录片名称</label>
+                                <input type="text" class="form-control" name="name" ng-model="searchName" id="exampleInputEmail2" placeholder="使用名称搜索">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail2">纪录片状态</label>
+                                <select name="status" id="" class="form-control" ng-model="searchStatus">
+                                    <option value="9">不限</option>
+                                    <option value="0">禁用</option>
+                                    <option value="1">启用</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-success"  >搜索</button>
+                        </form>
+               </div>  
+                    <div class="row">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>编号</th>
+                                <th>标题</th>
+                                <!-- <th>摘要</th> -->
+                                <th>发布时间</th>
+                                <th>状态</th>
+                                <!-- <th>类别</th> -->
+                                <!-- <th>位置</th> -->
+                                <th>操作</th>
+                            </tr>
+                            <tr ng-repeat="article in allArticle">
+                                <td>{{article.id}}</td>
+                                <td>{{article.title}}</td>
+                                <!-- <td>{{article.content}}</td> -->
+                                <td>{{article.publishtime}}</td>
+                                <td>  
+                                <span ng-switch="{{article.status}}">
+                                    <span ng-switch-when="1">可用</span>
+                                    <span ng-switch-when="0">已撤销</span>
+                                     <span ng-switch-when="2">草稿</span>
+                                    </span>
+                               
+                                </td>
+                               
+                             
+                                <td>
+                                        <span ng-switch="{{article.status}}"   class="link">
+                                    <span ng-switch-when="1" ng-click="changeStatus(article.id,article.status)">撤销</span>
+                                    <span ng-switch-when="0" ng-click="changeStatus(article.id,article.status)">恢复</span>
+                                    <span ng-switch-when="2" ng-click="publish(article.id,article.status)">发布</span>
+                                    </span>
+
+                                    <a href="#/newDocumentary?id={{article.id}}"> 编辑 </a>
+                                    <a href="/index.php/#documentary/{{article.id}}/1" target="_blank">预览</a>
+                                    <!-- <a href="">置于首页</a> -->
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="tcdPageCode">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

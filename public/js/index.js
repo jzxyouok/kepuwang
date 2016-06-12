@@ -87,11 +87,11 @@ app.directive('embedSrc', function () {
                 templateUrl: "/public/template/imageDetailTpl.html",
                 controller: "imageDetailController"
             })
-            .when("/documentary/", {
+            .when("/documentary", {
                 templateUrl: "/public/template/documentary.html",
-                controller: "loginController"
+                controller: "allDocumentaryController"
             })
-            .when("/documentaryDetail", {
+            .when("/documentaryDetail/:id/:set", {
                 templateUrl: "/public/template/documentaryDetail.html",
                 controller: "allArticleController"
             })
@@ -112,7 +112,22 @@ app.directive('embedSrc', function () {
         .otherwise({ redirectTo: "/index" });
 
     }]);
+ 
+    app.controller("allDocumentaryController", function($scope, $http, $route, $sce) {
+        $http({
+            url:"index.php?c=documentary&a=allDocumentary&page=1",
+            method:"get"
+        }).success(function(response){
+            $scope.documentarys = response.data;
+             var len=$scope.documentarys.length; 
 
+            for(var i=0;i<len;i++){
+            $scope.documentarys[i].sets =JSON.parse($scope.documentarys[i].sets.replace(/&quot;/g,"\"")||'[]');
+                console.log($scope.documentarys[i].sets)
+             }
+            $scope.num = $scope.num;
+        })
+    });
     app.controller("articleDetailController", function($scope, $http, $route, $sce) {
         var id = $route.current.params.id;
         if (id == "")

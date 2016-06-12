@@ -29,7 +29,7 @@ class ArticleController extends Controller
         // } else {
         //     $thumb = '';
         // }
-
+        echo json_encode($newArticle);
         $db = M("article");
 
         $id = $db->add($newArticle);
@@ -85,6 +85,9 @@ class ArticleController extends Controller
             case '4':
                 $db = M("video");
                 break;
+                case '5':
+                $db = M("documentary");
+                break;
 
             default:
                  $db = M("article");
@@ -117,6 +120,9 @@ class ArticleController extends Controller
                 break;
             case '4':
                 $db = M("video");
+                break;
+            case '5':
+                $db = M("documentary");
                 break;
             default:
                 $db = M("article");
@@ -161,6 +167,9 @@ class ArticleController extends Controller
             case '4':
                 $db = M("video");
                 break;
+            case '5':
+                $db = M("documentary");
+                break;
             default:
                 # code...
                 break;
@@ -183,8 +192,11 @@ class ArticleController extends Controller
             case '4':
                 $db = M("video");
                 break;
-
+            case '5':
+                $db = M("documentary");
+                break;
             default:
+                $db = M("article");
                 # code...
                 break;
         }

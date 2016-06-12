@@ -19,21 +19,23 @@ class ArticleController extends Controller
     }
     public function allArticle()
     {
-        $condition           = array();
-        $condition["status"] = 1;
-       
+        // $condition           = array();
+        // $condition["status"] = 1;
+        $query = " status = 1 ";
         if (I("get.maintype") != "") {
-            $condition["maintype"] = I("get.maintype");
-            // echo json_encode($condition);
+            // $condition["maintype"] = I("get.maintype");
+             $query = $query." AND  mainType  = ".I("get.maintype");
         }
 
         $page           = I("get.page");
         $result         = array();
         $result["num"]  = M("article")->where($condition)->count();
-         // echo json_encode($condition);
-        $result["data"] = M("article")->where($condition)->order("publishTime desc")->limit(($page - 1) * 18, $page * 18)->select();
+
         
-         // echo M("article")->getLastSql();
+
+        $result["data"] = M("article")->where($query)->order("publishTime desc")->limit(($page - 1) * 18, $page * 18)->select();
+        
+           // echo M("article")->getLastSql();
           echo json_encode($result);
     }
 

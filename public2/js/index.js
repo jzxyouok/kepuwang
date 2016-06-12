@@ -89,10 +89,19 @@
                 templateUrl: "/public2/template/editArticleTpl.html",
                 controller: "editArticleController"
             })
-            .when("/newContent", {
-                templateUrl: "/public2/template/newContentTpl.html",
-                controller: "newContentController"
+            .when("/newDocumentary", {
+                templateUrl: "/public2/template/newDocumentary.html",
+                controller: "newDocumentaryController"
             })
+            .when("/allDocumentary", {
+                templateUrl: "/public2/template/documentary.html",
+                controller: "allDocumentaryController"
+            })
+
+        .when("/newContent", {
+            templateUrl: "/public2/template/newContentTpl.html",
+            controller: "newContentController"
+        })
 
         .when("/about", {
                 templateUrl: "public2/template/about.html",
@@ -100,6 +109,112 @@
             .otherwise({ redirectTo: "/index" });
     }]);
 
+    app.controller('allDocumentaryController', function($scope, $http, $route, pageSet) {
+        var status = $route.current.params.status || 1;
+        $http({
+            url: "/index.php?c=documentary&a=allDocumentary&page=1&status=" + status,
+            method: "get"
+        }).success(function(response) {
+            $scope.allArticle = response.data;
+        });
+         $scope.publish = function(id) {
+            var message = "确定发布此纪录片？";
+            if (confirm(message)) {
+                $http({
+                    url: "/admin.php?c=article&articleType=5&a=publish&id=" + id,
+                    method: "get"
+                }).success(function(response) {
+                    location.reload(true);
+                });
+            }
+        }
+
+    })
+
+    app.controller('newDocumentaryController', function($scope, $http, $route) {
+        // 得到之前数据
+        var Id = $route.current.params.id;
+        $scope.showSaveButton = !!Id;
+        // 如果是编辑已有
+        $scope.documentary = {};
+        if (Id) {
+            $http({
+                url: "/admin.php?c=documentary&a=documentaryDetail&id=" + Id,
+                method: "get",
+            }).success(function(response) {
+                $scope.documentary = response;
+                $scope.documentary.sets = $scope.documentary.sets ||[];
+                $scope.documentary.sets=JSON.parse($scope.documentary.sets);
+                 UE.getEditor('editor2').setContent($scope.documentary.maincontent || "", false);
+            });
+        }
+        if (!$scope.documentary.sets) {
+            console.log("here");
+            $scope.documentary.sets = [{ title: "", code: "" }];
+        }
+        $scope.addSet = function() {
+            console.log($scope.documentary.sets.length);
+            $scope.documentary.sets.push({ title: "", code: "" });
+
+        }
+        $scope.delSet = function(index) {
+            if (confirm("确定删除第" + (index + 1) + "集？")) {
+                $scope.documentary.sets.splice(index, 1);
+            }
+
+        }
+        $scope.save = function(type) {
+            var len = $scope.documentary.sets.length;
+            var sets = [];
+           for(var i=0;i<len;i++){
+                sets.push({
+                    title:$scope.documentary.sets[i].title,
+                    code:$scope.documentary.sets[i].code,
+                });
+            }
+            $http({
+                method: "POST",
+                url: "/admin.php?c=documentary&a=newdocumentary",
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+                transformRequest: transform,
+                data: {
+                    title: $scope.documentary.title,
+                    // content: content,
+                    mainContent: UE.getEditor('editor2').getContent(),
+                    thumbnail_url: $scope.documentary.thumbnail,
+                    abstract: $scope.documentary.abstract,
+                    sets: JSON.stringify(sets),
+                    id: Id
+                }
+            }).success(function(response) {
+                if(type==1){
+                    alert("保存成功");
+                }else{
+                    location.href = "#/newContent?articleType=5&id=" + response;
+                }
+                 
+            });
+        }
+        var o_ueditorupload = UE.getEditor('j_ueditorupload', {
+            autoHeightEnabled: false
+        });
+        o_ueditorupload.ready(function() {
+            o_ueditorupload.hide(); //隐藏编辑器
+
+            o_ueditorupload.addListener('beforeInsertImage', function(t, arg) {
+
+                $scope.documentary.thumbnail = arg[0].src;
+            });
+            $scope.documentary.upFiles = function() {
+                var myFiles = o_ueditorupload.getDialog("attachment");
+                myFiles.open();
+            };
+            $scope.documentary.upImage = function() {
+                var myImage = o_ueditorupload.getDialog("insertimage");
+                myImage.open();
+            };
+        });
+    });
     app.controller('editArticleController', function($scope, $http, $route) {
         // 得到之前数据
         var articleId = $route.current.params.id;
@@ -152,7 +267,7 @@
             };
         });
 
-    })
+    });
     app.controller("newContentController", function($scope, $http, $route) {
 
         $scope.article = {
@@ -181,9 +296,9 @@
         }).success(function(response) {
 
             $scope.article.title = response.title;
-            UE.getEditor('editor').setContent(response.content||"", false);
+            UE.getEditor('editor').setContent(response.content || "", false);
         });
-    })
+    });
     app.controller("allArticleController", function($http, $scope, $location, pageSet) {
         var type = $location.search()['type'] || 0;
         $scope.type = type;

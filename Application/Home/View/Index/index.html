@@ -81,13 +81,12 @@
                         <div class="pull-right"><span class="caret"></span></div>
                     </a>
                     <ul class="templatemo-submenu">
-                        <li><a href="#/allVideo">所有纪录片</a></li>
+                        <li><a href="#/allDocumentary">所有纪录片</a></li>
                          
-                         
-                        
-                        <li><a href="#/allVideo?status=2">草稿箱</a></li>
-                        <li><a href="#/allVideo?status=0">被撤纪录片</a></li>
-                        <li><a href="#/newVideo">新纪录片</a></li>
+                           <li></li>
+                        <li><a href="#/allDocumentary?status=2">草稿箱</a></li>
+                        <li><a href="#/allDocumentary?status=0">被撤纪录片</a></li>
+                        <li><a href="#/newDocumentary">新纪录片</a></li>
                     </ul>
                 </li>
                 <li class="sub">
