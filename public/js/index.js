@@ -186,6 +186,7 @@ app.directive('embedSrc', function () {
         })
     });
     app.controller("allPicController", function($scope, $http, pageSet) {
+        document.title="所有图片";
         $http({
             method: "get",
             url: "/index.php?c=pic&a=allPic&page=1",
@@ -239,6 +240,7 @@ app.directive('embedSrc', function () {
 
     app.controller("articleListController", function($http, $scope, pageSet, util, $route) {
         var maintype = $route.current.params.mainType;
+        console.log(maintype);
         var query = "";
         if (maintype) {
             query = "&maintype=" + maintype;

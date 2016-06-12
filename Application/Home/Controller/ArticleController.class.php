@@ -14,7 +14,7 @@ class ArticleController extends Controller
             mainType    => I("post.mainType"),
             type        => I("post.type"),
             "abstract"  => I("post.abstract"),
-            publishTime => time(),
+            // publishTime => time(),
         );
         // $info = getPic($newArticle["content"]); //使用函数 返回匹配地址 如果不为空则声称缩略图
         // $info = $newArticle["thumbnail"];

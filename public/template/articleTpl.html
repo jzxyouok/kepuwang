@@ -13,6 +13,7 @@
             padding-bottom:50px;
         }
 </style>
+
 <div id="imageTpl" class="bottom-padding">
     <div id="ad-carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -22,7 +23,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="item active">
-                <img src="public/images/slider01.png" alt="1 slide">
+                <img src="/public/images/slider01.png" alt="1 slide">
                 <div class="container">
                     <div class="carousel-caption">
                         <h2>这是一个星光与城市的故事</h2>
@@ -30,7 +31,7 @@
                 </div>
             </div>
             <div class="item">
-                <img src="public/images/slider02.jpg" alt="2 slide">
+                <img src="/public/images/slider02.jpg" alt="2 slide">
                 <div class="container">
                     <div class="carousel-caption">
                         <h2>情定苏格兰群岛</h2>
@@ -47,7 +48,7 @@
             </div>
         </div>
     </div>
-    <div class="row videoList article-list" id='test'>
+    <div class="row videoList article-list" id='test' >
         <div id="article-list1">
 
         </div>
@@ -60,9 +61,20 @@
         <div id="article-list4">
 
         </div>
-
+ 
     </div>
+    <div id="mainType">
+    <ul>
+
+
+        <li class="active"><a href="#/video">全部</a></li>
+        <li><a href="#/article?mainType=1" class="color1">天文·物理</a></li>
+        <li><a href="#/article?mainType=2" class="color2">地理·地质</a></li>
+        <li><a href="#/article?mainType=3" class="color3">生命·生态</a></li>
+    </ul>
+</div>
     <div class="tcdPageCode pull-right row">
     </div>
 </div>
+
  

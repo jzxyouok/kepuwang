@@ -14,7 +14,7 @@ class VideoController extends Controller
             "abstract"  => I("post.abstract"),
             videoCode   => I("post.videoCode"),
             mainType    => I("post.mainType"),
-            publishTime => time(),
+            // publishTime => time(),
         );
 
         $db = M("video");

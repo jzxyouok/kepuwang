@@ -21,16 +21,20 @@ class ArticleController extends Controller
     {
         $condition           = array();
         $condition["status"] = 1;
+       
         if (I("get.maintype") != "") {
-            $condition["maintype"] = T("get.maintype");
+            $condition["maintype"] = I("get.maintype");
+            // echo json_encode($condition);
         }
+
         $page           = I("get.page");
         $result         = array();
         $result["num"]  = M("article")->where($condition)->count();
+         // echo json_encode($condition);
         $result["data"] = M("article")->where($condition)->order("publishTime desc")->limit(($page - 1) * 18, $page * 18)->select();
-        // echo $page;
-        // echo M("article")->getLastSql();
-        echo json_encode($result);
+        
+         // echo M("article")->getLastSql();
+          echo json_encode($result);
     }
 
     public function articleDetail()

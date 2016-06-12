@@ -66,10 +66,7 @@ a:hover {
     border-bottom: 0;
 }
 
-.video-only {
-    width: 1200px !important;
-    padding-right: 100px;
-}
+ 
 
 .video-only .thumbnail {
     margin-bottom: 20px;
@@ -104,10 +101,13 @@ a:hover {
 #mainType {
     background-color: #1b1b1b;
     position: fixed;
-    top: 60%;
-    right: 30px;
-    width: 100px;
+ width:100px;
+     position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 550px;
 }
+ 
 
 #mainType .active,#mainType li:hover {
     background-color: #242424;
