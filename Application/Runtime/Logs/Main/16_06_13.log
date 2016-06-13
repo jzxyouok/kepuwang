@@ -7071,3 +7071,13 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000551s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000612s ]
 
+[ 2016-06-13T21:03:26+08:00 ] 127.0.0.1 /Uploads/image/20160613/1465822531695436.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+
+[ 2016-06-13T21:04:25+08:00 ] 127.0.0.1 /Uploads/image/20160613/1465822531695436.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+
