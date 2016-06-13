@@ -22,21 +22,22 @@
             replace: true
         }
     });
-app.directive('embedSrc', function () {
-  return {
-    restrict: 'A',
-    link: function (scope, element, attrs) {
-      var current = element;
-      scope.$watch(function() { return attrs.embedSrc; }, function () {
-        var clone = element
-                      .clone()
-                      .attr('src', attrs.embedSrc);
-        current.replaceWith(clone);
-        current = clone;
-      });
-    }
-  };
-})
+    app.directive('embedSrc', function() {
+        return {
+            restrict: 'A',
+            link: function(scope, element, attrs) {
+                var current = element;
+                scope.$watch(function() {
+                    return attrs.embedSrc; }, function() {
+                    var clone = element
+                        .clone()
+                        .attr('src', attrs.embedSrc);
+                    current.replaceWith(clone);
+                    current = clone;
+                });
+            }
+        };
+    })
     app.service("pageSet", function() {
         return {
             init: function(pages, callback) {
@@ -93,7 +94,7 @@ app.directive('embedSrc', function () {
             })
             .when("/documentaryDetail/:id/:set", {
                 templateUrl: "/public/template/documentaryDetail.html",
-                controller: "allArticleController"
+                controller: "documentaryDetailController"
             })
             .when("/article", {
                 templateUrl: "/public/template/articleTpl.html",
@@ -112,19 +113,40 @@ app.directive('embedSrc', function () {
         .otherwise({ redirectTo: "/index" });
 
     }]);
- 
+
+    app.controller("documentaryDetailController", function($scope, $http, $route, $sce) {
+        var id = $route.current.params.id;
+        $scope.id = id;
+        var set = $route.current.params.set;
+
+        $http({
+            url: "admin.php?c=documentary&a=documentaryDetail&id=" + id,
+            method: "get"
+        }).success(function(response) {
+            $scope.documentaryDetail = response;
+            var sets = $scope.documentaryDetail.sets.replace(/&quot;/g, "\"") || '[]';
+            $scope.documentaryDetail.sets = JSON.parse(sets);
+            $scope.documentaryDetail.set = JSON.parse(sets)[set];
+
+            $scope.documentaryDetail.maincontent = $sce.trustAsHtml($scope.documentaryDetail.maincontent);
+            $scope.documentaryDetail.content = $sce.trustAsHtml($scope.documentaryDetail.content);
+
+            console.log($scope.documentaryDetail.set)
+            console.log(response);
+        })
+    });
     app.controller("allDocumentaryController", function($scope, $http, $route, $sce) {
         $http({
-            url:"index.php?c=documentary&a=allDocumentary&page=1",
-            method:"get"
-        }).success(function(response){
+            url: "index.php?c=documentary&a=allDocumentary&page=1",
+            method: "get"
+        }).success(function(response) {
             $scope.documentarys = response.data;
-             var len=$scope.documentarys.length; 
+            var len = $scope.documentarys.length;
 
-            for(var i=0;i<len;i++){
-            $scope.documentarys[i].sets =JSON.parse($scope.documentarys[i].sets.replace(/&quot;/g,"\"")||'[]');
+            for (var i = 0; i < len; i++) {
+                $scope.documentarys[i].sets = JSON.parse($scope.documentarys[i].sets.replace(/&quot;/g, "\"") || '[]');
                 console.log($scope.documentarys[i].sets)
-             }
+            }
             $scope.num = $scope.num;
         })
     });
@@ -141,7 +163,7 @@ app.directive('embedSrc', function () {
         });
 
     });
-    app.controller("imageDetailController", function($scope, $http, $route,$sce) {
+    app.controller("imageDetailController", function($scope, $http, $route, $sce) {
         var id = $route.current.params.id;
         if (id == "")
             window.location.href = "#/image";
@@ -150,33 +172,33 @@ app.directive('embedSrc', function () {
             method: "get"
         }).success(function(response) {
             $scope.imgDetail = response;
-           $scope.imgDetail.content =   $sce.trustAsHtml($scope.imgDetail.content);
-           $scope.imgDetail.maincontent =   $sce.trustAsHtml($scope.imgDetail.maincontent);
+            $scope.imgDetail.content = $sce.trustAsHtml($scope.imgDetail.content);
+            $scope.imgDetail.maincontent = $sce.trustAsHtml($scope.imgDetail.maincontent);
         });
         $scope.like = function() {
             var liked = localStorage.getItem("pid" + id) === "1";
-            
-            if(liked){
-                 console.log(liked + "`````false")
-                localStorage.setItem("pid" + id,"0");
+
+            if (liked) {
+                console.log(liked + "`````false")
+                localStorage.setItem("pid" + id, "0");
                 $scope.imgDetail.likes--;
-            }else{
+            } else {
                 console.log(liked + "`````true")
-                localStorage.setItem("pid" + id,"1");
+                localStorage.setItem("pid" + id, "1");
                 $scope.imgDetail.likes++;
             }
-              
+
             $http({
                 url: "/index.php?c=pic&a=like&id=" + id + "&liked=" + liked,
                 method: "get"
             }).success(function(response) {
-                 
-               
+
+
             })
         }
     })
 
-    app.controller("videoDetailController", function($scope, $http, $route,$sce) {
+    app.controller("videoDetailController", function($scope, $http, $route, $sce) {
         var id = $route.current.params.id;
         if (id == "")
             window.location.href = "#/video";
@@ -201,7 +223,7 @@ app.directive('embedSrc', function () {
         })
     });
     app.controller("allPicController", function($scope, $http, pageSet) {
-        document.title="所有图片";
+        document.title = "所有图片";
         $http({
             method: "get",
             url: "/index.php?c=pic&a=allPic&page=1",
@@ -271,11 +293,10 @@ app.directive('embedSrc', function () {
             $("#article-list3").empty();
             $("#article-list4").empty();
             for (var len = response.data.length, i = 0; i < len; i++) {
-                var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/' 
-                + response.data[i].id + '"><h4>' + response.data[i].title +
-                 '</h4></a><p>'+response.data[i].publishtime.slice(0,16) +
-                  '</p></div><img src="' + response.data[i].thumbnail + 
-                  '" alt=""><div class="caption"><p>' + response.data[i].abstract +
+                var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/' + response.data[i].id + '"><h4>' + response.data[i].title +
+                    '</h4></a><p>' + response.data[i].publishtime.slice(0, 16) +
+                    '</p></div><img src="' + response.data[i].thumbnail +
+                    '" alt=""><div class="caption"><p>' + response.data[i].abstract +
                     '</p></div></div>';
 
                 $("#article-list" + (i % 4 + 1)).append(newArticle);
@@ -305,7 +326,7 @@ app.directive('embedSrc', function () {
             });
         }
     });
-     app.controller("videoController", function($http, $scope, pageSet, $route) {
+    app.controller("videoController", function($http, $scope, pageSet, $route) {
         var maintype = $route.current.params.mainType;
         var query = "";
         if (maintype) {

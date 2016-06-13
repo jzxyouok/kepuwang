@@ -52,9 +52,9 @@
             <p> {{doc.abstract}}</p>
         </div>
         <div class="row">
-            <div class="col-md-3" ng-repeat="set in doc.sets track by $index">
+            <div class="col-md-4" ng-repeat="set in doc.sets track by $index">
                 <div class="list-group">
-                    <a href="/documentary/{{doc.id}}/{{$index}}" class="list-group-item">{{set.title}}<span class="badge">{{$index+1}}</span></a>
+                    <a href="#/documentaryDetail/{{doc.id}}/{{$index}}" class="list-group-item">{{set.title}}<span class="badge">{{$index+1}}</span></a>
                 </div>
             </div>
         </div>

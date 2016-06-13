@@ -8,6 +8,7 @@
 		},
 		//填充html
 		fillHtml:function(obj,args){
+			console.log("current: " + args.current + "pagecount" + args.pageCount);
 			return (function(){
 				obj.empty();
 				//上一页
@@ -75,6 +76,7 @@
 				});
 				//下一页
 				obj.on("click","a.nextPage",function(){
+
 					var current = parseInt(obj.children("span.current").text());
 					ms.fillHtml(obj,{"current":current+1,"pageCount":args.pageCount});
 					if(typeof(args.backFn)=="function"){

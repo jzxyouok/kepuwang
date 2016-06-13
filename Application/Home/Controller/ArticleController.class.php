@@ -49,7 +49,9 @@ class ArticleController extends Controller
     // }
     public function allArticle()
     {
-        $page = I("get.page") || 1;
+        $page = I("get.page");
+        if($page == "")
+            $page = 1;
 
         if(I("get.status") != "9"){
              $condition = array(
@@ -65,7 +67,7 @@ class ArticleController extends Controller
             $condition["type"] = I("get.type");
         }
 
-
+     
         $result["pageNum"]    = M("article")->where($condition)->count();
         $result["allArticle"] = M("article")->where($condition)->order("publishTime desc")->limit(($page - 1) * 10, $page * 10)->select();
  // echo M("article")->getLastSql();

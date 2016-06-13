@@ -25,6 +25,7 @@ class DocumentaryController extends Controller
 		$result = M("documentary")->where("id=".$id)->find();
         $result['sets'] = htmlspecialchars_decode(html_entity_decode($result['sets']));
         $result['maincontent'] = htmlspecialchars_decode(html_entity_decode($result['maincontent']));
+        $result['content'] = htmlspecialchars_decode(html_entity_decode($result['content']));
 
 		echo json_encode($result);
 

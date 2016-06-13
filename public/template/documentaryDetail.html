@@ -1,49 +1,80 @@
-<!-- 纪录片详情页和视频详情页共用前端！！ -->
+<!-- 纪录片详情页和纪录片详情页共用前端！！ -->
 <link rel="stylesheet" href="/public/stylesheet/imageDetail.css">
+<style>
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    color: #FFF;
+}
+
+.d-detail-list-group {
+    background-color: #1f1f1f;
+}
+
+.imageDetail {
+    margin-top: 0;
+}
+
+.imageDetail p {
+    font-size: 1em;
+}
+
+.d-detail-list-group a {
+    color: #FFF;
+    background-color: #1f1f1f;
+}
+ .list-group-item{
+padding:5px !important;
+}
+
+small {
+    font-size: 0.5em !important;
+    padding-left: 15px;
+    color: #ddd !important;
+}
+</style>
 <div class="videoDetailTpl">
     <div class="imageDetail">
         <div class="row videoPlay">
             <div class="col-md-9 left">
-                <h2>{{videoDetail.title}}</h2>
-                <EMBED style=" margin: 5px auto; width:900px; height: 400px" ; ng-src="{{videoDetail.videocode|trusted}}" width="740" height="500" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash">
-                <!-- <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" ng-src="{{videoDetail.videocode|trusted}}" width="740" height="500" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" /> -->
+                <h2>{{documentaryDetail.title}}<small>{{documentaryDetail.set.title}}</small></h2>
+                <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" embed-src="{{documentaryDetail.set.code|trusted}}" width="740" height="457" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" />
             </div>
-            <div class="col-md-3 right">
-                <h3>视频名片</h3>
-                <p>简介：{{videoDetail.abstract}}</p>
-                <p>名称：{{videoDetail.title}}</p>
-                <p>类别： <span ng-switch="videoDetail.maintype">
-                                    <span ng-switch-when="1">天文·文理</span>
-                    <span ng-switch-when="2">地理·地质</span>
-                    <span ng-switch-when="3">人文·生态</span>
-                    <span ng-switch-default>其他</span>
-                    </span>
-                </p>
-                <p>发表人：佚名</p>
-                <p>上传时间：{{videoDetail.publishTime||YYYY-MM-DD}}</p>
+            <div class="col-md-3 right" ng-bind-html="documentaryDetail.maincontent">
+            </div>
+        </div>
+        <div class="row">
+            <h4>所有集数</h4>
+            <div class="row">
+                <div class="col-md-3" ng-repeat="set in documentaryDetail.sets track by $index">
+                    <div class="list-group d-detail-list-group">
+                        <a href="#/documentaryDetail/{{id}}/{{$index}}" class="list-group-item">{{set.title}}<span class="badge">{{$index+1}}</span></a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="imgDetail row">
-            <h3>视频简介</h3> {{videoDetail.content}}
+            <h3>纪录片简介</h3>
+            <div ng-bind-html="documentaryDetail.content">
+            </div>
         </div>
-        <div class="imgDownload">
-            <h3>视频下载</h3>
+        <!--   <div class="imgDownload">
+            <h3>纪录片下载</h3>
             <table>
-                <!-- <tr>
+                <tr>
                 <th>小尺寸</th>
                 <th>中尺寸</th>
                 <th>大尺寸</th>
-            </tr> -->
+            </tr>
                 <tr>
                     <td>百度网盘1</td>
                     <td>百度网盘2</td>
                     <td>百度网盘3</td>
                 </tr>
             </table>
-        </div>
+        </div> -->
         <div class="row">
             <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="2232" data-title="2323" data-url="http://www.server.com/#/videoDetail/12"></div>
+            <div class="ds-thread" data-thread-key="2232" data-title="2323" data-url="http://www.server.com/#/documentaryDetail/12"></div>
             <!-- 多说评论框 end -->
             <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
             <script type="text/javascript">

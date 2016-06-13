@@ -26,12 +26,14 @@
     // 关于用户的服务
     app.service("pageSet", function() {
         return {
-            init: function(pages) {
+            init: function(pages, callback) {
                 $(".tcdPageCode").createPage({
                     pageCount: pages,
                     current: 1,
                     backFn: function(p) {
-                        console.log(p);
+                        console.log(p)
+                        if(p<= pages)
+                        callback(p);
                     }
                 });
             },
@@ -117,7 +119,7 @@
         }).success(function(response) {
             $scope.allArticle = response.data;
         });
-         $scope.publish = function(id) {
+        $scope.publish = function(id) {
             var message = "确定发布此纪录片？";
             if (confirm(message)) {
                 $http({
@@ -143,9 +145,9 @@
                 method: "get",
             }).success(function(response) {
                 $scope.documentary = response;
-                $scope.documentary.sets = $scope.documentary.sets ||[];
-                $scope.documentary.sets=JSON.parse($scope.documentary.sets);
-                 UE.getEditor('editor2').setContent($scope.documentary.maincontent || "", false);
+                $scope.documentary.sets = $scope.documentary.sets || [];
+                $scope.documentary.sets = JSON.parse($scope.documentary.sets);
+                UE.getEditor('editor2').setContent($scope.documentary.maincontent || "", false);
             });
         }
         if (!$scope.documentary.sets) {
@@ -166,10 +168,10 @@
         $scope.save = function(type) {
             var len = $scope.documentary.sets.length;
             var sets = [];
-           for(var i=0;i<len;i++){
+            for (var i = 0; i < len; i++) {
                 sets.push({
-                    title:$scope.documentary.sets[i].title,
-                    code:$scope.documentary.sets[i].code,
+                    title: $scope.documentary.sets[i].title,
+                    code: $scope.documentary.sets[i].code,
                 });
             }
             $http({
@@ -187,12 +189,12 @@
                     id: Id
                 }
             }).success(function(response) {
-                if(type==1){
+                if (type == 1) {
                     alert("保存成功");
-                }else{
+                } else {
                     location.href = "#/newContent?articleType=5&id=" + response;
                 }
-                 
+
             });
         }
         var o_ueditorupload = UE.getEditor('j_ueditorupload', {
@@ -304,12 +306,23 @@
         $scope.type = type;
         var status = $location.search()['status'] || 1;
         $http({
-            url: "/admin.php?c=article&a=allArticle&type=" + type + "&status=" + status,
+            url: "/admin.php?c=article&a=allArticle&page=1&type=" + type + "&status=" + status,
             method: "get"
         }).success(function(response) {
             $scope.allArticle = response.allArticle;
-            pageSet.init(response.pageNum / 10 + 1);
+            pageSet.init((Math.ceil(response.pageNum / 10)), handlePageChange);
+
         });
+
+        function handlePageChange(page) {
+      
+            $http({
+                url: "/admin.php?c=article&a=allArticle&type=" + type + "&status=" + status + "&page=" + page,
+                method: "get"
+            }).success(function(response) {
+                $scope.allArticle = response.allArticle;
+            });
+        }
         $scope.changeStatus = function(id, status) {
             var message = "确定" + status == "0" ? "恢复" : "撤销" + "这篇文章？";
             if (confirm(message)) {
