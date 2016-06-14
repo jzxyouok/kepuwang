@@ -584,8 +584,16 @@
             method: "get"
         }).success(function(response) {
             $scope.allArticle = response.allArticle;
-            pageSet.init(response.pageNum / 10 + 1);
+            pageSet.init(Math.ceil(response.pageNum / 10),getPicByPage);
         });
+        function getPicByPage(page){
+             $http({
+            url: "/admin.php?c=pic&a=allPic" + queryString + "&page="+page,
+            method: "get"
+        }).success(function(response) {
+            $scope.allArticle = response.allArticle;
+        });
+        }
         $scope.changeStatus = function(id, status) {
             var message = "确定" + status == "0" ? "恢复" : "撤销" + "这张图片？";
             if (confirm(message)) {
