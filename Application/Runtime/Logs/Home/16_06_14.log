@@ -778,3 +778,89 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000798s ]
 
+[ 2016-06-14T23:47:31+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032638s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001162s ]
+
+[ 2016-06-14T23:47:32+08:00 ] 127.0.0.1 /admin.php?c=pic&a=picDetail&id=74
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001185s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0819s ]
+SQL: SELECT * FROM `pic` WHERE ( id = 74 ) LIMIT 1   [ RunTime:0.0826s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001203s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001349s ]
+
+[ 2016-06-14T23:49:56+08:00 ] 127.0.0.1 /admin.php?c=pic&a=newPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant img_src - assumed 'img_src' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant mainContent - assumed 'mainContent' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0799s ]
+SQL: UPDATE `pic` SET `title`='创世之柱——鹰状星云',`thumbnail`='/Uploads/image/20160614/1465912904293304.jpg',`img_src`='/Uploads/image/20160614/1465912891120747.jpg',`type`='3',`abstract`='哈勃望远镜拍摄到的太空照片不计其数，美到让人窒息，而其中一张一定能够脱颖而出，那就是被称为创世之柱的鹰状星云。',`mainType`='1',`mainContent`='&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;名称：&lt;/span&gt;鹰状星云&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;span style=&quot;font-family: 微软雅黑, &quot; microsoft=&quot;&quot;&gt;作者：哈勃&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;拍摄时间：2015年1月&lt;/p&gt;&lt;p&gt;距离：7000光年&lt;/p&gt;',`publishTime`='1465919396' WHERE ( id=74 ) [ RunTime:0.0760s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000667s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2016-06-14T23:49:59+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001125s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032809s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032913s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000780s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000891s ]
+
+[ 2016-06-14T23:50:00+08:00 ] 127.0.0.1 /admin.php?c=pic&a=picDetail&id=74
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001074s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0776s ]
+SQL: SELECT * FROM `pic` WHERE ( id = 74 ) LIMIT 1   [ RunTime:0.0749s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000733s ]
+

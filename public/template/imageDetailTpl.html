@@ -4,6 +4,13 @@
         font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
     color: #FFF;
 }
+.imageDetail-bottom a{
+    display:block;
+    float:left;
+}
+.imageDetail-bottom {
+    padding-bottom:20px;
+}
 </style>
 <div class="imageDetailTpl">
     <div class="imageDetail">
@@ -41,11 +48,8 @@
         </table>
     </div>
     <div class="row imageDetail-bottom">
-        <a href=""><img src="/public/images/article-4.png" width="200" alt=""></a>
-        <a href=""><img src="/public/images/article-4.png" width="200" alt=""></a>
-        <a href=""><img src="/public/images/article-4.png" width="200" alt=""></a>
-        <a href=""><img src="/public/images/article-4.png" width="200" alt=""></a>
-        <a href=""><img src="/public/images/article-4.png" width="200" alt=""></a>
+        <a href="#/imageDetail/{{pic.id}}" ng-repeat="pic in relativePics"><img  ng-src="{{pic.thumbnail}}" width="200" height="150" alt=""></a>
+       
     </div>
 </div>
 </div>

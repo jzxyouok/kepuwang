@@ -29,7 +29,7 @@ class ArticleController extends Controller
         // } else {
         //     $thumb = '';
         // }
-        echo json_encode($newArticle);
+        // echo json_encode($newArticle);
         $db = M("article");
 
         $id = $db->add($newArticle);

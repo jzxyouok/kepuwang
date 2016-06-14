@@ -38,8 +38,14 @@ class PicController extends Controller
         $picDetail = $db->where("id = " . $id)->getField("id,title,content,type,likes,img_src,mainContent", true);
         $picDetail[$id]["maincontent"] = htmlspecialchars_decode(html_entity_decode($picDetail[$id]["maincontent"]));
          $picDetail[$id]["content"] = htmlspecialchars_decode(html_entity_decode($picDetail[$id]["content"]));
+
         echo json_encode($picDetail[$id]);
 
+    }
+    public function relativePic(){
+        $db = M("pic");
+        $result = $db->where("status=1")->order("publishTime desc")->limit(0,10)->select();
+        echo json_encode($result);
     }
     public function like(){
         $id = I("get.id");

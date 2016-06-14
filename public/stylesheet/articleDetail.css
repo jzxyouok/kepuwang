@@ -37,7 +37,7 @@ color: #050505 !important;
     top:0;
     right:0;
     padding: 0 10px;
-    /*width: 27%;*/
+    width: 33%;
     
     background-color: #eee;
     /*border-left: 2px solid #ddd !important;*/
@@ -47,7 +47,7 @@ color: #050505 !important;
 .articleRight p,
 .articleRight a {
     color: #050505;
-     font-size: 12px;
+     font-size: 14px;
 }
 
 .articleRight h3 {

@@ -46,8 +46,9 @@ class ArticleController extends Controller
 
         $db                          = M("article");
         $result["detail"]            = $db->where("id=" . $id)->find();
-        $result["relative"]          = array();
+       
         $result["detail"]["content"] = htmlspecialchars_decode(html_entity_decode($result["detail"]["content"]));
+        $result["relative"]          = $db->order("publishTime desc")->limit(0,10)->select();
         echo json_encode($result);
 
     }

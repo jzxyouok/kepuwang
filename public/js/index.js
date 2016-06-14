@@ -175,6 +175,12 @@
             $scope.imgDetail.content = $sce.trustAsHtml($scope.imgDetail.content);
             $scope.imgDetail.maincontent = $sce.trustAsHtml($scope.imgDetail.maincontent);
         });
+        $http({
+            url:"/index.php?c=pic&a=relativePic",
+            method:"get"
+        }).success(function(response){
+            $scope.relativePics = response;
+        })
         $scope.like = function() {
             var liked = localStorage.getItem("pid" + id) === "1";
 

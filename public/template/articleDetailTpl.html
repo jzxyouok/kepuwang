@@ -16,15 +16,8 @@
          
         <h3 id="related">相关文章</h3>
         <ul>
-            <li><a href="">[sleepy][广东南十字星会]南十字远程天文台照片集</a></li>
-            <li><a href="">[Metaverse][广东南十字星会]二零一六年南十字</a></li>
-            <li><a href="">[哈雷]新一批轻型脚架（HL-TP-S3）已推出！</a></li>
-            <li><a href="">[WFT][观测摄影]wtf-ngc7293/m45/ngc1499</a></li>
-            <li><a href="">[steveyzh]若岩天文台拍摄的深空目标</a></li>
-            <li><a href="">[Jeff-Dai][观测摄影]APOD-西藏天空和湖水中的猎户座</a></li>
-            <li><a href="">[公共信息]2016年全球天文月--探索月球</a></li>
-            <li><a href="">[哈雷][哈雷五金加工行]太阳系存在着</a></li>
-            <li><a href="">[公共信息]2016年全球天文月--探索月球</a></li>
+            <li ng-repeat="a in  articleDetail.relative"><a href="#/articleDetail/{{a.id}}">{{a.title}}</a></li>
+           
         </ul>
     </div>
 </div>
