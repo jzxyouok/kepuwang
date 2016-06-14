@@ -7,9 +7,7 @@
     padding-bottom: 30px;
 }
 
-.imageDetail * {
-    font-weight: 300;
-}
+ 
 
 .main-title {
     font-weight: 300;
@@ -17,7 +15,7 @@
 }
 
 .imageDetail p {
-    font-size: 1.4em;
+    /*font-size: 1.4em;*/
 }
 
  
@@ -32,11 +30,11 @@
 }
 
 .imageDetail .right {
-    margin-top: 40px;
+    margin-top: 53px;
 }
 
 .imageDetail .right p {
-    margin-top: 35px;
+    /*margin-top: 35px;*/
 }
 
 .imageDetail .imgDetail {
