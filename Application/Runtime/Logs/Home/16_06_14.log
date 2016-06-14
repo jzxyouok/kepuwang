@@ -141,3 +141,640 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000668s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000731s ]
 
+[ 2016-06-14T23:10:53+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055551s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055666s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002236s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002439s ]
+
+[ 2016-06-14T23:11:06+08:00 ] 127.0.0.1 /admin.php?c=video&a=allVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0824s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `video` LIMIT 1   [ RunTime:0.0812s ]
+SQL: SELECT * FROM `video` ORDER BY publishTime DESC LIMIT 0,19   [ RunTime:0.0829s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000735s ]
+
+[ 2016-06-14T23:11:21+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031819s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005391s ]
+
+[ 2016-06-14T23:11:23+08:00 ] 127.0.0.1 /admin.php?c=video&a=allVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001176s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0825s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `video` LIMIT 1   [ RunTime:0.0806s ]
+SQL: SELECT * FROM `video` ORDER BY publishTime DESC LIMIT 0,19   [ RunTime:0.0792s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000780s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000853s ]
+
+[ 2016-06-14T23:12:13+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=119&status=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000629s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 160 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0880s ]
+SQL: UPDATE `video` SET `status`='0' WHERE ( id=119 ) [ RunTime:0.0828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000974s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001096s ]
+
+[ 2016-06-14T23:12:13+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029931s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030097s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001732s ]
+
+[ 2016-06-14T23:12:15+08:00 ] 127.0.0.1 /admin.php?c=video&a=allVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001230s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0876s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `video` LIMIT 1   [ RunTime:0.0815s ]
+SQL: SELECT * FROM `video` ORDER BY publishTime DESC LIMIT 0,19   [ RunTime:0.0817s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2016-06-14T23:12:19+08:00 ] 127.0.0.1 /admin.php?c=article&a=changeStatus&articleType=4&id=119&status=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 160 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0825s ]
+SQL: UPDATE `video` SET `status`='1' WHERE ( id=119 ) [ RunTime:0.0810s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000720s ]
+
+[ 2016-06-14T23:12:19+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000091s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000929s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071229s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000847s ]
+
+[ 2016-06-14T23:12:20+08:00 ] 127.0.0.1 /admin.php?c=video&a=allVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001111s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0801s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `video` LIMIT 1   [ RunTime:0.0775s ]
+SQL: SELECT * FROM `video` ORDER BY publishTime DESC LIMIT 0,19   [ RunTime:0.0773s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000725s ]
+
+[ 2016-06-14T23:12:23+08:00 ] 127.0.0.1 /admin.php?c=video&a=videoDetail&id=119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001967s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0839s ]
+SQL: SELECT `id`,`mainType`,`thumbnail`,`title`,`abstract`,`type`,`videoCode` FROM `video` WHERE ( id = 119 )  [ RunTime:0.0825s ]
+NOTIC: [8] Undefined index: videoCode G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 55 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000801s ]
+
+[ 2016-06-14T23:14:19+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027570s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027679s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001153s ]
+
+[ 2016-06-14T23:14:20+08:00 ] 127.0.0.1 /admin.php?c=video&a=videoDetail&id=119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001258s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0834s ]
+SQL: SELECT `id`,`mainType`,`thumbnail`,`title`,`abstract`,`type`,`videoCode` FROM `video` WHERE ( id = 119 )  [ RunTime:0.0829s ]
+NOTIC: [8] Undefined index: videoCode G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 55 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+
+[ 2016-06-14T23:14:25+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030635s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030815s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000938s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001054s ]
+
+[ 2016-06-14T23:14:26+08:00 ] 127.0.0.1 /admin.php?c=video&a=videoDetail&id=119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001278s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0843s ]
+SQL: SELECT `id`,`mainType`,`thumbnail`,`title`,`abstract`,`type`,`videoCode` FROM `video` WHERE ( id = 119 )  [ RunTime:0.0819s ]
+NOTIC: [8] Undefined index: videoCode G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 55 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000692s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2016-06-14T23:14:43+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028058s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001630s ]
+
+[ 2016-06-14T23:14:44+08:00 ] 127.0.0.1 /admin.php?c=video&a=videoDetail&id=119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001109s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0811s ]
+SQL: SELECT `id`,`mainType`,`thumbnail`,`title`,`abstract`,`type`,`videoCode` FROM `video` WHERE ( id = 119 )  [ RunTime:0.0789s ]
+NOTIC: [8] Undefined index: videoCode G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 55 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000780s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000841s ]
+
+[ 2016-06-14T23:15:45+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034195s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006779s ]
+
+[ 2016-06-14T23:16:05+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028729s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028834s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001197s ]
+
+[ 2016-06-14T23:16:06+08:00 ] 127.0.0.1 /admin.php?c=video&a=videoDetail&id=119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0828s ]
+SQL: SELECT `id`,`mainType`,`thumbnail`,`title`,`abstract`,`type`,`videoCode` FROM `video` WHERE ( id = 119 )  [ RunTime:0.0805s ]
+NOTIC: [8] Undefined index: videoCode G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 55 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000768s ]
+
+[ 2016-06-14T23:16:10+08:00 ] 127.0.0.1 /admin.php?c=video&a=newVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant videoCode - assumed 'videoCode' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0843s ]
+SQL: UPDATE `video` SET `title`='鹰状星云',`thumbnail`='',`type`='3',`abstract`='被称为创世之柱的鹰状星云，既是一个恒星形成区，又是一个名副其实的死亡地带。',`videoCode`='http://player.youku.com/player.php/sid/XMTYwMTA1ODE4NA==/v.swf',`mainType`='1' WHERE ( id=119 ) [ RunTime:0.0816s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000667s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000726s ]
+
+[ 2016-06-14T23:16:13+08:00 ] 127.0.0.1 /admin.php?c=video&a=newVideo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant videoCode - assumed 'videoCode' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0805s ]
+SQL: UPDATE `video` SET `title`='鹰状星云',`thumbnail`='',`type`='3',`abstract`='被称为创世之柱的鹰状星云，既是一个恒星形成区，又是一个名副其实的死亡地带。',`videoCode`='http://player.youku.com/player.php/sid/XMTYwMTA1ODE4NA==/v.swf',`mainType`='1' WHERE ( id=119 ) [ RunTime:0.0789s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000667s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000725s ]
+
+[ 2016-06-14T23:16:14+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=119&articleType=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000123s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000866s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001131s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0808s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 100 行.
+SQL: SELECT `id`,`title`,`content` FROM `video` WHERE `id` = 119  [ RunTime:0.0780s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000667s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000731s ]
+
+[ 2016-06-14T23:16:18+08:00 ] 127.0.0.1 /admin.php?c=video&a=videoDetail&id=119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002103s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0788s ]
+SQL: SELECT `id`,`mainType`,`thumbnail`,`title`,`abstract`,`type`,`videoCode` FROM `video` WHERE ( id = 119 )  [ RunTime:0.0765s ]
+NOTIC: [8] Undefined index: videoCode G:\CODE\kepuwang\Application\Home\Controller\VideoController.class.php 第 55 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000813s ]
+
+[ 2016-06-14T23:16:30+08:00 ] 127.0.0.1 /admin.php?c=pic&a=allPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0824s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pic` LIMIT 1   [ RunTime:0.0798s ]
+SQL: SELECT * FROM `pic` ORDER BY publishTime DESC LIMIT 0,10   [ RunTime:0.1639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000988s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001102s ]
+
+[ 2016-06-14T23:16:34+08:00 ] 127.0.0.1 /admin.php?c=pic&a=picDetail&id=74
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001753s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0839s ]
+SQL: SELECT * FROM `pic` WHERE ( id = 74 ) LIMIT 1   [ RunTime:0.0822s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000875s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000975s ]
+
+[ 2016-06-14T23:17:00+08:00 ] 127.0.0.1 /admin.php?c=pic&a=newPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant img_src - assumed 'img_src' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant mainContent - assumed 'mainContent' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0846s ]
+SQL: UPDATE `pic` SET `title`='创世之柱——鹰状星云',`thumbnail`='/Uploads/image/20160614/1465912904293304.jpg',`img_src`='/Uploads/image/20160614/1465912891120747.jpg',`type`='3',`abstract`='哈勃望远镜拍摄到的太空照片不计其数，美到让人窒息，而其中一张一定能够脱颖而出，那就是被称为创世之柱的鹰状星云。',`mainType`='1',`mainContent`='&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;名称：&lt;/span&gt;鹰状星云&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;span style=&quot;font-family: 微软雅黑, &quot; microsoft=&quot;&quot;&gt;作者：哈勃&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;拍摄时间：2015年1月&lt;/p&gt;&lt;p&gt;距离：7000光年&lt;/p&gt;&lt;p&gt;其他：他他他&lt;/p&gt;',`publishTime`='1465917420' WHERE ( id=74 ) [ RunTime:0.0823s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000799s ]
+
+[ 2016-06-14T23:17:03+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028429s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001205s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001379s ]
+
+[ 2016-06-14T23:17:05+08:00 ] 127.0.0.1 /admin.php?c=pic&a=picDetail&id=74
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001063s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0858s ]
+SQL: SELECT * FROM `pic` WHERE ( id = 74 ) LIMIT 1   [ RunTime:0.0807s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001205s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001370s ]
+
+[ 2016-06-14T23:17:14+08:00 ] 127.0.0.1 /admin.php?c=pic&a=newPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant img_src - assumed 'img_src' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant mainContent - assumed 'mainContent' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0828s ]
+SQL: UPDATE `pic` SET `title`='创世之柱——鹰状星云',`thumbnail`='/Uploads/image/20160614/1465912904293304.jpg',`img_src`='/Uploads/image/20160614/1465912891120747.jpg',`type`='3',`abstract`='哈勃望远镜拍摄到的太空照片不计其数，美到让人窒息，而其中一张一定能够脱颖而出，那就是被称为创世之柱的鹰状星云。',`mainType`='1',`mainContent`='&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;名称：&lt;/span&gt;鹰状星云&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;span style=&quot;font-family: 微软雅黑, &quot; microsoft=&quot;&quot;&gt;作者：哈勃&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;拍摄时间：2015年1月&lt;/p&gt;&lt;p&gt;距离：7000光年&amp;lt;/&lt;/p&gt;',`publishTime`='1465917433' WHERE ( id=74 ) [ RunTime:0.0815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000668s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000728s ]
+
+[ 2016-06-14T23:17:18+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000802s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000951s ]
+
+[ 2016-06-14T23:17:19+08:00 ] 127.0.0.1 /admin.php?c=pic&a=picDetail&id=74
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0828s ]
+SQL: SELECT * FROM `pic` WHERE ( id = 74 ) LIMIT 1   [ RunTime:0.0787s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000748s ]
+
+[ 2016-06-14T23:17:33+08:00 ] 127.0.0.1 /admin.php?c=pic&a=newPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000935s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant img_src - assumed 'img_src' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant mainContent - assumed 'mainContent' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0851s ]
+SQL: UPDATE `pic` SET `title`='创世之柱——鹰状星云',`thumbnail`='/Uploads/image/20160614/1465912904293304.jpg',`img_src`='/Uploads/image/20160614/1465912891120747.jpg',`type`='3',`abstract`='哈勃望远镜拍摄到的太空照片不计其数，美到让人窒息，而其中一张一定能够脱颖而出，那就是被称为创世之柱的鹰状星云。',`mainType`='1',`mainContent`='&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;名称：&lt;/span&gt;鹰状星云&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;span style=&quot;font-family: 微软雅黑, &quot; microsoft=&quot;&quot;&gt;作者：哈勃&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;拍摄时间：2015年1月&lt;/p&gt;&lt;p&gt;距离：7000光年&amp;amp;&lt;/p&gt;',`publishTime`='1465917452' WHERE ( id=74 ) [ RunTime:0.0819s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000761s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000836s ]
+
+[ 2016-06-14T23:17:54+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001179s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001409s ]
+
+[ 2016-06-14T23:17:55+08:00 ] 127.0.0.1 /admin.php?c=pic&a=picDetail&id=74
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001226s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0841s ]
+SQL: SELECT * FROM `pic` WHERE ( id = 74 ) LIMIT 1   [ RunTime:0.0820s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000740s ]
+
+[ 2016-06-14T23:18:20+08:00 ] 127.0.0.1 /admin.php?c=pic&a=newPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001192s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant img_src - assumed 'img_src' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant mainContent - assumed 'mainContent' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0882s ]
+SQL: UPDATE `pic` SET `title`='创世之柱——鹰状星云',`thumbnail`='/Uploads/image/20160614/1465912904293304.jpg',`img_src`='/Uploads/image/20160614/1465912891120747.jpg',`type`='3',`abstract`='哈勃望远镜拍摄到的太空照片不计其数，美到让人窒息，而其中一张一定能够脱颖而出，那就是被称为创世之柱的鹰状星云。',`mainType`='1',`mainContent`='&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;名称：&lt;/span&gt;鹰状星云&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif;&quot;&gt;&lt;span style=&quot;font-family: 微软雅黑, &quot; microsoft=&quot;&quot;&gt;作者：哈勃&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;拍摄时间：2015年1月&lt;/p&gt;&lt;p&gt;距离：7000光年&lt;/p&gt;',`publishTime`='1465917499' WHERE ( id=74 ) [ RunTime:0.0883s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2016-06-14T23:18:22+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037347s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001566s ]
+
+[ 2016-06-14T23:18:24+08:00 ] 127.0.0.1 /admin.php?c=pic&a=picDetail&id=74
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000999s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001140s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0883s ]
+SQL: SELECT * FROM `pic` WHERE ( id = 74 ) LIMIT 1   [ RunTime:0.0895s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000798s ]
+

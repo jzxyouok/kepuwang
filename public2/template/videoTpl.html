@@ -64,7 +64,7 @@
                                 <td>{{article.title}}</td>
                                 <td><img ng-src="{{article.thumbnail}}" alt="" width="100" height="100"></td>
                                 <!-- <td>{{article.content}}</td> -->
-                                <td>{{article.publishtime*1000| date:'yyyy-MM-dd hh:mm:ss'}}</td>
+                                <td>{{article.publishtime}}</td>
                                 <td>
                                     <span ng-switch="{{article.status}}">
                                     <span ng-switch-when="1">可用</span>
@@ -74,7 +74,7 @@
                                 </td>
                                 <td>
                                     <span ng-switch="{{article.maintype}}">
-                                    <span ng-switch-when="1">天文·文理</span>
+                                    <span ng-switch-when="1">天文·物理</span>
                                     <span ng-switch-when="2">地理·地质</span>
                                     <span ng-switch-when="3">人文·生态</span>
                                     <span ng-switch-default>其他</span>

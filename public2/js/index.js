@@ -444,6 +444,7 @@
     });
     app.controller("newVideoController", function($scope, $http, $route) {
         var videoId = $route.current.params.id;
+        $scope.showSave = !!videoId;
         $scope.newVideo = {};
         if (videoId !== undefined) {
             $http({
@@ -469,7 +470,7 @@
 
 
         $scope.methods = {
-            save: function() {
+            save: function(type) {
                 $http({
                     method: "POST",
                     url: "/admin.php?c=video&a=newVideo",
@@ -486,8 +487,12 @@
                         id: videoId
                     }
                 }).success(function(response) {
-
-                    location.href = "#/newContent?articleType=4&id=" + response;
+                    if(type==0){
+                        alert("保存成功");
+                    }else{
+                          location.href = "#/newContent?articleType=4&id=" + response;
+                    }
+                  
                 });
 
             },
@@ -619,7 +624,7 @@
             method: "get"
         }).success(function(response) {
             $scope.allArticle = response.allArticle;
-            pageSet.init(response.pageNum / 10 + 1);
+            pageSet.init(Math.ceil(response.pageNum / 10));
         });
         $scope.changeStatus = function(id, status) {
 
