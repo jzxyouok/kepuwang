@@ -1,19 +1,33 @@
 <link rel="stylesheet" href="/public/stylesheet/imageDetail.css">
 <style>
-     *{
-        
+* {
     color: #FFF;
 }
+
+.relative-video {
+    width: 180px;
+    float: left;
+    margin: 9px;
+    background-color: #1b1b1b;
+    position:relative;
+}
+.relative-video h5{
+    color:#fff;
+    text-align:center;
+}
+.rel-play{
+    position:absolute;
+    top:0;
+
+left:0;}
 </style>
 <div class="videoDetailTpl">
     <div class="imageDetail">
         <div class="row videoPlay">
             <div class="col-md-9 left">
                 <h2>{{videoDetail.title}}</h2>
-                 
                 <!-- <embed src=" http://static.youku.com/v1.0.0149/v/swf/qplayer_rtmp.swf?VideoIDS=XMTU4NzU1NTU4MA&winType=adshow&isAutoPlay=true" quality="high" width="760px"  align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed> -->
- 
-                <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer"  embed-src="{{videoDetail.videocode|trusted}}" width="740" height="500" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" />
+                <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" embed-src="{{videoDetail.videocode|trusted}}" width="740" height="500" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" />
             </div>
             <div class="col-md-3 right">
                 <h3>视频名片</h3>
@@ -31,8 +45,8 @@
             </div>
         </div>
         <div class="imgDetail row">
-            <h3>视频简介</h3> 
-            <div ng-bind-html="videoDetail.content"></div> 
+            <h3>视频简介</h3>
+            <div ng-bind-html="videoDetail.content"></div>
         </div>
         <div class="imgDownload">
             <h3>视频下载</h3>
@@ -48,6 +62,41 @@
                     <td>百度网盘3</td>
                 </tr>
             </table>
+        </div>
+        <div class="imgDownload">
+            <h3>相关视频</h3>
+            <div class="row">
+                <div class="relative-video">
+                    <img ng-src="{{video.thumbnail||'/Uploads/image/20160613/1465753197528387.png'}}" class="video-thumbnail" alt="..." width="180" height="135">
+                    <a href="#/videoDetail/{{video.id}}" class="rel-play"><img src="/public/images/videoPlay.png" width="180" height="135" alt=""></a>
+                    <h5>测试相关视频</h5>
+                </div>
+                 <div class="relative-video">
+                    <img ng-src="{{video.thumbnail||'/Uploads/image/20160613/1465753197528387.png'}}" class="video-thumbnail" alt="..." width="180" height="135">
+                    <a href="#/videoDetail/{{video.id}}" class="rel-play"><img src="/public/images/videoPlay.png" width="180" height="135" alt=""></a>
+                    <h5>测试相关视频</h5>
+                </div>
+
+ <div class="relative-video">
+                    <img ng-src="{{video.thumbnail||'/Uploads/image/20160613/1465753197528387.png'}}" class="video-thumbnail" alt="..." width="180" height="135">
+                    <a href="#/videoDetail/{{video.id}}" class="rel-play"><img src="/public/images/videoPlay.png" width="180" height="135" alt=""></a>
+                    <h5>测试相关视频</h5>
+                </div>
+
+ <div class="relative-video">
+                    <img ng-src="{{video.thumbnail||'/Uploads/image/20160613/1465753197528387.png'}}" class="video-thumbnail" alt="..." width="180" height="135">
+                    <a href="#/videoDetail/{{video.id}}" class="rel-play"><img src="/public/images/videoPlay.png" width="180" height="135" alt=""></a>
+                    <h5>测试相关视频</h5>
+                </div>
+
+ <div class="relative-video">
+                    <img ng-src="{{video.thumbnail||'/Uploads/image/20160613/1465753197528387.png'}}" class="video-thumbnail" alt="..." width="180" height="135">
+                    <a href="#/videoDetail/{{video.id}}" class="rel-play"><img src="/public/images/videoPlay.png" width="180" height="135" alt=""></a>
+                    <h5>测试相关视频</h5>
+                </div>
+
+
+            </div>
         </div>
         <div class="row">
             <!-- 多说评论框 start -->

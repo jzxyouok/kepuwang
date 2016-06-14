@@ -7081,3 +7081,96 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
 
+[ 2016-06-13T21:05:33+08:00 ] 127.0.0.1 /Uploads/image/20160613/1465815076847295.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+
+[ 2016-06-13T21:05:36+08:00 ] 127.0.0.1 /Uploads/image/20160613/1465815862617893.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+
+[ 2016-06-13T21:05:36+08:00 ] 127.0.0.1 /Uploads/image/20160613/1465815968292616.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+
+[ 2016-06-13T21:05:36+08:00 ] 127.0.0.1 /Uploads/image/20160613/1465816027121095.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+
+[ 2016-06-13T22:35:53+08:00 ] 127.0.0.1 /index.php?c=video&a=allVideo&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000957s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001543s ]
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\VideoController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Main\Controller\VideoController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0962s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `video` WHERE `type` = 3 AND `status` = 1 LIMIT 1   [ RunTime:0.0937s ]
+SQL: SELECT * FROM `video` WHERE `type` = 3 AND `status` = 1 ORDER BY publishTime desc LIMIT 0,18   [ RunTime:0.2316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000770s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000863s ]
+
+[ 2016-06-13T22:35:53+08:00 ] 127.0.0.1 /Uploads/image/20160613/1465814769353635.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+
+[ 2016-06-13T22:36:00+08:00 ] 127.0.0.1 /index.php?c=pic&a=allPic&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001184s ]
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\PicController.class.php 第 20 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Main\Controller\PicController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.1027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pic` WHERE `type` = 3 AND `status` = 1 LIMIT 1   [ RunTime:0.0989s ]
+SQL: SELECT * FROM `pic` WHERE `type` = 3 AND `status` = 1 ORDER BY publishTime desc LIMIT 0,18   [ RunTime:0.1007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000678s ]
+
+[ 2016-06-13T22:36:00+08:00 ] 127.0.0.1 /index.php?c=pic&a=allPic&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\PicController.class.php 第 20 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Main\Controller\PicController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.1002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pic` WHERE `type` = 3 AND `status` = 1 LIMIT 1   [ RunTime:0.0961s ]
+SQL: SELECT * FROM `pic` WHERE `type` = 3 AND `status` = 1 ORDER BY publishTime desc LIMIT 0,18   [ RunTime:0.0974s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000627s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000698s ]
+
+[ 2016-06-13T22:36:00+08:00 ] 127.0.0.1 /Uploads/image/20160612/1465700774960125.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+
+[ 2016-06-13T22:36:03+08:00 ] 127.0.0.1 /index.php?c=documentary&a=allDocumentary&page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001268s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Main\Controller\DocumentaryController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0939s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `documentary` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0896s ]
+SQL: SELECT * FROM `documentary` WHERE `status` = 1 LIMIT 0,15   [ RunTime:0.1798s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001265s ]
+

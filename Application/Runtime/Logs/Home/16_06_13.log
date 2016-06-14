@@ -3856,3 +3856,45 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001044s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001158s ]
 
+[ 2016-06-13T21:05:28+08:00 ] 127.0.0.1 /admin.php?c=article&a=allArticle&page=1&type=0&status=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001385s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 58 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0733s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0711s ]
+SQL: SELECT * FROM `article` WHERE `status` = 1 ORDER BY publishTime desc LIMIT 0,10   [ RunTime:1.1589s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000921s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001079s ]
+
+[ 2016-06-13T21:05:33+08:00 ] 127.0.0.1 /admin.php?c=article&a=editArticle&articleType=1&id=70
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001114s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0748s ]
+SQL: SELECT `id`,`mainType`,`thumbnail`,`title`,`abstract`,`type` FROM `article` WHERE ( id = 70 )  [ RunTime:0.0722s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2016-06-13T21:05:36+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=70&articleType=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001092s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0739s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 100 行.
+SQL: SELECT `id`,`title`,`content` FROM `article` WHERE `id` = 70  [ RunTime:0.2178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000772s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000884s ]
+

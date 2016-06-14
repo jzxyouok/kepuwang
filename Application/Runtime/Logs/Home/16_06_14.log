@@ -1,0 +1,13 @@
+[ 2016-06-14T10:22:57+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=documentaryDetail&id=134
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001075s ]
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0761s ]
+SQL: SELECT * FROM `documentary` WHERE ( id=134 ) LIMIT 1   [ RunTime:0.1468s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000718s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000796s ]
+

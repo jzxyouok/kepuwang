@@ -293,7 +293,8 @@
             $("#article-list3").empty();
             $("#article-list4").empty();
             for (var len = response.data.length, i = 0; i < len; i++) {
-                var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/' + response.data[i].id + '"><h4>' + response.data[i].title +
+                var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/'
+                 + response.data[i].id + '"><h4>' + response.data[i].title +
                     '</h4></a><p>' + response.data[i].publishtime.slice(0, 16) +
                     '</p></div><img src="' + response.data[i].thumbnail +
                     '" alt=""><div class="caption"><p>' + response.data[i].abstract +
@@ -315,14 +316,17 @@
                 $("#article-list3").empty();
                 $("#article-list4").empty();
 
-                for (var len = response.data.length, i = 0; i < len; i++) {
-                    var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/' + response.data[i].id + '"><h4>' + response.data[i].id + '</h4></a><p> {{article.publishtime||YYYY-MM-DD}}</p></div><img ng-src="' + response.data[i].thumbnail +
-                        '" alt=""><div class="caption"><p>+' + response.data[i].abstract +
-                        '</p></div></div>';
+                  for (var len = response.data.length, i = 0; i < len; i++) {
+                var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/'
+                 + response.data[i].id + '"><h4>' + response.data[i].title +
+                    '</h4></a><p>' + response.data[i].publishtime.slice(0, 16) +
+                    '</p></div><img src="' + response.data[i].thumbnail +
+                    '" alt=""><div class="caption"><p>' + response.data[i].abstract +
+                    '</p></div></div>';
 
-                    $("#article-list" + (i % 4 + 1)).append(newArticle);
+                $("#article-list" + (i % 4 + 1)).append(newArticle);
 
-                }
+            }
             });
         }
     });
