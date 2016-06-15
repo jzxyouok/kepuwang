@@ -11,6 +11,13 @@
 .imageDetail-bottom {
     padding-bottom:20px;
 }
+.imgDownload{
+    padding-bottom:50px;
+}
+.imgDownload a{
+    color:#FFF;
+    font-size:1.1em;
+}
 </style>
 <div class="imageDetailTpl">
     <div class="imageDetail">
@@ -34,21 +41,12 @@
     </div>
     <div class="imgDownload">
         <h4 class="main-title">图片下载</h4>
-        <table>
-            <tr>
-                <th>小尺寸</th>
-                <th>中尺寸</th>
-                <th>大尺寸</th>
-            </tr>
-            <tr>
-                <td>1M</td>
-                <td>2M</td>
-                <td>3M</td>
-            </tr>
-        </table>
+        <div class="col-md-3" ng-repeat="att in imgDetail.attachment">
+            <a href="{{att.url}}" download>{{att.name}}</a>
+        </div>
     </div>
     <div class="row imageDetail-bottom">
-        <a href="#/imageDetail/{{pic.id}}" ng-repeat="pic in relativePics"><img  ng-src="{{pic.thumbnail}}" width="200" height="150" alt=""></a>
+        <a href="#/imageDetail/{{pic.id}}" ng-repeat="pic in relativePics"  ><img  ng-src="{{pic.thumbnail}}" width="200" height="150" alt=""></a>
        
     </div>
 </div>

@@ -8,12 +8,12 @@ class VideoController extends Controller
     public function newVideo()
     {
         $newVideo = array(
-            title       => I("post.title"),
-            thumbnail   => I("post.thumbnail_url"),
-            type        => I("post.type"),
-            "abstract"  => I("post.abstract"),
-            videoCode   => I("post.videoCode"),
-            mainType    => I("post.mainType"),
+            title      => I("post.title"),
+            thumbnail  => I("post.thumbnail_url"),
+            type       => I("post.type"),
+            "abstract" => I("post.abstract"),
+            videoCode  => I("post.videoCode"),
+            mainType   => I("post.mainType"),
             // publishTime => time(),
         );
 
@@ -24,7 +24,30 @@ class VideoController extends Controller
         } else {
             $id = $db->add($newVideo);
         }
-        // echo $db->getLastSql();
+        // 处理附件
+        $attachment = I("post.attachment");
+        if ($attachment != "") {
+            $attachDB   = M("attachment");
+            $attachment = htmlspecialchars_decode(html_entity_decode($attachment));
+
+            $attachment = json_decode($attachment, true);
+            $attachDB->where("articleType=4 and  articleId=" . $id)->delete();
+
+            foreach ($attachment as $attach) {
+
+                $item = array(
+                    articleId   => $id,
+                    articleType => 4,
+                    name        => $attach["name"],
+                    url         => $attach["url"],
+                );
+                if ($item["name"] != "" && $item["url"] != "") {
+                    $attachDB->add($item);
+                }
+
+            }
+
+        }
         echo $id;
 
     }
@@ -53,7 +76,9 @@ class VideoController extends Controller
         $db                     = M("video");
         $picDetail              = $db->where("id = " . $id)->getField("id,mainType,thumbnail,title,abstract,type,videoCode", true);
         $picDetail["videoCode"] = htmlspecialchars_decode(html_entity_decode($picDetail["videoCode"]));
-        echo json_encode($picDetail[$id]);
+        $result                 = $picDetail[$id];
+        $result["attachment"]   = M("attachment")->where("articleType=4 and articleId=" . $id)->select();
+        echo json_encode($result);
 
     }
 

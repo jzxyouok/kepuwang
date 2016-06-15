@@ -42,8 +42,8 @@ left:0;}
 }
 .stay-bottom{
     position:absolute;
-    bottom:5px;
-    right:40px;
+    bottom:0px;
+    right:10px;
     font-size:0.9em;
     color:#ddd;
 }
@@ -52,13 +52,24 @@ left:0;}
     font-size:0.9em;
 }
 .bottom-info span{margin-right:20px;}
+.imgDownload{
+    padding-bottom:50px;
+}
+.imgDownload a{
+    color:#FFF;
+    font-size:1.1em;
+}
+.no-download{
+    font-size:0.9em;
+    color:#ddd;
+    padding-top:20px;
+}
 </style>
 <div class="videoDetailTpl">
     <div class="imageDetail">
         <div class="row videoPlay">
             <div class="col-md-9 left">
                 <h2>{{videoDetail.title}}</h2>
-                <!-- <embed src=" http://static.youku.com/v1.0.0149/v/swf/qplayer_rtmp.swf?VideoIDS=XMTU4NzU1NTU4MA&winType=adshow&isAutoPlay=true" quality="high" width="760px"  align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed> -->
                 <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" embed-src="{{videoDetail.videocode|trusted}}" width="740" height="455" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" />
                   <p  class="bottom-info"> <span ng-switch="videoDetail.maintype" >
                                     <span ng-switch-when="1">天文·物理</span>
@@ -87,61 +98,17 @@ left:0;}
             
             <h5>相关视频</h5>
               
-                <div class="relative-video">
-                    <div class="absolute-position"> <img ng-src="{{video.thumbnail||'/Uploads/image/20160613/1465753197528387.png'}}" class="video-thumbnail" alt="..." width="100" height="70" >
+                <div class="relative-video" ng-repeat="rel in videoDetail.relative">
+                    <div class="absolute-position"> <img ng-src="{{rel.thumbnail}}" class="video-thumbnail" alt="..." width="100" height="70" >
                     <a href="#/videoDetail/{{video.id}}" class="rel-play"><img src="/public/images/videoPlay.png" width="100" height="70" alt=""></a>
                         </div>
                         
-                    <h5>测试相关视频测试相关视频</h5>
+                    <h5>{{rel.title}}</h5>
                    
-                        <span  class="stay-bottom">2016-6-15</span>
+                        <span  class="stay-bottom">{{rel.publishtime|cutTimeStr}}</span>
                      
                 </div>
-                <div class="relative-video">
-                    <div class="absolute-position"> <img ng-src="{{video.thumbnail||'/Uploads/image/20160613/1465753197528387.png'}}" class="video-thumbnail" alt="..." width="100" height="70" >
-                    <a href="#/videoDetail/{{video.id}}" class="rel-play"><img src="/public/images/videoPlay.png" width="100" height="70" alt=""></a>
-                        </div>
-                        
-                    <h5>测试相关视频测试相关视频</h5>
-                   
-                        <span  class="stay-bottom">2016-6-15</span>
-                     
-                </div>
-   <div class="relative-video">
-                    <div class="absolute-position"> <img ng-src="{{video.thumbnail||'/Uploads/image/20160613/1465753197528387.png'}}" class="video-thumbnail" alt="..." width="100" height="70" >
-                    <a href="#/videoDetail/{{video.id}}" class="rel-play"><img src="/public/images/videoPlay.png" width="100" height="70" alt=""></a>
-                        </div>
-                        
-                    <h5>测试相关视频测试相关视频</h5>
-                   
-                        <span  class="stay-bottom">2016-6-15</span>
-                     
-                </div>
-   <div class="relative-video">
-                    <div class="absolute-position"> <img ng-src="{{video.thumbnail||'/Uploads/image/20160613/1465753197528387.png'}}" class="video-thumbnail" alt="..." width="100" height="70" >
-                    <a href="#/videoDetail/{{video.id}}" class="rel-play"><img src="/public/images/videoPlay.png" width="100" height="70" alt=""></a>
-                        </div>
-                        
-                    <h5>测试相关视频测试相关视频</h5>
-                   
-                        <span  class="stay-bottom">2016-6-15</span>
-                     
-                </div>
-   <div class="relative-video">
-                    <div class="absolute-position"> <img ng-src="{{video.thumbnail||'/Uploads/image/20160613/1465753197528387.png'}}" class="video-thumbnail" alt="..." width="100" height="70" >
-                    <a href="#/videoDetail/{{video.id}}" class="rel-play"><img src="/public/images/videoPlay.png" width="100" height="70" alt=""></a>
-                        </div>
-                        
-                    <h5>测试相关视频测试相关视频</h5>
-                   
-                        <span  class="stay-bottom">2016-6-15</span>
-                     
-                </div>
-
                
-
-            
-
             </div>
         </div>
         <div class="imgDetail row">
@@ -149,20 +116,12 @@ left:0;}
             <div ng-bind-html="videoDetail.content"></div>
         </div>
         <div class="imgDownload">
-            <h3>视频下载</h3>
-            <table>
-                <!-- <tr>
-                <th>小尺寸</th>
-                <th>中尺寸</th>
-                <th>大尺寸</th>
-            </tr> -->
-                <tr>
-                    <td>百度网盘1</td>
-                    <td>百度网盘2</td>
-                    <td>百度网盘3</td>
-                </tr>
-            </table>
+        <h4 class="main-title">视频下载</h4>
+        <p class="no-download" ng-show="noDownload">无可供下载资源···</p>
+        <div class="col-md-3" ng-repeat="att in imgDetail.attachment">
+            <a href="{{att.url}}" download>{{att.name}}</a>
         </div>
+    </div>
       
         <div class="row">
             <!-- 多说评论框 start -->

@@ -9,16 +9,18 @@ class PicController extends Controller
     public function newPic()
     {
         $newPic = array(
- 
+
             title       => I("post.title"),
             thumbnail   => I("post.thumbnail_url"),
-            img_src => I("post.img_src"),
+            img_src     => I("post.img_src"),
             type        => I("post.type"),
             "abstract"  => I("post.abstract"),
             mainType    => I("post.mainType"),
-            mainContent    => I("post.mainContent"),
+            mainContent => I("post.mainContent"),
             publishTime => time(),
         );
+        $attachment = I("post.attachment");
+
 // 此处缺少图片压缩
         $db = M("pic");
         $id = I("post.id");
@@ -28,7 +30,29 @@ class PicController extends Controller
         } else {
             $id = $db->add($newPic);
         }
+        // 处理附件
+        if ($attachment != "") {
+            $attachDB   = M("attachment");
+            $attachment = htmlspecialchars_decode(html_entity_decode($attachment));
 
+            $attachment = json_decode($attachment, true);
+            $attachDB->where("articleId=" . $id)->delete();
+
+            foreach ($attachment as $attach) {
+
+                $item = array(
+                    articleId   => $id,
+                    articleType => 2,
+                    name        => $attach["name"],
+                    url         => $attach["url"],
+                );
+                if ($item["name"] != "" && $item["url"] != "") {
+                    $attachDB->add($item);
+                }
+
+            }
+
+        }
         echo $id;
     }
 
@@ -59,10 +83,10 @@ class PicController extends Controller
 
         $id = I("get.id");
 
-        $db        = M("pic");
-        $picDetail = $db->where("id = " . $id)->find();
-          $picDetail["maincontent"] = htmlspecialchars_decode(html_entity_decode($picDetail["maincontent"]));
-      
+        $db                       = M("pic");
+        $picDetail                = $db->where("id = " . $id)->find();
+        $picDetail["maincontent"] = htmlspecialchars_decode(html_entity_decode($picDetail["maincontent"]));
+        $picDetail["attachment"]  = M("attachment")->where("articleType=2 and articleId=" . $id)->select();
         echo json_encode($picDetail);
 
     }

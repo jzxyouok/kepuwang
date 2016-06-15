@@ -4,14 +4,14 @@
     var transform = function(data) {
         return $.param(data);
     }
-      app.filter('cut', function(){
-    var filter = function(input){
-        if(typeof input != "string")
-         return "无正文~~";
-      return input.slice(0,50) + '...';
-    };
-    return filter;
-  });
+    app.filter('cut', function() {
+        var filter = function(input) {
+            if (typeof input != "string")
+                return "无正文~~";
+            return input.slice(0, 50) + '...';
+        };
+        return filter;
+    });
     app.config(function($httpProvider) {
         $httpProvider.defaults.transformRequest = function(data) {
             if (data === undefined) {
@@ -111,32 +111,32 @@
                 templateUrl: "/public2/template/documentarySets.html",
                 controller: "documentarySetController"
             })
-        .when("/newContent", {
-            templateUrl: "/public2/template/newContentTpl.html",
-            controller: "newContentController"
-        })
+            .when("/newContent", {
+                templateUrl: "/public2/template/newContentTpl.html",
+                controller: "newContentController"
+            })
 
         .when("/about", {
                 templateUrl: "public2/template/about.html",
             })
             .otherwise({ redirectTo: "/index" });
     }]);
- 
-    app.controller('documentarySetController', function($scope, $http, $route,$sce) {
+
+    app.controller('documentarySetController', function($scope, $http, $route, $sce) {
         var id = $route.current.params.id;
-               $http({
+        $http({
             url: "/admin.php?c=documentary&a=setDetail&id=" + id,
             method: "get"
         }).success(function(response) {
             $scope.allSets = response;
-            for(var i=0,len=$scope.allSets.length;i<len;i++){
-                 $scope.allSets[i].content = $sce.trustAsHtml( $scope.allSets[i].content);
+            for (var i = 0, len = $scope.allSets.length; i < len; i++) {
+                $scope.allSets[i].content = $sce.trustAsHtml($scope.allSets[i].content);
             }
         });
- 
 
 
-})
+
+    })
     app.controller('allDocumentaryController', function($scope, $http, $route, pageSet) {
         var status = $route.current.params.status || 1;
         $http({
@@ -391,21 +391,26 @@
                 method: "get"
             }).success(function(response) {
                 $scope.allArticle = response.allArticle;
-                pageSet.init(response.pageNum / 10 + 1);
+                pageSet.init(Math.ceil(response.pageNum / 10));
             });
 
         }
     });
     app.controller("newPicController", function($scope, $route, $http) {
         var picId = $route.current.params.id;
+        var currentFile; //标识正在操作哪一个附件
         $scope.showSavebuttom = !!picId;
         $scope.newPic = {};
+        $scope.attachment = [{ name: "", url: "" }];
         if (picId !== undefined) {
             $http({
                 url: "/admin.php?c=pic&a=picDetail&id=" + picId,
                 method: "get",
             }).success(function(response) {
                 $scope.newPic = response;
+                $scope.attachment = response.attachment;
+                if (!$scope.attachment.length)
+                    $scope.attachment = [{ name: "", url: "" }];
                 UE.getEditor('editor2').setContent(response.maincontent || "", false);
 
             })
@@ -428,9 +433,9 @@
                 console.log(arg);
             });
             o_ueditorupload.addListener('afterUpfile', function(t, arg) {
-                console.log("asdssa" + arg[0].url);
-                $scope.files = arg[0].url;
-                console.log(arg);
+                $scope.$apply(function() {
+                    $scope.attachment[currentFile].url = arg.url;
+                });
             });
         });
 
@@ -450,8 +455,8 @@
                         type: $scope.newPic.type,
                         abstract: $scope.newPic.abstract,
                         id: $scope.newPic.id,
-                        mainContent: UE.getEditor('editor2').getContent() //图片的简要信息【图片详情页右侧内容】
-
+                        mainContent: UE.getEditor('editor2').getContent(), //图片的简要信息【图片详情页右侧内容】
+                        attachment: JSON.stringify($scope.attachment)
                     }
                 }).success(function(response) {
 
@@ -465,7 +470,8 @@
 
             },
 
-            upFiles: function() {
+            upFiles: function(index) {
+                currentFile = index;
                 var myFiles = o_ueditorupload.getDialog("attachment");
                 myFiles.open();
             },
@@ -474,6 +480,14 @@
                 var myImage = o_ueditorupload.getDialog("insertimage");
                 myImage.open();
             },
+            addAttachment: function() {
+                console.log("asasa")
+                $scope.attachment.push({ name: "", url: "" })
+            },
+            delAttachment: function(index) {
+                console.log("asasa")
+                $scope.attachment.splice(index, 1)
+            }
 
         }
 
@@ -482,12 +496,17 @@
         var videoId = $route.current.params.id;
         $scope.showSave = !!videoId;
         $scope.newVideo = {};
+        $scope.attachment = [{ name: "", url: "" }];
         if (videoId !== undefined) {
             $http({
                 url: "/admin.php?c=video&a=videoDetail&id=" + videoId,
                 method: "get",
             }).success(function(response) {
+
                 $scope.newVideo = response;
+                $scope.attachment = response.attachment;
+                if (!$scope.attachment.length)
+                    $scope.attachment = [{ name: "", url: "" }];
 
             })
 
@@ -520,7 +539,8 @@
                         type: $scope.newVideo.type,
                         abstract: $scope.newVideo.abstract,
                         videoCode: $scope.newVideo.videocode,
-                        id: videoId
+                        attachment:JSON.stringify($scope.attachment),
+                        id: videoId,
                     }
                 }).success(function(response) {
                     if (type == 0) {
@@ -542,6 +562,14 @@
             },
             publish: function() {
 
+            },
+            addAttachment: function() {
+                console.log("asasa")
+                $scope.attachment.push({ name: "", url: "" })
+            },
+            delAttachment: function(index) {
+                console.log("asasa")
+                $scope.attachment.splice(index, 1)
             }
 
         }
@@ -555,10 +583,10 @@
             o_ueditorupload.addListener('beforeInsertImage', function(t, arg) {
                 $scope.img_src = arg[0].src;
             });
-            // o_ueditorupload.addListener('afterUpfile', function (t, arg)
-            // {
-            //   $scope.files = arg[0].url;
-            // });
+            o_ueditorupload.addListener('afterUpfile', function(t, arg) {
+                $scope.files = arg[0].url;
+                console.log($scope.files)
+            });
         });
 
 

@@ -31,7 +31,7 @@ class DocumentaryController extends Controller
 
         $db = M("sets");
         // 插入每集信息时  先删除
-        $db->where("documentaryId=" . $id)->delete();
+        $db->where("articleType=4 and documentaryId=" . $id)->delete();
 
         foreach ($sets as $set) {
             $item = array(

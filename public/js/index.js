@@ -6,6 +6,11 @@
             return $sce.trustAsResourceUrl(url);
         };
     }]);
+        app.filter('cutTimeStr', function() {
+        return function(timeStr) {
+            return timeStr.slice(0,10);
+        };
+    });
 
     app.service("util", function() {
         return {
@@ -213,6 +218,8 @@
             method: "get"
         }).success(function(response) {
             $scope.videoDetail = response;
+            if(!$scope.videoDetail.attachment.length)
+                $scope.noDownload = true;
             $scope.videoDetail.content = $sce.trustAsHtml($scope.videoDetail.content);
         });
     });

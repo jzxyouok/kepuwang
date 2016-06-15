@@ -3,6 +3,11 @@
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js">
 </script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
+<style>
+    th{
+        padding:10px;
+    }
+</style>
  <div class="templatemo-content-wrapper">
     <div class="templatemo-content">
 <div class="row">
@@ -55,6 +60,26 @@
    
     <br>
     <!-- <button type="button" onClick="upFiles()">调用上传文件模块</button> -->
+    <div class="row">
+        <table>
+            <tr>
+                <th></th>
+                <th>下载名称</th>
+                <th>下载地址</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="attach in  attachment">
+                            <th>附件{{$index+1}}：</th>
+                            <th>
+                                <input type="text" name=" " ng-model="attach.name" class="form-control" id="" placeholder="输入文件名称"> </th>
+                            <th> <input type="text" name=" " ng-model="attach.url" class="form-control" id="" placeholder="输入下载链接"></th>
+                            
+                            <th> <a href="javascript:void 0;" ng-show="$last" ng-click="methods.addAttachment()">添加</a>
+                            <a href="javascript:void 0;" ng-hide="$last" ng-click="methods.delAttachment($index)">删除</a>
+                            </th>
+                        </tr>
+        </table>
+    </div>
 <div class="row pad">
     <div class="row" style="padding:0 30px 30px 30px;">
         <div class="radio floatLeft">

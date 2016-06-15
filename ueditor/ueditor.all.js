@@ -24743,6 +24743,7 @@ UE.plugin.register('insertfile', function (){
                             '<a style="font-size:12px; color:#0066cc;" href="' + item.url +'" title="' + title + '">' + title + '</a>' +
                             '</p>';
                     }
+                    me.fireEvent('afterUpfile', item);
                     me.execCommand('insertHtml', html);
                 }
             }
