@@ -24,19 +24,16 @@ class ArticleController extends Controller
         $query = " status = 1 ";
         if (I("get.maintype") != "") {
             // $condition["maintype"] = I("get.maintype");
-             $query = $query." AND  mainType  = ".I("get.maintype");
+            $query = $query . " AND  mainType  = " . I("get.maintype");
         }
 
-        $page           = I("get.page");
-        $result         = array();
-        $result["num"]  = M("article")->where($condition)->count();
-
-        
+        $page          = I("get.page");
+        $result        = array();
+        $result["num"] = M("article")->where($query)->count();
 
         $result["data"] = M("article")->where($query)->order("publishTime desc")->limit(($page - 1) * 18, $page * 18)->select();
-        
-           // echo M("article")->getLastSql();
-          echo json_encode($result);
+
+        echo json_encode($result);
     }
 
     public function articleDetail()
@@ -44,11 +41,11 @@ class ArticleController extends Controller
         $id     = I("get.id");
         $result = array();
 
-        $db                          = M("article");
-        $result["detail"]            = $db->where("id=" . $id)->find();
-       
+        $db               = M("article");
+        $result["detail"] = $db->where("id=" . $id)->find();
+
         $result["detail"]["content"] = htmlspecialchars_decode(html_entity_decode($result["detail"]["content"]));
-        $result["relative"]          = $db->order("publishTime desc")->limit(0,10)->select();
+        $result["relative"]          = $db->order("publishTime desc")->limit(0, 10)->select();
         echo json_encode($result);
 
     }
