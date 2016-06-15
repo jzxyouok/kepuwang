@@ -4,6 +4,14 @@
     var transform = function(data) {
         return $.param(data);
     }
+      app.filter('cut', function(){
+    var filter = function(input){
+        if(typeof input != "string")
+         return "无正文~~";
+      return input.slice(0,50) + '...';
+    };
+    return filter;
+  });
     app.config(function($httpProvider) {
         $httpProvider.defaults.transformRequest = function(data) {
             if (data === undefined) {
@@ -32,8 +40,8 @@
                     current: 1,
                     backFn: function(p) {
                         console.log(p)
-                        if(p<= pages)
-                        callback(p);
+                        if (p <= pages)
+                            callback(p);
                     }
                 });
             },
@@ -99,7 +107,10 @@
                 templateUrl: "/public2/template/documentary.html",
                 controller: "allDocumentaryController"
             })
-
+            .when("/documentarySet/:id", {
+                templateUrl: "/public2/template/documentarySets.html",
+                controller: "documentarySetController"
+            })
         .when("/newContent", {
             templateUrl: "/public2/template/newContentTpl.html",
             controller: "newContentController"
@@ -110,7 +121,22 @@
             })
             .otherwise({ redirectTo: "/index" });
     }]);
+ 
+    app.controller('documentarySetController', function($scope, $http, $route,$sce) {
+        var id = $route.current.params.id;
+               $http({
+            url: "/admin.php?c=documentary&a=setDetail&id=" + id,
+            method: "get"
+        }).success(function(response) {
+            $scope.allSets = response;
+            for(var i=0,len=$scope.allSets.length;i<len;i++){
+                 $scope.allSets[i].content = $sce.trustAsHtml( $scope.allSets[i].content);
+            }
+        });
+ 
 
+
+})
     app.controller('allDocumentaryController', function($scope, $http, $route, pageSet) {
         var status = $route.current.params.status || 1;
         $http({
@@ -118,7 +144,11 @@
             method: "get"
         }).success(function(response) {
             $scope.allArticle = response.data;
+
         });
+
+
+
         $scope.publish = function(id) {
             var message = "确定发布此纪录片？";
             if (confirm(message)) {
@@ -145,10 +175,16 @@
                 method: "get",
             }).success(function(response) {
                 $scope.documentary = response;
-                $scope.documentary.sets = $scope.documentary.sets || [];
-                $scope.documentary.sets = JSON.parse($scope.documentary.sets);
+                // $scope.documentary.sets = $scope.documentary.sets || [];
+                // $scope.documentary.sets = JSON.parse($scope.documentary.sets);
                 UE.getEditor('editor2').setContent($scope.documentary.maincontent || "", false);
             });
+            $http({
+                url: "admin.php?c=documentary&a=setDetail&id=" + Id,
+                method: "get"
+            }).success(function(response) {
+                $scope.documentary.sets = response;
+            })
         }
         if (!$scope.documentary.sets) {
             console.log("here");
@@ -315,7 +351,7 @@
         });
 
         function handlePageChange(page) {
-      
+
             $http({
                 url: "/admin.php?c=article&a=allArticle&type=" + type + "&status=" + status + "&page=" + page,
                 method: "get"
@@ -487,12 +523,12 @@
                         id: videoId
                     }
                 }).success(function(response) {
-                    if(type==0){
+                    if (type == 0) {
                         alert("保存成功");
-                    }else{
-                          location.href = "#/newContent?articleType=4&id=" + response;
+                    } else {
+                        location.href = "#/newContent?articleType=4&id=" + response;
                     }
-                  
+
                 });
 
             },
@@ -584,15 +620,16 @@
             method: "get"
         }).success(function(response) {
             $scope.allArticle = response.allArticle;
-            pageSet.init(Math.ceil(response.pageNum / 10),getPicByPage);
+            pageSet.init(Math.ceil(response.pageNum / 10), getPicByPage);
         });
-        function getPicByPage(page){
-             $http({
-            url: "/admin.php?c=pic&a=allPic" + queryString + "&page="+page,
-            method: "get"
-        }).success(function(response) {
-            $scope.allArticle = response.allArticle;
-        });
+
+        function getPicByPage(page) {
+            $http({
+                url: "/admin.php?c=pic&a=allPic" + queryString + "&page=" + page,
+                method: "get"
+            }).success(function(response) {
+                $scope.allArticle = response.allArticle;
+            });
         }
         $scope.changeStatus = function(id, status) {
             var message = "确定" + status == "0" ? "恢复" : "撤销" + "这张图片？";

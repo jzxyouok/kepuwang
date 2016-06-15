@@ -1,0 +1,44 @@
+<style>
+    .link{
+        color:#337ab7;
+        cursor: pointer;
+    }
+    .link:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+</style>
+<div class="templatemo-content-wrapper">
+    <div class="templatemo-content">
+        <div class="container-fluid marginTop">
+            <div class="row-fluid">
+                <div class="  whiteBg" id="content">
+                    <ol class="breadcrumb">
+                        <li>管理平台</li>
+                        <li>记录片管理</li>
+                    </ol>
+                    <div class="row">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>编号</th>
+                                <th>标题</th>
+                                
+                                <th>正文摘要</th>
+                               
+                               
+                                <th>操作</th>
+                            </tr>
+                            <tr ng-repeat="article in allSets">
+                                <td>{{article.id}}</td>
+                                <td>{{article.title}}</td>
+                                <td ng-bind-html="article.content"></td>
+                                <td><a href="#/newContent?articleType=6&id={{article.id}}">编辑简介</a></td>
+                            </tr>
+                           
+                        </table>
+                        <div class="tcdPageCode">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

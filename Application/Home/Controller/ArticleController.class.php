@@ -9,11 +9,11 @@ class ArticleController extends Controller
     public function newArticle()
     {
         $newArticle = array(
-            title       => I("post.title"),
-            thumbnail   => I("post.thumbnail_url"),
-            mainType    => I("post.mainType"),
-            type        => I("post.type"),
-            "abstract"  => I("post.abstract"),
+            title      => I("post.title"),
+            thumbnail  => I("post.thumbnail_url"),
+            mainType   => I("post.mainType"),
+            type       => I("post.type"),
+            "abstract" => I("post.abstract"),
             // publishTime => time(),
         );
         // $info = getPic($newArticle["content"]); //使用函数 返回匹配地址 如果不为空则声称缩略图
@@ -50,33 +50,35 @@ class ArticleController extends Controller
     public function allArticle()
     {
         $page = I("get.page");
-        if($page == "")
+        if ($page == "") {
             $page = 1;
-
-        if(I("get.status") != "9"){
-             $condition = array(
-            status => I("get.status"),
-        );
         }
-       
+
+        if (I("get.status") != "9") {
+            $condition = array(
+                status => I("get.status"),
+            );
+        }
 
         if (I("get.name") != "") {
-            $condition["title"] = array("like","%".I("get.name")."%");
+            $condition["title"] = array("like", "%" . I("get.name") . "%");
         }
-         if (I("get.type") != "0") {
+        if (I("get.type") != "0") {
             $condition["type"] = I("get.type");
         }
 
-     
         $result["pageNum"]    = M("article")->where($condition)->count();
         $result["allArticle"] = M("article")->where($condition)->order("publishTime desc")->limit(($page - 1) * 10, $page * 10)->select();
- // echo M("article")->getLastSql();
+        // echo M("article")->getLastSql();
         echo json_encode($result);
     }
     public function newContent()
     {
         $articleId   = I("get.id");
         $articleType = I("get.articleType");
+        $condition   = array(
+            id => $articleId,
+        );
         switch ($articleType) {
             case '1':
                 $db = M("article");
@@ -87,18 +89,16 @@ class ArticleController extends Controller
             case '4':
                 $db = M("video");
                 break;
-                case '5':
-                $db = M("documentary");
+            case '6':
+                $db = M("sets");
+
                 break;
 
             default:
-                 $db = M("article");
+                $db = M("article");
                 break;
         }
 
-        $condition = array(
-            id => $articleId,
-        );
         $title             = $db->where($condition)->getField("id,title,content");
         $result            = $title[$articleId];
         $result['content'] = htmlspecialchars_decode(html_entity_decode($result['content']));
@@ -125,6 +125,9 @@ class ArticleController extends Controller
                 break;
             case '5':
                 $db = M("documentary");
+                break;
+            case '6':
+                $db = M("sets");
                 break;
             default:
                 $db = M("article");

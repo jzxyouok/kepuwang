@@ -46,6 +46,7 @@
                                 <!-- <th>类别</th> -->
                                 <!-- <th>位置</th> -->
                                 <th>操作</th>
+                                <th>编辑分集信息</th>
                             </tr>
                             <tr ng-repeat="article in allArticle">
                                 <td>{{article.id}}</td>
@@ -63,7 +64,7 @@
                                
                              
                                 <td>
-                                        <span ng-switch="{{article.status}}"   class="link">
+                                    <span ng-switch="{{article.status}}"   class="link">
                                     <span ng-switch-when="1" ng-click="changeStatus(article.id,article.status)">撤销</span>
                                     <span ng-switch-when="0" ng-click="changeStatus(article.id,article.status)">恢复</span>
                                     <span ng-switch-when="2" ng-click="publish(article.id,article.status)">发布</span>
@@ -71,9 +72,14 @@
 
                                     <a href="#/newDocumentary?id={{article.id}}"> 编辑 </a>
                                     <a href="/index.php/#documentary/{{article.id}}/1" target="_blank">预览</a>
-                                    <!-- <a href="">置于首页</a> -->
-                                </td>
+                        <!-- <ul>
+    <li ng-repeat="set in article.sets">{{set.title}}</li>
+</ul>
+ -->
+                            </td> 
+                            <td><a href="#documentarySet/{{article.id}}">编辑分集信息</a></td>
                             </tr>
+                           
                         </table>
                         <div class="tcdPageCode">
                         </div>
