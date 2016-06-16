@@ -7,62 +7,75 @@
 .relative-video {
     width: 265px;
     float: left;
-    height:77px;
-    margin:9px;
-    margin-left:0px;
-    padding-left:110px;
-    padding-right:15px;
+    height: 77px;
+    margin: 9px;
+    margin-left: 0px;
+    padding-left: 110px;
+    padding-right: 15px;
     background-color: #1b1b1b;
-    position:relative;
+    position: relative;
 }
-.relative-video h5{
-    color:#fff;
+
+.relative-video h5 {
+    color: #fff;
     /*text-align:center;*/
 }
-.rel-play{
-    position:absolute;
-    top:0;
 
-left:0;}
-.videoPlay .left{
-    width:72%!important;
+.rel-play {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.video-info{
-    margin-bottom:15px;
-    border-bottom:1px solid #aaa;
+
+.videoPlay .left {
+    width: 72%!important;
 }
-.videoPlay .right{
-    width:28%;
-    
+
+.video-info {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #aaa;
 }
-.absolute-position{
-    position:absolute;
-    top:0;
-    left:0;
+
+.videoPlay .right {
+    width: 28%;
 }
-.stay-bottom{
-    position:absolute;
-    bottom:3px;
-    right:10px;
-    font-size:0.9em;
-    color:#ddd;
+
+.absolute-position {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.bottom-info{
-    color:#ddd !important;
-    font-size:0.9em;
+
+.stay-bottom {
+    position: absolute;
+    bottom: 3px;
+    right: 10px;
+    font-size: 0.9em;
+    color: #ddd;
 }
-.bottom-info span{margin-right:20px;}
-.imgDownload{
-    padding-bottom:50px;
+
+.bottom-info {
+    color: #ddd !important;
+    font-size: 0.9em;
 }
-.imgDownload a{
-    color:#FFF;
-    font-size:1.1em;
+
+.bottom-info span {
+    margin-right: 20px;
 }
-.no-download{
-    font-size:0.9em;
-    color:#ddd;
-    padding-top:20px;
+
+.imgDownload {
+    padding-bottom: 50px;
+}
+
+.imgDownload a {
+    color: #FFF;
+    font-size: 1.1em;
+}
+
+.no-download {
+    font-size: 0.9em;
+    color: #ddd;
+    padding-top: 20px;
 }
 </style>
 <div class="videoDetailTpl">
@@ -71,19 +84,19 @@ left:0;}
             <div class="col-md-9 left">
                 <h2>{{videoDetail.title}}</h2>
                 <embed type="application/x-shockwave-flash" class="edui-faked-video" pluginspage="http://www.macromedia.com/go/getflashplayer" embed-src="{{videoDetail.videocode|trusted}}" width="740" height="455" wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" />
-                  <p  class="bottom-info"> <span ng-switch="videoDetail.maintype" >
+                <p class="bottom-info"> <span ng-switch="videoDetail.maintype">
                                     <span ng-switch-when="1">天文·物理</span>
                     <span ng-switch-when="2">地理·地质</span>
                     <span ng-switch-when="3">人文·生态</span>
                     <span ng-switch-default>其他</span>
                     </span>
-                 {{videoDetail.publishtime}}</p>
+                    {{videoDetail.publishtime}}</p>
             </div>
             <div class="col-md-3 right">
                 <!--<h3>视频名片</h3>-->
                 <!--<p>简介：{{videoDetail.abstract}}</p>-->
                 <!--<p>名称：{{videoDetail.title}}</p>-->
-          <!--       <div class="video-info">
+                <!--       <div class="video-info">
                      <p>类别： <span ng-switch="videoDetail.maintype">
                                     <span ng-switch-when="1">天文·文理</span>
                     <span ng-switch-when="2">地理·地质</span>
@@ -95,20 +108,14 @@ left:0;}
                 <p>上传时间：{{videoDetail.publishtime}}</p>
                 </div>
                 -->
-            
-            <h5>相关视频</h5>
-              
+                <h5>相关视频</h5>
                 <div class="relative-video" ng-repeat="rel in videoDetail.relative">
-                    <div class="absolute-position"> <img ng-src="{{rel.thumbnail}}" class="video-thumbnail" alt="..." width="100" height="77" >
-                    <a href="#/videoDetail/{{rel.id}}" class="rel-play"><img src="/public/images/videoPlay.png" width="100" height="77" alt=""></a>
-                        </div>
-                        
+                    <div class="absolute-position"> <img ng-src="{{rel.thumbnail}}" class="video-thumbnail" alt="..." width="100" height="77">
+                        <a href="#/videoDetail/{{rel.id}}" class="rel-play"><img src="/public/images/videoPlay.png" width="100" height="77" alt=""></a>
+                    </div>
                     <h5>{{rel.title}}</h5>
-                   
-                        <span  class="stay-bottom">{{rel.publishtime|cutTimeStr}}</span>
-                     
+                    <span class="stay-bottom">{{rel.publishtime|cutTimeStr}}</span>
                 </div>
-               
             </div>
         </div>
         <div class="imgDetail row">
@@ -116,32 +123,27 @@ left:0;}
             <div ng-bind-html="videoDetail.content"></div>
         </div>
         <div class="imgDownload">
-        <h4 class="main-title">视频下载</h4>
-        <p class="no-download" ng-show="noDownload">无可供下载资源···</p>
-        <div class="col-md-3" ng-repeat="att in imgDetail.attachment">
-            <a href="{{att.url}}" download>{{att.name}}</a>
+            <h4 class="main-title">视频下载</h4>
+            <p class="no-download" ng-show="noDownload">无可供下载资源···</p>
+            <div class="col-md-3" ng-repeat="att in imgDetail.attachment">
+                <a href="{{att.url}}" download>{{att.name}}</a>
+            </div>
         </div>
-    </div>
-      
         <div class="row">
-            <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="id{{videoDetail.id}}" data-title="{{videoDetail.title}}" data-url="http://www.server.com/#/videoDetail/"></div>
-            <!-- 多说评论框 end -->
-            <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-            <script type="text/javascript">
-            var duoshuoQuery = {
-                short_name: "boomler2"
-            };
-            (function() {
-                var ds = document.createElement('script');
-                ds.type = 'text/javascript';
-                ds.async = true;
-                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                ds.charset = 'UTF-8';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-            })();
-            </script>
-            <!-- 多说公共JS代码 end -->
+            <div class="ds-share flat" id="ds-share" data-thread-key="此处请替换为当前文章的thread-key" data-title="此处请替换为分享时显示的标题" data-images="此处请替换为分享时显示的图片的链接地址" data-content="此处请替换为分享时显示的内容" data-url="此处请替换为分享时显示的链接地址">
+                <div class="ds-share-inline">
+                    <ul class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+                        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+                        <!-- <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li> -->
+                        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                    </ul>
+                    <div class="ds-share-icons-more">
+                    </div>
+                </div>
+            </div>
+            <div id="duoshuo-comment"></div>
         </div>
     </div>
 </div>

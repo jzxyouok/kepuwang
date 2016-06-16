@@ -1,7 +1,23 @@
 ! function(angular, window, b) {
     var app = angular.module('myApp', ['ngRoute']);
     // 导航栏指令
+    var base_url = "http://boomler.wang/";
 
+    function toggleDuoshuoComments(id, url,title,abstract) {
+        var el = document.createElement('div'); //该div不需要设置class="ds-thread"
+        el.setAttribute('data-thread-key', id); //必选参数
+        el.setAttribute('data-url', url); //必选参数
+        DUOSHUO.EmbedThread(el);
+        // DUOSHUO.initSelector('.ds-share',{type:'ShareWidget'});
+        jQuery("#duoshuo-comment").append(el);
+        document.getElementById("ds-share").setAttribute('data-thread-key', id);
+        document.getElementById("ds-share").setAttribute('data-url', url);
+        document.getElementById("ds-share").setAttribute('data-content', abstract);
+
+        document.getElementById("ds-share").setAttribute('data-title', title);
+
+    }
+ 
     app.filter('trusted', ['$sce', function($sce) {
         return function(url) {
             return $sce.trustAsResourceUrl(url);
@@ -46,7 +62,7 @@
                 });
             }
         };
-    })
+    });
     app.service("pageSet", function() {
         return {
             init: function(pages, callback) {
@@ -61,7 +77,29 @@
 
         }
 
-    })
+    });
+    app.directive("comment", function() {
+        return {
+            restrict: 'A',
+            link: function(scope) {
+                var duoshuo = scope.duoshuo;
+                var data_thread_key = 'article_' + duoshuo.id;
+                var data_url = duoshuo.url;
+                // var data_author_key = base_url + duoshuo.url + duoshuo.id;
+
+                // dynamic load the duoshuo comment box
+                var el = document.createElement('div'); //该div不需要设置class="ds-thread"
+                el.setAttribute('data-thread-key', data_thread_key); //必选参数
+                el.setAttribute('data-url', data_url); //必选参数
+                // el.setAttribute('data-author-key', data_author_key);//可选参数
+                console.log(DUOSHUO)
+                DUOSHUO.EmbedThread(el);
+                jQuery('#comment-box').append(el);
+
+
+            }
+        };
+    });
 
     app.directive("foot", function() {
         return {
@@ -146,11 +184,11 @@
             // 本集的详细信息
 
         $http({
-            url: "/index.php?c=documentary&a=setDetail&id=" + id + "&set=" +set,
+            url: "/index.php?c=documentary&a=setDetail&id=" + id + "&set=" + set,
             method: "get",
         }).success(function(response) {
             $scope.setDetail = response;
-                $scope.setDetail.content = $sce.trustAsHtml($scope.setDetail.content);
+            $scope.setDetail.content = $sce.trustAsHtml($scope.setDetail.content);
 
         });
 
@@ -169,12 +207,14 @@
         var id = $route.current.params.id;
         if (id == "")
             window.location.href = "#/article";
+ 
         $http({
             url: "/index.php?c=article&a=articleDetail&id=" + id,
             method: "get"
         }).success(function(response) {
             $scope.articleDetail = response;
             $scope.articleDetail.detail.content = $sce.trustAsHtml($scope.articleDetail.detail.content);
+            toggleDuoshuoComments(id,base_url + "#/articleDetail/" + id,$scope.articleDetail.detail.title,$scope.articleDetail.detail.abstract,$scope.articleDetail.detail.thumbnail)
         });
 
     });
@@ -189,6 +229,8 @@
             $scope.imgDetail = response;
             $scope.imgDetail.content = $sce.trustAsHtml($scope.imgDetail.content);
             $scope.imgDetail.maincontent = $sce.trustAsHtml($scope.imgDetail.maincontent);
+            toggleDuoshuoComments(id,base_url + "#/imageDetail/" + id,$scope.imgDetail.title,$scope.imgDetail.abstract,$scope.imgDetail.thumbnail);
+
         });
         $http({
             url: "/index.php?c=pic&a=relativePic",
@@ -231,6 +273,8 @@
             if (!$scope.videoDetail.attachment.length)
                 $scope.noDownload = true;
             $scope.videoDetail.content = $sce.trustAsHtml($scope.videoDetail.content);
+            toggleDuoshuoComments(id,base_url + "#/videoDetail/" + id,$scope.videoDetail.title,$scope.videoDetail.abstract,$scope.videoDetail.thumbnail);
+
         });
     });
     app.controller("indexController", function($scope, $http) {
