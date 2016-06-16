@@ -1,14 +1,16 @@
 ! function(angular, window, b) {
     var app = angular.module('myApp', ['ngRoute']);
     // 导航栏指令
+
     app.filter('trusted', ['$sce', function($sce) {
         return function(url) {
             return $sce.trustAsResourceUrl(url);
         };
     }]);
-        app.filter('cutTimeStr', function() {
+
+    app.filter('cutTimeStr', function() {
         return function(timeStr) {
-            return timeStr.slice(0,10);
+            return timeStr.slice(0, 10);
         };
     });
 
@@ -19,6 +21,7 @@
             }
         }
     })
+
     app.directive("navbar", function() {
         return {
             restrict: "E",
@@ -33,7 +36,8 @@
             link: function(scope, element, attrs) {
                 var current = element;
                 scope.$watch(function() {
-                    return attrs.embedSrc; }, function() {
+                    return attrs.embedSrc;
+                }, function() {
                     var clone = element
                         .clone()
                         .attr('src', attrs.embedSrc);
@@ -123,22 +127,33 @@
         var id = $route.current.params.id;
         $scope.id = id;
         var set = $route.current.params.set;
+        // 纪录片的详细信息
+        $http({
+                url: "admin.php?c=documentary&a=documentaryDetail&id=" + id,
+                method: "get"
+            }).success(function(response) {
+                $scope.documentaryDetail = response;
+                var sets = $scope.documentaryDetail.sets.replace(/&quot;/g, "\"") || '[]';
+                $scope.documentaryDetail.sets = JSON.parse(sets);
+                $scope.documentaryDetail.set = JSON.parse(sets)[set];
+
+                $scope.documentaryDetail.maincontent = $sce.trustAsHtml($scope.documentaryDetail.maincontent);
+                $scope.documentaryDetail.content = $sce.trustAsHtml($scope.documentaryDetail.content);
+
+                console.log($scope.documentaryDetail.set)
+                console.log(response);
+            })
+            // 本集的详细信息
 
         $http({
-            url: "admin.php?c=documentary&a=documentaryDetail&id=" + id,
-            method: "get"
+            url: "/index.php?c=documentary&a=setDetail&id=" + id + "&set=" +set,
+            method: "get",
         }).success(function(response) {
-            $scope.documentaryDetail = response;
-            var sets = $scope.documentaryDetail.sets.replace(/&quot;/g, "\"") || '[]';
-            $scope.documentaryDetail.sets = JSON.parse(sets);
-            $scope.documentaryDetail.set = JSON.parse(sets)[set];
+            $scope.setDetail = response;
+                $scope.setDetail.content = $sce.trustAsHtml($scope.setDetail.content);
 
-            $scope.documentaryDetail.maincontent = $sce.trustAsHtml($scope.documentaryDetail.maincontent);
-            $scope.documentaryDetail.content = $sce.trustAsHtml($scope.documentaryDetail.content);
+        });
 
-            console.log($scope.documentaryDetail.set)
-            console.log(response);
-        })
     });
     app.controller("allDocumentaryController", function($scope, $http, $route, $sce) {
         $http({
@@ -147,14 +162,9 @@
         }).success(function(response) {
             $scope.documentarys = response.data;
             var len = $scope.documentarys.length;
-
-            for (var i = 0; i < len; i++) {
-                $scope.documentarys[i].sets = JSON.parse($scope.documentarys[i].sets.replace(/&quot;/g, "\"") || '[]');
-                console.log($scope.documentarys[i].sets)
-            }
-            $scope.num = $scope.num;
         })
     });
+
     app.controller("articleDetailController", function($scope, $http, $route, $sce) {
         var id = $route.current.params.id;
         if (id == "")
@@ -181,9 +191,9 @@
             $scope.imgDetail.maincontent = $sce.trustAsHtml($scope.imgDetail.maincontent);
         });
         $http({
-            url:"/index.php?c=pic&a=relativePic",
-            method:"get"
-        }).success(function(response){
+            url: "/index.php?c=pic&a=relativePic",
+            method: "get"
+        }).success(function(response) {
             $scope.relativePics = response;
         })
         $scope.like = function() {
@@ -218,7 +228,7 @@
             method: "get"
         }).success(function(response) {
             $scope.videoDetail = response;
-            if(!$scope.videoDetail.attachment.length)
+            if (!$scope.videoDetail.attachment.length)
                 $scope.noDownload = true;
             $scope.videoDetail.content = $sce.trustAsHtml($scope.videoDetail.content);
         });
@@ -306,8 +316,7 @@
             $("#article-list3").empty();
             $("#article-list4").empty();
             for (var len = response.data.length, i = 0; i < len; i++) {
-                var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/'
-                 + response.data[i].id + '"><h4>' + response.data[i].title +
+                var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/' + response.data[i].id + '"><h4>' + response.data[i].title +
                     '</h4></a><p>' + response.data[i].publishtime.slice(0, 16) +
                     '</p></div><img src="' + response.data[i].thumbnail +
                     '" alt=""><div class="caption"><p>' + response.data[i].abstract +
@@ -329,17 +338,16 @@
                 $("#article-list3").empty();
                 $("#article-list4").empty();
 
-                  for (var len = response.data.length, i = 0; i < len; i++) {
-                var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/'
-                 + response.data[i].id + '"><h4>' + response.data[i].title +
-                    '</h4></a><p>' + response.data[i].publishtime.slice(0, 16) +
-                    '</p></div><img src="' + response.data[i].thumbnail +
-                    '" alt=""><div class="caption"><p>' + response.data[i].abstract +
-                    '</p></div></div>';
+                for (var len = response.data.length, i = 0; i < len; i++) {
+                    var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/' + response.data[i].id + '"><h4>' + response.data[i].title +
+                        '</h4></a><p>' + response.data[i].publishtime.slice(0, 16) +
+                        '</p></div><img src="' + response.data[i].thumbnail +
+                        '" alt=""><div class="caption"><p>' + response.data[i].abstract +
+                        '</p></div></div>';
 
-                $("#article-list" + (i % 4 + 1)).append(newArticle);
+                    $("#article-list" + (i % 4 + 1)).append(newArticle);
 
-            }
+                }
             });
         }
     });

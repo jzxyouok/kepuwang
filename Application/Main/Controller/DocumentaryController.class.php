@@ -26,4 +26,13 @@ class DocumentaryController extends Controller
 
         echo json_encode($result);
     }
+    public function setDetail()
+    {
+        $id = I("get.set");
+
+        $result            = M("sets")->where("id =  " . $id)->find();
+        $result['content'] = htmlspecialchars_decode(html_entity_decode($result['content']));
+
+        echo json_encode($result);
+    }
 }
