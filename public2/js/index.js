@@ -504,6 +504,7 @@
             }).success(function(response) {
 
                 $scope.newVideo = response;
+
                 $scope.attachment = response.attachment;
                 if (!$scope.attachment.length)
                     $scope.attachment = [{ name: "", url: "" }];
@@ -534,7 +535,7 @@
                     data: {
                         title: $scope.newVideo.title,
                         // content: content,
-                        thumbnail_url: $scope.thumbnail,
+                        thumbnail_url: $scope.thumbnail ||$scope.newVideo.thumbnail,
                         mainType: $scope.newVideo.maintype,
                         type: $scope.newVideo.type,
                         abstract: $scope.newVideo.abstract,
