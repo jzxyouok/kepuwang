@@ -197,9 +197,7 @@
         }).success(function(response) {
             $scope.setDetail = response;
             $scope.setDetail.content = $sce.trustAsHtml($scope.setDetail.content);
-
         });
-
     });
     app.controller("allDocumentaryController", function($scope, $http, $route, $sce) {
         $http({

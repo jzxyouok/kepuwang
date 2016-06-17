@@ -36,7 +36,7 @@
                         <input class="form-control" ng-model="set.code" placeholder="请输入本集视频地址" />
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail2" class="del" ng-click="delSet($index)">删除</label>
+                        <label for="exampleInputEmail2" class="del" ng-click="delSet($index,set.id)">删除</label>
                     </div>
                 </div>
             </div>
@@ -50,10 +50,10 @@
                 <textarea class="form-control" rows="3" ng-model="documentary.abstract" placeholder="请输入纪录片简介"></textarea>
             </div>
         </div>
-        <script type="text/plain" id="j_ueditorupload" style="height:5px;display:none;"></script>
+        <script type="text/plain" id="j_ueditorupload" ></script>
         <div class="row" style="padding-top:30px;">
             <div class="col-md-2">
-                <button type="button" class="btn btn-md btn-primary" ng-click="documentary.upImage()">选择纪录片缩略图</button>
+                <button type="button" class="btn btn-md btn-primary" ng-click="upImage()">选择纪录片缩略图</button>
             </div>
             <div class="col-md-4">
                 <img ng-src="{{documentary.thumbnail}}" alt="" width="120" height="90">
@@ -68,7 +68,7 @@
         </div>
         <div class="row">
             <div class="mainInfo-docu">
-              <script type="text/plain" id="j_ueditorupload"></script>
+              
                 <script type="text/plain" id="editor2"></script>
                 <script>
                 var ue = UE.getEditor('editor2');

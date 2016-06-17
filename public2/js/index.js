@@ -177,29 +177,34 @@
             }).success(function(response) {
 
                 $scope.documentary = response;
-                // $scope.documentary.sets = $scope.documentary.sets || [];
-                // $scope.documentary.sets = JSON.parse($scope.documentary.sets);
                 UE.getEditor('editor2').setContent($scope.documentary.maincontent || "", false);
+                $http({
+                    url: "admin.php?c=documentary&a=setDetail&id=" + Id,
+                    method: "get"
+                }).success(function(response) {
+                    $scope.documentary.sets = response;
+                    if (!$scope.documentary.sets.length) {
+                         
+                        $scope.documentary.sets = [{ title: "", code: "" }];
+                    }
+                })
+
             });
-            $http({
-                url: "admin.php?c=documentary&a=setDetail&id=" + Id,
-                method: "get"
-            }).success(function(response) {
-                $scope.documentary.sets = response;
-            })
         }
-        if (!$scope.documentary.sets) {
-            console.log("here");
-            $scope.documentary.sets = [{ title: "", code: "" }];
-        }
+
+
         $scope.addSet = function() {
             console.log($scope.documentary.sets.length);
             $scope.documentary.sets.push({ title: "", code: "" });
 
         }
-        $scope.delSet = function(index) {
+        $scope.delSet = function(index,setId) {
             if (confirm("确定删除第" + (index + 1) + "集？")) {
                 $scope.documentary.sets.splice(index, 1);
+                $http({
+                    method:"get",
+                    url:"/admin.php?c=documentary&a=delSet&id="+setId
+                }).success(function(){});
             }
 
         }
@@ -210,6 +215,7 @@
                 sets.push({
                     title: $scope.documentary.sets[i].title,
                     code: $scope.documentary.sets[i].code,
+                    id:$scope.documentary.sets[i].id ||0,
                 });
             }
             $http({
@@ -248,10 +254,12 @@
                 $scope.documentary.thumbnail = arg[0].src;
             });
             $scope.documentary.upFiles = function() {
+
                 var myFiles = o_ueditorupload.getDialog("attachment");
                 myFiles.open();
             };
-            $scope.documentary.upImage = function() {
+            $scope.upImage = function() {
+                console.log("beinghrere")
                 var myImage = o_ueditorupload.getDialog("insertimage");
                 myImage.open();
             };
@@ -539,12 +547,12 @@
                     data: {
                         title: $scope.newVideo.title,
                         // content: content,
-                        thumbnail_url: $scope.thumbnail ||$scope.newVideo.thumbnail,
+                        thumbnail_url: $scope.thumbnail || $scope.newVideo.thumbnail,
                         mainType: $scope.newVideo.maintype,
                         type: $scope.newVideo.type,
                         abstract: $scope.newVideo.abstract,
                         videoCode: $scope.newVideo.videocode,
-                        attachment:JSON.stringify($scope.attachment),
+                        attachment: JSON.stringify($scope.attachment),
                         id: videoId,
                     }
                 }).success(function(response) {

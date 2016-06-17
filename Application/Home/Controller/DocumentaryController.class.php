@@ -31,7 +31,6 @@ class DocumentaryController extends Controller
 
         $db = M("sets");
         // 插入每集信息时  先删除
-        $db->where("documentaryId=" . $id)->delete();
 
         foreach ($sets as $set) {
             $item = array(
@@ -39,8 +38,11 @@ class DocumentaryController extends Controller
                 title         => $set["title"],
                 code          => $set["code"],
             );
-            $db->add($item);
-            echo $db->getLastSql();
+            if ($set["id"]) {
+                $db->where("id=" . $set["id"])->save($item);
+            } else {
+                $db->add($item);
+            }
 
         }
 
@@ -66,6 +68,12 @@ class DocumentaryController extends Controller
             $result[$i]["content"] = htmlspecialchars_decode(html_entity_decode($result[$i]["content"]));
         }
         echo json_encode($result);
+    }
+    public function delSet()
+    {
+        $db = M("sets");
+        $db->where("id=" . I("get.id"))->delete();
+        echo $db->getLastSql();
     }
 
 }
