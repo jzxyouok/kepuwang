@@ -131,6 +131,7 @@
             $scope.allSets = response;
             for (var i = 0, len = $scope.allSets.length; i < len; i++) {
                 $scope.allSets[i].content = $sce.trustAsHtml($scope.allSets[i].content);
+                $scope.currentDocumentary = id;
             }
         });
 
@@ -227,7 +228,7 @@
                 }
             }).success(function(response) {
                 alert("保存成功！");
-                
+
                 // if (type == 1) {
                 //     alert("保存成功");
                 // } else {

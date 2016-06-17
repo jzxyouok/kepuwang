@@ -175,7 +175,7 @@
         var set = $route.current.params.set;
         // 纪录片的详细信息
         $http({
-                url: "admin.php?c=documentary&a=documentaryDetail&id=" + id,
+                url: "/admin.php?c=documentary&a=documentaryDetail&id=" + id,
                 method: "get"
             }).success(function(response) {
                 $scope.documentaryDetail = response;

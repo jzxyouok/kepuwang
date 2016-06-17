@@ -31,8 +31,13 @@
                             <tr ng-repeat="article in allSets">
                                 <td>{{article.id}}</td>
                                 <td>{{article.title}}</td>
-                                <td ng-bind-html="article.content"></td>
-                                <td><a href="#/newContent?articleType=6&id={{article.id}}">编辑简介</a></td>
+                                <td>
+                                    <div ng-bind-html="article.content" style="max-height:100px;overflow:hidden;"></div>  
+                                </td>
+                                <td><a href="#/newContent?articleType=6&id={{article.id}}&documentId={{currentDocumentary}}">编辑本集简介</a>
+                                <a href="/#/documentaryDetail/{{currentDocumentary}}/{{article.id}}&documentId={{currentDocumentary}}">预览</a>
+                                </td>
+
                             </tr>
                            
                         </table>

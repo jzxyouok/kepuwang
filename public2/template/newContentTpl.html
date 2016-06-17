@@ -3,10 +3,12 @@
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js">
 </script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
-<style>#edui1_iframeholder{
-    height:528px;
-    overflow:visible!important;}
-    </style>
+<style>
+#edui1_iframeholder {
+    height: 528px;
+    overflow: visible!important;
+}
+</style>
 <div class="templatemo-content-wrapper">
     <div class="templatemo-content">
         <div class="row">
@@ -44,7 +46,13 @@
                 case "4":
                     location.href = "/#videoDetail/" + id;
                     break;
-                   
+                case "6":
+                    var ddocumentaryId = serach.split("&")[2].split("=")[1];
+
+                    location.href = "/#documentaryDetail/" + ddocumentaryId + "/" +id ;
+                    break;
+
+
 
             }
         }
