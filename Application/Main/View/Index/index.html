@@ -8,6 +8,8 @@
     <link href="/public/stylesheet/styles.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="/public/stylesheet/bootstrap.min.css">
     <link href="/public/stylesheet/index.css" rel="stylesheet">
+    <link href="/public/stylesheet/duoshuo.css" rel="stylesheet">
+
 </head>
 
 <body>

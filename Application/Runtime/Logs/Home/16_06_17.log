@@ -1,0 +1,423 @@
+[ 2016-06-17T15:56:26+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+
+[ 2016-06-17T15:56:26+08:00 ] 127.0.0.1 /admin.php?c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000471s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029442s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029542s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2016-06-17T15:56:30+08:00 ] 127.0.0.1 /admin.php?c=login&a=auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000471s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0981s ]
+SQL: SELECT * FROM `admin` WHERE ( username='admin' ) LIMIT 1   [ RunTime:0.1014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.469013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.469121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2016-06-17T15:56:32+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000273s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.410636s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.410748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000950s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001065s ]
+
+[ 2016-06-17T15:56:41+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=newdocumentary
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001073s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant maincontent - assumed 'maincontent' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.1042s ]
+SQL: INSERT INTO `documentary` (`title`,`maincontent`,`thumbnail`,`abstract`) VALUES ('','','','') [ RunTime:0.0987s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1042s ]
+SQL: DELETE FROM `sets` WHERE ( documentaryId=238 ) [ RunTime:0.1009s ]
+NOTIC: [8] Use of undefined constant documentaryId - assumed 'documentaryId' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant titile - assumed 'titile' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 39 行.
+NOTIC: [8] Use of undefined constant code - assumed 'code' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 40 行.
+SQL: INSERT INTO `sets` (`documentaryId`,`code`) VALUES ('238','') [ RunTime:0.1041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000744s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000825s ]
+
+[ 2016-06-17T15:56:52+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=newdocumentary
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant maincontent - assumed 'maincontent' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.1046s ]
+SQL: INSERT INTO `documentary` (`title`,`maincontent`,`thumbnail`,`abstract`) VALUES ('','&lt;p&gt;sdsd&lt;/p&gt;','','sds') [ RunTime:0.0983s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1046s ]
+SQL: DELETE FROM `sets` WHERE ( documentaryId=239 ) [ RunTime:0.1007s ]
+NOTIC: [8] Use of undefined constant documentaryId - assumed 'documentaryId' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant titile - assumed 'titile' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 39 行.
+NOTIC: [8] Use of undefined constant code - assumed 'code' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 40 行.
+SQL: INSERT INTO `sets` (`documentaryId`,`code`) VALUES ('239','sds') [ RunTime:0.1016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000613s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000691s ]
+
+[ 2016-06-17T15:57:41+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=newdocumentary
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002225s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant maincontent - assumed 'maincontent' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.1045s ]
+SQL: INSERT INTO `documentary` (`title`,`maincontent`,`thumbnail`,`abstract`) VALUES ('dfdfdfd','&lt;p&gt;dfd&lt;/p&gt;','','dfdf') [ RunTime:0.1112s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.0917s ]
+SQL: DELETE FROM `sets` WHERE ( documentaryId=240 ) [ RunTime:0.0983s ]
+NOTIC: [8] Use of undefined constant documentaryId - assumed 'documentaryId' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant titile - assumed 'titile' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 39 行.
+NOTIC: [8] Use of undefined constant code - assumed 'code' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 40 行.
+SQL: INSERT INTO `sets` (`documentaryId`,`code`) VALUES ('240','dfdf') [ RunTime:0.1022s ]
+NOTIC: [8] Use of undefined constant documentaryId - assumed 'documentaryId' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant titile - assumed 'titile' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 39 行.
+NOTIC: [8] Use of undefined constant code - assumed 'code' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 40 行.
+SQL: INSERT INTO `sets` (`documentaryId`,`code`) VALUES ('240','dfddfdfd') [ RunTime:0.1028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000713s ]
+
+[ 2016-06-17T15:59:27+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000909s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000351s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031448s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031539s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004883s ]
+
+[ 2016-06-17T15:59:37+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=documentaryDetail&id=240
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001082s ]
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.1044s ]
+SQL: SELECT * FROM `documentary` WHERE ( id=240 ) LIMIT 1   [ RunTime:0.0998s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000690s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000752s ]
+
+[ 2016-06-17T15:59:37+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=setDetail&id=240
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001383s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1058s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId=240 )  [ RunTime:0.1006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000863s ]
+
+[ 2016-06-17T16:00:17+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=newdocumentary
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant maincontent - assumed 'maincontent' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.1027s ]
+SQL: UPDATE `documentary` SET `title`='dfdfdfd',`maincontent`='&lt;p&gt;dfd&lt;/p&gt;',`thumbnail`='',`abstract`='dfdf' WHERE ( id=240 ) [ RunTime:0.1167s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.0991s ]
+SQL: DELETE FROM `sets` WHERE ( documentaryId=240 ) [ RunTime:0.0865s ]
+NOTIC: [8] Use of undefined constant documentaryId - assumed 'documentaryId' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 39 行.
+NOTIC: [8] Use of undefined constant code - assumed 'code' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 40 行.
+SQL: INSERT INTO `sets` (`documentaryId`,`title`,`code`) VALUES ('240','erer','dfdf') [ RunTime:0.1015s ]
+NOTIC: [8] Use of undefined constant documentaryId - assumed 'documentaryId' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 39 行.
+NOTIC: [8] Use of undefined constant code - assumed 'code' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 40 行.
+SQL: INSERT INTO `sets` (`documentaryId`,`title`,`code`) VALUES ('240','erer','dfddfdfd') [ RunTime:0.1035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000657s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000717s ]
+
+[ 2016-06-17T16:00:20+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040828s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040969s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002721s ]
+
+[ 2016-06-17T16:00:21+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=setDetail&id=240
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001112s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1047s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId=240 )  [ RunTime:0.1077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000777s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000848s ]
+
+[ 2016-06-17T16:00:22+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=documentaryDetail&id=240
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.1018s ]
+SQL: SELECT * FROM `documentary` WHERE ( id=240 ) LIMIT 1   [ RunTime:0.0989s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000619s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2016-06-17T16:00:30+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=setDetail&id=157
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1004s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId=157 )  [ RunTime:0.0992s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2016-06-17T16:02:56+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=setDetail&id=157
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1079s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId=157 )  [ RunTime:0.1008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000586s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000655s ]
+
+[ 2016-06-17T16:03:12+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=newdocumentary
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001255s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant maincontent - assumed 'maincontent' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0982s ]
+SQL: INSERT INTO `documentary` (`title`,`maincontent`,`thumbnail`,`abstract`) VALUES ('','','','') [ RunTime:0.0984s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1008s ]
+SQL: DELETE FROM `sets` WHERE ( documentaryId=241 ) [ RunTime:0.0985s ]
+NOTIC: [8] Use of undefined constant documentaryId - assumed 'documentaryId' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 39 行.
+NOTIC: [8] Use of undefined constant code - assumed 'code' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 40 行.
+SQL: INSERT INTO `sets` (`documentaryId`,`title`,`code`) VALUES ('241','sds','sdsd') [ RunTime:0.1025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000656s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000717s ]
+
+[ 2016-06-17T16:03:53+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=setDetail&id=240
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000090s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1044s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId=240 )  [ RunTime:0.0985s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000607s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000678s ]
+
+[ 2016-06-17T16:03:57+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=18&articleType=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 80 行.
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1046s ]
+SQL: SELECT `id`,`title`,`content` FROM `sets` WHERE `id` = 18  [ RunTime:0.1012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000709s ]
+
+[ 2016-06-17T16:04:02+08:00 ] 127.0.0.1 /admin.php?c=article&a=saveContent&articleType=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 112 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1007s ]
+SQL: UPDATE `sets` SET `content`='&lt;p&gt;dfvcvcvbcv&lt;/p&gt;' WHERE `id` = 18 [ RunTime:0.0998s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000636s ]
+
+[ 2016-06-17T16:04:14+08:00 ] 127.0.0.1 /admin.php?c=article&a=saveContent&articleType=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 112 行.
+NOTIC: [8] Use of undefined constant content - assumed 'content' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1062s ]
+SQL: UPDATE `sets` SET `content`='&lt;p&gt;dfvcvcvbcv&lt;/p&gt;' WHERE `id` = 18 [ RunTime:0.1039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000599s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000659s ]
+
+[ 2016-06-17T16:04:18+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=setDetail&id=240
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1065s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId=240 )  [ RunTime:0.0967s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000691s ]
+
+[ 2016-06-17T16:04:19+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000900s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000300s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000681s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033480s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033611s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2016-06-17T16:04:20+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=setDetail&id=240
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1164s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId=240 )  [ RunTime:0.0900s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2016-06-17T16:04:23+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=17&articleType=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001651s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 80 行.
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.1044s ]
+SQL: SELECT `id`,`title`,`content` FROM `sets` WHERE `id` = 17  [ RunTime:0.0993s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000609s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000677s ]
+

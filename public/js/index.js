@@ -10,11 +10,19 @@
         DUOSHUO.EmbedThread(el);
         // DUOSHUO.initSelector('.ds-share',{type:'ShareWidget'});
         jQuery("#duoshuo-comment").append(el);
-        document.getElementById("ds-share").setAttribute('data-thread-key', id);
-        document.getElementById("ds-share").setAttribute('data-url', url);
-        document.getElementById("ds-share").setAttribute('data-content', abstract);
 
-        document.getElementById("ds-share").setAttribute('data-title', title);
+        var share_code = '<div class="ds-share flat" id="ds-share" data-thread-key="此处请替换为当前文章的thread-key" data-title="此处请替换为分享时显示的标题" data-images="此处请替换为分享时显示的图片的链接地址" data-content="此处请替换为分享时显示的内容" data-url="此处请替换为分享时显示的链接地址"><div class="ds-share-inline"><ul class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li><li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li><li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li><li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li><li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li></ul><div class="ds-share-icons-more"></div></div></div>';
+        var share_el = $(share_code);
+        share_el.attr('data-thread-key', id);
+        share_el.attr('data-url', url);
+        share_el.attr('data-content', abstract);
+        share_el.attr('data-title', title);
+        $("#duoshuo-share").append(share_el);
+        // document.getElementById("ds-share").setAttribute('data-thread-key', id);
+        // document.getElementById("ds-share").setAttribute('data-url', url);
+        // document.getElementById("ds-share").setAttribute('data-content', abstract);
+
+        // document.getElementById("ds-share").setAttribute('data-title', title);
 
     }
  

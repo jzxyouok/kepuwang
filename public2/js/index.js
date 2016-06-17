@@ -174,6 +174,7 @@
                 url: "/admin.php?c=documentary&a=documentaryDetail&id=" + Id,
                 method: "get",
             }).success(function(response) {
+
                 $scope.documentary = response;
                 // $scope.documentary.sets = $scope.documentary.sets || [];
                 // $scope.documentary.sets = JSON.parse($scope.documentary.sets);
@@ -225,11 +226,13 @@
                     id: Id
                 }
             }).success(function(response) {
-                if (type == 1) {
-                    alert("保存成功");
-                } else {
-                    location.href = "#/newContent?articleType=5&id=" + response;
-                }
+                alert("保存成功！");
+                
+                // if (type == 1) {
+                //     alert("保存成功");
+                // } else {
+                //     location.href = "#/newContent?articleType=5&id=" + response;
+                // }
 
             });
         }
