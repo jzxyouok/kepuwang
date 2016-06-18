@@ -4516,3 +4516,29 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000737s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000799s ]
 
+[ 2016-06-17T20:48:07+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=documentaryDetail&id=242
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001211s ]
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0894s ]
+SQL: SELECT * FROM `documentary` WHERE ( id=242 ) LIMIT 1   [ RunTime:0.0867s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000792s ]
+
+[ 2016-06-17T20:48:08+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=setDetail&id=242
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001193s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.0893s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId=242 )  [ RunTime:0.0882s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000847s ]
+

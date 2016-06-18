@@ -5,19 +5,17 @@
 	padding: 9px;
 	color: #333333;
 }
-.caption-change p{
-	color: #DCDCDC;
-}
+ 
 .caption p{
 	text-indent: 12px;
 }
 h4{
 	font-size: 18px !important;
 	margin-top:0 ; 
-	color:#eee!important;
+	 
 }
 .article img{
-	width:100%;
+	width:328px;
 	height:180px;
 
 }

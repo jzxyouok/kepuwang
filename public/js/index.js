@@ -3,7 +3,7 @@
     // 导航栏指令
     var base_url = "http://boomler.wang/";
 
-    function toggleDuoshuoComments(id, url,title,abstract) {
+    function toggleDuoshuoComments(id, url, title, abstract) {
         var el = document.createElement('div'); //该div不需要设置class="ds-thread"
         el.setAttribute('data-thread-key', id); //必选参数
         el.setAttribute('data-url', url); //必选参数
@@ -25,7 +25,7 @@
         // document.getElementById("ds-share").setAttribute('data-title', title);
 
     }
- 
+
     app.filter('trusted', ['$sce', function($sce) {
         return function(url) {
             return $sce.trustAsResourceUrl(url);
@@ -179,9 +179,9 @@
                 method: "get"
             }).success(function(response) {
                 $scope.documentaryDetail = response;
-                var sets = $scope.documentaryDetail.sets.replace(/&quot;/g, "\"") || '[]';
-                $scope.documentaryDetail.sets = JSON.parse(sets);
-                $scope.documentaryDetail.set = JSON.parse(sets)[set];
+                // var sets = $scope.documentaryDetail.sets.replace(/&quot;/g, "\"") || '[]';
+                // $scope.documentaryDetail.sets = JSON.parse(sets);
+                // $scope.documentaryDetail.set = JSON.parse(sets)[set];
 
                 $scope.documentaryDetail.maincontent = $sce.trustAsHtml($scope.documentaryDetail.maincontent);
                 $scope.documentaryDetail.content = $sce.trustAsHtml($scope.documentaryDetail.content);
@@ -199,28 +199,38 @@
             $scope.setDetail.content = $sce.trustAsHtml($scope.setDetail.content);
         });
     });
-    app.controller("allDocumentaryController", function($scope, $http, $route, $sce) {
+    app.controller("allDocumentaryController", function($scope, $http, $route, $sce, pageSet) {
         $http({
-            url: "index.php?c=documentary&a=allDocumentary&page=1",
+            url: "/index.php?c=documentary&a=allDocumentary&page=1",
             method: "get"
         }).success(function(response) {
             $scope.documentarys = response.data;
             var len = $scope.documentarys.length;
-        })
+            pageSet.init(Math.ceil(response.num/10), selectPage);
+
+            function selectPage(page) {
+                $http({
+                    url: "/index.php?c=documentary&a=allDocumentary&page=" + page,
+                    method: "get"
+                }).success(function(response) {
+                    $scope.documentarys = response.data;
+                })
+            }
+        });
     });
 
     app.controller("articleDetailController", function($scope, $http, $route, $sce) {
         var id = $route.current.params.id;
         if (id == "")
             window.location.href = "#/article";
- 
+
         $http({
             url: "/index.php?c=article&a=articleDetail&id=" + id,
             method: "get"
         }).success(function(response) {
             $scope.articleDetail = response;
             $scope.articleDetail.detail.content = $sce.trustAsHtml($scope.articleDetail.detail.content);
-            toggleDuoshuoComments(id,base_url + "#/articleDetail/" + id,$scope.articleDetail.detail.title,$scope.articleDetail.detail.abstract,$scope.articleDetail.detail.thumbnail)
+            toggleDuoshuoComments(id, base_url + "#/articleDetail/" + id, $scope.articleDetail.detail.title, $scope.articleDetail.detail.abstract, $scope.articleDetail.detail.thumbnail)
         });
 
     });
@@ -235,7 +245,7 @@
             $scope.imgDetail = response;
             $scope.imgDetail.content = $sce.trustAsHtml($scope.imgDetail.content);
             $scope.imgDetail.maincontent = $sce.trustAsHtml($scope.imgDetail.maincontent);
-            toggleDuoshuoComments(id,base_url + "#/imageDetail/" + id,$scope.imgDetail.title,$scope.imgDetail.abstract,$scope.imgDetail.thumbnail);
+            toggleDuoshuoComments(id, base_url + "#/imageDetail/" + id, $scope.imgDetail.title, $scope.imgDetail.abstract, $scope.imgDetail.thumbnail);
 
         });
         $http({
@@ -279,7 +289,7 @@
             if (!$scope.videoDetail.attachment.length)
                 $scope.noDownload = true;
             $scope.videoDetail.content = $sce.trustAsHtml($scope.videoDetail.content);
-            toggleDuoshuoComments(id,base_url + "#/videoDetail/" + id,$scope.videoDetail.title,$scope.videoDetail.abstract,$scope.videoDetail.thumbnail);
+            toggleDuoshuoComments(id, base_url + "#/videoDetail/" + id, $scope.videoDetail.title, $scope.videoDetail.abstract, $scope.videoDetail.thumbnail);
 
         });
     });
@@ -366,7 +376,7 @@
             $("#article-list3").empty();
             $("#article-list4").empty();
             for (var len = response.data.length, i = 0; i < len; i++) {
-                var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/' + response.data[i].id + '"><h4>' + response.data[i].title +
+                var newArticle = '<div class="thumbnail article-thumbnail"><div class="caption-change"><a href="#articleDetail/' + response.data[i].id + '"><h4>' + response.data[i].title +
                     '</h4></a><p>' + response.data[i].publishtime.slice(0, 16) +
                     '</p></div><img src="' + response.data[i].thumbnail +
                     '" alt=""><div class="caption"><p>' + response.data[i].abstract +
@@ -389,7 +399,7 @@
                 $("#article-list4").empty();
 
                 for (var len = response.data.length, i = 0; i < len; i++) {
-                    var newArticle = '<div class="thumbnail video-padding"><div class="caption-change"><a href="#articleDetail/' + response.data[i].id + '"><h4>' + response.data[i].title +
+                    var newArticle = '<div class="thumbnail article-thumbnail"><div class="caption-change"><a href="#articleDetail/' + response.data[i].id + '"><h4>' + response.data[i].title +
                         '</h4></a><p>' + response.data[i].publishtime.slice(0, 16) +
                         '</p></div><img src="' + response.data[i].thumbnail +
                         '" alt=""><div class="caption"><p>' + response.data[i].abstract +

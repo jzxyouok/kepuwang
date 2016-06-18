@@ -145,11 +145,18 @@
             method: "get"
         }).success(function(response) {
             $scope.allArticle = response.data;
+             pageSet.init(Math.ceil(response.num/10), selectPage);
+
+            function selectPage(page) {
+                $http({
+                    url: "/index.php?c=documentary&a=allDocumentary&page=" + page,
+                    method: "get"
+                }).success(function(response) {
+                    $scope.documentarys = response.data;
+                })
+            }
 
         });
-
-
-
         $scope.publish = function(id) {
             var message = "确定发布此纪录片？";
             if (confirm(message)) {

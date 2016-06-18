@@ -50,9 +50,10 @@ class DocumentaryController extends Controller
     }
     public function documentaryDetail()
     {
-        $id                    = I("get.id");
-        $result                = M("documentary")->where("id=" . $id)->find();
-        $result['sets']        = htmlspecialchars_decode(html_entity_decode($result['sets']));
+        $id             = I("get.id");
+        $result         = M("documentary")->where("id=" . $id)->find();
+        $result['sets'] = M("sets")->where("documentaryId=" . $id)->select();
+        // = htmlspecialchars_decode(html_entity_decode($result['sets']));
         $result['maincontent'] = htmlspecialchars_decode(html_entity_decode($result['maincontent']));
         $result['content']     = htmlspecialchars_decode(html_entity_decode($result['content']));
 

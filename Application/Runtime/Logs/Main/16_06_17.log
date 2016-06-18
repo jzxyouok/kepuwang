@@ -7498,3 +7498,21 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000759s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000825s ]
 
+[ 2016-06-17T20:48:00+08:00 ] 127.0.0.1 /index.php?c=documentary&a=allDocumentary&page=1&status=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001338s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Main\Controller\DocumentaryController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0921s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `documentary` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0885s ]
+SQL: SELECT * FROM `documentary` WHERE `status` = 2 LIMIT 0,15   [ RunTime:0.0874s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.0891s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId = 242 )  [ RunTime:0.0875s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId = 244 )  [ RunTime:0.0883s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000768s ]
+
