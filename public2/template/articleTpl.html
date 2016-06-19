@@ -23,7 +23,7 @@
                             <span ng-switch-default>其他</span>
                         </li>
                     </ol>
-               <div class="row search" style="margin-bottom:20px">
+            <!--    <div class="row search" style="margin-bottom:20px">
                         <form class="form-inline" ng-submit="searchArticle()">
                             <div class="form-group">
                                 <label for="exampleInputEmail2">文章名称</label>
@@ -39,7 +39,7 @@
                             </div>
                             <button type="submit" class="btn btn-success"  >搜索</button>
                         </form>
-               </div>  
+               </div>  --> 
                     <div class="row">
                         <table class="table table-bordered">
                             <tr>
@@ -51,6 +51,7 @@
                                 <th>类别</th>
                                 <th>位置</th>
                                 <th>操作</th>
+                                <th>相关文章</th>
                             </tr>
                             <tr ng-repeat="article in allArticle">
                                 <td>{{article.id}}</td>
@@ -93,6 +94,7 @@
                                     <a href="/index.php/#articleDetail/{{article.id}}" target="_blank">预览</a>
                                     <!-- <a href="">置于首页</a> -->
                                 </td>
+                                <td><a href="#relative/1/{{article.id}}">相关文章</a></td>
                             </tr>
                         </table>
                         <div class="tcdPageCode">

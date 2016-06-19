@@ -151,9 +151,22 @@ class ArticleController extends Controller
                 $db = M("article");
                 break;
         }
-
         $articleDetail = $db->where("id = " . $id)->getField("id,mainType,thumbnail,title,abstract,type", true);
         echo json_encode($articleDetail);
+    }
+    public function relativeArticle()
+    {
+        $id       = I("get.id");
+        $articles = M("relation")->where("articleType=1 and aid=" . $id)->select();
+        $result   = array();
+        foreach ($articles as $article) {
+
+            $articleDetail = M("article")->where("id=" . $article["aid"])->find();
+            $result[]      = array(
+                id    => $articleDetail["id"],
+                title => $articleDetail["title"]);
+        }
+        echo $result;
     }
     public function changeStatus()
     {
@@ -228,5 +241,28 @@ class ArticleController extends Controller
         $db->where("id=" . $id)->save($Article);
         echo $id;
     }
+
+    // public function articleList()
+    // {
+    //     $result = array(
+    //         allArticle => array(),
+    //         relative   => array(),
+    //     );
+    //     //所有文章
+    //     $result["allArticle"] = M("article")->where("status=1")->select();
+    //     // 相关文章
+    //     $id       = I("get.id");
+    //     $articles = M("relation")->where("articleType=1 and aid=" . $id)->select();
+
+    //     foreach ($articles as $article) {
+
+    //         $articleDetail        = M("article")->where("id=" . $article["aid"])->find();
+    //         $result["relative"][] = array(
+    //             id    => $articleDetail["id"],
+    //             title => $articleDetail["title"]);
+    //     }
+    //     echo json_encode($result);
+
+    // }
 
 }

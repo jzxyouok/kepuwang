@@ -58,6 +58,7 @@
                                 <th>类别</th>
                                 <th>位置</th>
                                 <th>操作</th>
+                                <th>相关视频</th>
                             </tr>
                             <tr ng-repeat="article in allArticle">
                                 <td>{{article.id}}</td>
@@ -99,7 +100,9 @@
                                     <a href="#/newVideo?id={{article.id}}"> 编辑 </a>
                                     <a href="/index.php/#videoDetail/{{article.id}}" target="_blank">预览</a>
                                     <!-- <a href="">置于首页</a> -->
+
                                 </td>
+                                <td> <a href="#relative/4/{{article.id}}">相关视频</a></td>
                             </tr>
                         </table>
                         <div class="tcdPageCode">

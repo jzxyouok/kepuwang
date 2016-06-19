@@ -1,95 +1,97 @@
- 
-<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js">
+</script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js">
 </script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
- <div class="templatemo-content-wrapper">
+<div class="templatemo-content-wrapper">
     <div class="templatemo-content">
-<div class="row">
-<h1>输入文章基本信息</h1>
-    <div class="col-md-2 form-group">
-        <label for="exampleInputEmail2">文章类型</label>
-        <select name="status" class="form-control" ng-model="article.maintype"  >
-            <option value="1" ng-selected="1">天文·物理</option>
-            <option value="2">地理·地质</option>
-            <option value="3">生命·生态</option>
-            <option value="4">其他</option>
-            <!-- 1天文文理2地理地质3人文生态4其他 -->
-        </select>
-    </div>
-    <div class="form-group col-md-6">
-        <label for="exampleInputPassword1">文章标题</label>
-        <input type="text" name="title" ng-model="article.detail.title" class="form-control" id="exampleInputEmail1"   placeholder="输入文章标题">
-    </div>
-    <div class="col-md-2">
-    </div>
-
-</div>
-<div class="row">
-<div class="col-md-8">
-  <label for="exampleInputEmail2">文章简介</label>
-    <textarea class="form-control" rows="3" ng-model="article.detail.abstract" placeholder="请输入文章简介"></textarea>
-</div>
+        <style>
+        .paddingleft {
+            padding-left: 50px;
+        }
+        
+        li {
+            margin: 5px;
+        }
+        
+        input {
+            width: 220px!important;
+        }
+        </style>
+        <div class="row">
+            <h1>输入文章基本信息</h1>
+            <div class="col-md-2 form-group">
+                <label for="exampleInputEmail2">文章类型</label>
+                <select name="status" class="form-control" ng-model="article.maintype">
+                    <option value="1" ng-selected="1">天文·物理</option>
+                    <option value="2">地理·地质</option>
+                    <option value="3">生命·生态</option>
+                    <option value="4">其他</option>
+                    <!-- 1天文文理2地理地质3人文生态4其他 -->
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="exampleInputPassword1">文章标题</label>
+                <input type="text" name="title" ng-model="article.detail.title" class="form-control" id="exampleInputEmail1" placeholder="输入文章标题">
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <label for="exampleInputEmail2">文章简介</label>
+                <textarea class="form-control" rows="3" ng-model="article.detail.abstract" placeholder="请输入文章简介"></textarea>
+            </div>
+        </div>
+        <script type="text/plain" id="j_ueditorupload" style="height:5px;display:none;"></script>
+        <div class="row" style="padding-top:30px;">
+            <div class="col-md-3">
+                <img ng-src="{{article.detail.thumbnail}}" alt="" width="160" height="120">
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-md btn-primary" ng-click="article.upImage()" style="margin-top:100px">更换文章缩略图</button>
+            </div>
+            <div class="col-md-2">
+                <!-- <button type="button" class="btn btn-md btn-primary" ng-click="article.upFiles()">添加文章附件</button> -->
+            </div>
+        </div>
  
-</div>
-    <script type="text/plain" id="j_ueditorupload" style="height:5px;display:none;" ></script>
- 
-  <div class="row" style="padding-top:30px;">
-    <div class="col-md-3">
-        <img ng-src="{{article.detail.thumbnail}}" alt="" width="160" height="120">
-    </div><div class="col-md-2">
-
-        <button type="button" class="btn btn-md btn-primary" ng-click="article.upImage()" style="margin-top:100px">更换文章缩略图</button>
-    </div>
-    <div class="col-md-2">
-        <!-- <button type="button" class="btn btn-md btn-primary" ng-click="article.upFiles()">添加文章附件</button> -->
-    </div>
-</div>
-
-   
-    <br>
-    <!-- <button type="button" onClick="upFiles()">调用上传文件模块</button> -->
-<div class="row pad">
-    <div class="row" style="padding:0 30px 30px 30px;">
-        <div class="radio floatLeft">
-            <label>
-                <input type="radio" name="type" id="type" ng-model="article.detail.type"  value="3" ng-selected="3">  普通文章
-            </label>
-        </div>
-        <div class="radio floatLeft">
-            <label>
-                <input type="radio" name="type" id="type" ng-model="article.detail.type"  value="1"> 首页轮播
-            </label>
-        </div>
-        <div class="radio floatLeft">
-            <label>
-                <input type="radio" name="type" id="type"  ng-model="article.detail.type" value="4"> 首页推荐栏目
-            </label>
-        </div>
-          <div class="radio floatLeft">
-            <label>
-                <input type="radio" name="type" id="type"  ng-model="article.detail.type" value="2"> 首页热点文章
-            </label>
-        </div>
-    </div>
-    <div class="row" style="padding-bottom:100px;">
-       <div class="col-md-4">
-         <button class="btn btn-danger marginRight"  ><a href="javascript:history.back(-1)">放弃修改</a>   </button>
-     
-         <button class="btn btn-primary" ng-click="article.save()">提交修改</button>
-     
-         <button class="btn btn-success marginRight">
-         <a href="#/newContent?articleType=1&id={{article.detail.id}}">
+      
+        <br>
+        <!-- <button type="button" onClick="upFiles()">调用上传文件模块</button> -->
+        <div class="row pad">
+         <h3>文章位置</h3>
+            <div class="row" style="padding:0 30px 30px 30px;">
+                <div class="radio floatLeft">
+                    <label>
+                        <input type="radio" name="type" id="type" ng-model="article.detail.type" value="3" ng-selected="3"> 普通文章
+                    </label>
+                </div>
+                <div class="radio floatLeft">
+                    <label>
+                        <input type="radio" name="type" id="type" ng-model="article.detail.type" value="1"> 首页轮播
+                    </label>
+                </div>
+                <div class="radio floatLeft">
+                    <label>
+                        <input type="radio" name="type" id="type" ng-model="article.detail.type" value="4"> 首页推荐栏目
+                    </label>
+                </div>
+                <div class="radio floatLeft">
+                    <label>
+                        <input type="radio" name="type" id="type" ng-model="article.detail.type" value="2"> 首页热点文章
+                    </label>
+                </div>
+            </div>
+            <div class="row" style="padding-bottom:100px;">
+                <div class="col-md-4">
+                    <button class="btn btn-danger marginRight"><a href="javascript:history.back(-1)">放弃修改</a> </button>
+                    <button class="btn btn-primary" ng-click="article.save()">提交修改</button>
+                    <button class="btn btn-success marginRight">
+                        <a href="#/newContent?articleType=1&id={{article.detail.id}}">
          编辑正文<span class="glyphicon glyphicon-arrow-right"></span></a></button>
-    </div>
-
-        <!-- <button class="btn btn-default " ng-click="article.publish()">发布</button> --><p class="  bg-warning row">编辑正文前，注意有无提交修改！！</p>
-    </div> 
-     
-</div>
- 
- 
- 
- 
-
-
+                </div>
+                <!-- <button class="btn btn-default " ng-click="article.publish()">发布</button> -->
+                <p class="  bg-warning row">编辑正文前，注意有无提交修改！！</p>
+            </div>
+        </div>

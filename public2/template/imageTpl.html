@@ -58,6 +58,7 @@
                                 <th>类别</th>
                                 <th>位置</th>
                                 <th>操作</th>
+                                <th>相关图片</th>
                             </tr>
                             <tr ng-repeat="article in allArticle">
                                 <td>{{article.id}}</td>
@@ -100,6 +101,8 @@
                                     <a href="/#imageDetail/{{article.id}}" target="_blank">预览</a>
                                     <!-- <a href="">置于首页</a> -->
                                 </td>
+                                <td><a href="#relative/2/{{article.id}}">相关图片</a></td>
+
                             </tr>
                         </table>
                         <div class="tcdPageCode">

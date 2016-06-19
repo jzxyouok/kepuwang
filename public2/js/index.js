@@ -50,6 +50,45 @@
 
     })
 
+    app.service("relation", function($http) {
+        return {
+            //查找相关文章
+            init: function(type, id, callback) {
+                $http({
+                    url: "/admin.php?c=relation&a=allRelative&articleType=" + type + "&id=" + id,
+                    mthod: "get"
+                }).success(function(response) {
+                    callback(response);
+
+                })
+
+            },
+            // 添加相关文章
+            addRelative: function(aid, rid, type, callback) {
+                $http({
+                    url: "/admin.php?c=relation&a=addRelative&articleType=" + type + "&rid=" + rid + "&aid=" + aid,
+                    method: "get"
+                }).success(function(response) {
+                    if (response == "0") alert("编号不存在！！")
+                    else {
+                        callback({ id: response.id, "title": response.title });
+                    }
+
+                })
+
+
+            },
+            delRelative: function(aid, rid, type) {
+                $http({
+                    url: "/admin.php?c=relation&a=delRelative&articleType=" + type + "&rid=" + rid + "&aid=" + aid,
+                    method: "post"
+                }).success(function(response) {
+                    // do something
+                });
+            }
+
+        }
+    })
 
     app.config(['$routeProvider', function($routeProvider) {
         $routeProvider.when("/index", {
@@ -115,12 +154,54 @@
                 templateUrl: "/public2/template/newContentTpl.html",
                 controller: "newContentController"
             })
+            .when("/relative/:articleType/:id", {
+                templateUrl: "/public2/template/relativeTpl.html",
+                controller: "relativeController"
+            })
 
         .when("/about", {
                 templateUrl: "public2/template/about.html",
             })
             .otherwise({ redirectTo: "/index" });
     }]);
+    app.controller('relativeController', function($scope, $http, $route) {
+        var id = $route.current.params.id;
+        var articleType = $route.current.params.articleType;
+        $scope.relative = [];
+        $http({
+            url: "/admin.php?c=relation&a=allRelative&articleType=" + articleType + "&id=" + id,
+            mthod: "get"
+        }).success(function(response) {
+            $scope.relative = response;
+
+        })
+        $scope.addRelative = function() {
+            $http({
+                url: "/admin.php?c=relation&a=addRelative&articleType=" +articleType + "&rid=" + $scope.articleId + "&aid=" + id,
+                method: "get"
+            }).success(function(response) {
+                if (response == "0") alert("编号不存在！！")
+                else {
+                    $scope.relative.push({ id: response.id, "title": response.title });
+                }
+
+            })
+
+
+        };
+        $scope.delRelative = function(rid,index) {
+            $http({
+                url: "/admin.php?c=relation&a=delRelative&articleType=" + articleType + "&rid=" + rid + "&aid=" + id,
+                method: "post"
+            }).success(function(response) {
+                // do something
+                $scope.relative.splice(index,1);
+            });
+        }
+
+
+
+    });
 
     app.controller('documentarySetController', function($scope, $http, $route, $sce) {
         var id = $route.current.params.id;
@@ -145,7 +226,7 @@
             method: "get"
         }).success(function(response) {
             $scope.allArticle = response.data;
-             pageSet.init(Math.ceil(response.num/10), selectPage);
+            pageSet.init(Math.ceil(response.num / 10), selectPage);
 
             function selectPage(page) {
                 $http({
@@ -191,7 +272,7 @@
                 }).success(function(response) {
                     $scope.documentary.sets = response;
                     if (!$scope.documentary.sets.length) {
-                         
+
                         $scope.documentary.sets = [{ title: "", code: "" }];
                     }
                 })
@@ -205,13 +286,13 @@
             $scope.documentary.sets.push({ title: "", code: "" });
 
         }
-        $scope.delSet = function(index,setId) {
+        $scope.delSet = function(index, setId) {
             if (confirm("确定删除第" + (index + 1) + "集？")) {
                 $scope.documentary.sets.splice(index, 1);
                 $http({
-                    method:"get",
-                    url:"/admin.php?c=documentary&a=delSet&id="+setId
-                }).success(function(){});
+                    method: "get",
+                    url: "/admin.php?c=documentary&a=delSet&id=" + setId
+                }).success(function() {});
             }
 
         }
@@ -222,7 +303,7 @@
                 sets.push({
                     title: $scope.documentary.sets[i].title,
                     code: $scope.documentary.sets[i].code,
-                    id:$scope.documentary.sets[i].id ||0,
+                    id: $scope.documentary.sets[i].id || 0,
                 });
             }
             $http({
@@ -272,7 +353,7 @@
             };
         });
     });
-    app.controller('editArticleController', function($scope, $http, $route) {
+    app.controller('editArticleController', function($scope, $http, $route, relation) {
         // 得到之前数据
         var articleId = $route.current.params.id;
         $scope.article = { detail: {} };
@@ -283,8 +364,31 @@
         }).success(function(response) {
             $scope.article.detail = response[articleId];
             // console.log($scope.article);
-        })
 
+            // 相关文章
+            $scope.relative = [];
+
+            relation.init(1, articleId, bindRel);
+
+            function bindRel(data) {
+                $scope.relative = data;
+            }
+            $scope.delRelative = function(index) {
+                relation.delRelative(articleId, $scope.relative[index].id, 1);
+                $scope.relative.splice(index, 1);
+
+            }
+
+            $scope.addRelative = function() {
+
+                relation.addRelative(articleId, $scope.articleId, 1, bindAdded);
+
+                function bindAdded(data) {
+                    if (!$scope.relative) $scope.relative = [];
+                    $scope.relative.push(data);
+                }
+            }
+        })
         $scope.article.save = function() {
             $http({
                 url: "/admin.php?c=article&a=update",
@@ -511,7 +615,7 @@
         }
 
     });
-    app.controller("newVideoController", function($scope, $http, $route) {
+    app.controller("newVideoController", function($scope, $http, $route, relation) {
         var videoId = $route.current.params.id;
         $scope.showSave = !!videoId;
         $scope.newVideo = {};
@@ -532,7 +636,28 @@
 
         }
 
+        $scope.relative = [];
 
+        relation.init(4, videoId, bindRel);
+
+        function bindRel(data) {
+            $scope.relative = data;
+        }
+        $scope.delRelative = function(index) {
+            relation.delRelative(videoId, $scope.relative[index].id, 4);
+            $scope.relative.splice(index, 1);
+
+        }
+
+        $scope.addRelative = function() {
+
+            relation.addRelative(videoId, $scope.articleId, 1, bindAdded);
+
+            function bindAdded(data) {
+                if (!$scope.relative) $scope.relative = [];
+                $scope.relative.push(data);
+            }
+        }
         var o_ueditorupload = UE.getEditor('j_ueditorupload', {
             autoHeightEnabled: false
         });

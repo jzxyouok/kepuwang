@@ -1,0 +1,61 @@
+<style>
+.link {
+    color: #337ab7;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+</style>
+<div class="templatemo-content-wrapper">
+    <div class="templatemo-content">
+        <div class="container-fluid marginTop">
+            <div class="row-fluid">
+                <div class="  whiteBg" id="content">
+                    <ol class="breadcrumb">
+                        <li>管理平台</li>
+                        <li>文章管理</li>
+                        <li ng-switch="type">
+                            <span ng-switch-when="3">普通文章</span>
+                            <span ng-switch-when="2">首页文章</span>
+                            <span ng-switch-when="1">轮播文章</span>
+                            <span ng-switch-default>其他</span>
+                        </li>
+                    </ol>
+                    <div class="row search" style="margin-bottom:20px">
+                        <form class="form-inline" ng-submit="addRelative()">
+                            <div class="form-group">
+                                 
+                                <input type="text" class="form-control" name="name" ng-model="articleId" id="exampleInputEmail2" placeholder="输入相关编号">
+                            </div>
+                             
+                            <button type="submit" class="btn btn-success">添加</button>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <table class="table table-bordered">
+                            <tr>
+                                
+                                <th>编号</th>
+                                <!-- <th>摘要</th> -->
+                                <th>标题</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr ng-repeat="rel in relative">
+                                
+                                <td>{{rel.id}}</td>
+                                <td>{{rel.title}}</td>
+                                <!-- <td>{{article.content}}</td> -->
+                                <td>
+                                    <button class="btn btn-sm btn-danger" ng-click="delRelative(rel.id,$index)"> 删除 </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -46,11 +46,12 @@
         }
     })
 
+
     app.directive("navbar", function() {
         return {
             restrict: "E",
             templateUrl: '/public/template/nav.html',
-            controller: 'loginController',
+            
             replace: true
         }
     });
@@ -123,10 +124,7 @@
                 templateUrl: "/public/template/indexTpl.html",
                 controller: "indexController"
             })
-            .when("/login", {
-                templateUrl: "/public/template/loginTpl.html",
-                controller: "loginController"
-            })
+            
             .when("/video", {
                 templateUrl: "/public/template/videoTpl.html",
                 controller: "videoController"
@@ -159,12 +157,6 @@
                 templateUrl: "/public/template/articleDetailTpl.html",
                 controller: "articleDetailController"
             })
-            .when("/tieba", {
-                templateUrl: "/public/template/tieba.html",
-                controller: "loginController"
-            })
-
-
         .otherwise({ redirectTo: "/index" });
 
     }]);
@@ -232,7 +224,12 @@
             $scope.articleDetail.detail.content = $sce.trustAsHtml($scope.articleDetail.detail.content);
             toggleDuoshuoComments(id, base_url + "#/articleDetail/" + id, $scope.articleDetail.detail.title, $scope.articleDetail.detail.abstract, $scope.articleDetail.detail.thumbnail)
         });
-
+  $http({
+            url:"/admin.php?c=relation&a=allRelative&articleType=1&id=" + id,
+            method:"get"
+        }).success(function(response){
+            $scope.finalRelative = response;
+        })
     });
     app.controller("imageDetailController", function($scope, $http, $route, $sce) {
         var id = $route.current.params.id;
@@ -248,11 +245,11 @@
             toggleDuoshuoComments(id, base_url + "#/imageDetail/" + id, $scope.imgDetail.title, $scope.imgDetail.abstract, $scope.imgDetail.thumbnail);
 
         });
-        $http({
-            url: "/index.php?c=pic&a=relativePic",
-            method: "get"
-        }).success(function(response) {
-            $scope.relativePics = response;
+         $http({
+            url:"/admin.php?c=relation&a=allRelative&articleType=2&id=" + id,
+            method:"get"
+        }).success(function(response){
+            $scope.finalRelative = response.slice(0,5);
         })
         $scope.like = function() {
             var liked = localStorage.getItem("pid" + id) === "1";
@@ -289,9 +286,15 @@
             if (!$scope.videoDetail.attachment.length)
                 $scope.noDownload = true;
             $scope.videoDetail.content = $sce.trustAsHtml($scope.videoDetail.content);
+           
             toggleDuoshuoComments(id, base_url + "#/videoDetail/" + id, $scope.videoDetail.title, $scope.videoDetail.abstract, $scope.videoDetail.thumbnail);
-
         });
+        $http({
+            url:"/admin.php?c=relation&a=allRelative&articleType=4&id=" + id,
+            method:"get"
+        }).success(function(response){
+            $scope.finalRelative = response.slice(0,5);
+        })
     });
     app.controller("indexController", function($scope, $http) {
 
@@ -437,14 +440,6 @@
         }
 
 
-    })
-
-    app.controller("loginController", function($scope, $http) {
-        $scope.init = function(type) {
-            $scope.type = type;
-            $('#myModal').modal();
-
-        }
     })
 
 }(angular, window);
