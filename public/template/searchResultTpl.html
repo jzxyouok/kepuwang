@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="/public/stylesheet/documentary.css">
+<style>
+* {
+    font: 12px / 1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    color: #FFF;
+}
+
+.result-item {
+    width: 76%;
+    margin-left: 12%!important;
+    padding: 0px 20px 0px 190px;
+    position: relative;
+    height: 120px;
+    overflow: hidden;
+    background-color: #1f1f1f;
+    margin-top: 20px;
+}
+
+.result-item img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.color {
+    color: #eaffb8;
+    font-size: 1em;
+}
+
+.highlight {
+    background-color: yellow;
+}
+.time{
+    position:absolute;
+    bottom:10px;
+    right:50px;
+}
+</style>
+<div id="documentary">
+    <div id="ad-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li class="active" data-target="#ad-carousel" data-slide-to="0"></li>
+            <li data-target="#ad-carousel" data-slide-to="1"></li>
+            <li data-target="#ad-carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="/public/images/slider01.png" alt="1 slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h2>这是一个星光与城市的故事</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/public/images/slider02.jpg" alt="2 slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h2>情定苏格兰群岛</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/public/images/slider03.jpg" alt="5 slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h2>我们从何而来？</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="result">
+        <div class="row result-item" ng-repeat="search in searchResult" repeat-done="heightlight()">
+            <img ng-src="{{search.thumbnail}}" alt="" width="180" height="120">
+            <h4>【{{search.type}}】{{search.title}}</h4>
+            <p>{{search.abstract}}</p>
+            <div class="time"><span>{{search.publishTime|cutTimeStr}}</span></div>
+        </div>
+    </div>
+    <div class="tcdPageCode pull-right row">
+    </div>
+</div>
+<script>
+jQuery.fn.highlight = function(pat) {
+    function innerHighlight(node, pat) {
+        var skip = 0;
+        if (node.nodeType == 3) {
+            var pos = node.data.toUpperCase().indexOf(pat);
+            if (pos >= 0) {
+                var spannode = document.createElement('span');
+                spannode.className = 'highlight';
+                var middlebit = node.splitText(pos);
+                var endbit = middlebit.splitText(pat.length);
+                var middleclone = middlebit.cloneNode(true);
+                spannode.appendChild(middleclone);
+                middlebit.parentNode.replaceChild(spannode, middlebit);
+                skip = 1;
+            }
+        } else if (node.nodeType == 1 && node.childNodes && !/(script|style)/i.test(node.tagName)) {
+            for (var i = 0; i < node.childNodes.length; ++i) {
+                i += innerHighlight(node.childNodes[i], pat);
+            }
+        }
+        return skip;
+    }
+    return this.each(function() {
+        innerHighlight(this, pat.toUpperCase());
+    });
+};
+
+jQuery.fn.removeHighlight = function() {
+    return this.find("span.highlight").each(function() {
+        this.parentNode.firstChild.nodeName;
+        with(this.parentNode) {
+            replaceChild(this.firstChild, this);
+            normalize();
+        }
+    }).end();
+};
+ 
+</script>

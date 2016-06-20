@@ -557,7 +557,7 @@
             });
             o_ueditorupload.addListener('afterUpfile', function(t, arg) {
                 $scope.$apply(function() {
-                    console.log(arg.url)
+                     
                     $scope.attachment[currentFile].url = arg.url;
                 });
             });
@@ -611,6 +611,9 @@
             delAttachment: function(index) {
                 console.log("asasa")
                 $scope.attachment.splice(index, 1)
+                if($scope.attachment.length ==0){
+                   $scope.attachment = [{ name: "", url: "" }];
+                }
             }
 
         }
@@ -716,6 +719,9 @@
             delAttachment: function(index) {
                 console.log("asasa")
                 $scope.attachment.splice(index, 1)
+                if($scope.attachment.length==0)
+                    $scope.attachment = [{ name: "", url: "" }];
+                    
             }
 
         }

@@ -34,7 +34,10 @@
 
     app.filter('cutTimeStr', function() {
         return function(timeStr) {
+            console.log(timeStr)
+            if(typeof timeStr === "string")
             return timeStr.slice(0, 10);
+        return "";
         };
     });
 
@@ -51,10 +54,20 @@
         return {
             restrict: "E",
             templateUrl: '/public/template/nav.html',
-            
+            controller:"searchController",
             replace: true
         }
     });
+//     app.directive('repeatDone', function() {
+//     return {
+//         link: function(scope, element, attrs) {
+//             if (scope.$last) {                   // 这个判断意味着最后一个 OK
+//                 scope.$eval(attrs.repeatDone)    // 执行绑定的表达式
+//             }
+//         }
+//     }
+// })
+
     app.directive('embedSrc', function() {
         return {
             restrict: 'A',
@@ -121,11 +134,11 @@
 
     app.config(['$routeProvider', function($routeProvider) {
         $routeProvider.when("/index", {
-                templateUrl: "/public/template/indexTpl.html",
-                controller: "indexController"
-            })
-            
-            .when("/video", {
+            templateUrl: "/public/template/indexTpl.html",
+            controller: "indexController"
+        })
+
+        .when("/video", {
                 templateUrl: "/public/template/videoTpl.html",
                 controller: "videoController"
             })
@@ -157,10 +170,38 @@
                 templateUrl: "/public/template/articleDetailTpl.html",
                 controller: "articleDetailController"
             })
-        .otherwise({ redirectTo: "/index" });
+            .when("/searchResult", {
+                templateUrl: "/public/template/searchResultTpl.html",
+                controller: "searchResultController"
+            })
+            .otherwise({ redirectTo: "/index" });
 
     }]);
+    app.controller("searchController", function($scope, $http, $route) {
+        $scope.search = function(key){
+            location.href = "#/searchResult?search=" + key;
+        }
+    });
+        app.controller("searchResultController", function($scope, $http, $route,pageSet) {
+        var search = $route.current.params.search;
+        // $scope.heightlight = function(){
+        //     $("#result").highlight(search);
+        // }
+        $http({
+            url: "/index.php?c=search&a=search&search=" + search,
+            method: "get"
+        }).success(function(response) {
+            $scope.searchResult = response.slice(0,15);
+           
+            pageSet.init(Math.ceil(response.length/15),function(page){
+                console.log(response.slice((page-1)*15,page*15))
+                $scope.searchResult = response.slice((page-1)*15,page*15);
+                $scope.$apply();
+            });
 
+
+        });
+    });
     app.controller("documentaryDetailController", function($scope, $http, $route, $sce) {
         var id = $route.current.params.id;
         $scope.id = id;
@@ -198,7 +239,7 @@
         }).success(function(response) {
             $scope.documentarys = response.data;
             var len = $scope.documentarys.length;
-            pageSet.init(Math.ceil(response.num/10), selectPage);
+            pageSet.init(Math.ceil(response.num / 10), selectPage);
 
             function selectPage(page) {
                 $http({
@@ -224,10 +265,10 @@
             $scope.articleDetail.detail.content = $sce.trustAsHtml($scope.articleDetail.detail.content);
             toggleDuoshuoComments(id, base_url + "#/articleDetail/" + id, $scope.articleDetail.detail.title, $scope.articleDetail.detail.abstract, $scope.articleDetail.detail.thumbnail)
         });
-  $http({
-            url:"/admin.php?c=relation&a=allRelative&articleType=1&id=" + id,
-            method:"get"
-        }).success(function(response){
+        $http({
+            url: "/admin.php?c=relation&a=allRelative&articleType=1&id=" + id,
+            method: "get"
+        }).success(function(response) {
             $scope.finalRelative = response;
         })
     });
@@ -245,11 +286,11 @@
             toggleDuoshuoComments(id, base_url + "#/imageDetail/" + id, $scope.imgDetail.title, $scope.imgDetail.abstract, $scope.imgDetail.thumbnail);
 
         });
-         $http({
-            url:"/admin.php?c=relation&a=allRelative&articleType=2&id=" + id,
-            method:"get"
-        }).success(function(response){
-            $scope.finalRelative = response.slice(0,5);
+        $http({
+            url: "/admin.php?c=relation&a=allRelative&articleType=2&id=" + id,
+            method: "get"
+        }).success(function(response) {
+            $scope.finalRelative = response.slice(0, 5);
         })
         $scope.like = function() {
             var liked = localStorage.getItem("pid" + id) === "1";
@@ -286,14 +327,14 @@
             if (!$scope.videoDetail.attachment.length)
                 $scope.noDownload = true;
             $scope.videoDetail.content = $sce.trustAsHtml($scope.videoDetail.content);
-           
+
             toggleDuoshuoComments(id, base_url + "#/videoDetail/" + id, $scope.videoDetail.title, $scope.videoDetail.abstract, $scope.videoDetail.thumbnail);
         });
         $http({
-            url:"/admin.php?c=relation&a=allRelative&articleType=4&id=" + id,
-            method:"get"
-        }).success(function(response){
-            $scope.finalRelative = response.slice(0,5);
+            url: "/admin.php?c=relation&a=allRelative&articleType=4&id=" + id,
+            method: "get"
+        }).success(function(response) {
+            $scope.finalRelative = response.slice(0, 5);
         })
     });
     app.controller("indexController", function($scope, $http) {

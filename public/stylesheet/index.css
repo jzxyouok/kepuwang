@@ -166,7 +166,7 @@ body {
 
 #topNav .form-group {
     position: absolute;
-    right: 300px;
+    right: 200px;
     top: 20px;
     display: table-cell;
     vertical-align: center;
@@ -192,7 +192,10 @@ body {
     color: #E4E4E4;
 }
 
-
+.search-img{
+    cursor:pointer;
+    
+}
 /*@media screen and (max-width: 1080px) {
   #topNav .login {
     display: none;
