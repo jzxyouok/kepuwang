@@ -557,6 +557,7 @@
             });
             o_ueditorupload.addListener('afterUpfile', function(t, arg) {
                 $scope.$apply(function() {
+                    console.log(arg.url)
                     $scope.attachment[currentFile].url = arg.url;
                 });
             });

@@ -76,7 +76,7 @@
                             <th></th>
                         </tr>
                         <tr ng-repeat="attach in  attachment">
-                            <th>附件1：</th>
+                            <th>附件{{$index}}：</th>
                             <th>
                                 <input type="text" name=" " ng-model="attach.name" class="form-control" id="" placeholder="输入文件名称"> </th>
                             <th>{{attach.url}}</th>
@@ -84,7 +84,7 @@
                                 <button type="button" class="btn btn-md btn-primary" ng-click="methods.upFiles($index)">选择附件</button>
                             </th>
                             <th> <a href="javascript:void 0;" ng-show="$last" ng-click="methods.addAttachment()">添加</a>
-                            <a href="javascript:void 0;" ng-hide="$last" ng-click="methods.delAttachment($index)">删除</a>
+                            <a href="javascript:void 0;"   ng-click="methods.delAttachment($index)">删除</a>
                             </th>
                         </tr>
                     </table>
