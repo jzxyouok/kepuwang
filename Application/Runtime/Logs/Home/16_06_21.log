@@ -1,0 +1,304 @@
+[ 2016-06-21T00:46:03+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001083s ]
+
+[ 2016-06-21T00:46:03+08:00 ] 127.0.0.1 /admin.php?c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.141789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.141956s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000778s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000934s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001038s ]
+
+[ 2016-06-21T00:46:03+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001191s ]
+
+[ 2016-06-21T00:46:03+08:00 ] 127.0.0.1 /admin.php?c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008076s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000676s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000761s ]
+
+[ 2016-06-21T00:46:06+08:00 ] 127.0.0.1 /admin.php?c=login&a=auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001220s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0576s ]
+SQL: SELECT * FROM `admin` WHERE ( username='admin' ) LIMIT 1   [ RunTime:0.0556s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.108807s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.108959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000784s ]
+
+[ 2016-06-21T00:46:07+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000306s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.117055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.117165s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000900s ]
+
+[ 2016-06-21T00:46:11+08:00 ] 127.0.0.1 /admin.php?c=pic&a=allPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0698s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pic` LIMIT 1   [ RunTime:0.0673s ]
+SQL: SELECT * FROM `pic` ORDER BY publishTime DESC LIMIT 0,10   [ RunTime:0.2716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001112s ]
+
+[ 2016-06-21T00:46:15+08:00 ] 127.0.0.1 /admin.php?c=pic&a=picDetail&id=73
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001229s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `pic` WHERE ( id = 73 ) LIMIT 1   [ RunTime:0.0569s ]
+SQL: SHOW COLUMNS FROM `attachment` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `attachment` WHERE ( articleType=2 and articleId=73 )  [ RunTime:0.0561s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000819s ]
+
+[ 2016-06-21T00:46:20+08:00 ] 127.0.0.1 /admin.php?c=pic&a=newPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000808s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001185s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant img_src - assumed 'img_src' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant mainContent - assumed 'mainContent' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0711s ]
+SQL: UPDATE `pic` SET `title`='太空玫瑰',`thumbnail`='/Uploads/image/20160620/1466392078827242.jpg',`img_src`='/Uploads/image/20160620/1466392066119456.jpg',`type`='3',`abstract`='这张照片中其实有两个星系，上面的星系比较大，它对位于其下面的较小的星系有着很强的潮汐力作用，在这个潮汐力作用下，较小星系的物质流向较大星系。',`mainType`='1',`mainContent`='&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;&quot;&gt;图片名称：太空玫瑰&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;&quot;&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;&quot;&gt;种类：星系&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;&quot;&gt;距离：三亿光年&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;&quot;&gt;隶属星座：仙女座方向&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;',`publishTime`='1466441180' WHERE ( id=73 ) [ RunTime:0.0683s ]
+SQL: SHOW COLUMNS FROM `attachment` [ RunTime:0.0698s ]
+SQL: DELETE FROM `attachment` WHERE ( articleId=73 ) [ RunTime:0.0678s ]
+NOTIC: [8] Use of undefined constant articleId - assumed 'articleId' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant articleType - assumed 'articleType' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 45 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 47 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000749s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000807s ]
+
+[ 2016-06-21T00:46:24+08:00 ] 127.0.0.1 /admin.php?c=pic&a=allPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001809s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0675s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pic` LIMIT 1   [ RunTime:0.0651s ]
+SQL: SELECT * FROM `pic` ORDER BY publishTime DESC LIMIT 0,10   [ RunTime:0.2639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001197s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001321s ]
+
+[ 2016-06-21T00:46:26+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058225s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058372s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001574s ]
+
+[ 2016-06-21T00:46:28+08:00 ] 127.0.0.1 /admin.php?c=pic&a=allPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001065s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0705s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pic` LIMIT 1   [ RunTime:0.0678s ]
+SQL: SELECT * FROM `pic` ORDER BY publishTime DESC LIMIT 0,10   [ RunTime:0.2747s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000969s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001074s ]
+
+[ 2016-06-21T00:46:32+08:00 ] 127.0.0.1 /admin.php?c=pic&a=allPic&page=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001015s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0686s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pic` LIMIT 1   [ RunTime:0.0665s ]
+SQL: SELECT * FROM `pic` ORDER BY publishTime DESC LIMIT 0,10   [ RunTime:0.2691s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000997s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001110s ]
+
+[ 2016-06-21T00:46:54+08:00 ] 127.0.0.1 /admin.php?c=pic&a=picDetail&id=73
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001092s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `pic` WHERE ( id = 73 ) LIMIT 1   [ RunTime:1.0739s ]
+SQL: SHOW COLUMNS FROM `attachment` [ RunTime:0.0677s ]
+SQL: SELECT * FROM `attachment` WHERE ( articleType=2 and articleId=73 )  [ RunTime:0.0665s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001152s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001253s ]
+
+[ 2016-06-21T00:46:58+08:00 ] 127.0.0.1 /admin.php?c=pic&a=newPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000142s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant img_src - assumed 'img_src' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 15 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 16 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant mainContent - assumed 'mainContent' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0700s ]
+SQL: UPDATE `pic` SET `title`='太空玫瑰',`thumbnail`='/Uploads/image/20160620/1466392078827242.jpg',`img_src`='/Uploads/image/20160620/1466392066119456.jpg',`type`='3',`abstract`='这张照片中其实有两个星系，上面的星系比较大，它对位于其下面的较小的星系有着很强的潮汐力作用，在这个潮汐力作用下，较小星系的物质流向较大星系。',`mainType`='1',`mainContent`='&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;&quot;&gt;图片名称：太空玫瑰&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;&quot;&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;&quot;&gt;种类：星系&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;&quot;&gt;距离：三亿光年&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;&quot;&gt;隶属星座：仙女座方向&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;',`publishTime`='1466441218' WHERE ( id=73 ) [ RunTime:0.0677s ]
+SQL: SHOW COLUMNS FROM `attachment` [ RunTime:0.0693s ]
+SQL: DELETE FROM `attachment` WHERE ( articleId=73 ) [ RunTime:0.0676s ]
+NOTIC: [8] Use of undefined constant articleId - assumed 'articleId' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant articleType - assumed 'articleType' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 45 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Home\Controller\PicController.class.php 第 47 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000849s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000912s ]
+
+[ 2016-06-21T00:47:01+08:00 ] 127.0.0.1 /admin.php?c=pic&a=allPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000551s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0711s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pic` LIMIT 1   [ RunTime:0.0674s ]
+SQL: SELECT * FROM `pic` ORDER BY publishTime DESC LIMIT 0,10   [ RunTime:0.2732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001196s ]
+
+[ 2016-06-21T00:47:04+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001217s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000286s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027637s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001220s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001355s ]
+
+[ 2016-06-21T00:47:05+08:00 ] 127.0.0.1 /admin.php?c=pic&a=allPic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0580s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pic` LIMIT 1   [ RunTime:0.0555s ]
+SQL: SELECT * FROM `pic` ORDER BY publishTime DESC LIMIT 0,10   [ RunTime:0.2265s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001151s ]
+

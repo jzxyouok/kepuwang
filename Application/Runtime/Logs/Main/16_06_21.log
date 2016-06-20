@@ -4268,3 +4268,473 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
 
+[ 2016-06-21T00:43:52+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001469s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000654s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2016-06-21T00:43:53+08:00 ] 127.0.0.1 /index.php?c=search&a=search&search=%E6%9C%A8%E6%98%9F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001208s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0675s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0686s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0685s ]
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0679s ]
+SQL: SELECT * FROM `article` WHERE ( 'status' = 1 and ('title' like '%木星%' or 'abstract' like '%木星%') )  [ RunTime:0.0657s ]
+SQL: SELECT * FROM `pic` WHERE ( 'status' = 1 and ('title' like '%木星%' or 'abstract' like '%木星%') )  [ RunTime:0.0658s ]
+SQL: SELECT * FROM `video` WHERE ( 'status' = 1 and ('title' like '%木星%' or 'abstract' like '%木星%') )  [ RunTime:0.0659s ]
+SQL: SELECT * FROM `documentary` WHERE ( 'status' = 1 and ('title' like '%木星%' or 'abstract' like '%木星%') )  [ RunTime:0.0663s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001182s ]
+
+[ 2016-06-21T00:43:57+08:00 ] 127.0.0.1 /public/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-06-21T00:43:57+08:00 ] 127.0.0.1 /public/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001137s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-06-21T00:44:00+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001340s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010366s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000756s ]
+
+[ 2016-06-21T00:44:01+08:00 ] 127.0.0.1 /public/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001433s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-06-21T00:44:01+08:00 ] 127.0.0.1 /public/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001200s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-06-21T00:44:02+08:00 ] 127.0.0.1 /index.php?c=search&a=search&search=%E6%9C%A8%E6%98%9F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0704s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0748s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0701s ]
+SQL: SELECT * FROM `article` WHERE ( 'status' = 1 and ('title' like '%木星%' or 'abstract' like '%木星%') )  [ RunTime:0.0703s ]
+SQL: SELECT * FROM `pic` WHERE ( 'status' = 1 and ('title' like '%木星%' or 'abstract' like '%木星%') )  [ RunTime:0.0675s ]
+SQL: SELECT * FROM `video` WHERE ( 'status' = 1 and ('title' like '%木星%' or 'abstract' like '%木星%') )  [ RunTime:0.0674s ]
+SQL: SELECT * FROM `documentary` WHERE ( 'status' = 1 and ('title' like '%木星%' or 'abstract' like '%木星%') )  [ RunTime:0.0676s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000705s ]
+
+[ 2016-06-21T00:46:07+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001149s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T00:46:07+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000869s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T00:46:11+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393430685022.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+
+[ 2016-06-21T00:46:11+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393749988440.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+
+[ 2016-06-21T00:46:11+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466395945157453.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+
+[ 2016-06-21T00:46:11+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392078827242.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+
+[ 2016-06-21T00:46:11+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466398750445981.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000828s ]
+
+[ 2016-06-21T00:46:11+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407975986116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+
+[ 2016-06-21T00:46:11+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466408140113306.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+
+[ 2016-06-21T00:46:11+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393520852889.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001470s ]
+
+[ 2016-06-21T00:46:11+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407710885766.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+
+[ 2016-06-21T00:46:11+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411604239213.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+
+[ 2016-06-21T00:46:15+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392078827242.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+
+[ 2016-06-21T00:46:15+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392066119456.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+
+[ 2016-06-21T00:46:24+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393430685022.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+
+[ 2016-06-21T00:46:24+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466395945157453.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+
+[ 2016-06-21T00:46:24+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466398750445981.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+
+[ 2016-06-21T00:46:24+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393520852889.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001209s ]
+
+[ 2016-06-21T00:46:24+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392078827242.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001635s ]
+
+[ 2016-06-21T00:46:24+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466408140113306.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000106s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001233s ]
+
+[ 2016-06-21T00:46:24+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407710885766.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001301s ]
+
+[ 2016-06-21T00:46:24+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393749988440.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001055s ]
+
+[ 2016-06-21T00:46:24+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407975986116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+
+[ 2016-06-21T00:46:24+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411604239213.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001244s ]
+
+[ 2016-06-21T00:46:27+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001067s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T00:46:27+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002385s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T00:46:28+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392078827242.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+
+[ 2016-06-21T00:46:28+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393430685022.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+
+[ 2016-06-21T00:46:28+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466398750445981.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+
+[ 2016-06-21T00:46:28+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466395945157453.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+
+[ 2016-06-21T00:46:28+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393520852889.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001089s ]
+
+[ 2016-06-21T00:46:28+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407975986116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+
+[ 2016-06-21T00:46:28+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393749988440.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+
+[ 2016-06-21T00:46:28+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411604239213.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+
+[ 2016-06-21T00:46:28+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407710885766.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+
+[ 2016-06-21T00:46:28+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466408140113306.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+
+[ 2016-06-21T00:46:32+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466395945157453.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000910s ]
+
+[ 2016-06-21T00:46:32+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392078827242.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+
+[ 2016-06-21T00:46:33+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393430685022.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+
+[ 2016-06-21T00:46:33+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393749988440.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000098s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000872s ]
+
+[ 2016-06-21T00:46:33+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466398750445981.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001961s ]
+
+[ 2016-06-21T00:46:33+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393520852889.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000709s ]
+
+[ 2016-06-21T00:46:33+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466408140113306.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+
+[ 2016-06-21T00:46:33+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411604239213.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+
+[ 2016-06-21T00:46:33+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407975986116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+
+[ 2016-06-21T00:46:33+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407710885766.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001648s ]
+
+[ 2016-06-21T00:46:54+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392066119456.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+
+[ 2016-06-21T00:46:54+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392078827242.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+
+[ 2016-06-21T00:47:01+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392078827242.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+
+[ 2016-06-21T00:47:01+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466395945157453.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+
+[ 2016-06-21T00:47:01+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393430685022.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+
+[ 2016-06-21T00:47:01+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393749988440.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2016-06-21T00:47:01+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407975986116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+
+[ 2016-06-21T00:47:01+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411604239213.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+
+[ 2016-06-21T00:47:01+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393520852889.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+
+[ 2016-06-21T00:47:01+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466408140113306.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+
+[ 2016-06-21T00:47:01+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407710885766.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+
+[ 2016-06-21T00:47:01+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466398750445981.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000962s ]
+
+[ 2016-06-21T00:47:05+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393430685022.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+
+[ 2016-06-21T00:47:05+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393749988440.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+
+[ 2016-06-21T00:47:05+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392078827242.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+
+[ 2016-06-21T00:47:05+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393520852889.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+
+[ 2016-06-21T00:47:05+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466395945157453.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+
+[ 2016-06-21T00:47:05+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466398750445981.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+
+[ 2016-06-21T00:47:05+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407710885766.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+
+[ 2016-06-21T00:47:05+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411604239213.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+
+[ 2016-06-21T00:47:05+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466408140113306.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000947s ]
+
+[ 2016-06-21T00:47:05+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407975986116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000771s ]
+
