@@ -191,8 +191,9 @@
         });
 
     });
-    app.controller("searchResultController", function($scope, $http, $route, pageSet) {
-        $("#ad-carousel").show();
+    app.controller("searchResultController", function($rootScope,$scope, $http, $route, pageSet) {
+        
+        $rootScope.showSlider = true;
         var search = $route.current.params.search;
         // $scope.heightlight = function(){
         //     $("#result").highlight(search);
