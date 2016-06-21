@@ -23,3 +23,27 @@ function getVideo($content)
         }
     }
 }
+function getDb($type)
+{
+    switch ($type) {
+        case '1':
+            $db = M("article");
+            break;
+        case '2':
+            $db = M("pic");
+            break;
+        case '4':
+            $db = M("video");
+            break;
+        case '6':
+            $db = M("sets");
+
+            break;
+
+        default:
+            $db = M("article");
+            break;
+
+    }
+    return $db;
+}

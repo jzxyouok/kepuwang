@@ -35,13 +35,13 @@
 </a>
 
                     <ul class="templatemo-submenu"><!-- 1轮播2热点3普通4推荐 -->
-                        <li><a href="#/allArticle">所有文章</a></li>
-                        <li><a href="#/allArticle?type=1">首页轮播</a></li>
+                        <li><a href="#/allArticle?status=1&mainType=0&page=1">所有文章</a></li>
+                       <!--  <li><a href="#/allArticle?type=1">首页轮播</a></li>
                         <li><a href="#/allArticle?type=2">首页热点</a></li>
                            <li><a href="#/allArticle?type=4">首页推荐</a></li>
-                        <li><a href="#/allArticle?type=3">普通文章</a></li>
-                        <li><a href="#/allArticle?status=2">草稿箱</a></li>
-                        <li><a href="#/allArticle?status=0">被撤文章</a></li>
+                        <li><a href="#/allArticle?type=3">普通文章</a></li> -->
+                        <li><a href="#/allArticle?status=2&mainType=0&page=1">草稿箱</a></li>
+                        <li><a href="#/allArticle?status=0&mainType=0&page=1">被撤文章</a></li>
                         <li><a href="#/newArticle">新文章</a></li>
                          
                     </ul>
@@ -54,6 +54,8 @@
                     <ul class="templatemo-submenu">
                         <li><a href="#/allPic">所有图片</a></li>
                         <li><a href="#/allPic?type=2">首页图片</a></li>
+                        <li><a href="#/allPic?type=1">首页图片</a></li>
+
                         <li><a href="#/allPic?type=3">普通图片</a></li>
                         <li><a href="#/allPic?status=2">草稿箱</a></li>
                         <li><a href="#/allPic?status=0">被撤图片</a></li>

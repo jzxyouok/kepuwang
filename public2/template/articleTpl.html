@@ -1,11 +1,20 @@
 <style>
-    .link{
-        color:#337ab7;
-        cursor: pointer;
-    }
-    .link:hover {
+.link {
+    color: #337ab7;
+    cursor: pointer;
+}
+
+.link:hover {
     color: #23527c;
     text-decoration: underline;
+}
+
+#select-maintype {
+    width: 220px;
+}
+
+.form-inline {
+    padding: 10px 40px;
 }
 </style>
 <div class="templatemo-content-wrapper">
@@ -16,14 +25,9 @@
                     <ol class="breadcrumb">
                         <li>管理平台</li>
                         <li>文章管理</li>
-                        <li ng-switch="type">
-                            <span ng-switch-when="3">普通文章</span>
-                            <span ng-switch-when="2">首页文章</span>
-                            <span ng-switch-when="1">轮播文章</span>
-                            <span ng-switch-default>其他</span>
-                        </li>
+                       
                     </ol>
-            <!--    <div class="row search" style="margin-bottom:20px">
+                    <!--    <div class="row search" style="margin-bottom:20px">
                         <form class="form-inline" ng-submit="searchArticle()">
                             <div class="form-group">
                                 <label for="exampleInputEmail2">文章名称</label>
@@ -39,7 +43,21 @@
                             </div>
                             <button type="submit" class="btn btn-success"  >搜索</button>
                         </form>
-               </div>  --> 
+               </div>  -->
+                    <div class="row form-inline">
+                        <!-- maintype:1天文文理 2地理地质 3人文生态 4其他 -->
+                        <label for="select-maintype">按照类别筛选</label>
+                        <select name="" id="select-maintype" class="form-control" ng-model="mainType" ng-change="queryArticle()">
+                            <option value="0">不限</option>
+                            <option value="1">天文·物理</option>
+                            <option value="2">地理·地质</option>
+                            <option value="3">人文·生态</option>
+                            <option value="4">其他</option>
+                        </select>
+                        <label for="searchname">按照名称搜索</label>
+                        <input type="text" class="form-control" id="searchname" name="name" ng-model="query" id="exampleInputEmail2" placeholder="输入文章名关键字">
+                        <button type="submit" class="btn btn-success" ng-click="queryArticle(true)">搜索</button>
+                    </div>
                     <div class="row">
                         <table class="table table-bordered">
                             <tr>
@@ -58,38 +76,69 @@
                                 <td>{{article.title}}</td>
                                 <!-- <td>{{article.content}}</td> -->
                                 <td>{{article.publishtime}}</td>
-                                <td>  
-                                <span ng-switch="{{article.status}}">
+                                <td>
+                                    <span ng-switch="{{article.status}}">
                                     <span ng-switch-when="1">可用</span>
                                     <span ng-switch-when="0">已撤销</span>
-                                     <span ng-switch-when="2">草稿</span>
+                                    <span ng-switch-when="2">草稿</span>
                                     </span>
-                               
                                 </td>
                                 <td>
-                                    <span ng-switch="{{article.maintype}}">
+                                    <select ng-model="article.maintype" ng-change="changeArticleType(article.id,article.maintype)">
+                                        <option value="0">不限</option>
+                                        <option value="1">天文·物理</option>
+                                        <option value="2">地理·地质</option>
+                                        <option value="3">人文·生态</option>
+                                        <option value="4">其他</option>
+                                    </select>
+                                    <!-- <span ng-switch="{{article.maintype}}">
                                     <span ng-switch-when="1">天文·文理</span>
-                                    <span ng-switch-when="2">地理·地质</span>
-                                    <span ng-switch-when="3">人文·生态</span>
-                                    <span ng-switch-default>其他</span>
-                                    </span>
+<span ng-switch-when="2">地理·地质</span>
+<span ng-switch-when="3">人文·生态</span>
+<span ng-switch-default>其他</span>
+</span>
+ -->
                                 </td>
                                 <td>
-                                    <span ng-switch="{{article.type}}">
+                                    <!--            <span ng-switch="{{article.type}}">
                                     <span ng-switch-when="1">轮播</span>
                                     <span ng-switch-when="2">首页</span>
                                     <span ng-switch-when="3">普通</span>
                                     <span ng-switch-when="4">推荐</span>
                                     <span ng-switch-default>其他</span>
-                                    </span>
+                                    </span> -->
+                                    <select name="position" ng-change="changePosition(article.id,article.position)" ng-model="article.position" id="">
+                                        <option value="99">普通</option>
+                                        <option value="1">轮播1</option>
+                                        <option value="2">轮播2</option>
+                                        <option value="3">轮播3</option>
+                                        <option value="4">热点右1</option>
+                                        <option value="5">热点右2</option>
+                                        <option value="6">热点右3</option>
+                                        <option value="7">热点右4</option>
+                                        <option value="8">热点左下1</option>
+                                        <option value="9">热点左下2</option>
+                                        <option value="10">热点左下3</option>
+                                        <option value="11">推荐文章左图1</option>
+                                        <option value="12">推荐文章左图2</option>
+                                        <option value="13">推荐文章左图3</option>
+                                        <option value="14">推荐文章左图4</option>
+                                        <option value="15">推荐右1</option>
+                                        <option value="16">推荐右2</option>
+                                        <option value="17">推荐右3</option>
+                                        <option value="18">推荐右4</option>
+                                        <option value="19">推荐右5</option>
+                                        <option value="20">推荐右6</option>
+                                        <option value="19">推荐右7</option>
+                                        <option value="20">推荐右8</option>
+                                    </select>
                                 </td>
                                 <td>
-                                        <span ng-switch="{{article.status}}"   class="link">
+                                    <span ng-switch="{{article.status}}" class="link">
                                     <span ng-switch-when="1" ng-click="changeStatus(article.id,article.status)">撤销</span>
                                     <span ng-switch-when="0" ng-click="changeStatus(article.id,article.status)">恢复</span>
                                     <span ng-switch-when="2" ng-click="publish(article.id,article.status)">发布</span>
                                     </span>
-
                                     <a href="#/editArticle?id={{article.id}}"> 编辑 </a>
                                     <a href="/index.php/#articleDetail/{{article.id}}" target="_blank">预览</a>
                                     <!-- <a href="">置于首页</a> -->

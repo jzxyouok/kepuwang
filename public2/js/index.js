@@ -177,7 +177,7 @@
         })
         $scope.addRelative = function() {
             $http({
-                url: "/admin.php?c=relation&a=addRelative&articleType=" +articleType + "&rid=" + $scope.articleId + "&aid=" + id,
+                url: "/admin.php?c=relation&a=addRelative&articleType=" + articleType + "&rid=" + $scope.articleId + "&aid=" + id,
                 method: "get"
             }).success(function(response) {
                 if (response == "0") alert("编号不存在！！")
@@ -189,13 +189,13 @@
 
 
         };
-        $scope.delRelative = function(rid,index) {
+        $scope.delRelative = function(rid, index) {
             $http({
                 url: "/admin.php?c=relation&a=delRelative&articleType=" + articleType + "&rid=" + rid + "&aid=" + id,
                 method: "post"
             }).success(function(response) {
                 // do something
-                $scope.relative.splice(index,1);
+                $scope.relative.splice(index, 1);
             });
         }
 
@@ -461,28 +461,37 @@
             UE.getEditor('editor').setContent(response.content || "", false);
         });
     });
-    app.controller("allArticleController", function($http, $scope, $location, pageSet) {
-        var type = $location.search()['type'] || 0;
-        $scope.type = type;
-        var status = $location.search()['status'] || 1;
-        $http({
-            url: "/admin.php?c=article&a=allArticle&page=1&type=" + type + "&status=" + status,
-            method: "get"
-        }).success(function(response) {
-            $scope.allArticle = response.allArticle;
-            pageSet.init((Math.ceil(response.pageNum / 10)), handlePageChange);
+    app.controller("allArticleController", function($http, $route, $scope, $location, pageSet) {
+        $scope.mainType = $route.current.params.mainType;
+        var status = $route.current.params.status;
+        var page = $route.current.params.page;
+        var query = "";
+        $scope.query = "";
 
-        });
+        $scope.mainType = 0;
 
-        function handlePageChange(page) {
-
+        $scope.queryArticle = function(isQuery) {
+            
+             if ($scope.query &&isQuery) { query = "&name=" + $scope.query; }
             $http({
-                url: "/admin.php?c=article&a=allArticle&type=" + type + "&status=" + status + "&page=" + page,
+                url: "/admin.php?c=util&a=getAll&articleType=1&status=" + status + "&mainType=" + $scope.mainType + "&page=" + page + query,
                 method: "get"
             }).success(function(response) {
-                $scope.allArticle = response.allArticle;
+                $scope.allArticle = response.data;
+                pageSet.init((Math.ceil(response.num / 10)), handlePageChange);
+
             });
         }
+
+        function handlePageChange(page) {
+            $http({
+                url: "/admin.php?c=util&a=getAll&articleType=1&status=" + status + "&mainType=" + $scope.mainType + "&page=" + page + query,
+                method: "get"
+            }).success(function(response) {
+                $scope.allArticle = response.data;
+            });
+        }
+        $scope.queryArticle();
         $scope.changeStatus = function(id, status) {
             var message = "确定" + status == "0" ? "恢复" : "撤销" + "这篇文章？";
             if (confirm(message)) {
@@ -494,6 +503,20 @@
                 });
             }
         }
+        $scope.changePosition = function(id, position) {
+            if (confirm("确定调整此文章位置？")) {
+                console.log(id + position)
+                $http({
+                    url: "/admin.php?c=article&a=changePosition&articleType=1&id=" + id + "&position=" + position,
+                    method: "get"
+                }).success(function(response) {
+                    location.reload(true);
+                });
+            }
+
+        }
+
+
         $scope.publish = function(id, status) {
 
             var message = "确定发布这篇文章？";
@@ -506,18 +529,15 @@
                 });
             }
         }
-        $scope.searchArticle = function() {
-            var type = $location.search()['type'] || 0;
-            $scope.type = type;
-            var status = $location.search()['status'] || 1;
-            $http({
-                url: "/admin.php?c=article&a=allArticle&type=" + type + "&status=" + $scope.searchStatus + "&name=" + $scope.searchName,
-                method: "get"
-            }).success(function(response) {
-                $scope.allArticle = response.allArticle;
-                pageSet.init(Math.ceil(response.pageNum / 10));
-            });
-
+        $scope.changeArticleType = function(id, mainType) {
+            if (confirm("确定更换此文章类别？")) {
+                $http({
+                    url: "/admin.php?c=article&a=changeArticleMainType&articleType=1&id=" + id + "&mainType=" + mainType,
+                    method: "get"
+                }).success(function(response) {
+                    // location.reload(true);
+                });
+            }
         }
     });
     app.controller("newPicController", function($scope, $route, $http) {
@@ -558,7 +578,7 @@
             });
             o_ueditorupload.addListener('afterUpfile', function(t, arg) {
                 $scope.$apply(function() {
-                     
+
                     $scope.attachment[currentFile].url = arg.url;
                 });
             });
@@ -612,8 +632,8 @@
             delAttachment: function(index) {
                 console.log("asasa")
                 $scope.attachment.splice(index, 1)
-                if($scope.attachment.length ==0){
-                   $scope.attachment = [{ name: "", url: "" }];
+                if ($scope.attachment.length == 0) {
+                    $scope.attachment = [{ name: "", url: "" }];
                 }
             }
 
@@ -720,9 +740,9 @@
             delAttachment: function(index) {
                 console.log("asasa")
                 $scope.attachment.splice(index, 1)
-                if($scope.attachment.length==0)
+                if ($scope.attachment.length == 0)
                     $scope.attachment = [{ name: "", url: "" }];
-                    
+
             }
 
         }
@@ -850,13 +870,14 @@
             method: "get"
         }).success(function(response) {
             $scope.allArticle = response.allArticle;
-            pageSet.init(Math.ceil(response.pageNum / 10),handlePageChange);
+            pageSet.init(Math.ceil(response.pageNum / 10), handlePageChange);
         });
-          function handlePageChange(page) {
+
+        function handlePageChange(page) {
 
             $http({
-            url: "/admin.php?c=video&a=allVideo" + queryString+ "&page=" + page, 
-              method: "get"
+                url: "/admin.php?c=video&a=allVideo" + queryString + "&page=" + page,
+                method: "get"
             }).success(function(response) {
                 $scope.allArticle = response.allArticle;
             });

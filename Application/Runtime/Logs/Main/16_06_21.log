@@ -31078,3 +31078,1226 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
 
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /index.php?c=index&a=indexContent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001447s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0771s ]
+SQL: SELECT * FROM `pic` WHERE ( status=1 and type=2 ) LIMIT 0,12   [ RunTime:0.0747s ]
+SQL: SELECT * FROM `pic` WHERE ( status=1 and type=3 ) LIMIT 0,12   [ RunTime:0.2617s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0764s ]
+SQL: SELECT * FROM `video` WHERE ( status=1 and type=2 ) LIMIT 0,9   [ RunTime:0.0745s ]
+SQL: SELECT * FROM `video` WHERE ( status=1 and type=3 ) LIMIT 0,9   [ RunTime:0.0765s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0769s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001144s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001307s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160614/1465917455420936.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160618/1466235244160594.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160615/1465958691150353.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000669s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160616/1466085319106116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392078827242.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160615/1465954846693371.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160619/1466314913119830.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+ERR: 无法加载控制器:Uploads
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160614/1465918012967612.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001697s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160615/1465955276107230.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160618/1466234756271530.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001212s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393430685022.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393520852889.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000884s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393749988440.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466395945157453.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407975986116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466398750445981.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466408140113306.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002734s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411872459321.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407710885766.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411604239213.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+
+[ 2016-06-21T20:13:06+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466412178119563.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /index.php?c=search&a=search&search=%E6%98%9F
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0656s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0657s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0655s ]
+SQL: SELECT * FROM `article` WHERE `title` LIKE '%星%' AND `status` = 1  [ RunTime:0.5538s ]
+SQL: SELECT * FROM `pic` WHERE `title` LIKE '%星%' AND `status` = 1  [ RunTime:0.2084s ]
+SQL: SELECT * FROM `video` WHERE `title` LIKE '%星%' AND `status` = 1  [ RunTime:0.5561s ]
+SQL: SELECT * FROM `documentary` WHERE `title` LIKE '%星%' AND `status` = 1  [ RunTime:0.0707s ]
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 41 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 42 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 43 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 44 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 46 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 52 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 53 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 54 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 55 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 57 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 52 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 53 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 54 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 55 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 57 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 52 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 53 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 54 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 55 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 57 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 52 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 53 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 54 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 55 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 57 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 52 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 53 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 54 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 55 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 57 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 52 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 53 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 54 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 55 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 57 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 52 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 53 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 54 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 55 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 57 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 52 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 53 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 54 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 55 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 57 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 52 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 53 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 54 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 55 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 57 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 52 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 53 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 54 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 55 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 57 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 52 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 53 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 54 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 55 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 57 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 52 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 53 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 54 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 55 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 57 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001297s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001452s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160621/1466506733615827.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001315s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160621/1466502797338143.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160621/1466497038652318.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160621/1466496794738554.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160621/1466477165553862.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160621/1466476986539188.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160621/1466496486428897.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160621/1466477448403164.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160619/1466334538155430.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160619/1466322932333109.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000945s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160619/1466326443362327.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000893s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160618/1466256665116000.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000534s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160618/1466254994346664.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160619/1466330670431350.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000793s ]
+
+[ 2016-06-21T20:23:08+08:00 ] 127.0.0.1 /Uploads/image/20160621/1466473427896265.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000830s ]
+
+[ 2016-06-21T20:59:38+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000948s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T20:59:38+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:12:49+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001056s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:12:49+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:13:02+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001061s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:13:02+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001238s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:23:11+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001107s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:23:11+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:30:10+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:30:10+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000683s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001220s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:31:05+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000935s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:31:05+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001122s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001279s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:31:18+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001017s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001908s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:31:18+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:31:32+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:31:32+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000951s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:32:12+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001143s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:32:12+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000873s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:39:49+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+
+[ 2016-06-21T22:41:14+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:41:14+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001169s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:41:24+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:41:24+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000149s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000955s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:41:54+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:41:54+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001472s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:42:30+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001711s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:42:30+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001125s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:44:40+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:44:40+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001048s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:50:17+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002295s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:50:17+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001927s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:50:42+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:50:42+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:53:22+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:53:22+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001109s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:53:41+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:53:41+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000905s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001030s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:57:27+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001129s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:57:27+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000991s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001132s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:59:03+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001076s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T22:59:03+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:00:12+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001009s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:00:12+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:00:34+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:00:34+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001553s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:01:50+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000987s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001068s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:01:50+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000917s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:03:34+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001236s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001588s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:03:34+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000771s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:04:17+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000969s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:04:17+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001153s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:35:44+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:35:44+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:35:51+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001008s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:35:51+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001074s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:36:42+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001913s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:36:42+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:37:01+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:37:01+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:37:58+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:37:58+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:38:10+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001168s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:38:10+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:48:35+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:48:35+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001561s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:49:10+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:49:10+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001108s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:49:54+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001621s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:49:54+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:50:07+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000880s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:50:07+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:50:28+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:50:28+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000798s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:51:55+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001233s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:51:56+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000099s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:55:34+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:55:34+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:56:47+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001047s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:56:47+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000923s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:58:44+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T23:58:44+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+ERR: 无法加载控制器:Public2
+

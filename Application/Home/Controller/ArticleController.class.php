@@ -63,13 +63,13 @@ class ArticleController extends Controller
         if (I("get.name") != "") {
             $condition["title"] = array("like", "%" . I("get.name") . "%");
         }
-        if (I("get.type") != "0") {
-            $condition["type"] = I("get.type");
-        }
+        // if (I("get.type") != "0") {
+        //     $condition["type"] = I("get.type");
+        // }
 
         $result["pageNum"]    = M("article")->where($condition)->count();
-        $result["allArticle"] = M("article")->where($condition)->order("publishTime desc")->limit(($page - 1) * 10, $page * 10)->select();
-        // echo M("article")->getLastSql();
+        $result["allArticle"] = M("article")->where($condition)->order("position asc,publishTime desc")->limit(($page - 1) * 10, $page * 10)->select();
+        //echo M("article")->getLastSql();
         echo json_encode($result);
     }
     public function newContent()
@@ -196,6 +196,33 @@ class ArticleController extends Controller
         echo "1";
         // echo M("article")->getLastSql();
     }
+    public function changeArticleMainType()
+    {
+        $id          = I("get.id");
+        $articleType = I("get.articleType");
+        $update      = array(
+            mainType => I("get.mainType"),
+            id       => $id,
+        );
+        switch ($articleType) {
+            case '1':
+                $db = M("article");
+                break;
+            case '2':
+                $db = M("pic");
+                break;
+            case '4':
+                $db = M("video");
+                break;
+
+            default:
+                # code...
+                break;
+        }
+        $db->save($update);
+        echo $db->getLastSql();
+        echo "1";
+    }
     public function publish()
     {
         $id      = I("get.id");
@@ -225,6 +252,41 @@ class ArticleController extends Controller
         echo "1";
 
     }
+    public function sortByMainType()
+    {
+        $mainType = I("get.mainType");
+        $article  = I("get.articleType");
+        $page     = I("get.page");
+        if ($page == "") {
+            $page = 1;
+        }
+
+        switch ($article) {
+            case '1':
+                $db = M("article");
+                break;
+            case '2':
+                $db = M("pic");
+                break;
+            case '4':
+                $db = M("video");
+                break;
+
+            default:
+                $db = M("article");
+                # code...
+                break;
+        }
+        $condition = array(
+            status   => "1",
+            mainType => $mainType,
+        );
+        $result = $db->where($condition)->order("position asc,publishTime desc")->limit(($page - 1) * 10, $page * 10)->select();
+
+        echo json_encode($result);
+
+    }
+
     public function update()
     {
         $id = I("post.id");
@@ -264,5 +326,47 @@ class ArticleController extends Controller
     //     echo json_encode($result);
 
     // }
+    public function changePosition()
+    {
+        $position = I("get.position");
+        $article  = I("get.articleType");
+        $id       = I("get.id");
+
+        switch ($article) {
+            case '1':
+                $db = M("article");
+                break;
+            case '2':
+                $db = M("pic");
+                break;
+            case '4':
+                $db = M("video");
+                break;
+            case '5':
+                $db = M("documentary");
+                break;
+            default:
+                $db = M("article");
+                # code...
+                break;
+        }
+        $update = array(
+            position => "1",
+        );
+        // 将已有位置重置为99
+        $old = $db->where("position=" . $position)->select();
+        echo $db->getLastSql();
+        echo "old:" . json_encode($old);
+        foreach ($old as $o) {
+            $db->where("id=" . $o["id"])->save(array(position => 99));
+            echo $db->getLastSql();
+            # code...
+        }
+
+        $db->where("id=" . $id)->save(array(position => $position));
+
+        // 此ID修改
+
+    }
 
 }
