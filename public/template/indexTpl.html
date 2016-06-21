@@ -7,7 +7,10 @@
 #ad-carousel2 {
     height: 376px !important;
 }
-
+.tiezi h4 a{
+    font-size:18px;
+    }
+}
 #ad-carousel2 img {
     height: 376px !important;
 }
@@ -40,7 +43,7 @@
     height: 8px;
     width: 8px;
 }
-.pic a,.tiezi a{
+.pic a,.tiezi a,h2 a{
     color:#fff;
 }
 </style>
@@ -63,7 +66,7 @@
                                         <img ng-src="{{hotArticle[0].thumbnail}}" alt="1 slide">
                                         <div>
                                             <div class="carousel-caption">
-                                                <a href="#/articleDetail/{{hotArticle[0].id}}"><h2>{{hotArticle[0].title}}</h2></a>
+                                                <a href="#/articleDetail/{{hotArticle[0].id}}"><h2>{{hotArticle[0].title||"adfasfsdf"}}</h2></a>
                                             </div>
                                         </div>
                                     </div>

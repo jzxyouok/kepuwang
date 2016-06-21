@@ -1,4 +1,6 @@
-<div id="navPage">
+<div id="navPage"><style>
+    a h2{color:#fff;}
+</style>
     <div id="topNav" style="background-color:#535353">
         <div class="container-fluid" style="width:1200px">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -57,7 +59,7 @@
                 <img ng-src="{{slideArticle[0].thumbnail}}" alt="5 slide">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h2><a href="#articleDetail/{{slideArticle[0].id}}">{{slideArticle[0].title}}</a></h2>
+                       <a href="#articleDetail/{{slideArticle[0].id}}"> <h2>{{slideArticle[0].title}}</h2></a>
                     </div>
                 </div>
             </div>
@@ -65,7 +67,7 @@
                  <img ng-src="{{slideArticle[1].thumbnail}}" alt="5 slide">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h2><a href="#articleDetail/{{slideArticle[1].id}}">{{slideArticle[1].title}}</a></h2>
+                        <a href="#articleDetail/{{slideArticle[1].id}}"><h2>{{slideArticle[1].title}}</h2></a>
                     </div>
                 </div>
             </div>
@@ -73,7 +75,7 @@
                 <img ng-src="{{slideArticle[2].thumbnail}}" alt="5 slide">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h2><a href="#articleDetail/{{slideArticle[2].id}}">{{slideArticle[2].title}}</a></h2>
+                        <a href="#articleDetail/{{slideArticle[2].id}}"><h2>{{slideArticle[2].title}}</h2></a>
                     </div>
                 </div>
             </div>
