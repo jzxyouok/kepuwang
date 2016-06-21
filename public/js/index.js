@@ -35,9 +35,9 @@
     app.filter('cutTimeStr', function() {
         return function(timeStr) {
             console.log(timeStr)
-            if(typeof timeStr === "string")
-            return timeStr.slice(0, 10);
-        return "";
+            if (typeof timeStr === "string")
+                return timeStr.slice(0, 10);
+            return "";
         };
     });
 
@@ -54,19 +54,19 @@
         return {
             restrict: "E",
             templateUrl: '/public/template/nav.html',
-            controller:"searchController",
+            controller: "searchController",
             replace: true
         }
     });
-//     app.directive('repeatDone', function() {
-//     return {
-//         link: function(scope, element, attrs) {
-//             if (scope.$last) {                   // 这个判断意味着最后一个 OK
-//                 scope.$eval(attrs.repeatDone)    // 执行绑定的表达式
-//             }
-//         }
-//     }
-// })
+    //     app.directive('repeatDone', function() {
+    //     return {
+    //         link: function(scope, element, attrs) {
+    //             if (scope.$last) {                   // 这个判断意味着最后一个 OK
+    //                 scope.$eval(attrs.repeatDone)    // 执行绑定的表达式
+    //             }
+    //         }
+    //     }
+    // })
 
     app.directive('embedSrc', function() {
         return {
@@ -178,11 +178,21 @@
 
     }]);
     app.controller("searchController", function($scope, $http, $route) {
-        $scope.search = function(key){
-            location.href = "#/searchResult?search=" + key;
-        }
+
+        $scope.search = function(key) {
+                location.href = "#/searchResult?search=" + key;
+            }
+            //轮播栏目
+        $http({
+            url: "/index.php?c=index&a=slideArticle",
+            method: "get"
+        }).success(function(response) {
+            $scope.slideArticle = response;
+        });
+
     });
-        app.controller("searchResultController", function($scope, $http, $route,pageSet) {
+    app.controller("searchResultController", function($scope, $http, $route, pageSet) {
+        $("#ad-carousel").show();
         var search = $route.current.params.search;
         // $scope.heightlight = function(){
         //     $("#result").highlight(search);
@@ -191,18 +201,20 @@
             url: "/index.php?c=search&a=search&search=" + search,
             method: "get"
         }).success(function(response) {
-            $scope.searchResult = response.slice(0,15);
-           
-            pageSet.init(Math.ceil(response.length/15),function(page){
-                console.log(response.slice((page-1)*15,page*15))
-                $scope.searchResult = response.slice((page-1)*15,page*15);
+            $scope.searchResult = response.slice(0, 15);
+
+            pageSet.init(Math.ceil(response.length / 15), function(page) {
+                console.log(response.slice((page - 1) * 15, page * 15))
+                $scope.searchResult = response.slice((page - 1) * 15, page * 15);
                 $scope.$apply();
             });
 
 
         });
     });
-    app.controller("documentaryDetailController", function($scope, $http, $route, $sce) {
+    app.controller("documentaryDetailController", function($rootScope, $scope, $http, $route, $sce) {
+
+        $rootScope.showSlider = false;
         var id = $route.current.params.id;
         $scope.id = id;
         var set = $route.current.params.set;
@@ -229,10 +241,13 @@
             method: "get",
         }).success(function(response) {
             $scope.setDetail = response;
+            document.title = $scope.setDetail.title;
             $scope.setDetail.content = $sce.trustAsHtml($scope.setDetail.content);
         });
     });
-    app.controller("allDocumentaryController", function($scope, $http, $route, $sce, pageSet) {
+    app.controller("allDocumentaryController", function($rootScope,$scope, $http, $route, $sce, pageSet) {
+        $rootScope.showSlider = true;
+        document.title = "纪录片";
         $http({
             url: "/index.php?c=documentary&a=allDocumentary&page=1",
             method: "get"
@@ -252,7 +267,8 @@
         });
     });
 
-    app.controller("articleDetailController", function($scope, $http, $route, $sce) {
+    app.controller("articleDetailController", function($rootScope, $scope, $http, $route, $sce) {
+        $rootScope.showSlider = false;
         var id = $route.current.params.id;
         if (id == "")
             window.location.href = "#/article";
@@ -272,7 +288,9 @@
             $scope.finalRelative = response;
         })
     });
-    app.controller("imageDetailController", function($scope, $http, $route, $sce) {
+    app.controller("imageDetailController", function($rootScope, $scope, $http, $route, $sce) {
+        $rootScope.showSlider = false;
+
         var id = $route.current.params.id;
         if (id == "")
             window.location.href = "#/image";
@@ -280,7 +298,9 @@
             url: "/index.php?c=pic&a=picDetail&id=" + id,
             method: "get"
         }).success(function(response) {
+
             $scope.imgDetail = response;
+            document.title = $scope.imgDetail.title;
             $scope.imgDetail.content = $sce.trustAsHtml($scope.imgDetail.content);
             $scope.imgDetail.maincontent = $sce.trustAsHtml($scope.imgDetail.maincontent);
             toggleDuoshuoComments(id, base_url + "#/imageDetail/" + id, $scope.imgDetail.title, $scope.imgDetail.abstract, $scope.imgDetail.thumbnail);
@@ -315,7 +335,8 @@
         }
     })
 
-    app.controller("videoDetailController", function($scope, $http, $route, $sce) {
+    app.controller("videoDetailController", function($rootScope, $scope, $http, $route, $sce) {
+        $rootScope.showSlider = false;
         var id = $route.current.params.id;
         if (id == "")
             window.location.href = "#/video";
@@ -324,6 +345,7 @@
             method: "get"
         }).success(function(response) {
             $scope.videoDetail = response;
+            document.title = $scope.videoDetail.title;
             if (!$scope.videoDetail.attachment.length)
                 $scope.noDownload = true;
             $scope.videoDetail.content = $sce.trustAsHtml($scope.videoDetail.content);
@@ -337,20 +359,30 @@
             $scope.finalRelative = response.slice(0, 5);
         })
     });
-    app.controller("indexController", function($scope, $http) {
-
+    app.controller("indexController", function($rootScope,$scope, $http) {
+        $rootScope.showSlider = true;
         $http({
             method: "get",
-            url: "/index",
+            url: "/index.php?c=index&a=indexContent",
         }).success(function(response) {
             $scope.title = response.title;
             $scope.content = response.content;
-            $scope.img_src = response.img_src;
+            $scope.pics = response.pics;
+            $scope.mainVideo = response.videos[0];
+            $scope.topRightVideo1 = response.videos.slice(1, 3);
+            $scope.topRightVideo2 = response.videos.slice(3, 5);
+            $scope.bottomVideo = response.videos.slice(5, 9);
+            $scope.hotArticle = response.hotArticle;
+            $scope.recommandArticleWithPic = response.recommandArticle.slice(0, 4);
+            $scope.recommandArticleNoPic = response.recommandArticle.slice(5, 13);
+
+
 
         })
     });
-    app.controller("allPicController", function($scope, $http, pageSet) {
+    app.controller("allPicController", function($rootScope, $scope, $http, pageSet) {
         document.title = "所有图片";
+        $rootScope.showSlider = true;
         $http({
             method: "get",
             url: "/index.php?c=pic&a=allPic&page=1",
@@ -402,7 +434,9 @@
 
     });
 
-    app.controller("articleListController", function($http, $scope, pageSet, util, $route) {
+    app.controller("articleListController", function($rootScope, $http, $scope, pageSet, util, $route) {
+        $rootScope.showSlider = true;
+
         var maintype = $route.current.params.mainType;
         console.log(maintype);
         var query = "";
@@ -455,7 +489,8 @@
             });
         }
     });
-    app.controller("videoController", function($http, $scope, pageSet, $route) {
+    app.controller("videoController", function($rootScope, $http, $scope, pageSet, $route) {
+        $rootScope.showSlider = true;
         var maintype = $route.current.params.mainType;
         var query = "";
         if (maintype) {

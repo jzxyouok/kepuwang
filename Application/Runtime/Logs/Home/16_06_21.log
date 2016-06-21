@@ -1064,3 +1064,692 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000743s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
 
+[ 2016-06-21T15:48:17+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+
+[ 2016-06-21T15:48:18+08:00 ] 127.0.0.1 /admin.php?c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000952s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000718s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021790s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000629s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000717s ]
+
+[ 2016-06-21T15:48:21+08:00 ] 127.0.0.1 /admin.php?c=login&a=auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0684s ]
+SQL: SELECT * FROM `admin` WHERE ( username='admin' ) LIMIT 1   [ RunTime:0.0665s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040452s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040570s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000636s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2016-06-21T15:48:22+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044393s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001010s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001132s ]
+
+[ 2016-06-21T15:49:25+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001572s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000260s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035244s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001233s ]
+
+[ 2016-06-21T15:50:40+08:00 ] 127.0.0.1 /admin.php?c=article&a=newArticle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant mainType - assumed 'mainType' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0796s ]
+SQL: INSERT INTO `article` (`title`,`thumbnail`,`mainType`,`type`,`abstract`) VALUES ('测试轮播文章','/ueditor/php/upload/image/20160609/1465456111951561.jpg','2','1','测试轮播文章测试轮播文章测试轮播文章测试轮播文章') [ RunTime:0.0777s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000698s ]
+
+[ 2016-06-21T15:50:41+08:00 ] 127.0.0.1 /admin.php?c=article&a=newContent&id=99&articleType=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 80 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0807s ]
+SQL: SELECT `id`,`title`,`content` FROM `article` WHERE `id` = 99  [ RunTime:0.0755s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000674s ]
+
+[ 2016-06-21T15:50:59+08:00 ] 127.0.0.1 /admin.php?c=article&a=allArticle&page=1&type=1&status=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 59 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0765s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `status` = 1 AND `type` = 1 LIMIT 1   [ RunTime:0.0746s ]
+SQL: SELECT * FROM `article` WHERE `status` = 1 AND `type` = 1 ORDER BY publishTime desc LIMIT 0,10   [ RunTime:0.0748s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000655s ]
+
+[ 2016-06-21T15:51:02+08:00 ] 127.0.0.1 /admin.php?c=article&a=allArticle&page=1&type=0&status=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 59 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0757s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0742s ]
+SQL: SELECT * FROM `article` WHERE `status` = 2 ORDER BY publishTime desc LIMIT 0,10   [ RunTime:0.2993s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001020s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001187s ]
+
+[ 2016-06-21T15:51:23+08:00 ] 127.0.0.1 /admin.php?c=article&a=publish&articleType=1&id=99
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001198s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0775s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 222 行.
+SQL: UPDATE `article` SET `status`='1' WHERE ( id=99 ) [ RunTime:0.0754s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000717s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2016-06-21T15:51:23+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000887s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001258s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027962s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028052s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001129s ]
+
+[ 2016-06-21T15:51:24+08:00 ] 127.0.0.1 /admin.php?c=article&a=allArticle&page=1&type=0&status=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 59 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0884s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0866s ]
+SQL: SELECT * FROM `article` WHERE `status` = 2 ORDER BY publishTime desc LIMIT 0,10   [ RunTime:0.3493s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001141s ]
+
+[ 2016-06-21T15:51:29+08:00 ] 127.0.0.1 /admin.php?c=article&a=allArticle&page=1&type=1&status=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001143s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 59 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0733s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `status` = 1 AND `type` = 1 LIMIT 1   [ RunTime:0.0712s ]
+SQL: SELECT * FROM `article` WHERE `status` = 1 AND `type` = 1 ORDER BY publishTime desc LIMIT 0,10   [ RunTime:0.0718s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000582s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000653s ]
+
+[ 2016-06-21T15:53:35+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001182s ]
+
+[ 2016-06-21T15:53:36+08:00 ] 127.0.0.1 /admin.php?c=article&a=allArticle&page=1&type=1&status=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000934s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 59 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0772s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `status` = 1 AND `type` = 1 LIMIT 1   [ RunTime:0.0756s ]
+SQL: SELECT * FROM `article` WHERE `status` = 1 AND `type` = 1 ORDER BY publishTime desc LIMIT 0,10   [ RunTime:0.0756s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000673s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2016-06-21T17:21:30+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=1&id=85
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000936s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0610s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0605s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=1 and aid=85 )  [ RunTime:0.0587s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000735s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000814s ]
+
+[ 2016-06-21T17:24:17+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=1&id=85
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001169s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0561s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0560s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=1 and aid=85 )  [ RunTime:0.0539s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2016-06-21T17:40:28+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001006s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0804s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0801s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.0784s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001165s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001270s ]
+
+[ 2016-06-21T17:43:20+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000895s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0833s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0838s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.0811s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2016-06-21T17:43:25+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001105s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0852s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0857s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.0824s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000739s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000816s ]
+
+[ 2016-06-21T17:43:32+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0794s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0789s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.0759s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000852s ]
+
+[ 2016-06-21T17:43:53+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001685s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0829s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0824s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.0800s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001141s ]
+
+[ 2016-06-21T17:43:55+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0832s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0828s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.0815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2016-06-21T17:45:38+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001809s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0819s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0805s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.0782s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000783s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000884s ]
+
+[ 2016-06-21T17:45:40+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001201s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0798s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0783s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.0772s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000835s ]
+
+[ 2016-06-21T17:48:42+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001042s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0786s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0802s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.3604s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000774s ]
+
+[ 2016-06-21T17:49:34+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=4&id=152
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001324s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0885s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0895s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=4 and aid=152 )  [ RunTime:0.0862s ]
+SQL: SELECT * FROM `video` WHERE ( id=151 ) LIMIT 1   [ RunTime:0.0858s ]
+SQL: SELECT * FROM `video` WHERE ( id=149 ) LIMIT 1   [ RunTime:0.0858s ]
+SQL: SELECT * FROM `video` WHERE ( id=148 ) LIMIT 1   [ RunTime:0.0881s ]
+SQL: SELECT * FROM `video` WHERE ( id=150 ) LIMIT 1   [ RunTime:0.0874s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000733s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000804s ]
+
+[ 2016-06-21T17:49:37+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=4&id=152
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0863s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0863s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=4 and aid=152 )  [ RunTime:0.0830s ]
+SQL: SELECT * FROM `video` WHERE ( id=151 ) LIMIT 1   [ RunTime:0.0841s ]
+SQL: SELECT * FROM `video` WHERE ( id=149 ) LIMIT 1   [ RunTime:0.0830s ]
+SQL: SELECT * FROM `video` WHERE ( id=148 ) LIMIT 1   [ RunTime:0.0824s ]
+SQL: SELECT * FROM `video` WHERE ( id=150 ) LIMIT 1   [ RunTime:0.3712s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000904s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001035s ]
+
+[ 2016-06-21T17:50:27+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=4&id=152
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0815s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0829s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=4 and aid=152 )  [ RunTime:0.0836s ]
+SQL: SELECT * FROM `video` WHERE ( id=151 ) LIMIT 1   [ RunTime:0.0821s ]
+SQL: SELECT * FROM `video` WHERE ( id=149 ) LIMIT 1   [ RunTime:0.0827s ]
+SQL: SELECT * FROM `video` WHERE ( id=148 ) LIMIT 1   [ RunTime:0.0817s ]
+SQL: SELECT * FROM `video` WHERE ( id=150 ) LIMIT 1   [ RunTime:0.0813s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000660s ]
+
+[ 2016-06-21T17:51:19+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=1&id=85
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001299s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0826s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0854s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=1 and aid=85 )  [ RunTime:0.0838s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000681s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2016-06-21T17:51:27+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=1&id=85
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001211s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0802s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0778s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=1 and aid=85 )  [ RunTime:0.0771s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000742s ]
+
+[ 2016-06-21T17:52:11+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001197s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0817s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0818s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.0787s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000895s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000983s ]
+
+[ 2016-06-21T17:53:15+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0823s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0817s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.0824s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000800s ]
+
+[ 2016-06-21T17:53:40+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001406s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0846s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0858s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.0829s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000855s ]
+
+[ 2016-06-21T17:54:17+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001251s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0848s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0837s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.0803s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000802s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000889s ]
+
+[ 2016-06-21T17:57:05+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=101
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000925s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0834s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0820s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=101 )  [ RunTime:0.0835s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000763s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000828s ]
+
+[ 2016-06-21T17:57:11+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=documentaryDetail&id=157
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001117s ]
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0876s ]
+SQL: SELECT * FROM `documentary` WHERE ( id=157 ) LIMIT 1   [ RunTime:0.0878s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.0878s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId=157 )  [ RunTime:0.1716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001804s ]
+
+[ 2016-06-21T17:57:22+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=4&id=151
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000109s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001749s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000983s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0863s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0867s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=4 and aid=151 )  [ RunTime:0.0847s ]
+SQL: SELECT * FROM `video` WHERE ( id=152 ) LIMIT 1   [ RunTime:0.0864s ]
+SQL: SELECT * FROM `video` WHERE ( id=149 ) LIMIT 1   [ RunTime:0.0862s ]
+SQL: SELECT * FROM `video` WHERE ( id=148 ) LIMIT 1   [ RunTime:0.3868s ]
+SQL: SELECT * FROM `video` WHERE ( id=150 ) LIMIT 1   [ RunTime:0.0853s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001151s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001262s ]
+
+[ 2016-06-21T17:59:59+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=1&id=98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000986s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001387s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0885s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0872s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=1 and aid=98 )  [ RunTime:0.0830s ]
+SQL: SELECT * FROM `article` WHERE ( id=59 ) LIMIT 1   [ RunTime:0.2594s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001210s ]
+
+[ 2016-06-21T18:00:06+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=1&id=59
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000883s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0832s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0835s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=1 and aid=59 )  [ RunTime:0.0815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000616s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2016-06-21T18:01:01+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=4&id=120
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0876s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0880s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=4 and aid=120 )  [ RunTime:0.0866s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000813s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000902s ]
+
+[ 2016-06-21T18:01:12+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=4&id=119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000980s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002477s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0827s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0834s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=4 and aid=119 )  [ RunTime:0.0833s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000783s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000854s ]
+
+[ 2016-06-21T18:01:54+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=4&id=119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0836s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0840s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=4 and aid=119 )  [ RunTime:0.0821s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000629s ]
+
+[ 2016-06-21T18:02:12+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=documentaryDetail&id=157
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000094s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000833s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001134s ]
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0965s ]
+SQL: SELECT * FROM `documentary` WHERE ( id=157 ) LIMIT 1   [ RunTime:0.0913s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.0951s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId=157 )  [ RunTime:0.1867s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001136s ]
+
+[ 2016-06-21T18:02:26+08:00 ] 127.0.0.1 /admin.php?c=relation&a=allRelative&articleType=2&id=79
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000784s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001137s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0828s ]
+SQL: SHOW COLUMNS FROM `relation` [ RunTime:0.0838s ]
+SQL: SELECT * FROM `relation` WHERE ( articleType=2 and aid=79 )  [ RunTime:0.0811s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000906s ]
+

@@ -34,10 +34,11 @@
     <div class="pull-right"><span class="caret"></span></div>
 </a>
 
-                    <ul class="templatemo-submenu">
+                    <ul class="templatemo-submenu"><!-- 1轮播2热点3普通4推荐 -->
                         <li><a href="#/allArticle">所有文章</a></li>
-                        <li><a href="#/allArticle?type=1">轮播文章</a></li>
-                        <li><a href="#/allArticle?type=2">首页文章</a></li>
+                        <li><a href="#/allArticle?type=1">首页轮播</a></li>
+                        <li><a href="#/allArticle?type=2">首页热点</a></li>
+                           <li><a href="#/allArticle?type=4">首页推荐</a></li>
                         <li><a href="#/allArticle?type=3">普通文章</a></li>
                         <li><a href="#/allArticle?status=2">草稿箱</a></li>
                         <li><a href="#/allArticle?status=0">被撤文章</a></li>

@@ -21,7 +21,7 @@ class ArticleController extends Controller
     {
         // $condition           = array();
         // $condition["status"] = 1;
-        $query = " status = 1 ";
+        $query = " status = 1 and type=3";
         if (I("get.maintype") != "") {
             // $condition["maintype"] = I("get.maintype");
             $query = $query . " AND  mainType  = " . I("get.maintype");

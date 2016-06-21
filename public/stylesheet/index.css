@@ -305,7 +305,7 @@ body {
 
 .hotNews .hotNews-left .mainPic {
     /*margin: 12px 0px;*/
-    padding: 12px 20px 12px 15px;
+    padding: 12px 20px 0px 15px;
     position: relative;
 }
 
@@ -329,18 +329,20 @@ body {
 
 .hotNews .hotNews-left .pic {
     float: left;
-    width: 33%;
-    padding: 14px;
+    width: 185px;
+    margin-right:23px;
+    margin-top:30px;
+    
 }
 
 .hotNews .hotNews-left .pic .pic-detail {
-    width: 100%;
+    width: 185px;
     height: 105px;
     position: relative;
 }
 
 .hotNews .hotNews-left .pic .pic-detail img {
-    width: 100%;
+    width: 185px;
     height: 105px;
 }
 
@@ -598,10 +600,12 @@ body {
 
 .picture .thumbnail {
     min-width: 160px;
+    height:154px !important;
+    overflow:hidden;
 }
 
 .picture .thumbnail img {
-    height: 100px;
+    height: 120px!important;
     width: 100%;
 }
 
