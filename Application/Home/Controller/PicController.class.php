@@ -64,7 +64,10 @@ class PicController extends Controller
     public function allPic()
     {
 
-        $page = I("get.page") || 1;
+        $page = I("get.page");
+        if ($page == "") {
+            $page = 1;
+        }
 
         $condition = array();
         if (I("get.type") != "") {
