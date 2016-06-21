@@ -258,6 +258,7 @@
         $scope.showSaveButton = !!Id;
         // 如果是编辑已有
         $scope.documentary = {};
+        $scope.documentary.sets = [{ title: "", code: "" }];
         if (Id) {
             $http({
                 url: "/admin.php?c=documentary&a=documentaryDetail&id=" + Id,

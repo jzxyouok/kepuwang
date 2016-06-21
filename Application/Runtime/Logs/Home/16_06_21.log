@@ -1753,3 +1753,84 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000906s ]
 
+[ 2016-06-21T19:10:13+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030288s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001196s ]
+
+[ 2016-06-21T19:10:50+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=newdocumentary
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant maincontent - assumed 'maincontent' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0834s ]
+SQL: INSERT INTO `documentary` (`title`,`maincontent`,`thumbnail`,`abstract`) VALUES ('','','','') [ RunTime:0.0814s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.0834s ]
+NOTIC: [8] Use of undefined constant documentaryId - assumed 'documentaryId' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant code - assumed 'code' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 39 行.
+SQL: INSERT INTO `sets` (`documentaryId`,`title`,`code`) VALUES ('245','','') [ RunTime:0.3766s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000904s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000989s ]
+
+[ 2016-06-21T19:11:26+08:00 ] 127.0.0.1 /admin.php?c=documentary&a=newdocumentary
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 13 行.
+NOTIC: [8] Use of undefined constant maincontent - assumed 'maincontent' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 14 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.3704s ]
+SQL: INSERT INTO `documentary` (`title`,`maincontent`,`thumbnail`,`abstract`) VALUES ('sdsd','&lt;p&gt;sdss&lt;/p&gt;','/ueditor/php/upload/image/20160609/1465456111951561.jpg','sdsds') [ RunTime:0.0794s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.0813s ]
+NOTIC: [8] Use of undefined constant documentaryId - assumed 'documentaryId' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant code - assumed 'code' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 39 行.
+SQL: INSERT INTO `sets` (`documentaryId`,`title`,`code`) VALUES ('246','sds','sds') [ RunTime:0.0816s ]
+NOTIC: [8] Use of undefined constant documentaryId - assumed 'documentaryId' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 37 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 38 行.
+NOTIC: [8] Use of undefined constant code - assumed 'code' G:\CODE\kepuwang\Application\Home\Controller\DocumentaryController.class.php 第 39 行.
+SQL: INSERT INTO `sets` (`documentaryId`,`title`,`code`) VALUES ('246','sdsd','sds') [ RunTime:0.0813s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000779s ]
+
+[ 2016-06-21T19:12:01+08:00 ] 127.0.0.1 /admin.php?c=article&a=allArticle&page=1&type=1&status=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Home\Controller\ArticleController.class.php 第 59 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0863s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `status` = 1 AND `type` = 1 LIMIT 1   [ RunTime:0.0842s ]
+SQL: SELECT * FROM `article` WHERE `status` = 1 AND `type` = 1 ORDER BY publishTime desc LIMIT 0,10   [ RunTime:0.2566s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001175s ]
+

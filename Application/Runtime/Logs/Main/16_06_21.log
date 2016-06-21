@@ -28045,3 +28045,672 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
 
+[ 2016-06-21T18:11:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010212s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010311s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000701s ]
+
+[ 2016-06-21T18:11:50+08:00 ] 127.0.0.1 /index.php?c=index&a=slideArticle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000941s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0844s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003293s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003539s ]
+
+[ 2016-06-21T18:11:51+08:00 ] 127.0.0.1 /index.php?c=index&a=indexContent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001067s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0909s ]
+SQL: SELECT * FROM `pic` WHERE ( status=1 and type=2 ) LIMIT 0,12   [ RunTime:0.0853s ]
+SQL: SELECT * FROM `pic` WHERE ( status=1 and type=3 ) LIMIT 0,12   [ RunTime:0.3836s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0892s ]
+SQL: SELECT * FROM `video` WHERE ( status=1 and type=2 ) LIMIT 0,9   [ RunTime:0.0863s ]
+SQL: SELECT * FROM `video` WHERE ( status=1 and type=3 ) LIMIT 0,9   [ RunTime:0.1729s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0867s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000949s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001073s ]
+
+[ 2016-06-21T18:11:51+08:00 ] 127.0.0.1 /public/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001145s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-06-21T18:11:51+08:00 ] 127.0.0.1 /public/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001136s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-06-21T18:11:51+08:00 ] 127.0.0.1 /Uploads/image/20160614/1465917455420936.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+
+[ 2016-06-21T18:11:51+08:00 ] 127.0.0.1 /Uploads/image/20160618/1466234756271530.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+
+[ 2016-06-21T18:11:51+08:00 ] 127.0.0.1 /Uploads/image/20160615/1465958691150353.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+
+[ 2016-06-21T18:11:51+08:00 ] 127.0.0.1 /Uploads/image/20160618/1466235244160594.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
+[ 2016-06-21T18:11:51+08:00 ] 127.0.0.1 /Uploads/image/20160616/1466085319106116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000135s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000958s ]
+
+[ 2016-06-21T18:11:51+08:00 ] 127.0.0.1 /Uploads/image/20160614/1465918012967612.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002934s ]
+
+[ 2016-06-21T18:11:51+08:00 ] 127.0.0.1 /Uploads/image/20160615/1465954846693371.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+
+[ 2016-06-21T18:11:51+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392078827242.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+
+[ 2016-06-21T18:11:51+08:00 ] 127.0.0.1 /Uploads/image/20160619/1466314913119830.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001204s ]
+ERR: 无法加载控制器:Uploads
+
+[ 2016-06-21T18:11:51+08:00 ] 127.0.0.1 /Uploads/image/20160615/1465955276107230.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+
+[ 2016-06-21T18:11:52+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393520852889.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+
+[ 2016-06-21T18:11:52+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393430685022.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+
+[ 2016-06-21T18:11:52+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393749988440.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+
+[ 2016-06-21T18:11:52+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466398750445981.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+
+[ 2016-06-21T18:11:52+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407710885766.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+
+[ 2016-06-21T18:11:52+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466408140113306.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+
+[ 2016-06-21T18:11:52+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466395945157453.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000910s ]
+
+[ 2016-06-21T18:11:52+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411604239213.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+
+[ 2016-06-21T18:11:52+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411872459321.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+
+[ 2016-06-21T18:11:52+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407975986116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002904s ]
+
+[ 2016-06-21T18:11:52+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466412178119563.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+
+[ 2016-06-21T18:11:54+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000642s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000702s ]
+
+[ 2016-06-21T18:11:54+08:00 ] 127.0.0.1 /public/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001042s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-06-21T18:11:54+08:00 ] 127.0.0.1 /public/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000956s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000974s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-06-21T18:11:55+08:00 ] 127.0.0.1 /index.php?c=index&a=slideArticle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001442s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0843s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000587s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2016-06-21T18:11:59+08:00 ] 127.0.0.1 /index.php?c=index&a=indexContent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000987s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0891s ]
+SQL: SELECT * FROM `pic` WHERE ( status=1 and type=2 ) LIMIT 0,12   [ RunTime:0.3778s ]
+SQL: SELECT * FROM `pic` WHERE ( status=1 and type=3 ) LIMIT 0,12   [ RunTime:2.2808s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0892s ]
+SQL: SELECT * FROM `video` WHERE ( status=1 and type=2 ) LIMIT 0,9   [ RunTime:0.0871s ]
+SQL: SELECT * FROM `video` WHERE ( status=1 and type=3 ) LIMIT 0,9   [ RunTime:1.1810s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0904s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001326s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160614/1465917455420936.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160618/1466234756271530.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160614/1465918012967612.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160618/1466235244160594.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160616/1466085319106116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160615/1465958691150353.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000093s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000953s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160615/1465954846693371.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160615/1465955276107230.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001358s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392078827242.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007372s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393430685022.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160619/1466314913119830.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000855s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000905s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+ERR: 无法加载控制器:Uploads
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393520852889.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466395945157453.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000916s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393749988440.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000287s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001207s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466398750445981.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000672s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407710885766.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407975986116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466408140113306.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411872459321.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411604239213.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+
+[ 2016-06-21T18:12:00+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466412178119563.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+
+[ 2016-06-21T18:13:13+08:00 ] 127.0.0.1 /index.php?c=search&a=search&search=%E5%A4%A9%E6%96%87%E5%8F%B0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0872s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0877s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0863s ]
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0869s ]
+SQL: SELECT * FROM `article` WHERE `title` LIKE '%天文台%' AND `status` = 1  [ RunTime:0.6357s ]
+SQL: SELECT * FROM `pic` WHERE `title` LIKE '%天文台%' AND `status` = 1  [ RunTime:0.3874s ]
+SQL: SELECT * FROM `video` WHERE `title` LIKE '%天文台%' AND `status` = 1  [ RunTime:0.0842s ]
+SQL: SELECT * FROM `documentary` WHERE `title` LIKE '%天文台%' AND `status` = 1  [ RunTime:0.0848s ]
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000624s ]
+
+[ 2016-06-21T18:13:13+08:00 ] 127.0.0.1 /Uploads/image/20160612/1465664925296488.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+
+[ 2016-06-21T18:13:13+08:00 ] 127.0.0.1 /Uploads/image/20160619/1466344182116895.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+
+[ 2016-06-21T18:13:16+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005908s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001918s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002501s ]
+
+[ 2016-06-21T18:13:19+08:00 ] 127.0.0.1 /index.php?c=index&a=slideArticle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001159s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0856s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000789s ]
+
+[ 2016-06-21T18:13:22+08:00 ] 127.0.0.1 /index.php?c=search&a=search&search=%E5%A4%A9%E6%96%87%E5%8F%B0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000794s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000946s ]
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 12 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0893s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.3857s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0895s ]
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0893s ]
+SQL: SELECT * FROM `article` WHERE `title` LIKE '%天文台%' AND `status` = 1  [ RunTime:1.0422s ]
+SQL: SELECT * FROM `pic` WHERE `title` LIKE '%天文台%' AND `status` = 1  [ RunTime:0.0872s ]
+SQL: SELECT * FROM `video` WHERE `title` LIKE '%天文台%' AND `status` = 1  [ RunTime:0.0869s ]
+SQL: SELECT * FROM `documentary` WHERE `title` LIKE '%天文台%' AND `status` = 1  [ RunTime:0.0887s ]
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant publishTime - assumed 'publishTime' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 30 行.
+NOTIC: [8] Use of undefined constant title - assumed 'title' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 32 行.
+NOTIC: [8] Use of undefined constant thumbnail - assumed 'thumbnail' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 33 行.
+NOTIC: [8] Use of undefined constant type - assumed 'type' G:\CODE\kepuwang\Application\Main\Controller\SearchController.class.php 第 35 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000701s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000761s ]
+
+[ 2016-06-21T18:13:22+08:00 ] 127.0.0.1 /Uploads/image/20160619/1466344182116895.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+
+[ 2016-06-21T18:13:22+08:00 ] 127.0.0.1 /Uploads/image/20160612/1465664925296488.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000694s ]
+
+[ 2016-06-21T18:13:46+08:00 ] 127.0.0.1 /index.php?c=index&a=indexContent
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001178s ]
+SQL: SHOW COLUMNS FROM `pic` [ RunTime:0.0853s ]
+SQL: SELECT * FROM `pic` WHERE ( status=1 and type=2 ) LIMIT 0,12   [ RunTime:0.0829s ]
+SQL: SELECT * FROM `pic` WHERE ( status=1 and type=3 ) LIMIT 0,12   [ RunTime:0.6614s ]
+SQL: SHOW COLUMNS FROM `video` [ RunTime:0.0866s ]
+SQL: SELECT * FROM `video` WHERE ( status=1 and type=2 ) LIMIT 0,9   [ RunTime:0.0844s ]
+SQL: SELECT * FROM `video` WHERE ( status=1 and type=3 ) LIMIT 0,9   [ RunTime:0.4519s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0856s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001156s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001305s ]
+
+[ 2016-06-21T18:13:46+08:00 ] 127.0.0.1 /Uploads/image/20160615/1465958691150353.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001156s ]
+
+[ 2016-06-21T18:13:46+08:00 ] 127.0.0.1 /Uploads/image/20160614/1465917455420936.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005585s ]
+
+[ 2016-06-21T18:13:46+08:00 ] 127.0.0.1 /Uploads/image/20160618/1466235244160594.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+
+[ 2016-06-21T18:13:46+08:00 ] 127.0.0.1 /Uploads/image/20160614/1465918012967612.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+
+[ 2016-06-21T18:13:46+08:00 ] 127.0.0.1 /Uploads/image/20160616/1466085319106116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+
+[ 2016-06-21T18:13:46+08:00 ] 127.0.0.1 /Uploads/image/20160618/1466234756271530.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160615/1465955276107230.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000951s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466392078827242.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160619/1466314913119830.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001028s ]
+ERR: 无法加载控制器:Uploads
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160615/1465954846693371.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000797s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393430685022.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466395945157453.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393520852889.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407975986116.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466407710885766.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466408140113306.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001152s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466398750445981.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001017s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411872459321.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466411604239213.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466393749988440.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+
+[ 2016-06-21T18:13:47+08:00 ] 127.0.0.1 /Uploads/image/20160620/1466412178119563.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+
+[ 2016-06-21T19:10:47+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001111s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T19:10:47+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000925s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001056s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T19:11:37+08:00 ] 127.0.0.1 /public2/js/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T19:11:37+08:00 ] 127.0.0.1 /public2/js/angular-route.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000938s ]
+ERR: 无法加载控制器:Public2
+
+[ 2016-06-21T19:11:45+08:00 ] 127.0.0.1 /index.php?c=documentary&a=allDocumentary&page=1&status=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Main\Controller\DocumentaryController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0863s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `documentary` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0837s ]
+SQL: SELECT * FROM `documentary` WHERE `status` = 1 LIMIT 0,15   [ RunTime:0.2943s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.0855s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId = 157 )  [ RunTime:0.1671s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId = 242 )  [ RunTime:0.0853s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId = 244 )  [ RunTime:0.0838s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId = 243 )  [ RunTime:0.0849s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000907s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000994s ]
+
+[ 2016-06-21T19:11:48+08:00 ] 127.0.0.1 /index.php?c=documentary&a=allDocumentary&page=1&status=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' G:\CODE\kepuwang\Application\Main\Controller\DocumentaryController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `documentary` [ RunTime:0.0860s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `documentary` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0837s ]
+SQL: SELECT * FROM `documentary` WHERE `status` = 2 LIMIT 0,15   [ RunTime:0.0839s ]
+SQL: SHOW COLUMNS FROM `sets` [ RunTime:0.0856s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId = 245 )  [ RunTime:0.0829s ]
+SQL: SELECT * FROM `sets` WHERE ( documentaryId = 246 )  [ RunTime:0.0830s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+

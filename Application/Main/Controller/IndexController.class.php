@@ -48,7 +48,7 @@ class IndexController extends Controller
         $article = M("article");
 
         // 轮播文章
-        $sliderArticle = M("article")->where("status=1 and type=1")->limit(0, 3);
+        $sliderArticle = $article->where("status=1 and type=1")->limit(0, 3)->select();
         echo json_encode($sliderArticle);
     }
 }
