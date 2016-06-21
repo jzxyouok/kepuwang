@@ -10,10 +10,10 @@
     <div class="col-md-2 form-group">
         <label for="exampleInputEmail2">文章类型</label>
         <select name="status" class="form-control" ng-model="newArticle.mainType"  >
-            <option value="1" ng-selected="1">天文·物理</option>
+            <option value="1">天文·物理</option>
             <option value="2">地理·地质</option>
             <option value="3">生命·生态</option>
-            <option value="4">其他</option>
+            <option value="0">其他</option>
             <!-- 1天文文理2地理地质3人文生态4其他 -->
         </select>
     </div>
@@ -44,14 +44,14 @@
 </div>
     <br>
 <div class="row pad">
-    <div class="row" style="padding:0 30px 30px 30px;">
+  <!--   <div class="row" style="padding:0 30px 30px 30px;">
         <div class="radio floatLeft">
             <label>
                 <input type="radio" name="type" id="type" ng-model="newArticle.type"  value="3" ng-selected="3">  普通文章
             </label>
         </div>
         <div class="radio floatLeft">
-            <label><!-- 1轮播2热点3普通4推荐 -->
+            <label> 
                 <input type="radio" name="type" id="type" ng-model="newArticle.type"  value="1"> 首页轮播
             </label>
         </div>
@@ -65,7 +65,7 @@
                 <input type="radio" name="type" id="type"  ng-model="newArticle.type" value="2"> 首页热点文章
             </label>
         </div>
-    </div>
+    </div> -->
     <div class="row">
     <div class="col-md-4 ">
          <button class="btn btn-success marginRight" ng-click="newArticle.save()">编辑正文<span class="glyphicon glyphicon-arrow-right"></span></button>
