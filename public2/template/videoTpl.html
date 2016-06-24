@@ -8,6 +8,19 @@
     color: #23527c;
     text-decoration: underline;
 }
+
+#select-maintype {
+    width: 220px;
+}
+
+.form-inline {
+    padding: 10px 40px;
+}
+
+#priority {
+    width: 50px!important;
+    /*display:block;*/
+}
 </style>
 <div class="templatemo-content-wrapper">
     <div class="templatemo-content">
@@ -26,27 +39,20 @@
                             <span ng-switch-when="2">草稿箱</span>
                         </li>
                     </ol>
-                    <!--      <div class="row search">
-                        <form class="form-inline" ng-submit="searchUser()">
-                            <div class="form-group">
-                                <label for="exampleInputName2">用户名</label>
-                                <bninput type="text" class="form-control" name="name" ng-model="name" id="exampleInputName2" placeholder="Jane Doe">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail2">邮箱</label>
-                                <input type="text" class="form-control" name="email" ng-model="email" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail2">用户状态</label>
-                                <select name="status" id="" class="form-control" ng-model="status">
-                                    <option value="">不限</option>
-                                    <option value="0">禁用</option>
-                                    <option value="1">启用</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-success">搜索</button>
-                        </form>
-                    </div> -->
+                    <div class="row form-inline">
+                        <!-- maintype:1天文文理 2地理地质 3人文生态 4其他 -->
+                        <label for="select-maintype">按照类别筛选</label>
+                        <select name="" id="select-maintype" class="form-control" ng-model="mainType" ng-change="queryArticle()">
+                            <option value="0">不限</option>
+                            <option value="1">天文·物理</option>
+                            <option value="2">地理·地质</option>
+                            <option value="3">人文·生态</option>
+                            <option value="4">其他</option>
+                        </select>
+                        <label for="searchname">视频标题关键字搜索</label>
+                        <input type="text" class="form-control" id="searchname" name="name" ng-model="query" id="exampleInputEmail2" placeholder="输入视频名关键字">
+                        <button type="submit" class="btn btn-success" ng-click="queryArticle(true)">搜索</button>
+                    </div>
                     <div class="row">
                         <table class="table table-bordered">
                             <tr>
@@ -57,6 +63,7 @@
                                 <th>状态</th>
                                 <th>类别</th>
                                 <th>位置</th>
+                                <th>优先级</th>
                                 <th>操作</th>
                                 <th>相关视频</th>
                             </tr>
@@ -82,25 +89,31 @@
                                     </span>
                                 </td>
                                 <td>
-                                    <span ng-switch="{{article.type}}">
-                                    <span ng-switch-when="1">轮播</span>
-                                    <span ng-switch-when="2">首页</span>
-                                    <span ng-switch-when="3">普通</span>
-                                    <span ng-switch-when="4">推荐</span>
-                                    <span ng-switch-default>其他</span>
-                                    </span>
+                                    <select name="position" ng-change="changePosition(article.id,article.position)" ng-model="article.position" id="">
+                                        <option value="99">普通</option>
+                                        <option value="1">首页主视频</option>
+                                        <option value="2">右侧1-1</option>
+                                        <option value="3">右侧1-2</option>
+                                        <option value="4">右侧2-1</option>
+                                        <option value="5">右侧2-2</option>
+                                        <option value="6">底部1</option>
+                                        <option value="7">底部2</option>
+                                        <option value="8">底部3</option>
+                                        <option value="9">底部4</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input name="" id="priority" ng-model="article.priority" ng-change="chagePriority(article.id,article.priority)">
                                 </td>
                                 <td>
                                     <span ng-switch="{{article.status}}" ng-click="changeStatus(article.id,article.status)" class="link">
                                     <span ng-switch-when="1">撤销</span>
                                     <span ng-switch-when="0">恢复</span>
-                                   
-                                    </span> 
-                                   <span ng-click="publish(article.id)" class="link" ng-show="{{article.status==2}}">发布</span>
+                                    </span>
+                                    <span ng-click="publish(article.id)" class="link" ng-show="{{article.status==2}}">发布</span>
                                     <a href="#/newVideo?id={{article.id}}"> 编辑 </a>
                                     <a href="/index.php/#videoDetail/{{article.id}}" target="_blank">预览</a>
                                     <!-- <a href="">置于首页</a> -->
-
                                 </td>
                                 <td> <a href="#relative/4/{{article.id}}">相关视频</a></td>
                             </tr>

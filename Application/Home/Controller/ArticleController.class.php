@@ -13,23 +13,11 @@ class ArticleController extends Controller
             thumbnail  => I("post.thumbnail_url"),
             mainType   => I("post.mainType"),
             type       => I("post.type"),
+            author     => I("post.author"),
             "abstract" => I("post.abstract"),
             // publishTime => time(),
         );
-        // $info = getPic($newArticle["content"]); //使用函数 返回匹配地址 如果不为空则声称缩略图
-        // $info = $newArticle["thumbnail"];
-        // echo $info . "INFO";
-        // if (!$info == null) {
-        //     echo "ssssss";
-        //     $thumb = $info . 'thumb.png';
-        //     $image = new \Think\Image(); //实例化图像处理，缩略图功能
-        //     $image->open($info); // 生成一个居中裁剪为240*160的缩略图
-        //     $unlink                  = $image->thumb(240, 160, \Think\Image::IMAGE_THUMB_CENTER)->save($thumb);
-        //     $newArticle["thumbnail"] = $thumb;
-        // } else {
-        //     $thumb = '';
-        // }
-        // echo json_encode($newArticle);
+
         $db = M("article");
 
         $id = $db->add($newArticle);
@@ -37,16 +25,6 @@ class ArticleController extends Controller
 
     }
 
-    // public function indexArticle()
-    // {
-    //     $indexArticleCondition = array(
-    //         type     => 1,
-    //         status   => 1,
-    //         mainType => 1,
-    //     );
-    //     $indexArticle = M("article")->where($indexArticleCondition)->order("publishTime DESC")->limit(0, 6);
-    //     echo json_encode($indexArticle);
-    // }
     public function allArticle()
     {
         $page = I("get.page");
@@ -68,7 +46,7 @@ class ArticleController extends Controller
         // }
 
         $result["pageNum"]    = M("article")->where($condition)->count();
-        $result["allArticle"] = M("article")->where($condition)->order("position asc,publishTime desc")->limit(($page - 1) * 10, $page * 10)->select();
+        $result["allArticle"] = M("article")->where($condition)->order("position asc,publishTime desc")->limit(($page - 1) * 10, 10)->select();
         //echo M("article")->getLastSql();
         echo json_encode($result);
     }
@@ -151,7 +129,7 @@ class ArticleController extends Controller
                 $db = M("article");
                 break;
         }
-        $articleDetail = $db->where("id = " . $id)->getField("id,mainType,thumbnail,title,abstract,type", true);
+        $articleDetail = $db->where("id = " . $id)->getField("id,mainType,thumbnail,title,abstract,type,author", true);
         echo json_encode($articleDetail);
     }
     public function relativeArticle()
@@ -281,7 +259,7 @@ class ArticleController extends Controller
             status   => "1",
             mainType => $mainType,
         );
-        $result = $db->where($condition)->order("position asc,publishTime desc")->limit(($page - 1) * 10, $page * 10)->select();
+        $result = $db->where($condition)->order("position asc,publishTime desc")->limit(($page - 1) * 10, 10)->select();
 
         echo json_encode($result);
 
@@ -297,6 +275,8 @@ class ArticleController extends Controller
             mainType   => I("post.mainType"),
             type       => I("post.type"),
             "abstract" => I("post.abstract"),
+            "author"   => I("post.author"),
+
             // publishTime => time(),
         );
         $db = M("article");

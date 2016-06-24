@@ -26,7 +26,7 @@ class PicController extends Controller
         }
         $result         = array();
         $result["num"]  = $db->where($where)->count();
-        $result["data"] = $db->order("publishTime desc")->limit(($page - 1) * 18, $page * 18)->where($where)->select(); //getField('id,title,abstract,thumbnail');
+        $result["data"] = $db->order("publishTime desc")->limit(($page - 1) * 24, 24)->where($where)->select(); //getField('id,title,abstract,thumbnail');
         echo json_encode($result);
     }
     public function picDetail()

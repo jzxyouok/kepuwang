@@ -77,7 +77,7 @@ class PicController extends Controller
             $condition["status"] = I("get.status");
         }
         $result["pageNum"]    = M("pic")->where($condition)->count();
-        $result["allArticle"] = M("pic")->where($condition)->order("publishTime DESC")->limit(($page - 1) * 10, $page * 10)->select();
+        $result["allArticle"] = M("pic")->where($condition)->order("publishTime DESC")->limit(($page - 1) * 10, 10)->select();
         // echo (M("article")->getLastSql());
         echo json_encode($result);
     }

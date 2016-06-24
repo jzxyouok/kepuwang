@@ -1,11 +1,25 @@
 <style>
-    .link{
-        color:#337ab7;
-        cursor: pointer;
-    }
-    .link:hover {
+.link {
+    color: #337ab7;
+    cursor: pointer;
+}
+
+.link:hover {
     color: #23527c;
     text-decoration: underline;
+}
+
+#select-maintype {
+    width: 220px;
+}
+
+.form-inline {
+    padding: 10px 40px;
+}
+
+#priority {
+    width: 50px!important;
+    /*display:block;*/
 }
 </style>
 <div class="templatemo-content-wrapper">
@@ -18,23 +32,12 @@
                         <li>记录片管理</li>
                         
                     </ol>
-               <div class="row search" style="margin-bottom:20px">
-                        <form class="form-inline" ng-submit="searchArticle()">
-                            <div class="form-group">
-                                <label for="exampleInputEmail2">纪录片名称</label>
-                                <input type="text" class="form-control" name="name" ng-model="searchName" id="exampleInputEmail2" placeholder="使用名称搜索">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail2">纪录片状态</label>
-                                <select name="status" id="" class="form-control" ng-model="searchStatus">
-                                    <option value="9">不限</option>
-                                    <option value="0">禁用</option>
-                                    <option value="1">启用</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-success"  >搜索</button>
-                        </form>
-               </div>  
+                <div class="row form-inline">
+                         
+                        <label for="searchname">纪录片标题关键字搜索</label>
+                        <input type="text" class="form-control" id="searchname" name="name" ng-model="query" id="exampleInputEmail2" placeholder="输入关键字">
+                        <button type="submit" class="btn btn-success" ng-click="queryArticle(true)">搜索</button>
+                    </div>
                     <div class="row">
                         <table class="table table-bordered">
                             <tr>
@@ -44,7 +47,7 @@
                                 <th>发布时间</th>
                                 <th>状态</th>
                                 <!-- <th>类别</th> -->
-                                <!-- <th>位置</th> -->
+                                 <th>优先级</th>  
                                 <th>操作</th>
                                 <th>编辑分集信息</th>
                             </tr>
@@ -61,7 +64,9 @@
                                     </span>
                                
                                 </td>
-                               
+                                   <td>
+                                    <input name="" id="priority" ng-model="article.priority" ng-change="chagePriority(article.id,article.priority)">
+                                </td>
                              
                                 <td>
                                     <span ng-switch="{{article.status}}"   class="link">

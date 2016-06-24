@@ -43,7 +43,7 @@
     height: 8px;
     width: 8px;
 }
-.pic a,.tiezi a,h2 a{
+.pic a,.tiezi a,h2 a,h5 a{
     color:#fff;
 }
 </style>
@@ -147,7 +147,7 @@
             <h4 class="title center ">推荐文章</h4>
             <div class="article row">
                 <div class="article-left">
-                    <div class=" article-pic" ng-repeat="article in recommandArticleNoPic">
+                    <div class=" article-pic" ng-repeat="article in recommandArticleWithPic">
                         <img ng-src="{{article.thumbnail}}" alt="">
                         <h5><a href="#articleDetail/{{article.id}}">{{article.title}}</a></h5>
                     </div>

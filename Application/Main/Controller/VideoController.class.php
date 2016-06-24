@@ -12,7 +12,7 @@ class VideoController extends Controller
         $maintype = I("get.maintype");
 
         $where = array(
-            type   => 3,
+
             status => 1,
         );
         if ($maintype != "") {
@@ -24,7 +24,7 @@ class VideoController extends Controller
         }
         $result         = array();
         $result["num"]  = $db->where($where)->count();
-        $result["data"] = $db->order("publishTime desc")->limit(($page - 1) * 18, $page * 18)->where($where)->select(); //getField('id,title,abstract,thumbnail');
+        $result["data"] = $db->order("publishTime desc")->limit(($page - 1) * 40, 40)->where($where)->select(); //getField('id,title,abstract,thumbnail');
         echo json_encode($result);
     }
     public function videoDetail()

@@ -120,7 +120,7 @@
             })
             .when("/allVideo", {
                 templateUrl: "/public2/template/videoTpl.html",
-                controller: "allVideoController"
+                controller: "allArticleController"
             })
             .when("/newVideo", {
                 templateUrl: "/public2/template/newVideo.html",
@@ -144,15 +144,20 @@
             })
             .when("/allDocumentary", {
                 templateUrl: "/public2/template/documentary.html",
-                controller: "allDocumentaryController"
+                controller: "allArticleController"
             })
             .when("/documentarySet/:id", {
                 templateUrl: "/public2/template/documentarySets.html",
                 controller: "documentarySetController"
             })
-            .when("/newContent", {
+
+        .when("/newContent", {
                 templateUrl: "/public2/template/newContentTpl.html",
                 controller: "newContentController"
+            })
+            .when("/newPassword", {
+                templateUrl: "/public2/template/passwordTpl.html",
+                controller: "newPasswordController"
             })
             .when("/relative/:articleType/:id", {
                 templateUrl: "/public2/template/relativeTpl.html",
@@ -164,6 +169,37 @@
             })
             .otherwise({ redirectTo: "/index" });
     }]);
+
+    app.controller('newPasswordController', function($scope, $http, $route) {
+        $scope.user = {
+            name: "",
+            password: "",
+            password1: "",
+            changePd: function() {
+                if ($scope.user.password !== $scope.user.password1) {
+                    alert("两次密码输入不一致！");
+                } else {
+                    if ($scope.user.password.length < 6 || $scope.user.password.length > 12) {
+                        alert("密码长度必须6-12位！！");
+                    } else {
+
+                        $http({
+                            url: "/admin.php?c=login&a=changePd",
+                            method: "post",
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+                            transformRequest: transform,
+                            data:{
+                                newPwd:$scope.user.password
+                            }
+                        }).success(function(response) {
+                            alert("更改成功！")
+                        })
+                    }
+                }
+            }
+        }
+    })
+
     app.controller('relativeController', function($scope, $http, $route) {
         var id = $route.current.params.id;
         var articleType = $route.current.params.articleType;
@@ -192,7 +228,8 @@
         $scope.delRelative = function(rid, index) {
             $http({
                 url: "/admin.php?c=relation&a=delRelative&articleType=" + articleType + "&rid=" + rid + "&aid=" + id,
-                method: "post"
+                method: "post",
+
             }).success(function(response) {
                 // do something
                 $scope.relative.splice(index, 1);
@@ -401,11 +438,13 @@
                     thumbnail: $scope.article.detail.thumbnail,
                     title: $scope.article.detail.title,
                     type: $scope.article.detail.type,
+                    author: $scope.article.detail.author,
+
 
                 }
             }).success(function(response) {
                 alert("保存成功");
-                window.location.reload(true);
+                // window.location.reload(true);
 
             })
         }
@@ -463,18 +502,31 @@
     });
     app.controller("allArticleController", function($http, $route, $scope, $location, pageSet) {
         $scope.mainType = $route.current.params.mainType;
+        var articleType = $route.current.params.articleType;
         var status = $route.current.params.status;
         var page = $route.current.params.page;
         var query = "";
         $scope.query = "";
 
         $scope.mainType = 0;
+        var What = ""
+        switch (articleType) {
+            case "1":
+                what = "文章";
+                break;
+            case "2":
+                what = "图片";
+                break;
+            case "4":
+                what = "视频";
+                break;
+        }
 
         $scope.queryArticle = function(isQuery) {
-            
-             if ($scope.query &&isQuery) { query = "&name=" + $scope.query; }
+
+            if ($scope.query && isQuery) { query = "&name=" + $scope.query; }
             $http({
-                url: "/admin.php?c=util&a=getAll&articleType=1&status=" + status + "&mainType=" + $scope.mainType + "&page=" + page + query,
+                url: "/admin.php?c=util&a=getAll&articleType=" + articleType + "&status=" + status + "&mainType=" + $scope.mainType + "&page=" + page + query,
                 method: "get"
             }).success(function(response) {
                 $scope.allArticle = response.data;
@@ -493,7 +545,7 @@
         }
         $scope.queryArticle();
         $scope.changeStatus = function(id, status) {
-            var message = "确定" + status == "0" ? "恢复" : "撤销" + "这篇文章？";
+            var message = "确定" + status == "0" ? "恢复" : "撤销" + "这篇" + what + "？";
             if (confirm(message)) {
                 $http({
                     url: "/admin.php?c=article&a=changeStatus&articleType=1&id=" + id + "&status=" + status,
@@ -504,10 +556,10 @@
             }
         }
         $scope.changePosition = function(id, position) {
-            if (confirm("确定调整此文章位置？")) {
+            if (confirm("确定调整此" + what + "位置？")) {
                 console.log(id + position)
                 $http({
-                    url: "/admin.php?c=article&a=changePosition&articleType=1&id=" + id + "&position=" + position,
+                    url: "/admin.php?c=article&a=changePosition&articleType=" + articleType + "&id=" + id + "&position=" + position,
                     method: "get"
                 }).success(function(response) {
                     location.reload(true);
@@ -516,13 +568,26 @@
 
         }
 
+        $scope.chagePriority = function(id, priority) {
+            $http({
+                method: "POST",
+                url: "/admin.php?c=util&a=changePriority",
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+                transformRequest: transform,
+                data: {
+                    articleType: articleType,
+                    id: id,
+                    priority,
+                }
+            }).success(function() {});
 
+        }
         $scope.publish = function(id, status) {
 
-            var message = "确定发布这篇文章？";
+            var message = "确定发布这篇" + what + "？";
             if (confirm(message)) {
                 $http({
-                    url: "/admin.php?c=article&a=publish&articleType=1&id=" + id,
+                    url: "/admin.php?c=article&a=publish&articleType=" + articleType + "&id=" + id,
                     method: "get"
                 }).success(function(response) {
                     location.reload(true);
@@ -530,9 +595,9 @@
             }
         }
         $scope.changeArticleType = function(id, mainType) {
-            if (confirm("确定更换此文章类别？")) {
+            if (confirm("确定更换此" + what + "类别？")) {
                 $http({
-                    url: "/admin.php?c=article&a=changeArticleMainType&articleType=1&id=" + id + "&mainType=" + mainType,
+                    url: "/admin.php?c=article&a=changeArticleMainType&articleType=" + articleType + "&id=" + id + "&mainType=" + mainType,
                     method: "get"
                 }).success(function(response) {
                     // location.reload(true);
@@ -783,7 +848,9 @@
                         thumbnail_url: $scope.img_src,
                         mainType: $scope.newArticle.mainType,
                         type: $scope.newArticle.type,
-                        abstract: $scope.newArticle.abstract
+                        abstract: $scope.newArticle.abstract,
+                        author: $scope.newArticle.author,
+
                     }
                 }).success(function(response) {
                     // $scope.allPic = response;
@@ -806,32 +873,99 @@
 
         }
     });
-    app.controller("allPicController", function($scope, $http, $location, pageSet) {
-        var queryString = "";
-        $scope.type = $location.search()['type'];
-        if ($scope.type !== undefined) {
-            queryString = "&type=" + $scope.type;
-        }
-        $scope.status = $location.search()['status'];
-        if ($scope.status !== undefined) {
-            queryString = "&status=" + $scope.status;
-        }
-        $http({
-            url: "/admin.php?c=pic&a=allPic" + queryString,
-            method: "get"
-        }).success(function(response) {
-            $scope.allArticle = response.allArticle;
-            pageSet.init(Math.ceil(response.pageNum / 10), getPicByPage);
-        });
+    app.controller("allPicController", function($scope, $http, $route, pageSet) {
+        $scope.mainType = $route.current.params.mainType;
+        var status = $route.current.params.status;
+        var page = $route.current.params.page;
+        var query = "";
+        $scope.query = "";
 
-        function getPicByPage(page) {
+        $scope.mainType = 0;
+
+        $scope.queryArticle = function(isQuery) {
+
+            if ($scope.query && isQuery) { query = "&name=" + $scope.query; }
             $http({
-                url: "/admin.php?c=pic&a=allPic" + queryString + "&page=" + page,
+                url: "/admin.php?c=util&a=getAll&articleType=2&status=" + status + "&mainType=" + $scope.mainType + "&page=" + page + query,
                 method: "get"
             }).success(function(response) {
-                $scope.allArticle = response.allArticle;
+                $scope.allArticle = response.data;
+                document.getElementById("clearContent").innerHTML = "";
+                pageSet.init((Math.ceil(response.num / 10)), handlePageChange);
+
             });
         }
+
+        function handlePageChange(page) {
+            $http({
+                url: "/admin.php?c=util&a=getAll&articleType=2&status=" + status + "&mainType=" + $scope.mainType + "&page=" + page + query,
+                method: "get"
+            }).success(function(response) {
+                $scope.allArticle = response.data;
+            });
+        }
+        $scope.queryArticle();
+        $scope.changeStatus = function(id, status) {
+            var message = "确定" + status == "0" ? "恢复" : "撤销" + "此图片？";
+            if (confirm(message)) {
+                $http({
+                    url: "/admin.php?c=article&a=changeStatus&articleType=2&id=" + id + "&status=" + status,
+                    method: "get"
+                }).success(function(response) {
+                    location.reload(true);
+                });
+            }
+        }
+        $scope.changePosition = function(id, position) {
+            if (confirm("确定调整此图片位置？")) {
+                console.log(id + position)
+                $http({
+                    url: "/admin.php?c=article&a=changePosition&articleType=2&id=" + id + "&position=" + position,
+                    method: "get"
+                }).success(function(response) {
+                    location.reload(true);
+                });
+            }
+
+        }
+
+        $scope.chagePriority = function(id, priority) {
+            $http({
+                method: "POST",
+                url: "/admin.php?c=util&a=changePriority",
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+                transformRequest: transform,
+                data: {
+                    articleType: 2,
+                    id: id,
+                    priority,
+                }
+            }).success(function() {});
+
+        }
+        $scope.publish = function(id, status) {
+
+            var message = "确定发布这篇文章？";
+            if (confirm(message)) {
+                $http({
+                    url: "/admin.php?c=article&a=publish&articleType=1&id=" + id,
+                    method: "get"
+                }).success(function(response) {
+                    location.reload(true);
+                });
+            }
+        }
+        $scope.changeArticleType = function(id, mainType) {
+            if (confirm("确定更换此文章类别？")) {
+                $http({
+                    url: "/admin.php?c=article&a=changeArticleMainType&articleType=1&id=" + id + "&mainType=" + mainType,
+                    method: "get"
+                }).success(function(response) {
+                    // location.reload(true);
+                });
+            }
+        }
+
         $scope.changeStatus = function(id, status) {
             var message = "确定" + status == "0" ? "恢复" : "撤销" + "这张图片？";
             if (confirm(message)) {

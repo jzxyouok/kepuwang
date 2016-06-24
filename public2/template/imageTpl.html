@@ -1,3 +1,4 @@
+ 
 <style>
 .link {
     color: #337ab7;
@@ -8,6 +9,19 @@
     color: #23527c;
     text-decoration: underline;
 }
+
+#select-maintype {
+    width: 220px;
+}
+
+.form-inline {
+    padding: 10px 40px;
+}
+#priority{
+    width:50px!important;
+    /*display:block;*/
+}
+</style>
 </style>
 <div class="templatemo-content-wrapper">
     <div class="templatemo-content">
@@ -26,27 +40,20 @@
                             <span ng-switch-when="2">草稿箱</span>
                         </li>
                     </ol>
-                    <!--      <div class="row search">
-                        <form class="form-inline" ng-submit="searchUser()">
-                            <div class="form-group">
-                                <label for="exampleInputName2">用户名</label>
-                                <bninput type="text" class="form-control" name="name" ng-model="name" id="exampleInputName2" placeholder="Jane Doe">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail2">邮箱</label>
-                                <input type="text" class="form-control" name="email" ng-model="email" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail2">用户状态</label>
-                                <select name="status" id="" class="form-control" ng-model="status">
-                                    <option value="">不限</option>
-                                    <option value="0">禁用</option>
-                                    <option value="1">启用</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-success">搜索</button>
-                        </form>
-                    </div> -->
+                    <div class="row form-inline">
+                        <!-- maintype:1天文文理 2地理地质 3人文生态 4其他 -->
+                        <label for="select-maintype">按照类别筛选</label>
+                        <select name="" id="select-maintype" class="form-control" ng-model="mainType" ng-change="queryArticle()">
+                            <option value="0">不限</option>
+                            <option value="1">天文·物理</option>
+                            <option value="2">地理·地质</option>
+                            <option value="3">人文·生态</option>
+                            <option value="4">其他</option>
+                        </select>
+                        <label for="searchname">图片标题关键字搜索</label>
+                        <input type="text" class="form-control" id="searchname" name="name" ng-model="query" id="exampleInputEmail2" placeholder="输入图片名关键字">
+                        <button type="submit" class="btn btn-success" ng-click="queryArticle(true)">搜索</button>
+                    </div>
                     <div class="row">
                         <table class="table table-bordered">
                             <tr>
@@ -56,7 +63,9 @@
                                 <th>发布时间</th>
                                 <th>状态</th>
                                 <th>类别</th>
-                                <th>位置</th>
+                                
+                                  <th>位置</th>
+                                <th>优先级</th>
                                 <th>操作</th>
                                 <th>相关图片</th>
                             </tr>
@@ -81,31 +90,45 @@
                                     <span ng-switch-default>其他</span>
                                     </span>
                                 </td>
-                                <td>
-                                    <span ng-switch="{{article.type}}">
-                                    <span ng-switch-when="1">轮播</span>
-                                    <span ng-switch-when="2">首页</span>
-                                    <span ng-switch-when="3">普通</span>
-                                    <span ng-switch-when="4">推荐</span>
-                                    <span ng-switch-default>其他</span>
-                                    </span>
+                                  <td>
+                                   
+                                    <select name="position" ng-change="changePosition(article.id,article.position)" ng-model="article.position" id="">
+                                        <option value="99">普通</option>
+                                        <option value="1">首页轮播图片1</option>
+                                        <option value="2">首页轮播图片2</option>
+                                        <option value="3">首页轮播图片3</option>
+                                        <option value="4">首页1-1</option>
+                                        <option value="5">首页1-2</option>
+                                        <option value="6">首页1-3</option>
+                                        <option value="7">首页1-4</option>
+                                        <option value="8">首页1-5</option>
+                                        <option value="9">首页1-6</option>
+                                        <option value="10">首页2-1</option>
+                                        <option value="11">首页2-2</option>
+                                        <option value="12">首页2-3</option>
+                                        <option value="13">首页2-4</option>
+                                        <option value="14">首页2-5</option>
+                                        <option value="15">首页2-6</option>
+                                       
+                                    </select>
+                                </td>
+                                <td><input name="" id="priority" ng-model="article.priority" ng-change="chagePriority(article.id,article.priority)">
+                                  
                                 </td>
                                 <td>
                                     <span ng-switch="{{article.status}}" ng-click="changeStatus(article.id,article.status)" class="link">
                                     <span ng-switch-when="1">撤销</span>
                                     <span ng-switch-when="0">恢复</span>
-                                   
-                                    </span> 
-                                   <span ng-click="publish(article.id)" class="link" ng-show="{{article.status==2}}">发布</span>
+                                    </span>
+                                    <span ng-click="publish(article.id)" class="link" ng-show="{{article.status==2}}">发布</span>
                                     <a href="#/editPic?id={{article.id}}"> 编辑 </a>
                                     <a href="/#imageDetail/{{article.id}}" target="_blank">预览</a>
                                     <!-- <a href="">置于首页</a> -->
                                 </td>
                                 <td><a href="#relative/2/{{article.id}}">相关图片</a></td>
-
                             </tr>
                         </table>
-                        <div class="tcdPageCode">
+                        <div class="tcdPageCode" id="clearContent">
                         </div>
                     </div>
                 </div>

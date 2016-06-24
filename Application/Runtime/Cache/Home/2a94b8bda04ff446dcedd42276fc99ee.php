@@ -40,8 +40,8 @@
                         <li><a href="#/allArticle?type=2">首页热点</a></li>
                            <li><a href="#/allArticle?type=4">首页推荐</a></li>
                         <li><a href="#/allArticle?type=3">普通文章</a></li> -->
-                        <li><a href="#/allArticle?status=2&mainType=0&page=1">草稿箱</a></li>
-                        <li><a href="#/allArticle?status=0&mainType=0&page=1">被撤文章</a></li>
+                        <li><a href="#/allArticle?articleType=1&status=2&mainType=0&page=1">草稿箱</a></li>
+                        <li><a href="#/allArticle?articleType=1&status=0&mainType=0&page=1">被撤文章</a></li>
                         <li><a href="#/newArticle">新文章</a></li>
                          
                     </ul>
@@ -52,13 +52,13 @@
                         <div class="pull-right"><span class="caret"></span></div>
                     </a>
                     <ul class="templatemo-submenu">
-                        <li><a href="#/allPic">所有图片</a></li>
-                        <li><a href="#/allPic?type=2">首页图片</a></li>
+                        <li><a href="#/allPic?articleType=2&status=1&mainType=0&page=1">所有图片</a></li>
+                     <!--    <li><a href="#/allPic?type=2">首页图片</a></li>
                         <li><a href="#/allPic?type=1">首页图片</a></li>
 
-                        <li><a href="#/allPic?type=3">普通图片</a></li>
-                        <li><a href="#/allPic?status=2">草稿箱</a></li>
-                        <li><a href="#/allPic?status=0">被撤图片</a></li>
+                        <li><a href="#/allPic?type=3">普通图片</a></li> -->
+                        <li><a href="#/allPic?articleType=2&status=2&mainType=0&page=1">草稿箱</a></li>
+                        <li><a href="#/allPic?articleType=2&status=0&mainType=0&page=1">被撤图片</a></li>
                         <li><a href="#/newPic">新图片</a></li>
                         <!-- <li><a href="#">Facilisi</a></li> -->
                     </ul>
@@ -69,12 +69,12 @@
                         <div class="pull-right"><span class="caret"></span></div>
                     </a>
                     <ul class="templatemo-submenu">
-                        <li><a href="#/allVideo">所有视频</a></li>
+                        <li><a href="#/allVideo?articleType=4&status=1&mainType=0&page=1">所有视频</a></li>
                          
-                        <li><a href="#/allVideo?type=2">首页视频</a></li>
-                        <li><a href="#/allVideo?type=3">普通视频</a></li>
-                        <li><a href="#/allVideo?status=2">草稿箱</a></li>
-                        <li><a href="#/allVideo?status=0">被撤视频</a></li>
+                      <!--   <li><a href="#/allVideo?type=2">首页视频</a></li>
+                        <li><a href="#/allVideo?type=3">普通视频</a></li> -->
+                        <li><a href="#/allVideo?articleType=4&status=2&mainType=0&page=1">草稿箱</a></li>
+                        <li><a href="#/allVideo?articleType=4&status=0&mainType=0&page=1">被撤视频</a></li>
                         <li><a href="#/newVideo">新视频</a></li>
                     </ul>
                 </li>
@@ -84,15 +84,15 @@
                         <div class="pull-right"><span class="caret"></span></div>
                     </a>
                     <ul class="templatemo-submenu">
-                        <li><a href="#/allDocumentary">所有纪录片</a></li>
+                        <li><a href="#/allDocumentary?articleType=5&status=1&mainType=0&page=1">所有纪录片</a></li>
                          
                            <li></li>
-                        <li><a href="#/allDocumentary?status=2">草稿箱</a></li>
-                        <li><a href="#/allDocumentary?status=0">被撤纪录片</a></li>
+                        <li><a href="#/allDocumentary?articleType=5&status=2&mainType=0&page=1">草稿箱</a></li>
+                        <li><a href="#/allDocumentary?articleType=5&status=0&mainType=0&page=1">被撤纪录片</a></li>
                         <li><a href="#/newDocumentary">新纪录片</a></li>
                     </ul>
                 </li>
-                <li class="sub">
+               <!--  <li class="sub">
                     <a href="javascript:;">
                         <i class="fa fa-database"></i> 用户管理
                         <div class="pull-right"><span class="caret"></span></div>
@@ -104,11 +104,29 @@
                         <li><a href="#">Interdum</a></li>
                         <li><a href="#">Facilisi</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <li class="sub">
                     <a href="#/about">
                         <i class="fa fa-cubes"></i>
                         使用说明
+                    </a>
+                </li>
+                <li class="sub">
+                    <a href="#/about">
+                        <i class="fa fa-cubes"></i>
+                        多说评论
+                    </a>
+                </li>
+                <li class="sub">
+                    <a href="#/newPassword">
+                        <i class="fa fa-cubes"></i>
+                        更改密码
+                    </a>
+                </li> 
+                <li class="sub">
+                    <a href="/admin.php?c=login&a=signout">
+                       
+                        退出
                     </a>
                 </li>
                 <!-- <li><a href="#/newArticle"><i class="fa fa-map-marker"></i><span class="badge pull-right">42</span>发布</a></li>

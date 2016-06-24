@@ -16,6 +16,10 @@
 .form-inline {
     padding: 10px 40px;
 }
+#priority{
+    width:50px!important;
+    /*display:block;*/
+}
 </style>
 <div class="templatemo-content-wrapper">
     <div class="templatemo-content">
@@ -54,7 +58,7 @@
                             <option value="3">人文·生态</option>
                             <option value="4">其他</option>
                         </select>
-                        <label for="searchname">按照名称搜索</label>
+                        <label for="searchname">文章标题关键字搜索</label>
                         <input type="text" class="form-control" id="searchname" name="name" ng-model="query" id="exampleInputEmail2" placeholder="输入文章名关键字">
                         <button type="submit" class="btn btn-success" ng-click="queryArticle(true)">搜索</button>
                     </div>
@@ -68,8 +72,10 @@
                                 <th>状态</th>
                                 <th>类别</th>
                                 <th>位置</th>
+                                <th>优先级</th>
                                 <th>操作</th>
                                 <th>相关文章</th>
+
                             </tr>
                             <tr ng-repeat="article in allArticle">
                                 <td>{{article.id}}</td>
@@ -100,13 +106,7 @@
  -->
                                 </td>
                                 <td>
-                                    <!--            <span ng-switch="{{article.type}}">
-                                    <span ng-switch-when="1">轮播</span>
-                                    <span ng-switch-when="2">首页</span>
-                                    <span ng-switch-when="3">普通</span>
-                                    <span ng-switch-when="4">推荐</span>
-                                    <span ng-switch-default>其他</span>
-                                    </span> -->
+                                   
                                     <select name="position" ng-change="changePosition(article.id,article.position)" ng-model="article.position" id="">
                                         <option value="99">普通</option>
                                         <option value="1">轮播1</option>
@@ -133,6 +133,13 @@
                                         <option value="20">推荐右8</option>
                                     </select>
                                 </td>
+                                <td><input name="" id="priority" ng-model="article.priority" ng-change="chagePriority(article.id,article.priority)">
+                                  <!--   <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select></td> -->
                                 <td>
                                     <span ng-switch="{{article.status}}" class="link">
                                     <span ng-switch-when="1" ng-click="changeStatus(article.id,article.status)">撤销</span>
@@ -146,6 +153,10 @@
                                 <td><a href="#relative/1/{{article.id}}">相关文章</a></td>
                             </tr>
                         </table>
+                        <div class="row">
+                           <p>!!!优先级只能设置为1~99的整数，优先级高的显示在前面；</p>
+                       <!--     <p>位置除普通之外，其值都是唯一的，例如将一篇文章设置为“轮播1”，则原设置为“轮播1”的文章其位置信息会被更新为“普通”</p>  -->
+                        </div>
                         <div class="tcdPageCode">
                         </div>
                     </div>

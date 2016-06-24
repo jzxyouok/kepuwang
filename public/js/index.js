@@ -390,7 +390,7 @@
         }).success(function(response) {
             $scope.num = response.num;
 
-            pageSet.init(Math.ceil($scope.num / 18), picByPage);
+            pageSet.init(Math.ceil($scope.num / 24), picByPage);
         });
         picByPage(1);
 
@@ -449,7 +449,7 @@
             url: "/index.php?c=article&a=allArticle&page=1" + query,
         }).success(function(response) {
             $scope.num = response.num;
-            pageSet.init(Math.ceil($scope.num / 18), articleByPage);
+            pageSet.init(Math.ceil($scope.num / 32), articleByPage);
             $("#article-list1").empty();
             $("#article-list2").empty();
             $("#article-list3").empty();
@@ -502,7 +502,7 @@
             url: "/index.php?c=video&a=allVideo&page=1" + query,
         }).success(function(response) {
             $scope.num = response.num;
-            pageSet.init(Math.ceil($scope.num / 18), picByPage);
+            pageSet.init(Math.ceil($scope.num / 40), picByPage);
             $scope.videos = response.data;
         });
 
