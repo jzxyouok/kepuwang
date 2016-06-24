@@ -34,7 +34,8 @@ function getDb($type)
             break;
         case '4':
             $db = M("video");
-            break;case '5':
+            break;
+        case '5':
             $db = M("documentary");
             break;
         case '6':

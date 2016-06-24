@@ -104,7 +104,7 @@
             })
             .when("/allPic", {
                 templateUrl: "/public2/template/imageTpl.html",
-                controller: "allPicController"
+                controller: "allArticleController"
             })
             .when("/newPic", {
                 templateUrl: "/public2/template/newPic.html",
@@ -537,7 +537,7 @@
 
         function handlePageChange(page) {
             $http({
-                url: "/admin.php?c=util&a=getAll&articleType=1&status=" + status + "&mainType=" + $scope.mainType + "&page=" + page + query,
+                url: "/admin.php?c=util&a=getAll&articleType="+articleType+"&status=" + status + "&mainType=" + $scope.mainType + "&page=" + page + query,
                 method: "get"
             }).success(function(response) {
                 $scope.allArticle = response.data;
@@ -548,7 +548,7 @@
             var message = "确定" + status == "0" ? "恢复" : "撤销" + "这篇" + what + "？";
             if (confirm(message)) {
                 $http({
-                    url: "/admin.php?c=article&a=changeStatus&articleType=1&id=" + id + "&status=" + status,
+                    url: "/admin.php?c=article&a=changeStatus&articleType="+articleType+"&id=" + id + "&status=" + status,
                     method: "get"
                 }).success(function(response) {
                     location.reload(true);

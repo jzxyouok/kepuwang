@@ -225,16 +225,10 @@
                 method: "get"
             }).success(function(response) {
                 $scope.documentaryDetail = response;
-                // var sets = $scope.documentaryDetail.sets.replace(/&quot;/g, "\"") || '[]';
-                // $scope.documentaryDetail.sets = JSON.parse(sets);
-                // $scope.documentaryDetail.set = JSON.parse(sets)[set];
-
+ 
                 $scope.documentaryDetail.maincontent = $sce.trustAsHtml($scope.documentaryDetail.maincontent);
                 $scope.documentaryDetail.content = $sce.trustAsHtml($scope.documentaryDetail.content);
-
-                console.log($scope.documentaryDetail.set)
-                console.log(response);
-            })
+         })
             // 本集的详细信息
 
         $http({
@@ -255,7 +249,7 @@
         }).success(function(response) {
             $scope.documentarys = response.data;
             var len = $scope.documentarys.length;
-            pageSet.init(Math.ceil(response.num / 10), selectPage);
+            pageSet.init(Math.ceil(response.num / 15), selectPage);
 
             function selectPage(page) {
                 $http({
